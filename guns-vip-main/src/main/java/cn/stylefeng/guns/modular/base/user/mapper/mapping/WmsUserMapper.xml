@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.base.user.mapper.WmsUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.base.user.entity.WmsUser">
+        <id column="id" property="id"/>
+        <result column="serial_number" property="serialNumber"/>
+        <result column="user_name" property="userName"/>
+        <result column="work_team" property="workTeam"/>
+        <result column="job_responsibility" property="jobResponsibility"/>
+        <result column="id_info" property="idInfo"/>
+        <result column="user_type" property="userType"/>
+        <result column="data_state" property="dataState"/>
+        <result column="create_time" property="createTime"/>
+        <result column="u_pwd" property="uPwd"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", serial_number AS "serialNumber", user_name AS "userName", work_team AS "workTeam", job_responsibility AS "jobResponsibility", id_info AS "idInfo", user_type AS "userType", data_state AS "dataState", create_time AS "createTime",u_pwd AS uPwd
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult"
+            parameterType="cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_user where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.serialNumber != null and paramCondition.serialNumber != ''">
+            and serial_number like CONCAT('%',#{paramCondition.serialNumber},'%')
+        </if>
+        <if test="paramCondition.userName != null and paramCondition.userName != ''">
+            and user_name like CONCAT('%',#{paramCondition.userName},'%')
+        </if>
+        <if test="paramCondition.workTeam != null and paramCondition.workTeam != ''">
+            and work_team like CONCAT('%',#{paramCondition.workTeam},'%')
+        </if>
+        <if test="paramCondition.jobResponsibility != null and paramCondition.jobResponsibility != ''">
+            and job_responsibility like CONCAT('%',#{paramCondition.jobResponsibility},'%')
+        </if>
+        <if test="paramCondition.idInfo != null and paramCondition.idInfo != ''">
+            and id_info like CONCAT('%',#{paramCondition.idInfo},'%')
+        </if>
+        <if test="paramCondition.userType != null and paramCondition.userType != ''">
+            and user_type like CONCAT('%',#{paramCondition.userType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_user where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.serialNumber != null and paramCondition.serialNumber != ''">
+            and serial_number like CONCAT('%',#{paramCondition.serialNumber},'%')
+        </if>
+        <if test="paramCondition.userName != null and paramCondition.userName != ''">
+            and user_name like CONCAT('%',#{paramCondition.userName},'%')
+        </if>
+        <if test="paramCondition.workTeam != null and paramCondition.workTeam != ''">
+            and work_team like CONCAT('%',#{paramCondition.workTeam},'%')
+        </if>
+        <if test="paramCondition.jobResponsibility != null and paramCondition.jobResponsibility != ''">
+            and job_responsibility like CONCAT('%',#{paramCondition.jobResponsibility},'%')
+        </if>
+        <if test="paramCondition.idInfo != null and paramCondition.idInfo != ''">
+            and id_info like CONCAT('%',#{paramCondition.idInfo},'%')
+        </if>
+        <if test="paramCondition.userType != null and paramCondition.userType != ''">
+            and user_type like CONCAT('%',#{paramCondition.userType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult"
+            parameterType="cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam">
+        select
+        <include refid="Base_Column_List"/>,
+        (
+        case user_type
+        when "A" then "管理员"
+        when "B" then "维修人员"
+        else "操作员"
+        end
+        )
+        userTypeEx
+        from wms_user where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.serialNumber != null and paramCondition.serialNumber != ''">
+            and serial_number like CONCAT('%',#{paramCondition.serialNumber},'%')
+        </if>
+        <if test="paramCondition.userName != null and paramCondition.userName != ''">
+            and user_name like CONCAT('%',#{paramCondition.userName},'%')
+        </if>
+        <if test="paramCondition.workTeam != null and paramCondition.workTeam != ''">
+            and work_team like CONCAT('%',#{paramCondition.workTeam},'%')
+        </if>
+        <if test="paramCondition.jobResponsibility != null and paramCondition.jobResponsibility != ''">
+            and job_responsibility like CONCAT('%',#{paramCondition.jobResponsibility},'%')
+        </if>
+        <if test="paramCondition.idInfo != null and paramCondition.idInfo != ''">
+            and id_info like CONCAT('%',#{paramCondition.idInfo},'%')
+        </if>
+        <if test="paramCondition.userType != null and paramCondition.userType != ''">
+            and user_type like CONCAT('%',#{paramCondition.userType},'%')
+        </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_user where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.serialNumber != null and paramCondition.serialNumber != ''">
+            and serial_number like CONCAT('%',#{paramCondition.serialNumber},'%')
+        </if>
+        <if test="paramCondition.userName != null and paramCondition.userName != ''">
+            and user_name like CONCAT('%',#{paramCondition.userName},'%')
+        </if>
+        <if test="paramCondition.workTeam != null and paramCondition.workTeam != ''">
+            and work_team like CONCAT('%',#{paramCondition.workTeam},'%')
+        </if>
+        <if test="paramCondition.jobResponsibility != null and paramCondition.jobResponsibility != ''">
+            and job_responsibility like CONCAT('%',#{paramCondition.jobResponsibility},'%')
+        </if>
+        <if test="paramCondition.idInfo != null and paramCondition.idInfo != ''">
+            and id_info like CONCAT('%',#{paramCondition.idInfo},'%')
+        </if>
+        <if test="paramCondition.userType != null and paramCondition.userType != ''">
+            and user_type like CONCAT('%',#{paramCondition.userType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="findUserInfo" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult" parameterType="string">
+        select
+          id as id,
+          user_name AS userName,
+          serial_number AS serialNumber,
+          id_info AS idInfo,
+          CASE user_type WHEN 'A' THEN '管理人员' WHEN 'B' THEN '维修人员' ELSE '操作人员' END AS userTypeEx,
+          user_type AS userType
+         from  wms_user
+        where  serial_number = #{number}
+        and u_pwd = #{pwd}
+        and data_state = 0
+    </select>
+
+    <select id="findUserInfo2" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult" parameterType="string">
+         select
+          id as id,
+          user_name AS userName,
+          serial_number AS serialNumber,
+          id_info AS idInfo,
+          CASE user_type WHEN 'A' THEN '管理人员' WHEN 'B' THEN '维修人员' ELSE '操作人员' END AS userTypeEx,
+          user_type AS userType
+          from  wms_user
+            where  serial_number = #{number}
+            and u_pwd = #{pwd}
+            and data_state = 0
+            and user_type in ('A','C')
+    </select>
+
+    <select id="findUserIdInfo" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult" parameterType="string">
+        select
+          id as id,
+          user_name AS userName,
+          serial_number AS serialNumber,
+          id_info AS idInfo,
+        CASE user_type WHEN 'A' THEN '管理人员' WHEN 'B' THEN '维修人员' ELSE '操作人员' END AS userTypeEx,
+          user_type AS userType
+        from  wms_user
+        where  id_info = #{staffId}
+        and data_state = 0
+    </select>
+    <select id="findUserIdInfo2" resultType="cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult" parameterType="string">
+        select
+          id as id,
+          user_name AS userName,
+          serial_number AS serialNumber,
+          id_info AS idInfo,
+        CASE user_type WHEN 'A' THEN '管理人员' WHEN 'B' THEN '维修人员' ELSE '操作人员' END AS userTypeEx,
+          user_type AS userType
+        from  wms_user
+        where  id_info = #{staffId}
+        and data_state = 0
+        and user_type in ('A','C')
+    </select>
+
+    <insert id="insertListBatch">
+        insert into wms_user (
+        serial_number,user_name,data_state
+        )
+        values
+        <foreach collection="list" item="paramCondition" index="index" separator=",">
+            (#{paramCondition.serialNumber},#{paramCondition.userName},#{paramCondition.dataState})
+        </foreach>
+    </insert>
+
+</mapper>

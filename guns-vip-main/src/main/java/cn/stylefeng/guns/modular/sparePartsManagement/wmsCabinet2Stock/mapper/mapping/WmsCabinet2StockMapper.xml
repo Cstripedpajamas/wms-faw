@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.mapper.WmsCabinet2StockMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap"
+               type="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.entity.WmsCabinet2Stock">
+        <id column="id" property="id"/>
+        <result column="loca_number" property="locaNumber"/>
+        <result column="loca_row" property="locaRow"/>
+        <result column="loca_col" property="locaCol"/>
+        <result column="loca_layer" property="locaLayer"/>
+        <result column="loca_equipment" property="locaEquipment"/>
+        <result column="location_state" property="locationState"/>
+        <result column="turnover_id" property="turnoverId"/>
+        <result column="material_type_id" property="materialTypeId"/>
+        <result column="material_id" property="materialId"/>
+        <result column="material_name" property="materialName"/>
+        <result column="material_sku" property="materialSku"/>
+        <result column="m_batch" property="mBatch"/>
+        <result column="m_number" property="mNumber"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", loca_number AS "locaNumber", loca_row AS "locaRow", loca_col AS "locaCol", loca_layer AS "locaLayer", loca_equipment AS "locaEquipment", location_state AS "locationState", turnover_id AS "turnoverId", material_type_id AS "materialTypeId", material_id AS "materialId", material_name AS "materialName", material_sku AS "materialSku", m_batch AS "mBatch", m_number AS "mNumber", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList"
+            resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult"
+            parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock where 1 = 1
+        <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+            and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+        </if>
+        <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+            and material_id = #{paramCondition.materialId}
+        </if>
+        <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+            and material_type_id = #{paramCondition.materialTypeId}
+        </if>
+
+    </select>
+
+    <select id="customMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock where 1 = 1
+        <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+            and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+        </if>
+    </select>
+
+    <select id="customPageList"
+            resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult"
+            parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock where 1 = 1
+        <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+            and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+        </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock where 1 = 1
+        <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+            and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+        </if>
+    </select>
+
+    <select id="stockIsEnough" resultType="integer">
+        select count(*)
+        from wms_cabinet2_turnover_bind
+        where 1=1
+        and material_type_id = #{useMaterialTypeId}
+        and material_id = #{useMaterialId}
+        and m_number +0  &gt;= (#{useNumber} + 0)
+    </select>
+
+    <select id="findNumberInfo" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult" parameterType="string">
+        select * from wms_cabinet2_turnover_bind
+        where 1=1
+        and material_type_id = #{useMaterialTypeId}
+        and m_number + 0  &gt;= (#{useNumber} + 0)
+        order by create_time limit 1;
+    </select>
+
+    <update id="updateState" parameterType="string">
+        update wms_cabinet2_stock set location_state = #{state} where id = #{id}
+    </update>
+
+    <update id="updateStockById" parameterType="string">
+        update wms_cabinet2_stock set
+        location_state = #{state},
+        turnover_id = "",
+        material_type_id = "",
+        material_id = "",
+        material_name = "",
+        material_sku = "",
+        m_batch = "",
+        m_number = "0"
+        where id = #{stockID}
+    </update>
+
+    <select id="findNullStock" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult">
+        select * from wms_cabinet2_stock where location_state = "0" order by id limit 1;
+    </select>
+
+    <update id="updateTurnover" parameterType="string">
+        update wms_cabinet2_stock set turnover_id = #{turnoverID},location_state =#{stockState} where id = #{nullStockID}
+    </update>
+
+    <update id="updateStateByTurnId" parameterType="string">
+         update wms_cabinet2_stock set location_state = #{state} where turnover_id = #{turnoverId}
+    </update>
+
+    <select id="findByTurnId" parameterType="string" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult">
+        select  * from wms_cabinet2_stock
+        where turnover_id = #{turnoverId}
+    </select>
+    <select id="findNullReturnStock" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult">
+        select
+        w.id AS "id",
+        w.loca_number AS "locaNumber",
+        w.loca_row AS "locaRow",
+        w.loca_col AS "locaCol",
+        w.loca_layer AS "locaLayer",
+        w.loca_equipment AS "locaEquipment",
+        w.location_state AS "locationState",
+        w.turnover_id AS "turnoverId",
+        w.material_type_id AS "materialTypeId",
+        w.material_id AS "materialId",
+        w.material_name AS "materialName",
+        w.material_sku AS "materialSku",
+        w.m_batch AS "mBatch",
+        w.m_number AS "mNumber",
+        w.create_time AS "createTime"
+        from
+        wms_cabinet2_stock as w
+         join wms_cabinet2_turnover as c
+        on w.turnover_id = c.id
+        and c.storage_status = "1"
+        and c.turnover_state = "0"
+        limit 1
+    </select>
+
+    <update id="clearTurnMsg" parameterType="string">
+        update wms_cabinet2_stock set location_state = #{state},turnover_id = "" where id = #{stockID}
+    </update>
+
+    <select id="findStockNumber" parameterType="string" resultType="string">
+        select loca_number from wms_cabinet2_stock where id = #{stockID}
+    </select>
+
+    <select id="findAll" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock
+    </select>
+    <select id="findById" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam" parameterType="string">
+        select <include refid="Base_Column_List"/>
+        from wms_cabinet2_stock where id = #{stockID};
+    </select>
+
+    <update id="updateNumber" parameterType="string">
+        update wms_cabinet2_stock set m_number = #{mNumber} where id = #{stockID}
+    </update>
+
+    <select id="findIdByLoaclNumber" parameterType="string" resultType="string">
+        select id from wms_cabinet2_stock where  loca_number = #{locationNumber}
+    </select>
+</mapper>

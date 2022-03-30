@@ -1,0 +1,57 @@
+[2021-12-13 12:29:18.539][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[D:/Hikvision/lib/zlib1.dll], hHandleRet[1898774528]
+[2021-12-13 12:29:18.539][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2021-12-13 12:29:18.539][INF] The COM:Core ver is 6.1.6.45, 2021_03_02. Async:1.
+[2021-12-13 12:29:18.539][INF] This HCNetSDK ver is 6.1.6.45 Ver 2021_03_02.
+[2021-12-13 12:29:18.569][INF] Login dev 192.168.26.6:8000.
+[2021-12-13 12:29:18.569][INF] dwTotalNum[2048]
+[2021-12-13 12:29:18.613][INF] Private connect 192.168.26.6:8000 sock=2572 this=0x26c6f004 cmd=0x10000 port=54152
+[2021-12-13 12:29:18.613][INF] LogonDev1 in[192.168.26.6:8000]
+[2021-12-13 12:29:18.613][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[D:/Hikvision/lib/libeay32.dll], hHandleRet[-1008140288]
+[2021-12-13 12:29:18.613][DBG] Load libeay32.dll SUCC, Real Path[D:\Hikvision\lib\libeay32.dll]
+[2021-12-13 12:29:18.613][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[D:/Hikvision/lib/ssleay32.dll], hHandleRet[-638320640]
+[2021-12-13 12:29:18.613][DBG] Load ssleay32.dll SUCC, Real Path[D:\Hikvision\lib\ssleay32.dll]
+[2021-12-13 12:29:18.613][INF] SSLTRANSAPI::IsAllAPILoaded, OpenSSL_version Unload
+[2021-12-13 12:29:18.613][INF] OpenSSL, Not All Function Loaded!
+[2021-12-13 12:29:18.613][INF] SSLTRANSAPI::PrintVersion, SSLeay_version info [OpenSSL 1.0.2t  10 Sep 2019]
+[2021-12-13 12:29:18.613][INF] CSSLTrans::SSLCtxInit, dwSSLVersion[0], m_fnClientMethodV23
+[2021-12-13 12:29:20.035][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCVoiceTalk.dll] SUCC
+[2021-12-13 12:29:20.035][INF] AbilityAnalyze---Init-- start
+[2021-12-13 12:29:20.043][INF] The COM:VoiceTalk ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.053][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCGeneralCfgMgr.dll] SUCC
+[2021-12-13 12:29:20.053][INF] The COM:HCGeneralCfgMgr ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.055][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCPlayBack.dll] SUCC
+[2021-12-13 12:29:20.055][INF] The COM:HCPlayback ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.055][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCIndustry.dll] SUCC
+[2021-12-13 12:29:20.055][INF] The COM:HCIndustry ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.055][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCDisplay.dll] SUCC
+[2021-12-13 12:29:20.055][INF] The COM:HCDisplay ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.063][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCPreview.dll] SUCC
+[2021-12-13 12:29:20.063][INF] The COM:Preview ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.065][DBG] CComBase::Load, Load szDllPath[D:/Hikvision/lib/HCNetSDKCom/HCAlarm.dll] SUCC
+[2021-12-13 12:29:20.065][INF] The COM:HCAlarm ver is 6.1.6.45, 2021_03_02.
+[2021-12-13 12:29:20.094][INF] Private connect 192.168.26.6:8000 sock=2600 this=0x26c6f004 cmd=0x117001 port=54153
+[2021-12-13 12:29:20.105][DBG] SimpleSTDCommandToDvr with out cmd[PUT /ISAPI/Intelligent/FDLib/FDSearch/Delete?format=json&FDID=1&faceLibType=blackFD], input size[26], max segment length[262144]
+[2021-12-13 12:29:20.136][INF] Private connect 192.168.26.6:8000 sock=2604 this=0x26c6f004 cmd=0x117001 port=54154
+[2021-12-13 12:29:20.160][DBG] SimpleSTDCommandToDvr with out cmd[PUT /ISAPI/AccessControl/UserInfo/Delete?format=json], input size[61], max segment length[262144]
+[2021-12-13 12:29:20.160][DBG] CLongConfigSessionEx::start succ [userid:0][command:2550]
+[2021-12-13 12:29:20.179][INF] Private connect 192.168.26.6:8000 sock=2604 this=0x26c6f004 cmd=0x112200 port=54155
+[2021-12-13 12:29:20.222][DBG] callback [2]data len[30720].
+[2021-12-13 12:29:20.287][INF] [0]CLongConfigSession::Stop in
+[2021-12-13 12:29:20.287][ERR] [DoRealRecvEx] select return 1, socket=-1, sys_err=0
+[2021-12-13 12:29:20.287][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x27056448
+[2021-12-13 12:29:20.287][DBG] CLongConfigSessionEx::start succ [userid:0][command:2551]
+[2021-12-13 12:29:20.325][INF] Private connect 192.168.26.6:8000 sock=2600 this=0x26c6f004 cmd=0x112201 port=54156
+[2021-12-13 12:29:20.605][DBG] callback [2]data len[4096].
+[2021-12-13 12:29:20.625][INF] [1]CLongConfigSession::Stop in
+[2021-12-13 12:29:20.625][ERR] [DoRealRecvEx] select return 1, socket=-1, sys_err=0
+[2021-12-13 12:29:20.625][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x27056448
+[2021-12-13 12:29:20.625][DBG] CLongConfigSessionEx::start succ [userid:0][command:2550]
+[2021-12-13 12:29:20.647][INF] Private connect 192.168.26.6:8000 sock=2604 this=0x26c6f004 cmd=0x112200 port=54157
+[2021-12-13 12:29:20.692][DBG] callback [2]data len[30720].
+[2021-12-13 12:29:20.712][INF] [0]CLongConfigSession::Stop in
+[2021-12-13 12:29:20.712][ERR] [DoRealRecvEx] select return 1, socket=-1, sys_err=0
+[2021-12-13 12:29:20.712][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x27056448
+[2021-12-13 12:29:25.716][INF] COM_Logout[0][0]
+[2021-12-13 12:29:25.716][DBG] CUserMgr::UnRegisterHeartProxy[0]
+[2021-12-13 12:29:25.732][INF] Private connect 192.168.26.6:8000 sock=2016 this=0x26c6f004 cmd=0x10100 port=54159
+[2021-12-13 12:29:25.732][INF] CTransUnitMgr::UnloadTransUnitLib

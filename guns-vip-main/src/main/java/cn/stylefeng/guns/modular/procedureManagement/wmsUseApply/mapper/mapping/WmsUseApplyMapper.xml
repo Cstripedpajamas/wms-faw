@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.mapper.WmsUseApplyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.entity.WmsUseApply">
+        <id column="id" property="id" />
+        <result column="process_number" property="processNumber" />
+        <result column="operator" property="operator" />
+        <result column="material_id" property="materialId" />
+        <result column="m_number" property="mNumber" />
+        <result column="process_type" property="processType" />
+        <result column="process_reason" property="processReason" />
+        <result column="data_time" property="dataTime" />
+        <result column="data_state" property="dataState" />
+        <result column="scrap_material_id" property="scrapMaterialId" />
+        <result column="scrap_num" property="scrapNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", process_number AS "processNumber", operator AS "operator", material_id AS "materialId", m_number AS "mNumber", process_type AS "processType", process_reason AS "processReason", data_time AS "dataTime", data_state AS "dataState",
+        scrap_material_id AS "scrapMaterialId",scrap_num AS "scrapNum"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.result.WmsUseApplyResult" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+            <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
+                and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+            <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
+                and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.result.WmsUseApplyResult" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+            <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
+                and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
+            </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator = #{paramCondition.operator}
+        </if>
+            and process_type = 'B'
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+            <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
+                and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
+            </if>
+    </select>
+
+    <select id="findById" resultType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.result.WmsUseApplyResult" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+        and id = #{id}
+    </select>
+
+</mapper>

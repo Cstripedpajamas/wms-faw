@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsIntelligentCabinet1StockMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.onetypecabinet.entity.WmsIntelligentCabinet1Stock">
+        <id column="id" property="id" />
+        <result column="loca_serial_number" property="locaSerialNumber" />
+        <result column="loca_row" property="locaRow" />
+        <result column="loca_col" property="locaCol" />
+        <result column="prompt_direction" property="promptDirection" />
+        <result column="lattice_type" property="latticeType" />
+        <result column="lattice_type_name" property="latticeTypeName" />
+        <result column="loca_equipment" property="locaEquipment" />
+        <result column="loca_state" property="locaState" />
+        <result column="lattice_state" property="latticeState" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_id" property="materialId" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="material_serial_number" property="materialSerialNumber" />
+        <result column="m_number" property="mNumber" />
+        <result column="tool_state" property="toolState" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", loca_serial_number AS "locaSerialNumber", loca_row AS "locaRow", loca_col AS "locaCol", prompt_direction AS "promptDirection", lattice_type AS "latticeType", lattice_type_name AS "latticeTypeName", loca_equipment AS "locaEquipment", loca_state AS "locaState", lattice_state AS "latticeState", material_type_id AS "materialTypeId", material_id AS "materialId", material_name AS "materialName", material_sku AS "materialSku", material_serial_number AS "materialSerialNumber", m_number AS "mNumber", tool_state AS "toolState", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabinet1StockResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_stock where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.locaSerialNumber != null and paramCondition.locaSerialNumber != ''">
+                and loca_serial_number like CONCAT('%',#{paramCondition.locaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.locaRow != null and paramCondition.locaRow != ''">
+                and loca_row like CONCAT('%',#{paramCondition.locaRow},'%')
+            </if>
+            <if test="paramCondition.locaCol != null and paramCondition.locaCol != ''">
+                and loca_col like CONCAT('%',#{paramCondition.locaCol},'%')
+            </if>
+            <if test="paramCondition.promptDirection != null and paramCondition.promptDirection != ''">
+                and prompt_direction like CONCAT('%',#{paramCondition.promptDirection},'%')
+            </if>
+            <if test="paramCondition.latticeType != null and paramCondition.latticeType != ''">
+                and lattice_type like CONCAT('%',#{paramCondition.latticeType},'%')
+            </if>
+            <if test="paramCondition.latticeTypeName != null and paramCondition.latticeTypeName != ''">
+                and lattice_type_name like CONCAT('%',#{paramCondition.latticeTypeName},'%')
+            </if>
+            <if test="paramCondition.locaEquipment != null and paramCondition.locaEquipment != ''">
+                and loca_equipment like CONCAT('%',#{paramCondition.locaEquipment},'%')
+            </if>
+            <if test="paramCondition.locaState != null and paramCondition.locaState != ''">
+                and loca_state like CONCAT('%',#{paramCondition.locaState},'%')
+            </if>
+            <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+                and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.toolState != null and paramCondition.toolState != ''">
+                and tool_state like CONCAT('%',#{paramCondition.toolState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_stock where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.locaSerialNumber != null and paramCondition.locaSerialNumber != ''">
+                and loca_serial_number like CONCAT('%',#{paramCondition.locaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.locaRow != null and paramCondition.locaRow != ''">
+                and loca_row like CONCAT('%',#{paramCondition.locaRow},'%')
+            </if>
+            <if test="paramCondition.locaCol != null and paramCondition.locaCol != ''">
+                and loca_col like CONCAT('%',#{paramCondition.locaCol},'%')
+            </if>
+            <if test="paramCondition.promptDirection != null and paramCondition.promptDirection != ''">
+                and prompt_direction like CONCAT('%',#{paramCondition.promptDirection},'%')
+            </if>
+            <if test="paramCondition.latticeType != null and paramCondition.latticeType != ''">
+                and lattice_type like CONCAT('%',#{paramCondition.latticeType},'%')
+            </if>
+            <if test="paramCondition.latticeTypeName != null and paramCondition.latticeTypeName != ''">
+                and lattice_type_name like CONCAT('%',#{paramCondition.latticeTypeName},'%')
+            </if>
+            <if test="paramCondition.locaEquipment != null and paramCondition.locaEquipment != ''">
+                and loca_equipment like CONCAT('%',#{paramCondition.locaEquipment},'%')
+            </if>
+            <if test="paramCondition.locaState != null and paramCondition.locaState != ''">
+                and loca_state like CONCAT('%',#{paramCondition.locaState},'%')
+            </if>
+            <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+                and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.toolState != null and paramCondition.toolState != ''">
+                and tool_state like CONCAT('%',#{paramCondition.toolState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabinet1StockResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_stock where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.locaSerialNumber != null and paramCondition.locaSerialNumber != ''">
+                and loca_serial_number like CONCAT('%',#{paramCondition.locaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.locaRow != null and paramCondition.locaRow != ''">
+                and loca_row like CONCAT('%',#{paramCondition.locaRow},'%')
+            </if>
+            <if test="paramCondition.locaCol != null and paramCondition.locaCol != ''">
+                and loca_col like CONCAT('%',#{paramCondition.locaCol},'%')
+            </if>
+            <if test="paramCondition.promptDirection != null and paramCondition.promptDirection != ''">
+                and prompt_direction like CONCAT('%',#{paramCondition.promptDirection},'%')
+            </if>
+            <if test="paramCondition.latticeType != null and paramCondition.latticeType != ''">
+                and lattice_type like CONCAT('%',#{paramCondition.latticeType},'%')
+            </if>
+            <if test="paramCondition.latticeTypeName != null and paramCondition.latticeTypeName != ''">
+                and lattice_type_name like CONCAT('%',#{paramCondition.latticeTypeName},'%')
+            </if>
+            <if test="paramCondition.locaEquipment != null and paramCondition.locaEquipment != ''">
+                and loca_equipment like CONCAT('%',#{paramCondition.locaEquipment},'%')
+            </if>
+            <if test="paramCondition.locaState != null and paramCondition.locaState != ''">
+                and loca_state like CONCAT('%',#{paramCondition.locaState},'%')
+            </if>
+            <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+                and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.toolState != null and paramCondition.toolState != ''">
+                and tool_state like CONCAT('%',#{paramCondition.toolState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_stock where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.locaSerialNumber != null and paramCondition.locaSerialNumber != ''">
+                and loca_serial_number like CONCAT('%',#{paramCondition.locaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.locaRow != null and paramCondition.locaRow != ''">
+                and loca_row like CONCAT('%',#{paramCondition.locaRow},'%')
+            </if>
+            <if test="paramCondition.locaCol != null and paramCondition.locaCol != ''">
+                and loca_col like CONCAT('%',#{paramCondition.locaCol},'%')
+            </if>
+            <if test="paramCondition.promptDirection != null and paramCondition.promptDirection != ''">
+                and prompt_direction like CONCAT('%',#{paramCondition.promptDirection},'%')
+            </if>
+            <if test="paramCondition.latticeType != null and paramCondition.latticeType != ''">
+                and lattice_type like CONCAT('%',#{paramCondition.latticeType},'%')
+            </if>
+            <if test="paramCondition.latticeTypeName != null and paramCondition.latticeTypeName != ''">
+                and lattice_type_name like CONCAT('%',#{paramCondition.latticeTypeName},'%')
+            </if>
+            <if test="paramCondition.locaEquipment != null and paramCondition.locaEquipment != ''">
+                and loca_equipment like CONCAT('%',#{paramCondition.locaEquipment},'%')
+            </if>
+            <if test="paramCondition.locaState != null and paramCondition.locaState != ''">
+                and loca_state like CONCAT('%',#{paramCondition.locaState},'%')
+            </if>
+            <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+                and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.toolState != null and paramCondition.toolState != ''">
+                and tool_state like CONCAT('%',#{paramCondition.toolState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="findByLocaSerialNumber" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabinet1StockResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_stock where 1 = 1 and loca_serial_number = #{paramCondition.locaSerialNumber} limit 1
+    </select>
+
+</mapper>

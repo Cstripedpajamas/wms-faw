@@ -1,0 +1,57 @@
+@layout("/common/_container.html",{js:["/assets/warehousemanage/wmsWarehouseStock/wmsWarehouseStock.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">立库-仓库库存信息表管理</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input id="condition" class="layui-input" type="text" placeholder="名称"/>
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加</button>
+                                <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出</button>
+                                <button id="btnTemplate" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>模板下载</button>
+                                <button id="btnExp2" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导入</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="wmsWarehouseStockTable" lay-filter="wmsWarehouseStockTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+
+<script type="text/html" id="roadwayTpl">
+    {{# if(d.roadway == 'A'){ }}
+    <span style="color: #fdcb6e">1巷道</span>
+    {{# } else if(d.roadway == 'B'){ }}
+    <span style="color: #fdcb6e">2巷道</span>
+    {{# } else if(d.roadway == 'C'){ }}
+    <span style="color: #fdcb6e">3巷道</span>
+    {{# } }}
+</script>
+
+<script type="text/html" id="locaStateTpl">
+    {{# if(d.locaState == 0){ }}
+    <span style="color: #2BCCCE">空闲</span>
+    {{# } else if(d.locaState == 1){ }}
+    <span style="color: #4DAF29">有货</span>
+    {{# } else if(d.locaState == 2){ }}
+    <span style="color: grey">锁定</span>
+    {{# } }}
+</script>
+@}

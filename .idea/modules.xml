@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/guns-vip-main/faw.iml" filepath="$PROJECT_DIR$/guns-vip-main/faw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base/guns-base.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base/guns-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base-auth/guns-base-auth.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base-auth/guns-base-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base-email/guns-base-email.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base-email/guns-base-email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base-sms/guns-base-sms.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base-sms/guns-base-sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base-support.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base-support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-base-timers/guns-base-timers.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-base-timers/guns-base-timers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-sys/guns-sys.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-sys/guns-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-vip.iml" filepath="$PROJECT_DIR$/guns-vip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guns-base-support/guns-vip-gen/guns-vip-gen.iml" filepath="$PROJECT_DIR$/guns-base-support/guns-vip-gen/guns-vip-gen.iml" />
+    </modules>
+  </component>
+</project>

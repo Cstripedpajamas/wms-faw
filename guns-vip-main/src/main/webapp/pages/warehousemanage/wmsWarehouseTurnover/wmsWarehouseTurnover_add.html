@@ -1,0 +1,99 @@
+@layout("/common/_form.html",{js:["/assets/warehousemanage/wmsWarehouseTurnover/wmsWarehouseTurnover_add.js"]}){
+
+<form class="layui-form" id="wmsWarehouseTurnoverForm" lay-filter="wmsWarehouseTurnoverForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">基本信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input name="id" type="hidden"/>
+                    <!--<div class="layui-inline layui-col-md12">-->
+                        <!--<label class="layui-form-label">周转箱编号<span style="color: red;">*</span></label>-->
+                        <!--<div class="layui-input-block">-->
+                            <!--<input id="turnoverNumber" name="turnoverNumber" placeholder="请输入周转箱编号" type="text" class="layui-input" lay-verify="required" required/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <select id="turnoverType" name="turnoverType" class="layui-input">
+                                <option value="">请选择周转箱类型</option>
+                                <option value="A">小</option>
+                                <option value="B">中</option>
+                                <option value="C">大</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">条码信息<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="barcode" name="barcode" placeholder="请输入条码信息" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <!--<div class="layui-inline layui-col-md12">-->
+                        <!--<label class="layui-form-label">存放状态（1库内/2库外）<span style="color: red;">*</span></label>-->
+                        <!--<div class="layui-input-block">-->
+                            <!--<input id="storageStatus" name="storageStatus" placeholder="请输入存放状态（1库内/2库外）" type="text" class="layui-input" lay-verify="required" required/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">存放-排<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="locaRow" name="locaRow" placeholder="请输入存放-排" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">存放-列<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="locaCol" name="locaCol" placeholder="请输入存放-列" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">存放-层<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="locaLayer" name="locaLayer" placeholder="请输入存放-层" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <!--<div class="layui-inline layui-col-md12">-->
+                        <!--<label class="layui-form-label">周转箱状态（0空闲/1有货/2盘点）<span style="color: red;">*</span></label>-->
+                        <!--<div class="layui-input-block">-->
+                            <!--<input id="turnoverState" name="turnoverState" placeholder="请输入周转箱状态（0空闲/1有货/2盘点）" type="text" class="layui-input" lay-verify="required" required/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">格口数量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="turnoverMouthQuantity" name="turnoverMouthQuantity" placeholder="请输入格口数量" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">归属仓库<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <select id="affWarehouse" name="affWarehouse" class="layui-input">
+                               <option value=""></option>
+                               <option value="0">备品备件</option>
+                                <option value="1">工具</option>
+                            </select>
+<!--                            <input id="affWarehouse" name="affWarehouse" placeholder="请输入归属仓库" type="text" class="layui-input" lay-verify="required" required/>-->
+                        </div>
+                    </div>
+
+
+                    <!--<div class="layui-inline layui-col-md12">-->
+                        <!--<label class="layui-form-label">数据状态(0使用/1禁用)<span style="color: red;">*</span></label>-->
+                        <!--<div class="layui-input-block">-->
+                            <!--<input id="dataState" name="dataState" placeholder="请输入数据状态(0使用/1禁用)" type="text" class="layui-input" lay-verify="required" required/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button>
+        <button type="reset" class="layui-btn layui-btn-primary" ew-event="closeDialog">&emsp;取消&emsp;</button>
+    </div>
+
+</form>
+
+@}

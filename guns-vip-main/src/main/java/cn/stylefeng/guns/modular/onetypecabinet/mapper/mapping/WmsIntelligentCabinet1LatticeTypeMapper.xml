@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsIntelligentCabinet1LatticeTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.onetypecabinet.entity.WmsIntelligentCabinet1LatticeType">
+        <id column="id" property="id" />
+        <result column="type_name" property="typeName" />
+        <result column="type_standards" property="typeStandards" />
+        <result column="remarks" property="remarks" />
+        <result column="data_state" property="dataState" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", type_name AS "typeName", type_standards AS "typeStandards", remarks AS "remarks", data_state AS "dataState", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabinet1LatticeTypeResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1LatticeTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_lattice_type where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.typeName != null and paramCondition.typeName != ''">
+                and type_name like CONCAT('%',#{paramCondition.typeName},'%')
+            </if>
+            <if test="paramCondition.typeStandards != null and paramCondition.typeStandards != ''">
+                and type_standards like CONCAT('%',#{paramCondition.typeStandards},'%')
+            </if>
+            <if test="paramCondition.remarks != null and paramCondition.remarks != ''">
+                and remarks like CONCAT('%',#{paramCondition.remarks},'%')
+            </if>
+            <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+                and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1LatticeTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_lattice_type where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.typeName != null and paramCondition.typeName != ''">
+                and type_name like CONCAT('%',#{paramCondition.typeName},'%')
+            </if>
+            <if test="paramCondition.typeStandards != null and paramCondition.typeStandards != ''">
+                and type_standards like CONCAT('%',#{paramCondition.typeStandards},'%')
+            </if>
+            <if test="paramCondition.remarks != null and paramCondition.remarks != ''">
+                and remarks like CONCAT('%',#{paramCondition.remarks},'%')
+            </if>
+            <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+                and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabinet1LatticeTypeResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1LatticeTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_lattice_type where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.typeName != null and paramCondition.typeName != ''">
+                and type_name like CONCAT('%',#{paramCondition.typeName},'%')
+            </if>
+            <if test="paramCondition.typeStandards != null and paramCondition.typeStandards != ''">
+                and type_standards like CONCAT('%',#{paramCondition.typeStandards},'%')
+            </if>
+            <if test="paramCondition.remarks != null and paramCondition.remarks != ''">
+                and remarks like CONCAT('%',#{paramCondition.remarks},'%')
+            </if>
+            <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+                and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1LatticeTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_intelligent_cabinet1_lattice_type where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.typeName != null and paramCondition.typeName != ''">
+                and type_name like CONCAT('%',#{paramCondition.typeName},'%')
+            </if>
+            <if test="paramCondition.typeStandards != null and paramCondition.typeStandards != ''">
+                and type_standards like CONCAT('%',#{paramCondition.typeStandards},'%')
+            </if>
+            <if test="paramCondition.remarks != null and paramCondition.remarks != ''">
+                and remarks like CONCAT('%',#{paramCondition.remarks},'%')
+            </if>
+            <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+                and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+</mapper>

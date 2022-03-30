@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.stylefeng</groupId>
+        <artifactId>guns-vip</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>faw</artifactId>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <!-- guns-vip基础框架 -->
+        <dependency>
+            <groupId>cn.stylefeng</groupId>
+            <artifactId>guns-sys</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 分布式job -->
+        <!--        <dependency>-->
+        <!--            <groupId>cn.stylefeng</groupId>-->
+        <!--            <artifactId>guns-base-timers</artifactId>-->
+        <!--            <version>1.0.0</version>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+        <!--钉钉 -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>alibaba-dingtalk-service-sdk</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+<!--        海康JAR        -->
+        <dependency>
+            <groupId>org.faw.examples</groupId>
+            <artifactId>faw-examples</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.faw.jna</groupId>
+            <artifactId>faw-jna</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>3.2.7</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <fork>true</fork><!-- 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>install-jna-sdk</id>-->
+<!--                        <phase>clean</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>${basedir}/lib/jna.jar</file>-->
+<!--                            <repositoryLayout>default</repositoryLayout>-->
+<!--                            <groupId>org.faw.jna</groupId>-->
+<!--                            <artifactId>faw-jna</artifactId>-->
+<!--                            <version>1.0.1</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-examples-sdk</id>-->
+<!--                        <phase>clean</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>${basedir}/lib/examples.jar</file>-->
+<!--                            <repositoryLayout>default</repositoryLayout>-->
+<!--                            <groupId>org.faw.examples</groupId>-->
+<!--                            <artifactId>faw-examples</artifactId>-->
+<!--                            <version>1.0.1</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.26.1</version>
+                <configuration>
+                    <dockerHost>tcp://220.185.159.170:2376</dockerHost>
+                    <certPath>_dockerCerts56</certPath>
+                    <images>
+                        <image>
+                            <name>asd/${project.artifactId}:latest</name>
+                            <build>
+                                <from>primetoninc/jdk:1.8</from>
+                                <assembly>
+                                    <descriptor>docker-assembly.xml</descriptor>
+                                </assembly>
+                                <cmd>
+                                    <shell>java -jar -Xms256m -Xmx728m -Xss1024K -XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=512m /maven/${project.artifactId}.jar</shell>
+                                </cmd>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

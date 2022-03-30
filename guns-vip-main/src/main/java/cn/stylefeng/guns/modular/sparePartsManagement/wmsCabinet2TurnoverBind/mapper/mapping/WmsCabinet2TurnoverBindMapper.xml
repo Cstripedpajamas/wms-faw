@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.mapper.WmsCabinet2TurnoverBindMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.entity.WmsCabinet2TurnoverBind">
+        <id column="id" property="id" />
+        <result column="turnover_id" property="turnoverId" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_id" property="materialId" />
+        <result column="material_type" property="materialType" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="m_batch" property="mBatch" />
+        <result column="m_unit" property="mUnit" />
+        <result column="m_number" property="mNumber" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", turnover_id AS "turnoverId", material_type_id AS "materialTypeId", material_id AS "materialId", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_batch AS "mBatch", m_unit AS "mUnit", m_number AS "mNumber", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+    <delete id="delByTurnoverID">
+        delete from wms_cabinet2_turnover_bind where turnover_id = #{turnoverID}
+    </delete>
+
+    <select id="findNumberInfo" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult" parameterType="string">
+         select * from wms_cabinet2_turnover_bind
+        where 1=1
+        and material_type_id = #{matterTypeID}
+        and m_number &gt;= #{matterNumber}
+        order by create_time limit 1;
+    </select>
+    <select id="findByTurnId" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult" parameterType="string">
+        select * from wms_cabinet2_turnover_bind
+        where turnover_id = #{turnoverID}
+    </select>
+
+    <update id="updateNumber" parameterType="string">
+        update wms_cabinet2_turnover_bind set m_number = #{number} where  turnover_id = #{turnoverID}
+    </update>
+
+    <select id="WmsCabinet2TurnoverBindResult" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult" parameterType="string">
+        select
+         c.id AS "id",
+         c.turnover_id AS "turnoverId",
+         c.material_type_id AS "materialTypeId",
+         c.material_id AS "materialId",
+         c.material_type AS "materialType",
+         c.material_name AS "materialName",
+         c.material_sku AS "materialSku",
+         c.m_batch AS "mBatch",
+         c.m_unit AS "mUnit",
+         c.m_number AS "mNumber",
+         c.create_time AS "createTime",
+         w.turnover_number as "turnoverNumber"
+         from wms_cabinet2_turnover_bind as c
+         left join wms_cabinet2_turnover as w
+         on  c.turnover_id = w.id
+         where w.id = #{turnoverID}
+    </select>
+
+</mapper>

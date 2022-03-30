@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.mapper.WmsCabinet2UseTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.entity.WmsCabinet2UseTask">
+        <id column="id" property="id" />
+        <result column="task_number" property="taskNumber" />
+        <result column="use_request_id" property="useRequestId" />
+        <result column="process_number" property="processNumber" />
+        <result column="s_material_type_id" property="sMaterialTypeId" />
+        <result column="s_material_id" property="sMaterialId" />
+        <result column="s_number" property="sNumber" />
+        <result column="use_material_type_id" property="useMaterialTypeId" />
+        <result column="use_material_id" property="useMaterialId" />
+        <result column="use_number" property="useNumber" />
+        <result column="stock_id" property="stockId" />
+        <result column="loca_number" property="locaNumber" />
+        <result column="operator" property="operator" />
+        <result column="operation_time" property="operationTime" />
+        <result column="task_state" property="taskState" />
+        <result column="interface_state" property="interfaceState" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", task_number AS "taskNumber", use_request_id AS "useRequestId", process_number AS "processNumber", s_material_type_id AS "sMaterialTypeId", s_material_id AS "sMaterialId", s_number AS "sNumber", use_material_type_id AS "useMaterialTypeId", use_material_id AS "useMaterialId", use_number AS "useNumber", stock_id AS "stockId", loca_number AS "locaNumber", operator AS "operator", operation_time AS "operationTime", task_state AS "taskState", interface_state AS "interfaceState", create_time AS "createTime", update_time AS "updateTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator = #{paramCondition.operator}
+        </if>
+    </select>
+
+    <select id="customPageList2" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+        <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+            and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+        </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator = #{paramCondition.operator}
+        </if>
+        and task_state = "0"
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+    </select>
+
+    <select id="findById" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet2_use_task where 1 = 1
+        and id = #{id}
+    </select>
+
+    <update id="updateState" parameterType="string">
+        update wms_cabinet2_use_task set task_state = #{state} where id = #{id}
+    </update>
+
+    <update id="updateScropNumber" parameterType="string">
+         update wms_cabinet2_use_task set s_number = #{scrapNumber} where id = #{taskId}
+    </update>
+
+    <update id="updateStockMsgById" parameterType="string">
+        update wms_cabinet2_use_task
+        set stock_id = #{stockId},
+        loca_number  = #{locaNumber},
+        task_state = #{state}
+        where id = #{runningId}
+
+    </update>
+
+</mapper>

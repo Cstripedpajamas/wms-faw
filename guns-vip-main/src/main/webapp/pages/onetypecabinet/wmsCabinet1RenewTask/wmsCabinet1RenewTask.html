@@ -1,0 +1,61 @@
+@layout("/common/_container.html",{js:["/assets/onetypecabinet/wmsCabinet1RenewTask/wmsCabinet1RenewTask.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">Ⅰ类柜换新任务信息表管理</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input id="condition" class="layui-input" type="text" placeholder="名称"/>
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加</button>
+                                <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="wmsCabinet1RenewTaskTable" lay-filter="wmsCabinet1RenewTaskTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+
+<script type="text/html" id="taskStateTpl">
+    {{#  if(d.taskState == 0){ }}
+    <span style="color: grey">初始</span>
+    {{#  } else if(d.taskState == 1){ }}
+    <span>开始</span>
+    {{#  } else if(d.taskState == 2){ }}
+    <span>开始存储</span>
+    {{#  } else if(d.taskState == 3){ }}
+    <span>存储完成</span>
+    {{#  } else if(d.taskState == 4){ }}
+    <span>开始取货</span>
+    {{#  } else if(d.taskState == 5){ }}
+    <span>取货完成</span>
+    {{#  } else if(d.taskState == 6){ }}
+    <span>结束</span>
+    {{#  } }}
+</script>
+
+<script type="text/html" id="errorTragTpl">
+    {{#  if(d.errorTrag == 0){ }}
+    <span style="color: grey">初始</span>
+    {{#  } else if(d.errorTrag == 1){ }}
+    <span>异常</span>
+    {{#  } }}
+</script>
+@}

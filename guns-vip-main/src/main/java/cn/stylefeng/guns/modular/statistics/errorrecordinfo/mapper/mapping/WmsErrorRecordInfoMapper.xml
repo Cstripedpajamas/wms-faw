@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.statistics.errorrecordinfo.mapper.WmsErrorRecordInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.statistics.errorrecordinfo.entity.WmsErrorRecordInfo">
+        <id column="id" property="id" />
+        <result column="error_type" property="errorType" />
+        <result column="error_describe" property="errorDescribe" />
+        <result column="operator" property="operator" />
+        <result column="operation_time" property="operationTime" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", error_type AS "errorType", error_describe AS "errorDescribe", operator AS "operator", operation_time AS "operationTime", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.result.WmsErrorRecordInfoResult" parameterType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.params.WmsErrorRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_error_record_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.errorType != null and paramCondition.errorType != ''">
+                and error_type like CONCAT('%',#{paramCondition.errorType},'%')
+            </if>
+            <if test="paramCondition.errorDescribe != null and paramCondition.errorDescribe != ''">
+                and error_describe like CONCAT('%',#{paramCondition.errorDescribe},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.params.WmsErrorRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_error_record_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.errorType != null and paramCondition.errorType != ''">
+                and error_type like CONCAT('%',#{paramCondition.errorType},'%')
+            </if>
+            <if test="paramCondition.errorDescribe != null and paramCondition.errorDescribe != ''">
+                and error_describe like CONCAT('%',#{paramCondition.errorDescribe},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.result.WmsErrorRecordInfoResult" parameterType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.params.WmsErrorRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_error_record_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.errorType != null and paramCondition.errorType != ''">
+                and error_type like CONCAT('%',#{paramCondition.errorType},'%')
+            </if>
+            <if test="paramCondition.errorDescribe != null and paramCondition.errorDescribe != ''">
+                and error_describe like CONCAT('%',#{paramCondition.errorDescribe},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.params.WmsErrorRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_error_record_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.errorType != null and paramCondition.errorType != ''">
+                and error_type like CONCAT('%',#{paramCondition.errorType},'%')
+            </if>
+            <if test="paramCondition.errorDescribe != null and paramCondition.errorDescribe != ''">
+                and error_describe like CONCAT('%',#{paramCondition.errorDescribe},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+</mapper>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseTurnoverBindMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind">
+        <id column="id" property="id" />
+        <result column="turnover_id" property="turnoverId" />
+        <result column="lattice_code" property="latticeCode" />
+        <result column="goods_type" property="goodsType" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_id" property="materialId" />
+        <result column="material_type" property="materialType" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="m_unit" property="mUnit" />
+        <result column="material_serial_number" property="materialSerialNumber" />
+        <result column="m_batch" property="mBatch" />
+        <result column="m_number" property="mNumber" />
+        <result column="create_time" property="createTime" />
+        <result column="lattice_state" property="latticeState" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", turnover_id AS "turnoverId", lattice_code AS "latticeCode", goods_type AS "goodsType", material_type_id AS "materialTypeId", material_id AS "materialId", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_unit AS "mUnit", material_serial_number AS "materialSerialNumber", m_batch AS "mBatch", m_number AS "mNumber", create_time AS "createTime",lattice_state AS "latticeState"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id = #{paramCondition.id}
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id = #{paramCondition.turnoverId}
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id = #{paramCondition.materialId}
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+        <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+            and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+        </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+        <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+            and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+        </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+        <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+            and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+        </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
+                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.mBatch != null and paramCondition.mBatch != ''">
+                and m_batch like CONCAT('%',#{paramCondition.mBatch},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+        <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
+            and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
+        </if>
+    </select>
+
+    <select id="findByTurnoverId" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1 and turnover_id = #{paramCondition.turnoverId} limit 1
+    </select>
+
+    <select id="findListTurnover" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1 and turnover_id = #{paramCondition.turnoverId}
+    </select>
+
+    <select id="findLattice" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_turnover_bind where 1 = 1 and turnover_id = #{paramCondition.id}
+    </select>
+
+    <select id="delByTurnId">
+        delete from wms_warehouse_turnover_bind where turnover_id = #{id}
+    </select>
+    <select id="findBySKU" parameterType="string" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult">
+        select  <include refid="Base_Column_List"/>
+         from wms_warehouse_turnover_bind where 1=1 and material_sku = #{materialSku} order by id asc limit 1;
+    </select>
+
+    <select id="findTurnoverMsg" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
+        select
+          *
+        from wms_warehouse_turnover_bind AS wmb
+        LEFT JOIN wms_warehouse_turnover AS wm ON wmb.`turnover_id` = wm.`id` AND wm.`turnover_state` = '0'
+    </select>
+</mapper>

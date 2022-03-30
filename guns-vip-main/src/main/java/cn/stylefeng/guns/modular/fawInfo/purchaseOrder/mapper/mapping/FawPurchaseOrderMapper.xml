@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.mapper.FawPurchaseOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.entity.FawPurchaseOrder">
+        <id column="id" property="id" />
+        <result column="client" property="client" />
+        <result column="pur_docItem_no" property="purDocitemNo" />
+        <result column="pur_doc_no" property="purDocNo" />
+        <result column="purchase_req_no" property="purchaseReqNo" />
+        <result column="item_no" property="itemNo" />
+        <result column="pur_stock_bill_id" property="purStockBillId" />
+        <result column="buy_list_str_des" property="buyListStrDes" />
+        <result column="created_by" property="createdBy" />
+        <result column="created_date" property="createdDate" />
+        <result column="doc_date" property="docDate" />
+        <result column="estimated_price_indic" property="estimatedPriceIndic" />
+        <result column="item_delivery_date" property="itemDeliveryDate" />
+        <result column="mat_brand" property="matBrand" />
+        <result column="mtl_no" property="mtlNo" />
+        <result column="net_value" property="netValue" />
+        <result column="ord_price_unit" property="ordPriceUnit" />
+        <result column="ord_type" property="ordType" />
+        <result column="plant" property="plant" />
+        <result column="price" property="price" />
+        <result column="promotion" property="promotion" />
+        <result column="proposer_desc" property="proposerDesc" />
+        <result column="proposer_id" property="proposerId" />
+        <result column="pur_grp" property="purGrp" />
+        <result column="pur_grp_desc" property="purGrpDesc" />
+        <result column="pur_org" property="purOrg" />
+        <result column="purdocheader_id" property="purdocheaderId" />
+        <result column="purdocitem_id" property="purdocitemId" />
+        <result column="quantity" property="quantity" />
+        <result column="remark" property="remark" />
+        <result column="remark1" property="remark1" />
+        <result column="store_location" property="storeLocation" />
+        <result column="vendor_desc" property="vendorDesc" />
+        <result column="vendor_no" property="vendorNo" />
+        <result column="phone" property="phone" />
+        <result column="req_phone" property="reqPhone" />
+        <result column="plant_des" property="plantDes" />
+        <result column="store_location_des" property="storeLocationDes" />
+        <result column="sizeco_l" property="sizecoL" />
+        <result column="unit_des" property="unitDes" />
+        <result column="created_by_desc" property="createdByDesc" />
+        <result column="state_desc" property="stateDesc" />
+        <result column="di_opertype" property="diOpertype" />
+        <result column="di_batch" property="diBatch" />
+        <result column="di_updatetime" property="diUpdatetime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", client AS "client", pur_docItem_no AS "purDocitemNo", pur_doc_no AS "purDocNo", purchase_req_no AS "purchaseReqNo", item_no AS "itemNo", pur_stock_bill_id AS "purStockBillId", buy_list_str_des AS "buyListStrDes", created_by AS "createdBy", created_date AS "createdDate", doc_date AS "docDate", estimated_price_indic AS "estimatedPriceIndic", item_delivery_date AS "itemDeliveryDate", mat_brand AS "matBrand", mtl_no AS "mtlNo", net_value AS "netValue", ord_price_unit AS "ordPriceUnit", ord_type AS "ordType", plant AS "plant", price AS "price", promotion AS "promotion", proposer_desc AS "proposerDesc", proposer_id AS "proposerId", pur_grp AS "purGrp", pur_grp_desc AS "purGrpDesc", pur_org AS "purOrg", purdocheader_id AS "purdocheaderId", purdocitem_id AS "purdocitemId", quantity AS "quantity", remark AS "remark", remark1 AS "remark1", store_location AS "storeLocation", vendor_desc AS "vendorDesc", vendor_no AS "vendorNo", phone AS "phone", req_phone AS "reqPhone", plant_des AS "plantDes", store_location_des AS "storeLocationDes", sizeco_l AS "sizecoL", unit_des AS "unitDes", created_by_desc AS "createdByDesc", state_desc AS "stateDesc", di_opertype AS "diOpertype", di_batch AS "diBatch", di_updatetime AS "diUpdatetime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.result.FawPurchaseOrderResult" parameterType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_purchase_order where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.client != null and paramCondition.client != ''">
+                and client like CONCAT('%',#{paramCondition.client},'%')
+            </if>
+            <if test="paramCondition.purDocitemNo != null and paramCondition.purDocitemNo != ''">
+                and pur_docItem_no like CONCAT('%',#{paramCondition.purDocitemNo},'%')
+            </if>
+            <if test="paramCondition.purDocNo != null and paramCondition.purDocNo != ''">
+                and pur_doc_no like CONCAT('%',#{paramCondition.purDocNo},'%')
+            </if>
+            <if test="paramCondition.purchaseReqNo != null and paramCondition.purchaseReqNo != ''">
+                and purchase_req_no like CONCAT('%',#{paramCondition.purchaseReqNo},'%')
+            </if>
+            <if test="paramCondition.itemNo != null and paramCondition.itemNo != ''">
+                and item_no like CONCAT('%',#{paramCondition.itemNo},'%')
+            </if>
+            <if test="paramCondition.purStockBillId != null and paramCondition.purStockBillId != ''">
+                and pur_stock_bill_id like CONCAT('%',#{paramCondition.purStockBillId},'%')
+            </if>
+            <if test="paramCondition.buyListStrDes != null and paramCondition.buyListStrDes != ''">
+                and buy_list_str_des like CONCAT('%',#{paramCondition.buyListStrDes},'%')
+            </if>
+            <if test="paramCondition.createdBy != null and paramCondition.createdBy != ''">
+                and created_by like CONCAT('%',#{paramCondition.createdBy},'%')
+            </if>
+            <if test="paramCondition.createdDate != null and paramCondition.createdDate != ''">
+                and created_date like CONCAT('%',#{paramCondition.createdDate},'%')
+            </if>
+            <if test="paramCondition.docDate != null and paramCondition.docDate != ''">
+                and doc_date like CONCAT('%',#{paramCondition.docDate},'%')
+            </if>
+            <if test="paramCondition.estimatedPriceIndic != null and paramCondition.estimatedPriceIndic != ''">
+                and estimated_price_indic like CONCAT('%',#{paramCondition.estimatedPriceIndic},'%')
+            </if>
+            <if test="paramCondition.itemDeliveryDate != null and paramCondition.itemDeliveryDate != ''">
+                and item_delivery_date like CONCAT('%',#{paramCondition.itemDeliveryDate},'%')
+            </if>
+            <if test="paramCondition.matBrand != null and paramCondition.matBrand != ''">
+                and mat_brand like CONCAT('%',#{paramCondition.matBrand},'%')
+            </if>
+            <if test="paramCondition.mtlNo != null and paramCondition.mtlNo != ''">
+                and mtl_no like CONCAT('%',#{paramCondition.mtlNo},'%')
+            </if>
+            <if test="paramCondition.netValue != null and paramCondition.netValue != ''">
+                and net_value like CONCAT('%',#{paramCondition.netValue},'%')
+            </if>
+            <if test="paramCondition.ordPriceUnit != null and paramCondition.ordPriceUnit != ''">
+                and ord_price_unit like CONCAT('%',#{paramCondition.ordPriceUnit},'%')
+            </if>
+            <if test="paramCondition.ordType != null and paramCondition.ordType != ''">
+                and ord_type like CONCAT('%',#{paramCondition.ordType},'%')
+            </if>
+            <if test="paramCondition.plant != null and paramCondition.plant != ''">
+                and plant like CONCAT('%',#{paramCondition.plant},'%')
+            </if>
+            <if test="paramCondition.price != null and paramCondition.price != ''">
+                and price like CONCAT('%',#{paramCondition.price},'%')
+            </if>
+            <if test="paramCondition.promotion != null and paramCondition.promotion != ''">
+                and promotion like CONCAT('%',#{paramCondition.promotion},'%')
+            </if>
+            <if test="paramCondition.proposerDesc != null and paramCondition.proposerDesc != ''">
+                and proposer_desc like CONCAT('%',#{paramCondition.proposerDesc},'%')
+            </if>
+            <if test="paramCondition.proposerId != null and paramCondition.proposerId != ''">
+                and proposer_id like CONCAT('%',#{paramCondition.proposerId},'%')
+            </if>
+            <if test="paramCondition.purGrp != null and paramCondition.purGrp != ''">
+                and pur_grp like CONCAT('%',#{paramCondition.purGrp},'%')
+            </if>
+            <if test="paramCondition.purGrpDesc != null and paramCondition.purGrpDesc != ''">
+                and pur_grp_desc like CONCAT('%',#{paramCondition.purGrpDesc},'%')
+            </if>
+            <if test="paramCondition.purOrg != null and paramCondition.purOrg != ''">
+                and pur_org like CONCAT('%',#{paramCondition.purOrg},'%')
+            </if>
+            <if test="paramCondition.purdocheaderId != null and paramCondition.purdocheaderId != ''">
+                and purdocheader_id like CONCAT('%',#{paramCondition.purdocheaderId},'%')
+            </if>
+            <if test="paramCondition.purdocitemId != null and paramCondition.purdocitemId != ''">
+                and purdocitem_id like CONCAT('%',#{paramCondition.purdocitemId},'%')
+            </if>
+            <if test="paramCondition.quantity != null and paramCondition.quantity != ''">
+                and quantity like CONCAT('%',#{paramCondition.quantity},'%')
+            </if>
+            <if test="paramCondition.remark != null and paramCondition.remark != ''">
+                and remark like CONCAT('%',#{paramCondition.remark},'%')
+            </if>
+            <if test="paramCondition.remark1 != null and paramCondition.remark1 != ''">
+                and remark1 like CONCAT('%',#{paramCondition.remark1},'%')
+            </if>
+            <if test="paramCondition.storeLocation != null and paramCondition.storeLocation != ''">
+                and store_location like CONCAT('%',#{paramCondition.storeLocation},'%')
+            </if>
+            <if test="paramCondition.vendorDesc != null and paramCondition.vendorDesc != ''">
+                and vendor_desc like CONCAT('%',#{paramCondition.vendorDesc},'%')
+            </if>
+            <if test="paramCondition.vendorNo != null and paramCondition.vendorNo != ''">
+                and vendor_no like CONCAT('%',#{paramCondition.vendorNo},'%')
+            </if>
+            <if test="paramCondition.phone != null and paramCondition.phone != ''">
+                and phone like CONCAT('%',#{paramCondition.phone},'%')
+            </if>
+            <if test="paramCondition.reqPhone != null and paramCondition.reqPhone != ''">
+                and req_phone like CONCAT('%',#{paramCondition.reqPhone},'%')
+            </if>
+            <if test="paramCondition.plantDes != null and paramCondition.plantDes != ''">
+                and plant_des like CONCAT('%',#{paramCondition.plantDes},'%')
+            </if>
+            <if test="paramCondition.storeLocationDes != null and paramCondition.storeLocationDes != ''">
+                and store_location_des like CONCAT('%',#{paramCondition.storeLocationDes},'%')
+            </if>
+            <if test="paramCondition.sizecoL != null and paramCondition.sizecoL != ''">
+                and sizeco_l like CONCAT('%',#{paramCondition.sizecoL},'%')
+            </if>
+            <if test="paramCondition.unitDes != null and paramCondition.unitDes != ''">
+                and unit_des like CONCAT('%',#{paramCondition.unitDes},'%')
+            </if>
+            <if test="paramCondition.createdByDesc != null and paramCondition.createdByDesc != ''">
+                and created_by_desc like CONCAT('%',#{paramCondition.createdByDesc},'%')
+            </if>
+            <if test="paramCondition.stateDesc != null and paramCondition.stateDesc != ''">
+                and state_desc like CONCAT('%',#{paramCondition.stateDesc},'%')
+            </if>
+            <if test="paramCondition.diOpertype != null and paramCondition.diOpertype != ''">
+                and di_opertype like CONCAT('%',#{paramCondition.diOpertype},'%')
+            </if>
+            <if test="paramCondition.diBatch != null and paramCondition.diBatch != ''">
+                and di_batch like CONCAT('%',#{paramCondition.diBatch},'%')
+            </if>
+            <if test="paramCondition.diUpdatetime != null and paramCondition.diUpdatetime != ''">
+                and di_updatetime like CONCAT('%',#{paramCondition.diUpdatetime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_purchase_order where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.client != null and paramCondition.client != ''">
+                and client like CONCAT('%',#{paramCondition.client},'%')
+            </if>
+            <if test="paramCondition.purDocitemNo != null and paramCondition.purDocitemNo != ''">
+                and pur_docItem_no like CONCAT('%',#{paramCondition.purDocitemNo},'%')
+            </if>
+            <if test="paramCondition.purDocNo != null and paramCondition.purDocNo != ''">
+                and pur_doc_no like CONCAT('%',#{paramCondition.purDocNo},'%')
+            </if>
+            <if test="paramCondition.purchaseReqNo != null and paramCondition.purchaseReqNo != ''">
+                and purchase_req_no like CONCAT('%',#{paramCondition.purchaseReqNo},'%')
+            </if>
+            <if test="paramCondition.itemNo != null and paramCondition.itemNo != ''">
+                and item_no like CONCAT('%',#{paramCondition.itemNo},'%')
+            </if>
+            <if test="paramCondition.purStockBillId != null and paramCondition.purStockBillId != ''">
+                and pur_stock_bill_id like CONCAT('%',#{paramCondition.purStockBillId},'%')
+            </if>
+            <if test="paramCondition.buyListStrDes != null and paramCondition.buyListStrDes != ''">
+                and buy_list_str_des like CONCAT('%',#{paramCondition.buyListStrDes},'%')
+            </if>
+            <if test="paramCondition.createdBy != null and paramCondition.createdBy != ''">
+                and created_by like CONCAT('%',#{paramCondition.createdBy},'%')
+            </if>
+            <if test="paramCondition.createdDate != null and paramCondition.createdDate != ''">
+                and created_date like CONCAT('%',#{paramCondition.createdDate},'%')
+            </if>
+            <if test="paramCondition.docDate != null and paramCondition.docDate != ''">
+                and doc_date like CONCAT('%',#{paramCondition.docDate},'%')
+            </if>
+            <if test="paramCondition.estimatedPriceIndic != null and paramCondition.estimatedPriceIndic != ''">
+                and estimated_price_indic like CONCAT('%',#{paramCondition.estimatedPriceIndic},'%')
+            </if>
+            <if test="paramCondition.itemDeliveryDate != null and paramCondition.itemDeliveryDate != ''">
+                and item_delivery_date like CONCAT('%',#{paramCondition.itemDeliveryDate},'%')
+            </if>
+            <if test="paramCondition.matBrand != null and paramCondition.matBrand != ''">
+                and mat_brand like CONCAT('%',#{paramCondition.matBrand},'%')
+            </if>
+            <if test="paramCondition.mtlNo != null and paramCondition.mtlNo != ''">
+                and mtl_no like CONCAT('%',#{paramCondition.mtlNo},'%')
+            </if>
+            <if test="paramCondition.netValue != null and paramCondition.netValue != ''">
+                and net_value like CONCAT('%',#{paramCondition.netValue},'%')
+            </if>
+            <if test="paramCondition.ordPriceUnit != null and paramCondition.ordPriceUnit != ''">
+                and ord_price_unit like CONCAT('%',#{paramCondition.ordPriceUnit},'%')
+            </if>
+            <if test="paramCondition.ordType != null and paramCondition.ordType != ''">
+                and ord_type like CONCAT('%',#{paramCondition.ordType},'%')
+            </if>
+            <if test="paramCondition.plant != null and paramCondition.plant != ''">
+                and plant like CONCAT('%',#{paramCondition.plant},'%')
+            </if>
+            <if test="paramCondition.price != null and paramCondition.price != ''">
+                and price like CONCAT('%',#{paramCondition.price},'%')
+            </if>
+            <if test="paramCondition.promotion != null and paramCondition.promotion != ''">
+                and promotion like CONCAT('%',#{paramCondition.promotion},'%')
+            </if>
+            <if test="paramCondition.proposerDesc != null and paramCondition.proposerDesc != ''">
+                and proposer_desc like CONCAT('%',#{paramCondition.proposerDesc},'%')
+            </if>
+            <if test="paramCondition.proposerId != null and paramCondition.proposerId != ''">
+                and proposer_id like CONCAT('%',#{paramCondition.proposerId},'%')
+            </if>
+            <if test="paramCondition.purGrp != null and paramCondition.purGrp != ''">
+                and pur_grp like CONCAT('%',#{paramCondition.purGrp},'%')
+            </if>
+            <if test="paramCondition.purGrpDesc != null and paramCondition.purGrpDesc != ''">
+                and pur_grp_desc like CONCAT('%',#{paramCondition.purGrpDesc},'%')
+            </if>
+            <if test="paramCondition.purOrg != null and paramCondition.purOrg != ''">
+                and pur_org like CONCAT('%',#{paramCondition.purOrg},'%')
+            </if>
+            <if test="paramCondition.purdocheaderId != null and paramCondition.purdocheaderId != ''">
+                and purdocheader_id like CONCAT('%',#{paramCondition.purdocheaderId},'%')
+            </if>
+            <if test="paramCondition.purdocitemId != null and paramCondition.purdocitemId != ''">
+                and purdocitem_id like CONCAT('%',#{paramCondition.purdocitemId},'%')
+            </if>
+            <if test="paramCondition.quantity != null and paramCondition.quantity != ''">
+                and quantity like CONCAT('%',#{paramCondition.quantity},'%')
+            </if>
+            <if test="paramCondition.remark != null and paramCondition.remark != ''">
+                and remark like CONCAT('%',#{paramCondition.remark},'%')
+            </if>
+            <if test="paramCondition.remark1 != null and paramCondition.remark1 != ''">
+                and remark1 like CONCAT('%',#{paramCondition.remark1},'%')
+            </if>
+            <if test="paramCondition.storeLocation != null and paramCondition.storeLocation != ''">
+                and store_location like CONCAT('%',#{paramCondition.storeLocation},'%')
+            </if>
+            <if test="paramCondition.vendorDesc != null and paramCondition.vendorDesc != ''">
+                and vendor_desc like CONCAT('%',#{paramCondition.vendorDesc},'%')
+            </if>
+            <if test="paramCondition.vendorNo != null and paramCondition.vendorNo != ''">
+                and vendor_no like CONCAT('%',#{paramCondition.vendorNo},'%')
+            </if>
+            <if test="paramCondition.phone != null and paramCondition.phone != ''">
+                and phone like CONCAT('%',#{paramCondition.phone},'%')
+            </if>
+            <if test="paramCondition.reqPhone != null and paramCondition.reqPhone != ''">
+                and req_phone like CONCAT('%',#{paramCondition.reqPhone},'%')
+            </if>
+            <if test="paramCondition.plantDes != null and paramCondition.plantDes != ''">
+                and plant_des like CONCAT('%',#{paramCondition.plantDes},'%')
+            </if>
+            <if test="paramCondition.storeLocationDes != null and paramCondition.storeLocationDes != ''">
+                and store_location_des like CONCAT('%',#{paramCondition.storeLocationDes},'%')
+            </if>
+            <if test="paramCondition.sizecoL != null and paramCondition.sizecoL != ''">
+                and sizeco_l like CONCAT('%',#{paramCondition.sizecoL},'%')
+            </if>
+            <if test="paramCondition.unitDes != null and paramCondition.unitDes != ''">
+                and unit_des like CONCAT('%',#{paramCondition.unitDes},'%')
+            </if>
+            <if test="paramCondition.createdByDesc != null and paramCondition.createdByDesc != ''">
+                and created_by_desc like CONCAT('%',#{paramCondition.createdByDesc},'%')
+            </if>
+            <if test="paramCondition.stateDesc != null and paramCondition.stateDesc != ''">
+                and state_desc like CONCAT('%',#{paramCondition.stateDesc},'%')
+            </if>
+            <if test="paramCondition.diOpertype != null and paramCondition.diOpertype != ''">
+                and di_opertype like CONCAT('%',#{paramCondition.diOpertype},'%')
+            </if>
+            <if test="paramCondition.diBatch != null and paramCondition.diBatch != ''">
+                and di_batch like CONCAT('%',#{paramCondition.diBatch},'%')
+            </if>
+            <if test="paramCondition.diUpdatetime != null and paramCondition.diUpdatetime != ''">
+                and di_updatetime like CONCAT('%',#{paramCondition.diUpdatetime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.result.FawPurchaseOrderResult" parameterType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_purchase_order where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.client != null and paramCondition.client != ''">
+                and client like CONCAT('%',#{paramCondition.client},'%')
+            </if>
+            <if test="paramCondition.purDocitemNo != null and paramCondition.purDocitemNo != ''">
+                and pur_docItem_no like CONCAT('%',#{paramCondition.purDocitemNo},'%')
+            </if>
+            <if test="paramCondition.purDocNo != null and paramCondition.purDocNo != ''">
+                and pur_doc_no like CONCAT('%',#{paramCondition.purDocNo},'%')
+            </if>
+            <if test="paramCondition.purchaseReqNo != null and paramCondition.purchaseReqNo != ''">
+                and purchase_req_no like CONCAT('%',#{paramCondition.purchaseReqNo},'%')
+            </if>
+            <if test="paramCondition.itemNo != null and paramCondition.itemNo != ''">
+                and item_no like CONCAT('%',#{paramCondition.itemNo},'%')
+            </if>
+            <if test="paramCondition.purStockBillId != null and paramCondition.purStockBillId != ''">
+                and pur_stock_bill_id like CONCAT('%',#{paramCondition.purStockBillId},'%')
+            </if>
+            <if test="paramCondition.buyListStrDes != null and paramCondition.buyListStrDes != ''">
+                and buy_list_str_des like CONCAT('%',#{paramCondition.buyListStrDes},'%')
+            </if>
+            <if test="paramCondition.createdBy != null and paramCondition.createdBy != ''">
+                and created_by like CONCAT('%',#{paramCondition.createdBy},'%')
+            </if>
+            <if test="paramCondition.createdDate != null and paramCondition.createdDate != ''">
+                and created_date like CONCAT('%',#{paramCondition.createdDate},'%')
+            </if>
+            <if test="paramCondition.docDate != null and paramCondition.docDate != ''">
+                and doc_date like CONCAT('%',#{paramCondition.docDate},'%')
+            </if>
+            <if test="paramCondition.estimatedPriceIndic != null and paramCondition.estimatedPriceIndic != ''">
+                and estimated_price_indic like CONCAT('%',#{paramCondition.estimatedPriceIndic},'%')
+            </if>
+            <if test="paramCondition.itemDeliveryDate != null and paramCondition.itemDeliveryDate != ''">
+                and item_delivery_date like CONCAT('%',#{paramCondition.itemDeliveryDate},'%')
+            </if>
+            <if test="paramCondition.matBrand != null and paramCondition.matBrand != ''">
+                and mat_brand like CONCAT('%',#{paramCondition.matBrand},'%')
+            </if>
+            <if test="paramCondition.mtlNo != null and paramCondition.mtlNo != ''">
+                and mtl_no like CONCAT('%',#{paramCondition.mtlNo},'%')
+            </if>
+            <if test="paramCondition.netValue != null and paramCondition.netValue != ''">
+                and net_value like CONCAT('%',#{paramCondition.netValue},'%')
+            </if>
+            <if test="paramCondition.ordPriceUnit != null and paramCondition.ordPriceUnit != ''">
+                and ord_price_unit like CONCAT('%',#{paramCondition.ordPriceUnit},'%')
+            </if>
+            <if test="paramCondition.ordType != null and paramCondition.ordType != ''">
+                and ord_type like CONCAT('%',#{paramCondition.ordType},'%')
+            </if>
+            <if test="paramCondition.plant != null and paramCondition.plant != ''">
+                and plant like CONCAT('%',#{paramCondition.plant},'%')
+            </if>
+            <if test="paramCondition.price != null and paramCondition.price != ''">
+                and price like CONCAT('%',#{paramCondition.price},'%')
+            </if>
+            <if test="paramCondition.promotion != null and paramCondition.promotion != ''">
+                and promotion like CONCAT('%',#{paramCondition.promotion},'%')
+            </if>
+            <if test="paramCondition.proposerDesc != null and paramCondition.proposerDesc != ''">
+                and proposer_desc like CONCAT('%',#{paramCondition.proposerDesc},'%')
+            </if>
+            <if test="paramCondition.proposerId != null and paramCondition.proposerId != ''">
+                and proposer_id like CONCAT('%',#{paramCondition.proposerId},'%')
+            </if>
+            <if test="paramCondition.purGrp != null and paramCondition.purGrp != ''">
+                and pur_grp like CONCAT('%',#{paramCondition.purGrp},'%')
+            </if>
+            <if test="paramCondition.purGrpDesc != null and paramCondition.purGrpDesc != ''">
+                and pur_grp_desc like CONCAT('%',#{paramCondition.purGrpDesc},'%')
+            </if>
+            <if test="paramCondition.purOrg != null and paramCondition.purOrg != ''">
+                and pur_org like CONCAT('%',#{paramCondition.purOrg},'%')
+            </if>
+            <if test="paramCondition.purdocheaderId != null and paramCondition.purdocheaderId != ''">
+                and purdocheader_id like CONCAT('%',#{paramCondition.purdocheaderId},'%')
+            </if>
+            <if test="paramCondition.purdocitemId != null and paramCondition.purdocitemId != ''">
+                and purdocitem_id like CONCAT('%',#{paramCondition.purdocitemId},'%')
+            </if>
+            <if test="paramCondition.quantity != null and paramCondition.quantity != ''">
+                and quantity like CONCAT('%',#{paramCondition.quantity},'%')
+            </if>
+            <if test="paramCondition.remark != null and paramCondition.remark != ''">
+                and remark like CONCAT('%',#{paramCondition.remark},'%')
+            </if>
+            <if test="paramCondition.remark1 != null and paramCondition.remark1 != ''">
+                and remark1 like CONCAT('%',#{paramCondition.remark1},'%')
+            </if>
+            <if test="paramCondition.storeLocation != null and paramCondition.storeLocation != ''">
+                and store_location like CONCAT('%',#{paramCondition.storeLocation},'%')
+            </if>
+            <if test="paramCondition.vendorDesc != null and paramCondition.vendorDesc != ''">
+                and vendor_desc like CONCAT('%',#{paramCondition.vendorDesc},'%')
+            </if>
+            <if test="paramCondition.vendorNo != null and paramCondition.vendorNo != ''">
+                and vendor_no like CONCAT('%',#{paramCondition.vendorNo},'%')
+            </if>
+            <if test="paramCondition.phone != null and paramCondition.phone != ''">
+                and phone like CONCAT('%',#{paramCondition.phone},'%')
+            </if>
+            <if test="paramCondition.reqPhone != null and paramCondition.reqPhone != ''">
+                and req_phone like CONCAT('%',#{paramCondition.reqPhone},'%')
+            </if>
+            <if test="paramCondition.plantDes != null and paramCondition.plantDes != ''">
+                and plant_des like CONCAT('%',#{paramCondition.plantDes},'%')
+            </if>
+            <if test="paramCondition.storeLocationDes != null and paramCondition.storeLocationDes != ''">
+                and store_location_des like CONCAT('%',#{paramCondition.storeLocationDes},'%')
+            </if>
+            <if test="paramCondition.sizecoL != null and paramCondition.sizecoL != ''">
+                and sizeco_l like CONCAT('%',#{paramCondition.sizecoL},'%')
+            </if>
+            <if test="paramCondition.unitDes != null and paramCondition.unitDes != ''">
+                and unit_des like CONCAT('%',#{paramCondition.unitDes},'%')
+            </if>
+            <if test="paramCondition.createdByDesc != null and paramCondition.createdByDesc != ''">
+                and created_by_desc like CONCAT('%',#{paramCondition.createdByDesc},'%')
+            </if>
+            <if test="paramCondition.stateDesc != null and paramCondition.stateDesc != ''">
+                and state_desc like CONCAT('%',#{paramCondition.stateDesc},'%')
+            </if>
+            <if test="paramCondition.diOpertype != null and paramCondition.diOpertype != ''">
+                and di_opertype like CONCAT('%',#{paramCondition.diOpertype},'%')
+            </if>
+            <if test="paramCondition.diBatch != null and paramCondition.diBatch != ''">
+                and di_batch like CONCAT('%',#{paramCondition.diBatch},'%')
+            </if>
+            <if test="paramCondition.diUpdatetime != null and paramCondition.diUpdatetime != ''">
+                and di_updatetime like CONCAT('%',#{paramCondition.diUpdatetime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_purchase_order where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.client != null and paramCondition.client != ''">
+                and client like CONCAT('%',#{paramCondition.client},'%')
+            </if>
+            <if test="paramCondition.purDocitemNo != null and paramCondition.purDocitemNo != ''">
+                and pur_docItem_no like CONCAT('%',#{paramCondition.purDocitemNo},'%')
+            </if>
+            <if test="paramCondition.purDocNo != null and paramCondition.purDocNo != ''">
+                and pur_doc_no like CONCAT('%',#{paramCondition.purDocNo},'%')
+            </if>
+            <if test="paramCondition.purchaseReqNo != null and paramCondition.purchaseReqNo != ''">
+                and purchase_req_no like CONCAT('%',#{paramCondition.purchaseReqNo},'%')
+            </if>
+            <if test="paramCondition.itemNo != null and paramCondition.itemNo != ''">
+                and item_no like CONCAT('%',#{paramCondition.itemNo},'%')
+            </if>
+            <if test="paramCondition.purStockBillId != null and paramCondition.purStockBillId != ''">
+                and pur_stock_bill_id like CONCAT('%',#{paramCondition.purStockBillId},'%')
+            </if>
+            <if test="paramCondition.buyListStrDes != null and paramCondition.buyListStrDes != ''">
+                and buy_list_str_des like CONCAT('%',#{paramCondition.buyListStrDes},'%')
+            </if>
+            <if test="paramCondition.createdBy != null and paramCondition.createdBy != ''">
+                and created_by like CONCAT('%',#{paramCondition.createdBy},'%')
+            </if>
+            <if test="paramCondition.createdDate != null and paramCondition.createdDate != ''">
+                and created_date like CONCAT('%',#{paramCondition.createdDate},'%')
+            </if>
+            <if test="paramCondition.docDate != null and paramCondition.docDate != ''">
+                and doc_date like CONCAT('%',#{paramCondition.docDate},'%')
+            </if>
+            <if test="paramCondition.estimatedPriceIndic != null and paramCondition.estimatedPriceIndic != ''">
+                and estimated_price_indic like CONCAT('%',#{paramCondition.estimatedPriceIndic},'%')
+            </if>
+            <if test="paramCondition.itemDeliveryDate != null and paramCondition.itemDeliveryDate != ''">
+                and item_delivery_date like CONCAT('%',#{paramCondition.itemDeliveryDate},'%')
+            </if>
+            <if test="paramCondition.matBrand != null and paramCondition.matBrand != ''">
+                and mat_brand like CONCAT('%',#{paramCondition.matBrand},'%')
+            </if>
+            <if test="paramCondition.mtlNo != null and paramCondition.mtlNo != ''">
+                and mtl_no like CONCAT('%',#{paramCondition.mtlNo},'%')
+            </if>
+            <if test="paramCondition.netValue != null and paramCondition.netValue != ''">
+                and net_value like CONCAT('%',#{paramCondition.netValue},'%')
+            </if>
+            <if test="paramCondition.ordPriceUnit != null and paramCondition.ordPriceUnit != ''">
+                and ord_price_unit like CONCAT('%',#{paramCondition.ordPriceUnit},'%')
+            </if>
+            <if test="paramCondition.ordType != null and paramCondition.ordType != ''">
+                and ord_type like CONCAT('%',#{paramCondition.ordType},'%')
+            </if>
+            <if test="paramCondition.plant != null and paramCondition.plant != ''">
+                and plant like CONCAT('%',#{paramCondition.plant},'%')
+            </if>
+            <if test="paramCondition.price != null and paramCondition.price != ''">
+                and price like CONCAT('%',#{paramCondition.price},'%')
+            </if>
+            <if test="paramCondition.promotion != null and paramCondition.promotion != ''">
+                and promotion like CONCAT('%',#{paramCondition.promotion},'%')
+            </if>
+            <if test="paramCondition.proposerDesc != null and paramCondition.proposerDesc != ''">
+                and proposer_desc like CONCAT('%',#{paramCondition.proposerDesc},'%')
+            </if>
+            <if test="paramCondition.proposerId != null and paramCondition.proposerId != ''">
+                and proposer_id like CONCAT('%',#{paramCondition.proposerId},'%')
+            </if>
+            <if test="paramCondition.purGrp != null and paramCondition.purGrp != ''">
+                and pur_grp like CONCAT('%',#{paramCondition.purGrp},'%')
+            </if>
+            <if test="paramCondition.purGrpDesc != null and paramCondition.purGrpDesc != ''">
+                and pur_grp_desc like CONCAT('%',#{paramCondition.purGrpDesc},'%')
+            </if>
+            <if test="paramCondition.purOrg != null and paramCondition.purOrg != ''">
+                and pur_org like CONCAT('%',#{paramCondition.purOrg},'%')
+            </if>
+            <if test="paramCondition.purdocheaderId != null and paramCondition.purdocheaderId != ''">
+                and purdocheader_id like CONCAT('%',#{paramCondition.purdocheaderId},'%')
+            </if>
+            <if test="paramCondition.purdocitemId != null and paramCondition.purdocitemId != ''">
+                and purdocitem_id like CONCAT('%',#{paramCondition.purdocitemId},'%')
+            </if>
+            <if test="paramCondition.quantity != null and paramCondition.quantity != ''">
+                and quantity like CONCAT('%',#{paramCondition.quantity},'%')
+            </if>
+            <if test="paramCondition.remark != null and paramCondition.remark != ''">
+                and remark like CONCAT('%',#{paramCondition.remark},'%')
+            </if>
+            <if test="paramCondition.remark1 != null and paramCondition.remark1 != ''">
+                and remark1 like CONCAT('%',#{paramCondition.remark1},'%')
+            </if>
+            <if test="paramCondition.storeLocation != null and paramCondition.storeLocation != ''">
+                and store_location like CONCAT('%',#{paramCondition.storeLocation},'%')
+            </if>
+            <if test="paramCondition.vendorDesc != null and paramCondition.vendorDesc != ''">
+                and vendor_desc like CONCAT('%',#{paramCondition.vendorDesc},'%')
+            </if>
+            <if test="paramCondition.vendorNo != null and paramCondition.vendorNo != ''">
+                and vendor_no like CONCAT('%',#{paramCondition.vendorNo},'%')
+            </if>
+            <if test="paramCondition.phone != null and paramCondition.phone != ''">
+                and phone like CONCAT('%',#{paramCondition.phone},'%')
+            </if>
+            <if test="paramCondition.reqPhone != null and paramCondition.reqPhone != ''">
+                and req_phone like CONCAT('%',#{paramCondition.reqPhone},'%')
+            </if>
+            <if test="paramCondition.plantDes != null and paramCondition.plantDes != ''">
+                and plant_des like CONCAT('%',#{paramCondition.plantDes},'%')
+            </if>
+            <if test="paramCondition.storeLocationDes != null and paramCondition.storeLocationDes != ''">
+                and store_location_des like CONCAT('%',#{paramCondition.storeLocationDes},'%')
+            </if>
+            <if test="paramCondition.sizecoL != null and paramCondition.sizecoL != ''">
+                and sizeco_l like CONCAT('%',#{paramCondition.sizecoL},'%')
+            </if>
+            <if test="paramCondition.unitDes != null and paramCondition.unitDes != ''">
+                and unit_des like CONCAT('%',#{paramCondition.unitDes},'%')
+            </if>
+            <if test="paramCondition.createdByDesc != null and paramCondition.createdByDesc != ''">
+                and created_by_desc like CONCAT('%',#{paramCondition.createdByDesc},'%')
+            </if>
+            <if test="paramCondition.stateDesc != null and paramCondition.stateDesc != ''">
+                and state_desc like CONCAT('%',#{paramCondition.stateDesc},'%')
+            </if>
+            <if test="paramCondition.diOpertype != null and paramCondition.diOpertype != ''">
+                and di_opertype like CONCAT('%',#{paramCondition.diOpertype},'%')
+            </if>
+            <if test="paramCondition.diBatch != null and paramCondition.diBatch != ''">
+                and di_batch like CONCAT('%',#{paramCondition.diBatch},'%')
+            </if>
+            <if test="paramCondition.diUpdatetime != null and paramCondition.diUpdatetime != ''">
+                and di_updatetime like CONCAT('%',#{paramCondition.diUpdatetime},'%')
+            </if>
+    </select>
+
+    <insert id="insertListBatch">
+        insert into faw_purchase_order (
+        client,pur_docItem_no,pur_doc_no,purchase_req_no,item_no,pur_stock_bill_id,buy_list_str_des,created_by,created_date,doc_date,estimated_price_indic,item_delivery_date,mat_brand,mtl_no,net_value,ord_price_unit,ord_type,plant,price,promotion,proposer_desc,proposer_id,pur_grp,pur_grp_desc,pur_org,purdocheader_id,purdocitem_id,quantity,remark,remark1,store_location,vendor_desc,vendor_no,phone,req_phone,plant_des,store_location_des,sizeco_l,unit_des,created_by_desc,state_desc,di_opertype,di_batch,di_updatetime
+        )
+        values
+        <foreach collection="list" item="paramCondition" index="index" separator=",">
+            (#{paramCondition.client},#{paramCondition.purDocitemNo},#{paramCondition.purDocNo},#{paramCondition.purchaseReqNo},#{paramCondition.itemNo},#{paramCondition.purStockBillId},#{paramCondition.buyListStrDes},#{paramCondition.createdBy},#{paramCondition.createdDate},#{paramCondition.docDate},#{paramCondition.estimatedPriceIndic},#{paramCondition.itemDeliveryDate},#{paramCondition.matBrand},#{paramCondition.mtlNo},#{paramCondition.netValue},#{paramCondition.ordPriceUnit},#{paramCondition.ordType},#{paramCondition.plant},#{paramCondition.price},#{paramCondition.promotion},#{paramCondition.proposerDesc},#{paramCondition.proposerId},#{paramCondition.purGrp},#{paramCondition.purGrpDesc},#{paramCondition.purOrg},#{paramCondition.purdocheaderId},#{paramCondition.purdocitemId},#{paramCondition.quantity},#{paramCondition.remark},#{paramCondition.remark1},#{paramCondition.storeLocation},#{paramCondition.vendorDesc},#{paramCondition.vendorNo},#{paramCondition.phone},#{paramCondition.reqPhone},#{paramCondition.plantDes},#{paramCondition.storeLocationDes},#{paramCondition.sizecoL},#{paramCondition.unitDes},#{paramCondition.createdByDesc},#{paramCondition.stateDesc},#{paramCondition.diOpertype},#{paramCondition.diBatch},#{paramCondition.diUpdatetime})
+        </foreach>
+    </insert>
+
+</mapper>
