@@ -930,7 +930,8 @@ public class OneTypeCabinetService {
     // 立库周转箱 - 周转箱信息表
     public ResponseData warehouseTurnover(String turnoverNumber) {
         // 1. 获取周转箱的信息 2. 获取周转箱格口的信息
-        WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("turnover_number",turnoverNumber));
+//        WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("turnover_number",turnoverNumber));
+        WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("barcode",turnoverNumber));
         WmsWarehouseTurnoverBindParam wms = new WmsWarehouseTurnoverBindParam();
         wms.setTurnoverId(wmsWarehouseTurnover.getId().toString());
         List<WmsWarehouseTurnoverBindResult> listBySpec = wmsWarehouseTurnoverBindService.findListBySpec(wms);

@@ -60,4 +60,5 @@ public interface WmsWarehouseStockMapper extends BaseMapper<WmsWarehouseStock> {
      */
     List<WmsWarehouseStock> findByJoinOn();
 
+    WmsWarehouseStockResult findByTurnoverId(@Param("turnoverId")String turnoverId);
 }

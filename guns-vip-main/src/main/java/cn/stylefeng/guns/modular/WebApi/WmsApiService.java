@@ -47,7 +47,7 @@ public class WmsApiService {
     private static final String runBatchUrl = "http://127.0.0.1:8099/faw/WmsApi/Receive/test";
 
     // 立库 基本url地址
-    private static final  String requestWarehouse = "http://192.168.26.174:8092/PHS";
+    private static final  String requestWarehouse = "http://192.168.26.96:8092/PHS";
     // 立库 入库申请
     private static final  String inWarehouseReq = requestWarehouse+"/Inbound";
     // 立库 出库申请

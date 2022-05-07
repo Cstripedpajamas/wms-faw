@@ -69,6 +69,11 @@ public class WmsWarehouseStockServiceImpl extends ServiceImpl<WmsWarehouseStockM
         return this.baseMapper.findByJoinOn();
     }
 
+    @Override
+    public WmsWarehouseStockResult findByTurnoverId(String id) {
+        return this.baseMapper.findByTurnoverId(id);
+    }
+
     private Serializable getKey(WmsWarehouseStockParam param){
         return param.getId();
     }

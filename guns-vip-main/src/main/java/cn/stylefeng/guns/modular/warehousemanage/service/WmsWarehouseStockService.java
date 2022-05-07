@@ -69,4 +69,5 @@ public interface WmsWarehouseStockService extends IService<WmsWarehouseStock> {
 
     List<WmsWarehouseStock> findByJoinOn();
 
+    WmsWarehouseStockResult findByTurnoverId(String id);
 }

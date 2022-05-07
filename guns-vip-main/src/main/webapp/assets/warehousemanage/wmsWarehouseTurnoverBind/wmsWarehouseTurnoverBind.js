@@ -42,7 +42,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsWarehouseTurnoverBind.search = function () {
         var queryData = {};
-        queryData['latticeCode'] = $("#condition").val();
+        queryData['turnoverId'] = $("#condition").val();
         table.reload(WmsWarehouseTurnoverBind.tableId, {
             where: queryData, page: {curr: 1}
         });

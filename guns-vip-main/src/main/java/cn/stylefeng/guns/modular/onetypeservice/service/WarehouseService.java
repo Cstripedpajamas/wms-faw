@@ -37,6 +37,7 @@ import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
@@ -179,9 +180,12 @@ public class WarehouseService {
     }
 
     // 领用 - wms出库完成 回调
-    public void claimCallbackComplete(String messageId, String locaNumber, String barCode) {
+    public void claimCallbackComplete(String messageId, String barCode) {
         WmsWarehouseTaskOut wmsWarehouseTaskOut = wmsWarehouseTaskOutService.getOne(new QueryWrapper<WmsWarehouseTaskOut>().eq("message_id", messageId));
-        wmsWarehouseTaskOut.setLocaNumber(locaNumber); // 出库仓库编号
+        // todo 获取仓库编号 条码查周转箱id ,周转箱id 查仓库编号
+        WmsWarehouseTurnoverResult turnoverResult = wmsWarehouseTurnoverService.findByBarCode(barCode);
+        WmsWarehouseStockResult stock =  wmsWarehouseStockService.findByTurnoverId(turnoverResult.getId().toString());
+        wmsWarehouseTaskOut.setLocaNumber(stock.getLocaNumber()); // 出库仓库编号
         WmsWarehouseTurnoverResult wm =   wmsWarehouseTurnoverService.findByBarCode(barCode);
         wmsWarehouseTaskOut.setTurnoverNumber(wm.getTurnoverNumber()); // 出库周转箱编号
         wmsWarehouseTaskOut.setBarcode(barCode); // 出库周转箱条码
@@ -192,7 +196,7 @@ public class WarehouseService {
         wmsWarehouseTaskOutService.update(wmsWarehouseTaskOutParam); // 更新出库任务标识
 
         // 查询库位信息
-        WmsWarehouseStock wmsWarehouseStock = wmsWarehouseStockService.getOne(new QueryWrapper<WmsWarehouseStock>().eq("loca_number", locaNumber));
+        WmsWarehouseStock wmsWarehouseStock = wmsWarehouseStockService.getOne(new QueryWrapper<WmsWarehouseStock>().eq("loca_number", stock.getLocaNumber()));
 
         // 查询库位绑定的周转箱信息
         WmsWarehouseTurnover turnover = wmsWarehouseTurnoverService.getById(wmsWarehouseStock.getTurnoverId());
@@ -235,7 +239,7 @@ public class WarehouseService {
             WmsWarehouseReplenishmentTaskParam replenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
             ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, replenishmentTaskParam);
             wmsWarehouseReplenishmentTaskService.update(replenishmentTaskParam);
-            updateWarehouseStock(wmsWarehouseStock);// 3.更新库位信息为空
+            updateWarehouseStock(wmsWarehouseStock);// 3.更新库位信息为空1
             updateTurnoverToEmpty(turnover);// 4.更新周转箱信息
             toolClaimModel.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
 
@@ -429,10 +433,10 @@ public class WarehouseService {
         Map<String, Object> map = new HashMap<>();
         map.put("OutfeedId", messageId); // 消息识别id
         map.put("Type", Byte.parseByte("3")); // 出仓类型
-        map.put("BoxType", 2); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+        map.put("BoxType", 1); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
         map.put("LatticeType", 1); // 格口类型 A 多格口 B 单个口
         map.put("Sku","EmptyBox"); // 物料sku
-        map.put("Batch","1"); // 批次
+        map.put("Batch","2"); // 批次
         map.put("Qty",1); // 数量
         map.put("SortingPosition","AH1-PLA-A12"); // 分拣工位 A人工 B自动
         log.info("出库请求参数为{}",map);
@@ -484,14 +488,16 @@ public class WarehouseService {
             for (WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBindResult : bindResultList) {
                 if (wmsWarehouseTurnoverBindResult.getLatticeState().equals("1")) {
                     typeStr = wmsWarehouseTurnoverBindResult.getGoodsType(); // 获取货物类型
+                    break;
                 }
             }
             if (StateEnum.ONE.getState().equals(typeStr)) {
                 wmsWarehouseTaskIn.setGoodsType(ApplyType.A.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
-            } else {
+            } else if (StateEnum.TWO.getState().equals(typeStr)){
                 wmsWarehouseTaskIn.setGoodsType(ApplyType.B.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
+            } else {
+                wmsWarehouseTaskIn.setGoodsType(ApplyType.C.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
             }
-            wmsWarehouseTaskIn.setGoodsType(ApplyType.C.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
         }
         wmsWarehouseTaskIn.setReqTag(StateEnum.ONE.getState());//请求标记（0初始 1请求）
         wmsWarehouseTaskIn.setResStatus(StateEnum.ONE.getState());//结果状态（0初始 1正在执行 2任务完成 3任务失败）
@@ -1217,11 +1223,12 @@ public class WarehouseService {
                 map.put("OutfeedId", messageId); // 消息识别id
                 map.put("Type", Byte.parseByte(initMap.get(wmsWarehouseTaskOut.getGoodsType()))); // 出仓类型(A工具/B备品备件/C空周转箱)
 //                map.put("Type", Byte.parseByte("2")); // 出仓类型(A工具/B备品备件/C空周转箱)
-                map.put("BoxType", initMap.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+//                map.put("BoxType", initMap.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+                map.put("BoxType", "1"); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
                 map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 1 : 4); // 格口类型 A 多格口 B 单个口
                 map.put("Sku",wmsWarehouseTaskOut.getMaterialSku()); // 物料sku
-//                map.put("Sku","EmptyBox"); // 物料sku
-                map.put("Batch",wmsWarehouseTaskOut.getmBatch()); // 批次
+//                map.put("Batch",wmsWarehouseTaskOut.getmBatch()); // 批次
+                map.put("Batch","2"); // 批次
                 map.put("Qty",Integer.parseInt(wmsWarehouseTaskOut.getmNumber())); // 数量
                 map.put("SortingPosition", Objects.equals("A", wmsWarehouseTaskOut.getSortingInfo()) ?"AH1-PLA-A12":"AH1-PLA-A50"); // 分拣工位 A人工 B自动
                 log.info("出库请求参数为{}",map);
