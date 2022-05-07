@@ -37,11 +37,10 @@ public class WarehouseApiCallbackController {
     public ResponseData claimOutCallback(@RequestBody String str){
         JSONObject jsonObject = JSONObject.parseObject(str);
         String messageId = jsonObject.getString("messageId");
-        String locaNumber = jsonObject.getString("locaNumber");
         String turnoverNumber = jsonObject.getString("turnoverNumber");
         String status = jsonObject.getString("status");
         String errMsg = jsonObject.getString("errMsg");
-        log.info("出库结果:流程单号:{},库位信息:{},周转箱条码:{},出库状态:{},异常信息:{}",messageId,locaNumber,turnoverNumber,status,errMsg);
+        log.info("出库结果:流程单号:{},周转箱条码:{},出库状态:{},异常信息:{}",messageId,turnoverNumber,status,errMsg);
         warehouseService.claimCallbackComplete(messageId,turnoverNumber);
         return ResponseData.success();
     }

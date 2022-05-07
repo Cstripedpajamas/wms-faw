@@ -77,7 +77,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsWarehouseTaskOut.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['messageId'] = $("#condition").val();
         table.reload(WmsWarehouseTaskOut.tableId, {
             where: queryData, page: {curr: 1}
         });

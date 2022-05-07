@@ -38,7 +38,7 @@ import java.util.Map;
 @Component
 public class ListeningApply implements CommandLineRunner {
 
-    private static boolean kg=false;
+    private static boolean kg=true;
 
     @Autowired
     private WmsReturnApplyService wmsReturnApplyService;

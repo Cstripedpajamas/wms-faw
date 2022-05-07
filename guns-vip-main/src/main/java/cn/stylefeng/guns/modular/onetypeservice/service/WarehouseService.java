@@ -41,6 +41,7 @@ import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockR
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
+import cn.stylefeng.guns.print.ZplPrinter;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
@@ -58,6 +59,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static cn.stylefeng.guns.print.ZplPrinterTest.printFawTroue;
+
 /**
  * Created by li wen ya on 2021/11/12
  */
@@ -66,6 +69,9 @@ import java.util.concurrent.Executors;
 public class WarehouseService {
 
     private ExecutorService cachedThreadPool = Executors.newFixedThreadPool(2);
+
+    // 打印机
+    static ZplPrinter p = new ZplPrinter("\\\\192.168.26.96\\ZDesigner ZD888-203dpi ZPL");
 
     // 备品备件补货任务缓存
     public static Map<String, Object> replenishmentMap = new ConcurrentHashMap<>();
@@ -791,6 +797,9 @@ public class WarehouseService {
         System.out.println(materialSerialNumbers.length);
         for (String number : materialSerialNumbers) {
             System.out.println(number);
+            p.resetZpl();//清除
+            printFawTroue(p,number); // 工具条码
+            p.resetZpl();
         }
     }
 
