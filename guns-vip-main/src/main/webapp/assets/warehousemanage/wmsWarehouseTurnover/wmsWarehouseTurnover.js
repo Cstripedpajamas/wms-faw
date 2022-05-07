@@ -20,7 +20,7 @@ layui.use(['table', 'admin', 'ax', 'func','form','upload'], function () {
     WmsWarehouseTurnover.initColumn = function () {
         return [[
             {type: 'checkbox'},
-            {field: 'id', hide: true, title: '记录ID'},
+            {field: 'id', hide: false, title: '记录ID'},
             {field: 'turnoverNumber', sort: true, title: '周转箱编号',minWidth: 160},
             {field: 'turnoverType', sort: true, title: '周转箱类型',templet: '#turnoverTypeTpl',minWidth: 120},
             {field: 'barcode', sort: true, title: '条码信息',minWidth: 120},

@@ -137,7 +137,7 @@
                 and id like CONCAT('%',#{paramCondition.id},'%')
             </if>
             <if test="paramCondition.turnoverId != null and paramCondition.turnoverId != ''">
-                and turnover_id like CONCAT('%',#{paramCondition.turnoverId},'%')
+                and turnover_id = #{paramCondition.turnoverId}
             </if>
             <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
                 and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
