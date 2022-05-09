@@ -440,7 +440,7 @@ public class WarehouseService {
         map.put("OutfeedId", messageId); // 消息识别id
         map.put("Type", Byte.parseByte("3")); // 出仓类型
         map.put("BoxType", 1); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
-        map.put("LatticeType", 1); // 格口类型 A 多格口 B 单个口
+        map.put("LatticeType", 4); // 格口类型 1 单格口 4 多格口
         map.put("Sku","EmptyBox"); // 物料sku
         map.put("Batch","2"); // 批次
         map.put("Qty",1); // 数量
@@ -1256,7 +1256,7 @@ public class WarehouseService {
                 map.put("Type", Byte.parseByte(initMap.get(wmsWarehouseTaskIn.getGoodsType()))); // 入仓类型(A工具/B备品备件/C空周转箱)
                 map.put("BoxType",Integer.parseInt(initMap.get(wmsWarehouseTaskIn.getTurnoverType()))); // 周转箱类型(A 小 B 中 C 大)
                 map.put("BoxCode", wmsWarehouseTaskIn.gettBarcode()); // 周转箱编号
-                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskIn.getTurnoverMouthQuality()) > 1 ? 1 : 4); // 格口类型 A 多格口 B 单个口
+                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskIn.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 A 多格口 B 单个口
 
 //                ----------------------------------------
                 List<Map<String, Object>> list = new ArrayList<>();
