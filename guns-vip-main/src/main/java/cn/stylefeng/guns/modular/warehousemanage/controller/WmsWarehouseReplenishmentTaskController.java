@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.warehousemanage.controller;
 
+import cn.stylefeng.guns.base.auth.context.LoginContextHolder;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.onetypeservice.generatorcode.Code;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseReplenishmentTask;
@@ -74,6 +75,7 @@ public class WmsWarehouseReplenishmentTaskController extends BaseController {
     @ResponseBody
     public ResponseData addItem(WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam) {
         wmsWarehouseReplenishmentTaskParam.setTaskNumber(sparePartCode.createCode("0001"));
+        wmsWarehouseReplenishmentTaskParam.setOperator(LoginContextHolder.getContext().getUser().getName());
         this.wmsWarehouseReplenishmentTaskService.add(wmsWarehouseReplenishmentTaskParam);
         return ResponseData.success();
     }

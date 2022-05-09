@@ -48,5 +48,28 @@ layui.use(['form', 'admin', 'ax'], function () {
 
         return false;
     });
+    $("#materialName").focus(function () {
+        layer.open({
+            type: 2,
+            title: '选择补货类型',
+            area: ['800px', '500px'],
+            content: Feng.ctxPath + '/wmsMaterialSpareParts/tip',
+            end: function () {
+                var info = $("#parentIframe").val();
+                if (info != "") {
+                    var tempList = eval(info);
+                    console.log(tempList)
+                    $("#materialTypeId").val(tempList[0].materialTypeId);
+                    $("#materialType").val(tempList[0].materialType);
+                    $("#materialId").val(tempList[0].id);
+                    $("#materialName").val(tempList[0].materialName);
+                    $("#materialSku").val(tempList[0].materialSku);
+                    $("#mBatch").val(tempList[0].mBatch);
+                    $("#mUnit").val(tempList[0].mUnit);
+                    $("#parentIframe").val("");
+                }
+            }
+        });
+    });
 
 });

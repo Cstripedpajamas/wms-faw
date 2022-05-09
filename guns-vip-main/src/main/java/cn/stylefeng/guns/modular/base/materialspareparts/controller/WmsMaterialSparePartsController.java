@@ -38,6 +38,11 @@ public class WmsMaterialSparePartsController extends BaseController {
         return PREFIX + "/wmsMaterialSpareParts.html";
     }
 
+    @RequestMapping("/tip")
+    public String tip() {
+        return PREFIX + "/wmsMaterialSpareParts_tip.html";
+    }
+
     /**
      * 新增页面
      *
