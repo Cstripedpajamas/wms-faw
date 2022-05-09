@@ -170,7 +170,8 @@
         `type` as "type",
         case `type` when 1 then "工具" else "备品备件" end as typeEx,
         material_name as "materialName",
-        material_sku as "materialSku"
+        material_sku as "materialSku",
+        sort_type as "sortType"
         from wms_material_type where 1=1
         and id = #{id};
     </select>

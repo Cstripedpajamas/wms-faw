@@ -1241,7 +1241,10 @@ public class OneTypeCabinetService {
             wmsWarehouseToolUseTaskService.update(toolUseTask,new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number",modify.getTaskNumber()));
             toolClaimModel.setNumber(StateEnum.ONE.getState());// 分拣数量
         } else {// 备品备件
+
+            // 周转箱绑定数量(单个格口的数量)
             Integer value = Integer.valueOf(bind.getmNumber());
+            // 分拣数量
             Integer data = Integer.valueOf(modify.getNumber());
             Integer valueNew = value - data;
             if(valueNew < 0){

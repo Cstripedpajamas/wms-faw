@@ -18,7 +18,7 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
      */
     WmsMaterialSpareParts.initColumn = function () {
         return [[
-            {type: 'checkbox'},
+            {type: 'radio'},
             {field: 'id', hide: true, title: '记录ID'},
             {field: 'materialTypeId', hide: true, sort: true, title: '物料类型ID'},
             {field: 'materialType', sort: true, title: '物料类型'},

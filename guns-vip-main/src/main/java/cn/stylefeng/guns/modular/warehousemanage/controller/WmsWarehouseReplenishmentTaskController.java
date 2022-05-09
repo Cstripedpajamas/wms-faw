@@ -2,6 +2,8 @@ package cn.stylefeng.guns.modular.warehousemanage.controller;
 
 import cn.stylefeng.guns.base.auth.context.LoginContextHolder;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
+import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.onetypeservice.generatorcode.Code;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseReplenishmentTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseReplenishmentTaskParam;
@@ -28,6 +30,9 @@ public class WmsWarehouseReplenishmentTaskController extends BaseController {
 
     @Autowired
     private Code sparePartCode;
+
+    @Autowired
+    private WmsMaterialTypeService wmsMaterialTypeService;
 
     @Autowired
     private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
@@ -75,6 +80,10 @@ public class WmsWarehouseReplenishmentTaskController extends BaseController {
     @ResponseBody
     public ResponseData addItem(WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam) {
         wmsWarehouseReplenishmentTaskParam.setTaskNumber(sparePartCode.createCode("0001"));
+
+        // 分拣类型
+        WmsMaterialTypeResult byId = wmsMaterialTypeService.findById(wmsWarehouseReplenishmentTaskParam.getMaterialTypeId());
+        wmsWarehouseReplenishmentTaskParam.setSortingType(byId.getSortType());
         wmsWarehouseReplenishmentTaskParam.setOperator(LoginContextHolder.getContext().getUser().getName());
         this.wmsWarehouseReplenishmentTaskService.add(wmsWarehouseReplenishmentTaskParam);
         return ResponseData.success();
