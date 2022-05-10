@@ -119,4 +119,9 @@ public class WmsWarehouseTaskInResult implements Serializable {
      */
     private Date dataTime;
 
+    /**
+     * 入仓位置
+     * */
+    private String sortingInfo;
+
 }

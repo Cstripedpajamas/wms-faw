@@ -120,6 +120,11 @@ public class WmsWarehouseTaskInParam implements Serializable, BaseValidatingPara
      */
     private Date dataTime;
 
+    /**
+     * 入仓位置
+     * */
+    private String sortingInfo;
+
     @Override
     public String checkParam() {
         return null;

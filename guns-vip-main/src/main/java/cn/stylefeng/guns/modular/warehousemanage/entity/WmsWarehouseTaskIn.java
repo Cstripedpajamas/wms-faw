@@ -160,6 +160,20 @@ public class WmsWarehouseTaskIn implements Serializable {
     @TableField("data_time")
     private Date dataTime;
 
+    /**
+     * 入仓位置
+     * */
+    @ApiModelProperty(value = "入仓位置")
+    @TableField("sorting_info")
+    private String sortingInfo;
+
+    public String getSortingInfo() {
+        return sortingInfo;
+    }
+
+    public void setSortingInfo(String sortingInfo) {
+        this.sortingInfo = sortingInfo;
+    }
 
     public Long getId() {
         return id;
@@ -212,6 +226,7 @@ public class WmsWarehouseTaskIn implements Serializable {
                 ", createTime=" + createTime +
                 ", reqTime=" + reqTime +
                 ", dataTime=" + dataTime +
+                ", sortingInfo='" + sortingInfo + '\'' +
                 '}';
     }
 

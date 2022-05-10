@@ -51,6 +51,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
             // {field: 'bLatticeMBatch', sort: true, title: '批次'},
             // {field: 'bLatticeMNumber', sort: true, title: '数量'},
             {field: 'turnoverMouthQuality', sort: true, title: '周转箱格口数量'},
+            {field: 'sortingInfo', sort: true, title: '分拣类型'},
             {field: 'mark', sort: true, title: '备注'},
             {field: 'spareField', sort: true, title: '备用字段'},
             {field: 'reqTag', sort: true, title: '请求标记',templet: '#reqTagTpl'},

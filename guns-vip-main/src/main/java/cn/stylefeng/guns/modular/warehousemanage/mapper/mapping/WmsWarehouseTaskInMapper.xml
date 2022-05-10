@@ -24,12 +24,13 @@
         <result column="mark" property="mark" />
         <result column="spare_field" property="spareField" />
         <result column="turnover_mouth_quality" property="turnoverMouthQuality" />
+        <result column="sorting_info" property="sortingInfo" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id AS "id", message_id AS "messageId", order_type AS "orderType", task_mg AS "taskMg", goods_type AS "goodsType", turnover_type AS "turnoverType", turnover_number AS "turnoverNumber", t_barcode AS "tBarcode",req_tag AS "reqTag", req_status AS "reqStatus", res_tag AS "resTag", res_status AS "resStatus", loca_number AS "locaNumber", task_feedback AS "taskFeedback", create_time AS "createTime", req_time AS "reqTime", data_time AS "dataTime",
-        mark AS "mark",spare_field AS "spareField",turnover_mouth_quality AS "turnoverMouthQuality"
+        mark AS "mark",spare_field AS "spareField",turnover_mouth_quality AS "turnoverMouthQuality",sorting_info AS "sortingInfo"
     </sql>
 
 
