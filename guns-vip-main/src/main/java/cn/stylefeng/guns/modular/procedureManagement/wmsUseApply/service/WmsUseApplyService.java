@@ -70,4 +70,5 @@ public interface WmsUseApplyService extends IService<WmsUseApply> {
 
     WmsUseApplyResult findById(String useRequestId);
 
+    LayuiPageInfo findPageBySpec2(WmsUseApplyParam wmsUseApplyParam);
 }

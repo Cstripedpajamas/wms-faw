@@ -54,6 +54,14 @@
         </if>
             and process_type = 'B'
     </select>
+    <select id="customPageList2" resultType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.result.WmsUseApplyResult" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam" >
+        select
+        <include refid="Base_Column_List"/>
+        from wms_use_apply where 1 = 1
+        <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
+            and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
+        </if>
+    </select>
 
     <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
         select

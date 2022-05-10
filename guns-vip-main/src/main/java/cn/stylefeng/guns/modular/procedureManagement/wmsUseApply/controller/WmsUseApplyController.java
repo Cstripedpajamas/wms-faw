@@ -113,7 +113,7 @@ public class WmsUseApplyController extends BaseController {
     }
 
     /**
-     * 查询列表
+     * 查询指定员工列表
      *
      * @author ll
      * @Date 2021-11-01
@@ -122,6 +122,15 @@ public class WmsUseApplyController extends BaseController {
     @RequestMapping("/list")
     public LayuiPageInfo list(WmsUseApplyParam wmsUseApplyParam) {
         return this.wmsUseApplyService.findPageBySpec(wmsUseApplyParam);
+    }
+
+    /**
+     *  查询所有的列表
+     * */
+    @ResponseBody
+    @RequestMapping("/list2")
+    public LayuiPageInfo list2(WmsUseApplyParam wmsUseApplyParam) {
+        return this.wmsUseApplyService.findPageBySpec2(wmsUseApplyParam);
     }
 
 }

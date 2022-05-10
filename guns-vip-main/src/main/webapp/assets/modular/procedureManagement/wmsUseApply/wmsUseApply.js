@@ -102,7 +102,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
     // 渲染表格
     var tableResult = table.render({
         elem: '#' + WmsUseApply.tableId,
-        url: Feng.ctxPath + '/wmsUseApply/list',
+        url: Feng.ctxPath + '/wmsUseApply/list2',
         page: true,
         height: "full-158",
         cellMinWidth: 100,

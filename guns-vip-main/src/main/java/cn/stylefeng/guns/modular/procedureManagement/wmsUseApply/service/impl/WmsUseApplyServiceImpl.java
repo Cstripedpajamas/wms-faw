@@ -68,6 +68,13 @@ public class WmsUseApplyServiceImpl extends ServiceImpl<WmsUseApplyMapper, WmsUs
         return this.baseMapper.findById(useRequestId);
     }
 
+    @Override
+    public LayuiPageInfo findPageBySpec2(WmsUseApplyParam param) {
+        Page pageContext = getPageContext();
+        IPage page = this.baseMapper.customPageList2(pageContext, param);
+        return LayuiPageFactory.createPageInfo(page);
+    }
+
     private Serializable getKey(WmsUseApplyParam param){
         return param.getId();
     }

@@ -54,4 +54,6 @@ public interface WmsUseApplyMapper extends BaseMapper<WmsUseApply> {
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsUseApplyParam paramCondition);
 
     WmsUseApplyResult findById(@Param("id")String useRequestId);
+
+    Page<WmsUseApplyResult> customPageList2(@Param("page")Page page, @Param("paramCondition") WmsUseApplyParam paramCondition);
 }
