@@ -1201,9 +1201,6 @@ public class OneTypeCabinetService {
 
     // 立库分拣 - 分拣完成
     public ResponseData padSortingConform(WarehouseTurnoverModify modify) {
-        System.out.println("=========================================");
-        System.out.println(modify);
-        System.out.println("=========================================");
         // 查询出的绑定信息
         WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id",modify.getId()).eq("lattice_code",modify.getLatticeCode()));
 
@@ -1222,7 +1219,7 @@ public class OneTypeCabinetService {
             // 遍历判断数量
             if (!wmsWarehouseTurnoverBindResult.isEmpty()){
                 for (WmsWarehouseTurnoverBindResult warehouseTurnoverBindResult : wmsWarehouseTurnoverBindResult) {
-                    if (!Objects.equals("",warehouseTurnoverBindResult.getMNumber()) || !Objects.equals(null,warehouseTurnoverBindResult.getMNumber())){
+                    if (!Objects.equals("",warehouseTurnoverBindResult.getMNumber()) && !Objects.equals("0",warehouseTurnoverBindResult.getMNumber())){
                         turnover.setTurnoverState(StateEnum.ONE.getState());
                         break;
                     }
