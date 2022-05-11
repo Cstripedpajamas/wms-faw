@@ -53,4 +53,7 @@ public interface WmsWarehouseReplenishmentTaskMapper extends BaseMapper<WmsWareh
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsWarehouseReplenishmentTaskParam paramCondition);
 
+    WmsWarehouseReplenishmentTaskResult findByTaskNumber(@Param("taskNumber")String taskNumber);
+
+    void updatePickNumber(@Param("taskNumber")String taskNumber, @Param("pickNumber")String pickNumber);
 }

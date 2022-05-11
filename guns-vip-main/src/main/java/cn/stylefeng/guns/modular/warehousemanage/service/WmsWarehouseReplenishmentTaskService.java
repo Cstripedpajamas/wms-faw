@@ -66,4 +66,7 @@ public interface WmsWarehouseReplenishmentTaskService extends IService<WmsWareho
      */
      LayuiPageInfo findPageBySpec(WmsWarehouseReplenishmentTaskParam param);
 
+    WmsWarehouseReplenishmentTaskResult findByTaskNumber(String taskNumber);
+
+    void updatePickNumber(String taskNumber, String pickNumber);
 }

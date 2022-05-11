@@ -220,5 +220,19 @@
                 and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
             </if>
     </select>
+    <select id="findByTaskNumber" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_replenishment_task where 1 = 1
+        and task_number  = #{taskNumber} order by id desc limit 1
+    </select>
+
+    <update id="updatePickNumber" parameterType="string">
+        update
+        wms_warehouse_replenishment_task
+        set  sorting_num = #{pickNumber}
+        where task_number = #{taskNumber}
+    </update>
+
 
 </mapper>

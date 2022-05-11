@@ -63,6 +63,16 @@ public class WmsWarehouseReplenishmentTaskServiceImpl extends ServiceImpl<WmsWar
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsWarehouseReplenishmentTaskResult findByTaskNumber(String taskNumber) {
+        return this.baseMapper.findByTaskNumber(taskNumber);
+    }
+
+    @Override
+    public void updatePickNumber(String taskNumber, String pickNumber) {
+        this.baseMapper.updatePickNumber(taskNumber,pickNumber);
+    }
+
     private Serializable getKey(WmsWarehouseReplenishmentTaskParam param){
         return param.getId();
     }

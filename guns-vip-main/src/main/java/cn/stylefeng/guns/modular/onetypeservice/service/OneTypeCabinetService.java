@@ -48,6 +48,7 @@ import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
@@ -1200,7 +1201,9 @@ public class OneTypeCabinetService {
 
     // 立库分拣 - 分拣完成
     public ResponseData padSortingConform(WarehouseTurnoverModify modify) {
-
+        System.out.println("=========================================");
+        System.out.println(modify);
+        System.out.println("=========================================");
         // 查询出的绑定信息
         WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id",modify.getId()).eq("lattice_code",modify.getLatticeCode()));
 
@@ -1286,10 +1289,14 @@ public class OneTypeCabinetService {
                 ToolUtil.copyProperties(bind,bindParam);
                 wmsWarehouseTurnoverBindService.update(bindParam);
             }
-            toolClaimModel.setNumber(modify.getNumber());
+
+            // todo 这里 我们要更新下已经分拣的数量
+        WmsWarehouseReplenishmentTaskResult wmsWarehouseReplenishmentTaskResult =  wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
+        Integer pickNumber = Integer.parseInt(modify.getNumber()) + Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getSortingNum());
+        wmsWarehouseReplenishmentTaskService.updatePickNumber(modify.getTaskNumber(),pickNumber.toString());
 
         }
-        // todo 推送前端页面已经分拣
+        // todo 推送前端页面已经分拣 分拣数量没有更新
         toolClaimModel.setSortingStatus(StateEnum.ONE.getState());
         toolClaimModel.setCode(StateEnum.TWO.getState());
         toolClaimModel.setState(StateEnum.TWO.getState());
