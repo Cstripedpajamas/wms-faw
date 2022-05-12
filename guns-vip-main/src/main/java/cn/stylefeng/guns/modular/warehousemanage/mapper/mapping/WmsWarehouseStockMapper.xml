@@ -39,7 +39,7 @@
 --         stock.material_sku AS "materialSku",
         stock.create_time AS "createTime"
         FROM wms_warehouse_stock as stock, wms_warehouse_turnover as turnover
-        WHERE stock.loca_state = '1' and turnover.turnover_state = '0' and stock.turnover_id = turnover.id
+        WHERE stock.loca_state = '0' and turnover.turnover_state = '0' and stock.turnover_id = turnover.id
     </select>
 
     <select id="customList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseStockParam">

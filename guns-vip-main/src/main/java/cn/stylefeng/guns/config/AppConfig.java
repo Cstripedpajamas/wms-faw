@@ -59,7 +59,7 @@ public class AppConfig implements CommandLineRunner {
         bpmSendBody2Entity.setEmployeeId("10191572");
         bpmSendBody2Entity.setPageNo(1);
         bpmSendBody2Entity.setPageSize(3);
-        System.out.println(wmsApiService.queryBpm(bpmSendHeaderEntity2,bpmSendBody2Entity));
+//        System.out.println(wmsApiService.queryBpm(bpmSendHeaderEntity2,bpmSendBody2Entity));
     }
 
     static class TaskThreadPool implements Runnable {
