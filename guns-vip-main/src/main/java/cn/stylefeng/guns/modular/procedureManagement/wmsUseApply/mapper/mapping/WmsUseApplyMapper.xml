@@ -61,6 +61,7 @@
         <if test="paramCondition.processNumber != null and paramCondition.processNumber != ''">
             and process_number like CONCAT('%',#{paramCondition.processNumber},'%')
         </if>
+        order by data_time desc
     </select>
 
     <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.params.WmsUseApplyParam">
