@@ -376,10 +376,17 @@ public class RedirectConfController extends BaseController {
     @RequestMapping(value = "/run_batch")
     @ResponseBody
     public ResponseData sendBatchRun(String userId) {
+
+        // 查出分拣任务
         WmsSortingTaskResult wmsSortingTaskResult=this.wmsSortingTaskService.findByTaskStateOne();
+
+        // 物料类型 绑定的是SKU
         WmsMaterialTypeParam wmsMaterialTypeParam=new WmsMaterialTypeParam();
         wmsMaterialTypeParam.setMaterialSku(wmsSortingTaskResult.getSortingMaterialType());
+
+        // 根据物料SKU 查询出物料类型
         WmsMaterialTypeResult wmsMaterialTypeResult=this.wmsMaterialTypeService.findByMaterialSku(wmsMaterialTypeParam);
+
         WmsPackinfo wmsPackinfo=this.wmsPackinfoService.getById(wmsMaterialTypeResult.getPackageType());
         runBatch runBatchRe = wmsApiService.getRunBatchRe(wmsSortingTaskResult,wmsPackinfo);
         return ResponseData.success();

@@ -152,6 +152,7 @@ public class WmsApiService {
             map.put("pick_tote",0); // 料箱类型(0.大 1.小)
         }
         map.put("dimension",splitByS(wmsPackinfo.getPackgeSpecif()));
+        System.out.println(map);
         ResponseEntity<String> exchange = restTemplate().postForEntity(runBatchUrl, toJSON(map), String.class);
         String resultRemote = exchange.getBody();
         runBatch runBatch = JSONObject.parseObject(resultRemote, runBatch.class);

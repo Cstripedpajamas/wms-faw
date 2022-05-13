@@ -1061,6 +1061,8 @@ public class WarehouseService {
         taskOut.setTaskMg(taskNumber);// 任务信息
         taskOut.setGoodsType(ApplyType.C.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
         taskOut.setmNumber(StateEnum.ONE.getState());// 数量
+        taskOut.setmBatch("1");// 批次
+        taskOut.setMaterialSku("EmptyBox"); // 物料SKU
         taskOut.setSortingInfo("A");// 出仓分拣（A人工/B自动）
         taskOut.setReqTime(new Date());// 请求时间
         taskOut.setResTag(StateEnum.ZERO.getState());// 请求标记（0初始 1请求）

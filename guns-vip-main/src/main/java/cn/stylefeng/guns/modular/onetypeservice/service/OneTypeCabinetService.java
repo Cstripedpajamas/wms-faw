@@ -1263,7 +1263,7 @@ public class OneTypeCabinetService {
                 // 遍历判断数量
                 if (!wmsWarehouseTurnoverBindResult.isEmpty()){
                     for (WmsWarehouseTurnoverBindResult warehouseTurnoverBindResult : wmsWarehouseTurnoverBindResult) {
-                        if (!Objects.equals("",warehouseTurnoverBindResult.getMNumber()) || !Objects.equals(null,warehouseTurnoverBindResult.getMNumber())){
+                        if (!Objects.equals("",warehouseTurnoverBindResult.getMNumber()) && !Objects.equals("0",warehouseTurnoverBindResult.getMNumber())){
                             turnover.setTurnoverState(StateEnum.ONE.getState());
                             break;
                         }

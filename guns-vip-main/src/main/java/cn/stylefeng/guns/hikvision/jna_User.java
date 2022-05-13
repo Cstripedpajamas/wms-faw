@@ -36,6 +36,51 @@ public class jna_User {
 
     public static boolean kg=true;
 
+    public static void startHaK() throws InterruptedException {
+        jna_User test01 = new jna_User();
+        // 初始化
+        boolean initSuc = hCNetSDK.NET_DVR_Init();
+        if (initSuc != true) {
+            System.out.println("初始化失败");
+        }
+
+        // 打印SDK日志
+        hCNetSDK.NET_DVR_SetLogToFile(3, ".\\SDKLog\\", false);
+        // 用户登陆操作
+        test01.Login_V40("192.168.26.5", (short) 8000, "admin", "rz123456");
+
+        test01.SetAcsCfg();//配置门禁参数开启远程核验功能 DS-KiT671M产品不支持
+
+        test01.SetupAlarmChan();//布防
+
+//        test01.GetAbility();//获取能力集
+
+//        test01.SearchUserInfo(); //查询所有人员
+
+//        test01.DelUser("101");//删除人员
+
+//        test01.AddUser("101", "管理员","D:\\Hikvision\\fawFace\\pic\\FPID_[1001]_FacePic.jpg");//添加人员
+
+//        test01.EditUser("1002");//修改人员
+
+//        test01.FindFaceInfo("1002");//查找人脸
+
+//        test01.AllAddUser();//批量添加
+
+//        test01.OpenDor(1);//开门
+
+        while (kg){ Thread.sleep(1000); }
+
+//        test01.CloseAlarmChan();//撤防
+
+        /*
+         *实现SDK中其余功能模快
+         */
+        Thread.sleep(5000);
+        //用户注销，释放SDK
+        test01.Logout();
+    }
+
     public static void main(String[] args) throws InterruptedException {
         jna_User test01 = new jna_User();
         // 初始化
