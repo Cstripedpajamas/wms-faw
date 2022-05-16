@@ -919,7 +919,9 @@ public class WarehouseService {
             return ResponseData.error("空周转箱库存不足 无法继续操作!");
         }
         WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getOne(new QueryWrapper<WmsPurchaseOrderInfo>().eq("pur_number", purNumber));
-//        List<WmsWarehousePurchaseStorageTask> wmsWarehousePurchaseStorageTasks = wmsWarehousePurchaseStorageTaskService.list(new QueryWrapper<WmsWarehousePurchaseStorageTask>().eq("purchase_id",wmsPurchaseOrderInfo.getId()));
+        WmsMaterialTypeResult wmsMaterialTypeResult = wmsMaterialTypeService.findById(wmsPurchaseOrderInfo.getMaterialTypeId());
+
+
         // 2.采购入库任务
         WmsWarehousePurchaseStorageTask storageTask = new WmsWarehousePurchaseStorageTask();
         storageTask.setTaskNumber(mapCodeGenerator.get(CodeProviderEnum.purchaseWarehousingCode.getProvider()).createCode(null));// 任务编号
@@ -943,6 +945,7 @@ public class WarehouseService {
         taskOut.setGoodsType(ApplyType.C.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
         taskOut.setmNumber(StateEnum.ONE.getState());// 数量
         taskOut.setSortingInfo("A");// 出仓分拣（A人工/B自动）
+        taskOut.setTurnoverType(wmsMaterialTypeResult.getTurnoverType());
         taskOut.setmBatch("1");
         taskOut.setMaterialSku("EmptyBox");
         taskOut.setReqTime(new Date());// 请求时间
@@ -1236,9 +1239,9 @@ public class WarehouseService {
             initMap.put("A","1");
             initMap.put("B","2");
             initMap.put("C","3");
-            inOutType.put("A","1");
-            inOutType.put("B","2");
-            inOutType.put("C","3");
+            inOutType.put("0","1");
+            inOutType.put("1","2");
+            inOutType.put("2","3");
         }
 
         SendTOWcs(String messageId, StateEnum stateEnum) {
@@ -1254,8 +1257,13 @@ public class WarehouseService {
                 Map<String, Object> map = new HashMap<>();
                 map.put("OutfeedId", messageId); // 消息识别id
                 map.put("Type", Byte.parseByte(initMap.get(wmsWarehouseTaskOut.getGoodsType()))); // 出仓类型(A工具/B备品备件/C空周转箱)
-//                map.put("BoxType", initMap.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
-                map.put("BoxType",""); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+
+                // 空周转箱类型
+                if (Objects.equals("C",wmsWarehouseTaskOut.getGoodsType())){
+                    map.put("BoxType", initMap.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+                }else {
+                    map.put("BoxType"," ");
+                }
 //                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 A 多格口 B 单个口
                 map.put("LatticeType",""); // 格口类型 A 多格口 B 单个口
                 map.put("Sku",wmsWarehouseTaskOut.getMaterialSku()); // 物料sku
