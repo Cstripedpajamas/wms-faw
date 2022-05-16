@@ -80,6 +80,11 @@ public class WmsMaterialTypeParam implements Serializable, BaseValidatingParam {
      * */
     private String packageNumber;
 
+    /**
+     * 周转箱类型
+     * */
+    private String turnoverType;
+
     @Override
     public String checkParam() {
         return null;

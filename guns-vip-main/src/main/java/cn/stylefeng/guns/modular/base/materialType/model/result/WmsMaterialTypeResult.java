@@ -82,6 +82,12 @@ public class WmsMaterialTypeResult implements Serializable {
      * */
     private String packageNumber;
 
+
+    /**
+     * 周转箱类型
+     * */
+    private String turnoverType;
+
     /**
      * @author  ll
      * @Date 2021年11月8日14:20:10

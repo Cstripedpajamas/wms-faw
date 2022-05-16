@@ -54,6 +54,17 @@
                         </div>
                     </div>
                     <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <select id="turnoverType" name="turnoverType" lay-search>
+                                <option value="">请选择周转箱类型</option>
+                                <option value="0">小箱</option>
+                                <option value="1">中箱</option>
+                                <option value="2">大箱</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
                         <label class="layui-form-label">分拣类型<span style="color: red;">*</span></label>
                         <div class="layui-input-block">
                             <input type="radio" name="sortType" lay-filter="typeFilter2" value="0" title="人工" />

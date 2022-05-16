@@ -26,9 +26,10 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
             {field: 'materialSku', sort: true, title: '物料SKU'},
             {field: 'mUnit', sort: true, title: '单位'},
             {field: 'typeName', sort: true, title: '格口类型'},
-            // {field: 'sortType', sort: true, title: '分拣类型',templet: '#sortType'},
+            {field: 'sortType', sort: true, title: '分拣类型',templet: '#sortType'},
             {field: 'packageType', sort: true, title: '包装类型'},
             {field: 'packageNumber', sort: true, title: '包装数量'},
+            {align: 'center',field: 'turnoverType', sort: true, title: '周转箱类型',templet: '#turnoverType'},
             {align: 'center',field: 'dataState', sort: true, templet: '#statusTpl', title: '数据状态'},
             {field: 'createTime', sort: true, title: '数据时间'},
             {align: 'center', toolbar: '#tableBar', title: '操作'}

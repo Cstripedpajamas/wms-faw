@@ -50,4 +50,13 @@
     <span class="layui-btn-xs">自动</span>
     {{#  } }}
 </script>
+<script type="text/html" id="turnoverType">
+    {{#  if(d.turnoverType === '0'){ }}
+    <span class="layui-btn-xs">小箱</span>
+    {{#  } else if(d.turnoverType === '1'){ }}
+    <span class="layui-btn-xs">中箱</span>
+    {{#  }else if(d.turnoverType === '2'){ }}
+    <span class="layui-btn-xs">大箱</span>
+    {{#  } }}
+</script>
 @}

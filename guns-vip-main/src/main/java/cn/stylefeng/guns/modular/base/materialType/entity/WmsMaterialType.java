@@ -93,6 +93,20 @@ public class WmsMaterialType implements Serializable {
       @TableField(value = "package_number")
       private String packageNumber;
 
+    /**
+     * 周转箱类型
+     * */
+    @TableField(value = "turnover_type")
+    private String turnoverType;
+
+    public String getTurnoverType() {
+        return turnoverType;
+    }
+
+    public void setTurnoverType(String turnoverType) {
+        this.turnoverType = turnoverType;
+    }
+
     public Long getId() {
         return id;
     }
@@ -204,6 +218,7 @@ public class WmsMaterialType implements Serializable {
                 ", sortType='" + sortType + '\'' +
                 ", packageType='" + packageType + '\'' +
                 ", packageNumber='" + packageNumber + '\'' +
+                ", turnoverType='" + turnoverType + '\'' +
                 '}';
     }
 }
