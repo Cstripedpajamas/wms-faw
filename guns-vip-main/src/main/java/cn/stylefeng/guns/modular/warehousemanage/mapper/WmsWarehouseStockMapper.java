@@ -2,6 +2,7 @@ package cn.stylefeng.guns.modular.warehousemanage.mapper;
 
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseStock;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnover;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseStockParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -61,4 +62,8 @@ public interface WmsWarehouseStockMapper extends BaseMapper<WmsWarehouseStock> {
     List<WmsWarehouseStock> findByJoinOn();
 
     WmsWarehouseStockResult findByTurnoverId(@Param("turnoverId")String turnoverId);
+
+    List<StockSync> findAll();
+
+    void updateStock(@Param("containerCode")String containerCode, @Param("locationCode")String locationCode);
 }

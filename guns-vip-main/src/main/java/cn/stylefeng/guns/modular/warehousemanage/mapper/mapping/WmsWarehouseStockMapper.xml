@@ -193,4 +193,12 @@
         and turnover_id = #{turnoverId}
     </select>
 
+    <select id="findAll" resultType="cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync">
+        select * from temp_inventory
+    </select>
+
+    <update id="updateStock" parameterType="string">
+        UPDATE  wms_warehouse_stock SET turnover_id = (SELECT id FROM wms_warehouse_turnover WHERE barcode = #{containerCode})
+        WHERE  loca_number = #{locationCode}
+    </update>
 </mapper>

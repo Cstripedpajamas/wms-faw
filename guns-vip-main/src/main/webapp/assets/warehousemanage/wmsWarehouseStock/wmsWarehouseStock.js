@@ -100,6 +100,20 @@ layui.use(['table', 'admin', 'ax', 'func','upload'], function () {
         Feng.confirm("是否删除?", operation);
     };
 
+    // 库存同步
+    WmsWarehouseStock.inventorySyn = function (data) {
+        var operation = function () {
+            var ajax = new $ax(Feng.ctxPath + "/wmsWarehouseStock/inventorySyn", function (data) {
+                Feng.success("同步成功!");
+                table.reload(WmsWarehouseStock.tableId);
+            }, function (data) {
+                Feng.error("同步失败!" + data.responseJSON.message + "!");
+            });
+            ajax.start();
+        };
+        Feng.confirm("是否确定同步当前库存?", operation);
+    };
+
     // 模板下载
     $("#btnTemplate").click(function () {
         window.location.href = Feng.ctxPath + "/wmsWarehouseStock/exportOut"
@@ -143,6 +157,12 @@ layui.use(['table', 'admin', 'ax', 'func','upload'], function () {
     $('#btnExp').click(function () {
         WmsWarehouseStock.exportExcel();
     });
+    // 库存同步
+    $('#btnExp3').click(function () {
+        WmsWarehouseStock.inventorySyn();
+    });
+
+
 
     // 工具条点击事件
     table.on('tool(' + WmsWarehouseStock.tableId + ')', function (obj) {

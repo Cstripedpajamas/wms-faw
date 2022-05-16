@@ -3,6 +3,7 @@ package cn.stylefeng.guns.modular.warehousemanage.service;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseStock;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnover;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseStockParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -70,4 +71,8 @@ public interface WmsWarehouseStockService extends IService<WmsWarehouseStock> {
     List<WmsWarehouseStock> findByJoinOn();
 
     WmsWarehouseStockResult findByTurnoverId(String id);
+
+    List<StockSync> findAll();
+
+    void updateStock(String containerCode, String locationCode);
 }

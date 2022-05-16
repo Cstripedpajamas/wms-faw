@@ -7,6 +7,7 @@ import cn.afterturn.easypoi.excel.entity.params.ExcelExportEntity;
 import cn.afterturn.easypoi.view.PoiBaseView;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseStock;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseStockParam;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseStockService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
@@ -207,6 +208,22 @@ public class WmsWarehouseStockController extends BaseController {
 
         return  ResponseData.success();
     }
+
+
+    /**
+     * 同步库存
+     * @params stockSync.getContainerCode() 周转箱条码  stockSync.getLocationCode() 库位编号
+     * */
+    @RequestMapping("/inventorySyn")
+    @ResponseBody
+    public ResponseData inventorySyn(){
+      List<StockSync> list =   wmsWarehouseStockService.findAll();
+        for (StockSync stockSync : list) {
+            wmsWarehouseStockService.updateStock(stockSync.getContainerCode(),stockSync.getLocationCode());
+        }
+      return ResponseData.success();
+    }
+
 
 
 }

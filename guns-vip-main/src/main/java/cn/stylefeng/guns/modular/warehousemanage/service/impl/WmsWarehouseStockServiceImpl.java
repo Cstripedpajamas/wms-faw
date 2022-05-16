@@ -5,6 +5,7 @@ import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseStock;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnover;
 import cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseStockMapper;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseStockParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult;
 import  cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseStockService;
@@ -72,6 +73,16 @@ public class WmsWarehouseStockServiceImpl extends ServiceImpl<WmsWarehouseStockM
     @Override
     public WmsWarehouseStockResult findByTurnoverId(String id) {
         return this.baseMapper.findByTurnoverId(id);
+    }
+
+    @Override
+    public List<StockSync> findAll() {
+        return this.baseMapper.findAll();
+    }
+
+    @Override
+    public void updateStock(String containerCode, String locationCode) {
+        this.baseMapper.updateStock(containerCode,locationCode);
     }
 
     private Serializable getKey(WmsWarehouseStockParam param){
