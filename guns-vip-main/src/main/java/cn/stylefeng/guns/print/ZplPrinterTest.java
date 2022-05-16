@@ -12,24 +12,26 @@ public class ZplPrinterTest {
     static String type2 = "2"; // 中箱
     static String type3 = "3"; // 大箱
     //远程
-   static ZplPrinter p = new ZplPrinter("\\\\DESKTOP-QASNODV\\ZDesigner ZD888-203dpi ZPL");
+//   static ZplPrinter p = new ZplPrinter("\\\\DESKTOP-QASNODV\\ZDesigner ZD888-203dpi ZPL");
 
     public static void main(String[] args) {
 //        ZplPrinter p = new ZplPrinter("ZDesigner ZD888-203dpi ZPL"); //本地
+        ZplPrinter p = new ZplPrinter("TSC TTP-244 Pro"); //本地
         p.resetZpl();//清除
-        for (int i = 500; i < 1000; i++) {
-           String s = addZeroForNumber(i +"");
-            p.resetZpl();//清除
-            for (int j = 0; j < 2; j++) { // 大/小: 2 中箱: 4
-
-                    printFawTroue(p,type1+s); // 工具条码
-                    p.resetZpl();
-
-
-            }
-//            printBarcode(p);
-//            printPicking300DPI(p);
-        }
+        printPicking300DPI(p);
+//        for (int i = 500; i < 1000; i++) {
+//           String s = addZeroForNumber(i +"");
+//            p.resetZpl();//清除
+//            for (int j = 0; j < 2; j++) { // 大/小: 2 中箱: 4
+//
+//                    printFawTroue(p,type1+s); // 工具条码
+//                    p.resetZpl();
+//
+//
+//            }
+////            printBarcode(p);
+////            printPicking300DPI(p);
+//        }
     }
 
     public static String addZeroForNumber(String str){

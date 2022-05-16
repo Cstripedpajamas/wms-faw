@@ -4,6 +4,7 @@ import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import cn.stylefeng.guns.hikvision.jna_test;
 import cn.stylefeng.guns.modular.WebApi.Entity.runBatch;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
@@ -531,6 +532,67 @@ public class RedirectConfController extends BaseController {
 //        System.out.println("我的系统收到的信息为:"+text);
 //        return "嘎嘎嘎过~";
 //    }
+
+    /**
+     * 门禁 常闭
+     */
+    @RequestMapping("/KeppClose")
+    @ResponseBody
+    public ResponseData KeppClose() {
+        try {
+            jna_test.SendDoorKz(3);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return ResponseData.success();
+    }
+
+    /**
+     * 门禁 常开
+     */
+    @RequestMapping("/KeppOpen")
+    @ResponseBody
+    public ResponseData KeppOpen() {
+        try {
+            jna_test.SendDoorKz(2);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return ResponseData.success();
+    }
+
+    /**
+     * 门禁 常闭
+     */
+    @RequestMapping("/SendDoor")
+    @ResponseBody
+    public ResponseData SendDoor(String doorCodeId) {
+        int code=999;
+        switch (doorCodeId){
+            case "0":
+                code=0;
+                break;
+            case "1":
+                code=1;
+                break;
+            case "2":
+                code=2;
+                break;
+            case "3":
+                code=3;
+                break;
+            default:
+                break;
+        }
+        if (code!=999){
+            try {
+                jna_test.SendDoorKz(code);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return ResponseData.success();
+    }
 }
 
 

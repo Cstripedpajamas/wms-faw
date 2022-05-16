@@ -192,7 +192,10 @@ public class WarehouseService {
         // todo 获取仓库编号 条码查周转箱id ,周转箱id 查仓库编号
         WmsWarehouseTurnoverResult turnoverResult = wmsWarehouseTurnoverService.findByBarCode(barCode);
         WmsWarehouseStockResult stock =  wmsWarehouseStockService.findByTurnoverId(turnoverResult.getId().toString());
-        wmsWarehouseTaskOut.setLocaNumber(stock.getLocaNumber()); // 出库仓库编号
+        wmsWarehouseTaskOut.setLocaNumber(""); // 出库仓库编号
+        if(stock!=null){
+            wmsWarehouseTaskOut.setLocaNumber(stock.getLocaNumber());
+        }
         WmsWarehouseTurnoverResult wm =   wmsWarehouseTurnoverService.findByBarCode(barCode);
         wmsWarehouseTaskOut.setTurnoverNumber(wm.getTurnoverNumber()); // 出库周转箱编号
         wmsWarehouseTaskOut.setBarcode(barCode); // 出库周转箱条码
@@ -202,59 +205,64 @@ public class WarehouseService {
         ToolUtil.copyProperties(wmsWarehouseTaskOut, wmsWarehouseTaskOutParam);
         wmsWarehouseTaskOutService.update(wmsWarehouseTaskOutParam); // 更新出库任务标识
 
-        // 查询库位信息
-        WmsWarehouseStock wmsWarehouseStock = wmsWarehouseStockService.getOne(new QueryWrapper<WmsWarehouseStock>().eq("loca_number", stock.getLocaNumber()));
+        WmsWarehouseStock wmsWarehouseStock =new WmsWarehouseStock();
+        ToolUtil.copyProperties(stock, wmsWarehouseStock);
 
-        // 查询库位绑定的周转箱信息
-        WmsWarehouseTurnover turnover = wmsWarehouseTurnoverService.getById(wmsWarehouseStock.getTurnoverId());
+        WmsWarehouseTurnover turnover =new WmsWarehouseTurnover();
+        ToolUtil.copyProperties(turnoverResult, turnover);
 
         // 判断出库类型(A 工具领用 B 补货出库 C 出库)
         ToolClaimModel toolClaimModel = new ToolClaimModel();
-        if (ApplyType.A.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 工具领用出库
-            //根据任务编号获取领用任务
-            WmsWarehouseToolUseTask wmsWarehouseToolUseTask = wmsWarehouseToolUseTaskService.getOne(new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
-            if (StateEnum.ONE.getState().equals(wmsWarehouseToolUseTask.getSortingType())) {// 1.判断分拣任务是否自动分拣
-                WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
-                wmsWarehouseTurnoverBindParam.setTurnoverId(String.valueOf(turnover.getId()));
-                // 机械手分拣的周转箱没分格口
-                WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBindResult = wmsWarehouseTurnoverBindService.findByTurnoverId(wmsWarehouseTurnoverBindParam);
-                // FIXME 创建自动分拣任务,分拣数量默认为 1; 发送分拣任务到分拣站
-                createSortingTask(turnover, wmsWarehouseToolUseTask, wmsWarehouseTurnoverBindResult);// 创建自动分拣任务 分拣数量默认为 1
-            }
-            updateWarehouseToolUseTask(wmsWarehouseStock, wmsWarehouseToolUseTask); // 2.更新任务信息
-            updateWarehouseStock(wmsWarehouseStock);// 4.更新库位信息为空
-            updateTurnoverToEmpty(turnover);// 5.更新周转箱信息
-            if (StateEnum.ONE.getState().equals(wmsWarehouseToolUseTask.getSortingType())) {
-                toolClaimModel.setSortingInfo(ApplyType.B.getType());// 出仓分拣（A人工/B自动）
-            } else {
+        if(stock!=null){
+            if (ApplyType.A.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 工具领用出库
+                //根据任务编号获取领用任务
+                WmsWarehouseToolUseTask wmsWarehouseToolUseTask = wmsWarehouseToolUseTaskService.getOne(new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
+                if (StateEnum.ONE.getState().equals(wmsWarehouseToolUseTask.getSortingType())) {// 1.判断分拣任务是否自动分拣
+                    WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
+                    wmsWarehouseTurnoverBindParam.setTurnoverId(String.valueOf(turnover.getId()));
+                    // 机械手分拣的周转箱没分格口
+                    WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBindResult = wmsWarehouseTurnoverBindService.findByTurnoverId(wmsWarehouseTurnoverBindParam);
+                    // FIXME 创建自动分拣任务,分拣数量默认为 1; 发送分拣任务到分拣站
+                    createSortingTask(turnover, wmsWarehouseToolUseTask, wmsWarehouseTurnoverBindResult);// 创建自动分拣任务 分拣数量默认为 1
+                }
+                updateWarehouseToolUseTask(wmsWarehouseStock, wmsWarehouseToolUseTask); // 2.更新任务信息
+                updateWarehouseStock(wmsWarehouseStock);// 4.更新库位信息为空
+                updateTurnoverToEmpty(turnover);// 5.更新周转箱信息
+                if (StateEnum.ONE.getState().equals(wmsWarehouseToolUseTask.getSortingType())) {
+                    toolClaimModel.setSortingInfo(ApplyType.B.getType());// 出仓分拣（A人工/B自动）
+                } else {
+                    toolClaimModel.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
+                }
+                // 4.添加领用工具信息
+                WmsToolUse wmsToolUse = new WmsToolUse();
+                wmsToolUse.setOperator(wmsWarehouseToolUseTask.getOperator());// 人员信息
+                wmsToolUse.setMaterialTypeId(wmsWarehouseToolUseTask.getMaterialTypeId());// 物料类型ID
+                wmsToolUse.setMaterialName(wmsWarehouseToolUseTask.getMaterialName());// 物料名称
+                wmsToolUse.setMaterialSku(wmsWarehouseToolUseTask.getMaterialSku());// 物料SKU
+                wmsToolUse.setMaterialId(wmsWarehouseToolUseTask.getMaterialId());// 物料信息ID
+                wmsToolUse.setMaterialSerialNumber(wmsWarehouseToolUseTask.getMaterialSerialNumber());// 物料编码
+                wmsToolUse.setDataTime(new Date());// 数据时间
+                wmsToolUseService.save(wmsToolUse);
+            } else if (ApplyType.B.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 补货出库
+                WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask = wmsWarehouseReplenishmentTaskService.getOne(new QueryWrapper<WmsWarehouseReplenishmentTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
+                // 1.更新任务信息
+                wmsWarehouseReplenishmentTask.setTaskState(StateEnum.THREE.getState());// 出库任务 0初始 1开始 2出库中 3完成
+                WmsWarehouseReplenishmentTaskParam replenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
+                ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, replenishmentTaskParam);
+                wmsWarehouseReplenishmentTaskService.update(replenishmentTaskParam);
+                updateWarehouseStock(wmsWarehouseStock);// 3.更新库位信息为空1
+                updateTurnoverToEmpty(turnover);// 4.更新周转箱信息
                 toolClaimModel.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
-            }
-            // 4.添加领用工具信息
-            WmsToolUse wmsToolUse = new WmsToolUse();
-            wmsToolUse.setOperator(wmsWarehouseToolUseTask.getOperator());// 人员信息
-            wmsToolUse.setMaterialTypeId(wmsWarehouseToolUseTask.getMaterialTypeId());// 物料类型ID
-            wmsToolUse.setMaterialName(wmsWarehouseToolUseTask.getMaterialName());// 物料名称
-            wmsToolUse.setMaterialSku(wmsWarehouseToolUseTask.getMaterialSku());// 物料SKU
-            wmsToolUse.setMaterialId(wmsWarehouseToolUseTask.getMaterialId());// 物料信息ID
-            wmsToolUse.setMaterialSerialNumber(wmsWarehouseToolUseTask.getMaterialSerialNumber());// 物料编码
-            wmsToolUse.setDataTime(new Date());// 数据时间
-            wmsToolUseService.save(wmsToolUse);
-        } else if (ApplyType.B.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 补货出库
-            WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask = wmsWarehouseReplenishmentTaskService.getOne(new QueryWrapper<WmsWarehouseReplenishmentTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
-            // 1.更新任务信息
-            wmsWarehouseReplenishmentTask.setTaskState(StateEnum.THREE.getState());// 出库任务 0初始 1开始 2出库中 3完成
-            WmsWarehouseReplenishmentTaskParam replenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
-            ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, replenishmentTaskParam);
-            wmsWarehouseReplenishmentTaskService.update(replenishmentTaskParam);
-            updateWarehouseStock(wmsWarehouseStock);// 3.更新库位信息为空1
-            updateTurnoverToEmpty(turnover);// 4.更新周转箱信息
-            toolClaimModel.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
 
-        } else if (ApplyType.C.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 手动出库
-            updateWarehouseStock(wmsWarehouseStock);// 2.更新库位信息为空
+            }
+        }
+
+        if (ApplyType.C.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 手动出库
+            if(stock!=null){
+                updateWarehouseStock(wmsWarehouseStock);// 2.更新库位信息为空
+            }
             updateTurnoverToEmpty(turnover);// 3.更新周转箱信息
             toolClaimModel.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
-
         }
 
 
@@ -273,7 +281,7 @@ public class WarehouseService {
         }
         // 6.数据出库完成 推送前台
         toolClaimModel.setTaskState(StateEnum.THREE.getState());// 任务状态（0初始 1开始 2出库中 3完成)
-        toolClaimModel.setTurnoverNumber(wmsWarehouseStock.getLocaNumber());// 出库周转箱编号
+        toolClaimModel.setTurnoverNumber(turnover.getTurnoverNumber());// 出库周转箱编号
         toolClaimModel.setALatticeCode(strA);// 周转箱A格口
         toolClaimModel.setBLatticeCode(strB);// 周转箱B格口
         toolClaimModel.setCode(StateEnum.ONE.getState());

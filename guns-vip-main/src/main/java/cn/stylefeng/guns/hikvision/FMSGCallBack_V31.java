@@ -356,8 +356,12 @@ public class FMSGCallBack_V31 implements HCNetSDK.FMSGCallBack_V31 {
                     System.out.println("-------人脸认证通过------");
                     System.out.println("事件流水号 "+strACSInfo.struAcsEventInfo.dwSerialNo);
                     System.out.println("卡号 " +new String(strACSInfo.struAcsEventInfo.byCardNo).trim() );
-
                     // todo 开门
+                    try {
+                        jna_test.SendDoorKz(1);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
 
                 if (strACSInfo.dwPicDataLen > 0) {

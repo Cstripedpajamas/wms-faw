@@ -21,7 +21,7 @@ public class jna_User {
     static HCNetSDK hCNetSDK = HCNetSDK.INSTANCE;
 
     static int lUserID = -1;//用户句柄
-    int lAlarmHandle = -1;;//报警布防句柄
+    static int lAlarmHandle = -1;;//报警布防句柄
     int lListenHandle = -1;;//报警监听句柄
 
     public static HCNetSDK.FMSGCallBack_V31 fMSFCallBack_V31=null;//报警回调函数实现
@@ -36,49 +36,11 @@ public class jna_User {
 
     public static boolean kg=true;
 
-    public static void startHaK() throws InterruptedException {
-        jna_User test01 = new jna_User();
-        // 初始化
-        boolean initSuc = hCNetSDK.NET_DVR_Init();
-        if (initSuc != true) {
-            System.out.println("初始化失败");
-        }
-
-        // 打印SDK日志
-        hCNetSDK.NET_DVR_SetLogToFile(3, ".\\SDKLog\\", false);
+    public static void startHaK(){
         // 用户登陆操作
-        test01.Login_V40("192.168.26.5", (short) 8000, "admin", "rz123456");
-
-        test01.SetAcsCfg();//配置门禁参数开启远程核验功能 DS-KiT671M产品不支持
-
-        test01.SetupAlarmChan();//布防
-
-//        test01.GetAbility();//获取能力集
-
-//        test01.SearchUserInfo(); //查询所有人员
-
-//        test01.DelUser("101");//删除人员
-
-//        test01.AddUser("101", "管理员","D:\\Hikvision\\fawFace\\pic\\FPID_[1001]_FacePic.jpg");//添加人员
-
-//        test01.EditUser("1002");//修改人员
-
-//        test01.FindFaceInfo("1002");//查找人脸
-
-//        test01.AllAddUser();//批量添加
-
-//        test01.OpenDor(1);//开门
-
-        while (kg){ Thread.sleep(1000); }
-
-//        test01.CloseAlarmChan();//撤防
-
-        /*
-         *实现SDK中其余功能模快
-         */
-        Thread.sleep(5000);
-        //用户注销，释放SDK
-        test01.Logout();
+        Login_V40("192.168.26.5", (short) 8000, "admin", "rz123456");
+        //布防
+        SetupAlarmChan();
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -132,7 +94,7 @@ public class jna_User {
      * @param m_sUsername 用户名
      * @param m_sPassword 密码
      */
-    public void Login_V40(String m_sDeviceIP, short wPort, String m_sUsername, String m_sPassword) {
+    public static void Login_V40(String m_sDeviceIP, short wPort, String m_sUsername, String m_sPassword) {
         /* 注册 */
         // 设备登录信息
         HCNetSDK.NET_DVR_USER_LOGIN_INFO m_strLoginInfo = new HCNetSDK.NET_DVR_USER_LOGIN_INFO();
@@ -1196,7 +1158,7 @@ public class jna_User {
         }
     }
 
-    public void SetupAlarmChan(){
+    public static void SetupAlarmChan(){
         if (lAlarmHandle < 0)//尚未布防,需要布防
         {
             if (fMSFCallBack_V31 == null)

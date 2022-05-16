@@ -3,6 +3,26 @@
 <form class="layui-form" id="wmsIntelligentCabinet2ConfForm" lay-filter="wmsIntelligentCabinet2ConfForm">
     <div class="layui-fluid" style="padding-bottom: 75px;">
         <div class="layui-card">
+            <div class="layui-card-header">门禁控制柜 {0-关闭 1-打开 2-常开 3-常关}</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">命令代码</label>
+                        <div class="layui-input-block">
+                            <input id="doorCodeId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: right;" id="SendDoor">&emsp;发送&emsp;
+                    </button>
+                    <button class="layui-btn" type="button" style="float: right;margin-right: 30px" id="KeppClose">&emsp;常闭&emsp;
+                    </button>
+                    <button class="layui-btn" type="button" style="float: right;margin-right: 30px" id="KeppOpen">&emsp;常开&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
             <div class="layui-card-header">打开格口数据</div>
             <div class="layui-card-body">
                 <div class="layui-form-item layui-row">

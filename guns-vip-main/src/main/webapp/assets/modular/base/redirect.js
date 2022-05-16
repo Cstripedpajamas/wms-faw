@@ -28,6 +28,54 @@ layui.use(['form', 'admin', 'ax'], function () {
         })
     }, 1000);
 
+    // 门禁 常开
+    $("#KeppOpen").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/KeppOpen",
+            success: function (data) {
+                if (data.code == 200) {
+                    Feng.success("门禁 常开 成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    });
+
+    // 门禁 常闭
+    $("#KeppClose").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/KeppClose",
+            success: function (data) {
+                if (data.code == 200) {
+                    Feng.success("门禁 常闭 成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    });
+
+    // 门禁 发送
+    $("#SendDoor").click(function () {
+        var doorCodeId = $("#doorCodeId").val();
+        console.log(doorCodeId)
+        if (doorCodeId.length == 0) {
+            Feng.error("请先输入控制代码");
+            return false;
+        }
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/SendDoor?"+"doorCodeId="+doorCodeId,
+            success: function (data) {
+                if (data.code == 200) {
+                    Feng.success("门禁代码发送完成");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    });
+
     // 关闭格口
     $("#LockClosed").click(function () {
         var LocationId = $("#LocationId").val();

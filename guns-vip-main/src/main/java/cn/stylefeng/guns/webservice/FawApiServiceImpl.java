@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.webservice;
 
+import cn.stylefeng.guns.config.AppConfig;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
@@ -23,6 +24,8 @@ import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.webservice.entity.*;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.extension.api.R;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -47,6 +50,8 @@ import java.util.Map;
         endpointInterface = "cn.stylefeng.guns.webservice.FawApiService")
 public class FawApiServiceImpl implements FawApiService {
 
+    private final static Logger logger = LoggerFactory.getLogger(FawApiServiceImpl.class);
+
     @Autowired
     private WmsToolUseService wmsToolUseService;
 
@@ -70,6 +75,11 @@ public class FawApiServiceImpl implements FawApiService {
 
     @Override
     public RsBody setUserInfo(MsgHeader msgHeader, MsgBody msgBody) {
+
+        logger.info("--setUserInfo--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+
         List<FawUserInfoResult> fawUserInfoResults = this.fawUserInfoService.findListBySpec(new FawUserInfoParam());
 
         List<YQJFUserInfo> yqjfUserInfo = msgBody.getYqjfUserInfo();
@@ -81,19 +91,19 @@ public class FawApiServiceImpl implements FawApiService {
         if (!yqjfUserInfo.isEmpty()) {
             for (YQJFUserInfo userInfo : yqjfUserInfo) {
                 FawUserInfoParam fawUserInfoParam = new FawUserInfoParam();
-                fawUserInfoParam.setAccountCode(userInfo.getAccountCode());
-                fawUserInfoParam.setEmployeeId(userInfo.getEmployeeId());
-                fawUserInfoParam.setDepNo(userInfo.getDepNo());
-                fawUserInfoParam.setEmployeeName(userInfo.getEmployeeName());
-                fawUserInfoParam.setEmailAddress(userInfo.getEmailAddress());
-                fawUserInfoParam.setClassOfPositions(userInfo.getClassOfPositions());
-                fawUserInfoParam.setFawClaOfPos(userInfo.getFawClaOfPos());
-                fawUserInfoParam.setJobs(userInfo.getJobs());
-                fawUserInfoParam.setDirectorId(userInfo.getDirectorId());
-                fawUserInfoParam.setDirectorName(userInfo.getDirectorName());
-                fawUserInfoParam.setObjectStatus(userInfo.getObjectStatus());
-                fawUserInfoParam.setMdmType(userInfo.getMdmType());
-                fawUserInfoParam.setDeptLevel(userInfo.getDeptLevel());
+                fawUserInfoParam.setAccountCode(nullSetValue(userInfo.getAccountCode()));
+                fawUserInfoParam.setEmployeeId(nullSetValue(userInfo.getEmployeeId()));
+                fawUserInfoParam.setDepNo(nullSetValue(userInfo.getDepNo()));
+                fawUserInfoParam.setEmployeeName(nullSetValue(userInfo.getEmployeeName()));
+                fawUserInfoParam.setEmailAddress(nullSetValue(userInfo.getEmailAddress()));
+                fawUserInfoParam.setClassOfPositions(nullSetValue(userInfo.getClassOfPositions()));
+                fawUserInfoParam.setFawClaOfPos(nullSetValue(userInfo.getFawClaOfPos()));
+                fawUserInfoParam.setJobs(nullSetValue(userInfo.getJobs()));
+                fawUserInfoParam.setDirectorId(nullSetValue(userInfo.getDirectorId()));
+                fawUserInfoParam.setDirectorName(nullSetValue(userInfo.getDirectorName()));
+                fawUserInfoParam.setObjectStatus(nullSetValue(userInfo.getObjectStatus()));
+                fawUserInfoParam.setMdmType(nullSetValue(userInfo.getMdmType()));
+                fawUserInfoParam.setDeptLevel(nullSetValue(userInfo.getDeptLevel()));
                 boolean dataKg = true;
                 if (!fawUserInfoResults.isEmpty()) {
                     for (FawUserInfoResult fawUserInfoResult : fawUserInfoResults) {
@@ -131,25 +141,32 @@ public class FawApiServiceImpl implements FawApiService {
 
         RsBody rsBody = new RsBody();
         RsMsgHeader rsMsgHeader = new RsMsgHeader();
-        rsMsgHeader.setMessageID(msgHeader.getMessageID());
-        rsMsgHeader.setInterfaceID(msgHeader.getInterfaceID());
-        rsMsgHeader.setTransID(msgHeader.getTransID());
+        rsMsgHeader.setMessageID(nullSetValue(msgHeader.getMessageID()));
+        rsMsgHeader.setInterfaceID(nullSetValue(msgHeader.getInterfaceID()));
+        rsMsgHeader.setTransID(nullSetValue(msgHeader.getTransID()));
         rsMsgHeader.setResultType("0");
         rsMsgHeader.setResultCode("");
         rsMsgHeader.setResultMessage("接收成功");
-        rsMsgHeader.setCount(msgHeader.getCount());
-        rsMsgHeader.setComment(msgHeader.getComment());
+        rsMsgHeader.setCount(nullSetValue(msgHeader.getCount()));
+        rsMsgHeader.setComment(nullSetValue(msgHeader.getComment()));
         RsMsgBody rsMsgBody = new RsMsgBody();
         rsMsgBody.setCode("0");
         rsMsgBody.setBusinessCode("");
         rsMsgBody.setMessage("");
         rsBody.setMsgBody(rsMsgBody);
         rsBody.setMsgHeader(rsMsgHeader);
+
+        logger.info("--OVER--");
         return rsBody;
     }
 
     @Override
     public RsErpBody setPurchaseOrder(MsgHeader msgHeader, MsgBodyErp msgBody) {
+
+        logger.info("--setPurchaseOrder--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         List<FawPurchaseOrderResult> fawPurchaseOrderResultList = this.fawPurchaseOrderService.findListBySpec(new FawPurchaseOrderParam());
@@ -163,14 +180,14 @@ public class FawApiServiceImpl implements FawApiService {
         if (yqjfPurchaseOrderInfo != null && !yqjfPurchaseOrderInfo.isEmpty()) {
             for (YQJFPurchaseOrderInfo purchaseOrderInfo : yqjfPurchaseOrderInfo) {
                 FawPurchaseOrderParam fawPurchaseOrderParam = new FawPurchaseOrderParam();
-                fawPurchaseOrderParam.setClient(purchaseOrderInfo.getClient());
-                fawPurchaseOrderParam.setPurDocitemNo(purchaseOrderInfo.getPurDocItemNO());
-                fawPurchaseOrderParam.setPurDocNo(purchaseOrderInfo.getPurDocNO());
-                fawPurchaseOrderParam.setPurchaseReqNo(purchaseOrderInfo.getPurchaseReqNO());
-                fawPurchaseOrderParam.setItemNo(purchaseOrderInfo.getItemNO());
-                fawPurchaseOrderParam.setPurStockBillId(purchaseOrderInfo.getPURStockBillID());
-                fawPurchaseOrderParam.setBuyListStrDes(purchaseOrderInfo.getBuyListStrDes());
-                fawPurchaseOrderParam.setCreatedBy(purchaseOrderInfo.getCreatedBy());
+                fawPurchaseOrderParam.setClient(nullSetValue(purchaseOrderInfo.getClient()));
+                fawPurchaseOrderParam.setPurDocitemNo(nullSetValue(purchaseOrderInfo.getPurDocItemNO()));
+                fawPurchaseOrderParam.setPurDocNo(nullSetValue(purchaseOrderInfo.getPurDocNO()));
+                fawPurchaseOrderParam.setPurchaseReqNo(nullSetValue(purchaseOrderInfo.getPurchaseReqNO()));
+                fawPurchaseOrderParam.setItemNo(nullSetValue(purchaseOrderInfo.getItemNO()));
+                fawPurchaseOrderParam.setPurStockBillId(nullSetValue(purchaseOrderInfo.getPURStockBillID()));
+                fawPurchaseOrderParam.setBuyListStrDes(nullSetValue(purchaseOrderInfo.getBuyListStrDes()));
+                fawPurchaseOrderParam.setCreatedBy(nullSetValue(purchaseOrderInfo.getCreatedBy()));
                 try {
                     if (purchaseOrderInfo.getCreatedDate() != null) {
                         fawPurchaseOrderParam.setCreatedDate(sdf.parse(purchaseOrderInfo.getCreatedDate()));
@@ -187,38 +204,38 @@ public class FawApiServiceImpl implements FawApiService {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                fawPurchaseOrderParam.setEstimatedPriceIndic(purchaseOrderInfo.getEstimatedPriceIndic());
-                fawPurchaseOrderParam.setMatBrand(purchaseOrderInfo.getMatBrand());
-                fawPurchaseOrderParam.setMtlNo(purchaseOrderInfo.getMtlNO());
-                fawPurchaseOrderParam.setNetValue(purchaseOrderInfo.getNetValue());
-                fawPurchaseOrderParam.setOrdPriceUnit(purchaseOrderInfo.getOrdPriceUnit());
-                fawPurchaseOrderParam.setOrdType(purchaseOrderInfo.getOrdType());
-                fawPurchaseOrderParam.setPlant(purchaseOrderInfo.getPlant());
-                fawPurchaseOrderParam.setPrice(purchaseOrderInfo.getPrice());
-                fawPurchaseOrderParam.setPromotion(purchaseOrderInfo.getPromotion());
-                fawPurchaseOrderParam.setProposerDesc(purchaseOrderInfo.getProposerDesc());
-                fawPurchaseOrderParam.setProposerId(purchaseOrderInfo.getProposerID());
-                fawPurchaseOrderParam.setPurGrp(purchaseOrderInfo.getPurGrp());
-                fawPurchaseOrderParam.setPurGrpDesc(purchaseOrderInfo.getPurGrpDesc());
-                fawPurchaseOrderParam.setPurOrg(purchaseOrderInfo.getPurOrg());
-                fawPurchaseOrderParam.setPurdocheaderId(purchaseOrderInfo.getPurdocheaderid());
-                fawPurchaseOrderParam.setPurdocitemId(purchaseOrderInfo.getPurdocitemid());
-                fawPurchaseOrderParam.setQuantity(purchaseOrderInfo.getQuantity());
-                fawPurchaseOrderParam.setRemark(purchaseOrderInfo.getRemark());
-                fawPurchaseOrderParam.setRemark1(purchaseOrderInfo.getRemark1());
-                fawPurchaseOrderParam.setStoreLocation(purchaseOrderInfo.getStoreLocation());
-                fawPurchaseOrderParam.setVendorDesc(purchaseOrderInfo.getVendorDesc());
-                fawPurchaseOrderParam.setVendorNo(purchaseOrderInfo.getVendorNO());
-                fawPurchaseOrderParam.setPhone(purchaseOrderInfo.getPhone());
-                fawPurchaseOrderParam.setReqPhone(purchaseOrderInfo.getReqPhone());
-                fawPurchaseOrderParam.setPlantDes(purchaseOrderInfo.getPlantDes());
-                fawPurchaseOrderParam.setStoreLocationDes(purchaseOrderInfo.getStoreLocationDes());
-                fawPurchaseOrderParam.setSizecoL(purchaseOrderInfo.getSizecoL());
-                fawPurchaseOrderParam.setUnitDes(purchaseOrderInfo.getUnitDes());
-                fawPurchaseOrderParam.setCreatedByDesc(purchaseOrderInfo.getCreatedByDesc());
-                fawPurchaseOrderParam.setStateDesc(purchaseOrderInfo.getStateDesc());
-                fawPurchaseOrderParam.setDiOpertype(purchaseOrderInfo.getDI_OPERTYPE());
-                fawPurchaseOrderParam.setDiBatch(purchaseOrderInfo.getDI_BATCHNO());
+                fawPurchaseOrderParam.setEstimatedPriceIndic(nullSetValue(purchaseOrderInfo.getEstimatedPriceIndic()));
+                fawPurchaseOrderParam.setMatBrand(nullSetValue(purchaseOrderInfo.getMatBrand()));
+                fawPurchaseOrderParam.setMtlNo(nullSetValue(purchaseOrderInfo.getMtlNO()));
+                fawPurchaseOrderParam.setNetValue(nullSetValue(purchaseOrderInfo.getNetValue()));
+                fawPurchaseOrderParam.setOrdPriceUnit(nullSetValue(purchaseOrderInfo.getOrdPriceUnit()));
+                fawPurchaseOrderParam.setOrdType(nullSetValue(purchaseOrderInfo.getOrdType()));
+                fawPurchaseOrderParam.setPlant(nullSetValue(purchaseOrderInfo.getPlant()));
+                fawPurchaseOrderParam.setPrice(nullSetValue(purchaseOrderInfo.getPrice()));
+                fawPurchaseOrderParam.setPromotion(nullSetValue(purchaseOrderInfo.getPromotion()));
+                fawPurchaseOrderParam.setProposerDesc(nullSetValue(purchaseOrderInfo.getProposerDesc()));
+                fawPurchaseOrderParam.setProposerId(nullSetValue(purchaseOrderInfo.getProposerID()));
+                fawPurchaseOrderParam.setPurGrp(nullSetValue(purchaseOrderInfo.getPurGrp()));
+                fawPurchaseOrderParam.setPurGrpDesc(nullSetValue(purchaseOrderInfo.getPurGrpDesc()));
+                fawPurchaseOrderParam.setPurOrg(nullSetValue(purchaseOrderInfo.getPurOrg()));
+                fawPurchaseOrderParam.setPurdocheaderId(nullSetValue(purchaseOrderInfo.getPurdocheaderid()));
+                fawPurchaseOrderParam.setPurdocitemId(nullSetValue(purchaseOrderInfo.getPurdocitemid()));
+                fawPurchaseOrderParam.setQuantity(nullSetValue(purchaseOrderInfo.getQuantity()));
+                fawPurchaseOrderParam.setRemark(nullSetValue(purchaseOrderInfo.getRemark()));
+                fawPurchaseOrderParam.setRemark1(nullSetValue(purchaseOrderInfo.getRemark1()));
+                fawPurchaseOrderParam.setStoreLocation(nullSetValue(purchaseOrderInfo.getStoreLocation()));
+                fawPurchaseOrderParam.setVendorDesc(nullSetValue(purchaseOrderInfo.getVendorDesc()));
+                fawPurchaseOrderParam.setVendorNo(nullSetValue(purchaseOrderInfo.getVendorNO()));
+                fawPurchaseOrderParam.setPhone(nullSetValue(purchaseOrderInfo.getPhone()));
+                fawPurchaseOrderParam.setReqPhone(nullSetValue(purchaseOrderInfo.getReqPhone()));
+                fawPurchaseOrderParam.setPlantDes(nullSetValue(purchaseOrderInfo.getPlantDes()));
+                fawPurchaseOrderParam.setStoreLocationDes(nullSetValue(purchaseOrderInfo.getStoreLocationDes()));
+                fawPurchaseOrderParam.setSizecoL(nullSetValue(purchaseOrderInfo.getSizecoL()));
+                fawPurchaseOrderParam.setUnitDes(nullSetValue(purchaseOrderInfo.getUnitDes()));
+                fawPurchaseOrderParam.setCreatedByDesc(nullSetValue(purchaseOrderInfo.getCreatedByDesc()));
+                fawPurchaseOrderParam.setStateDesc(nullSetValue(purchaseOrderInfo.getStateDesc()));
+                fawPurchaseOrderParam.setDiOpertype(nullSetValue(purchaseOrderInfo.getDI_OPERTYPE()));
+                fawPurchaseOrderParam.setDiBatch(nullSetValue(purchaseOrderInfo.getDI_BATCHNO()));
                 boolean dataKg = true;
                 if (!fawPurchaseOrderResultList.isEmpty()) {
                     for (FawPurchaseOrderResult fawPurchaseOrderResult : fawPurchaseOrderResultList) {
@@ -268,25 +285,32 @@ public class FawApiServiceImpl implements FawApiService {
 
         RsErpBody rsErpBody = new RsErpBody();
         RsMsgHeader rsMsgHeader = new RsMsgHeader();
-        rsMsgHeader.setMessageID(msgHeader.getMessageID());
-        rsMsgHeader.setInterfaceID(msgHeader.getInterfaceID());
-        rsMsgHeader.setTransID(msgHeader.getTransID());
+        rsMsgHeader.setMessageID(nullSetValue(msgHeader.getMessageID()));
+        rsMsgHeader.setInterfaceID(nullSetValue(msgHeader.getInterfaceID()));
+        rsMsgHeader.setTransID(nullSetValue(msgHeader.getTransID()));
         rsMsgHeader.setResultType("0");
         rsMsgHeader.setResultCode("");
         rsMsgHeader.setResultMessage("接收成功");
-        rsMsgHeader.setCount(msgHeader.getCount());
-        rsMsgHeader.setComment(msgHeader.getComment());
+        rsMsgHeader.setCount(nullSetValue(msgHeader.getCount()));
+        rsMsgHeader.setComment(nullSetValue(msgHeader.getComment()));
         RsMsgErpBody rsMsgErpBody = new RsMsgErpBody();
         rsMsgErpBody.setMSG("");
         rsMsgErpBody.setMSGNO("");
         rsMsgErpBody.setRESULT("");
         rsErpBody.setMsgBody(rsMsgErpBody);
         rsErpBody.setMsgHeader(rsMsgHeader);
+
+        logger.info("--OVER--");
         return rsErpBody;
     }
 
     @Override
     public RsBody getMaterielInfos(MsgHeader msgHeader, MsgBodyByEsb msgBody) {
+
+        logger.info("--getMaterielInfos--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         List<FawMtlInfoResult> fawMtlInfoResultList = this.fawMtlInfoService.findListBySpec(new FawMtlInfoParam());
@@ -299,34 +323,34 @@ public class FawApiServiceImpl implements FawApiService {
 
         if (yqjfMaterialInfo != null && !yqjfMaterialInfo.isEmpty()) {
             for (YQJFMaterialInfo materialInfo : yqjfMaterialInfo) {
-                FawMtlInfoParam fawMtlInfoParam=new FawMtlInfoParam();
-                fawMtlInfoParam.setDiOpertype(materialInfo.getDI_OPERTYPE());
-                fawMtlInfoParam.setDiBatch(materialInfo.getDI_BATCHNO());
-                if (materialInfo.getDI_UPDATETIME()!=null){
+                FawMtlInfoParam fawMtlInfoParam = new FawMtlInfoParam();
+                fawMtlInfoParam.setDiOpertype(nullSetValue(materialInfo.getDI_OPERTYPE()));
+                fawMtlInfoParam.setDiBatch(nullSetValue(materialInfo.getDI_BATCHNO()));
+                if (materialInfo.getDI_UPDATETIME() != null) {
                     try {
                         fawMtlInfoParam.setDiUpdatetime(sdf.parse(materialInfo.getDI_UPDATETIME()));
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
                 }
-                fawMtlInfoParam.setPlant(materialInfo.getPLANT());
-                fawMtlInfoParam.setMtlNo(materialInfo.getMTLNO());
-                fawMtlInfoParam.setMtlNodes(materialInfo.getMTLNODES());
-                fawMtlInfoParam.setMtlType(materialInfo.getMTLTYPE());
-                fawMtlInfoParam.setDelflagforclientmtl(materialInfo.getDELFLAGFORCLIENTMTL());
-                fawMtlInfoParam.setMeasurebaseunit(materialInfo.getMEASUREBASEUNIT());
-                fawMtlInfoParam.setIndustrystnddes(materialInfo.getINDUSTRYSTNDDES());
-                fawMtlInfoParam.setPagefromat(materialInfo.getPAGEFROMAT());
-                fawMtlInfoParam.setIsconfflag(materialInfo.getISCONFFLAG());
-                fawMtlInfoParam.setDatauser(materialInfo.getDATAUSER());
-                fawMtlInfoParam.setPurgrp(materialInfo.getPURGRP());
-                fawMtlInfoParam.setProcuretype(materialInfo.getPROCURETYPE());
-                fawMtlInfoParam.setSpecprocuretype(materialInfo.getSPECPROCURETYPE());
-                fawMtlInfoParam.setMrpcontroller(materialInfo.getMRPCONTROLLER());
-                fawMtlInfoParam.setValctg(materialInfo.getVALCTG());
-                fawMtlInfoParam.setCroplant(materialInfo.getCROPLANT());
-                fawMtlInfoParam.setSizes(materialInfo.getSIZES());
-                fawMtlInfoParam.setSpmtlstatus(materialInfo.getSPMTLSTATUS());
+                fawMtlInfoParam.setPlant(nullSetValue(materialInfo.getPLANT()));
+                fawMtlInfoParam.setMtlNo(nullSetValue(materialInfo.getMTLNO()));
+                fawMtlInfoParam.setMtlNodes(nullSetValue(materialInfo.getMTLNODES()));
+                fawMtlInfoParam.setMtlType(nullSetValue(materialInfo.getMTLTYPE()));
+                fawMtlInfoParam.setDelflagforclientmtl(nullSetValue(materialInfo.getDELFLAGFORCLIENTMTL()));
+                fawMtlInfoParam.setMeasurebaseunit(nullSetValue(materialInfo.getMEASUREBASEUNIT()));
+                fawMtlInfoParam.setIndustrystnddes(nullSetValue(materialInfo.getINDUSTRYSTNDDES()));
+                fawMtlInfoParam.setPagefromat(nullSetValue(materialInfo.getPAGEFROMAT()));
+                fawMtlInfoParam.setIsconfflag(nullSetValue(materialInfo.getISCONFFLAG()));
+                fawMtlInfoParam.setDatauser(nullSetValue(materialInfo.getDATAUSER()));
+                fawMtlInfoParam.setPurgrp(nullSetValue(materialInfo.getPURGRP()));
+                fawMtlInfoParam.setProcuretype(nullSetValue(materialInfo.getPROCURETYPE()));
+                fawMtlInfoParam.setSpecprocuretype(nullSetValue(materialInfo.getSPECPROCURETYPE()));
+                fawMtlInfoParam.setMrpcontroller(nullSetValue(materialInfo.getMRPCONTROLLER()));
+                fawMtlInfoParam.setValctg(nullSetValue(materialInfo.getVALCTG()));
+                fawMtlInfoParam.setCroplant(nullSetValue(materialInfo.getCROPLANT()));
+                fawMtlInfoParam.setSizes(nullSetValue(materialInfo.getSIZES()));
+                fawMtlInfoParam.setSpmtlstatus(nullSetValue(materialInfo.getSPMTLSTATUS()));
                 boolean dataKg = true;
                 if (!fawMtlInfoResultList.isEmpty()) {
                     for (FawMtlInfoResult fawMtlInfoResult : fawMtlInfoResultList) {
@@ -346,9 +370,9 @@ public class FawApiServiceImpl implements FawApiService {
 
         if (!fawMtlInfoParams.isEmpty()) {
             this.fawMtlInfoService.insertListBatch(fawMtlInfoParams);
-            List<WmsMaterialTypeParam> wmsMaterialTypeParamList=new ArrayList<>();
+            List<WmsMaterialTypeParam> wmsMaterialTypeParamList = new ArrayList<>();
             for (FawMtlInfoParam fawMtlInfoParam : fawMtlInfoParams) {
-                WmsMaterialTypeParam wmsMaterialTypeParam=new WmsMaterialTypeParam();
+                WmsMaterialTypeParam wmsMaterialTypeParam = new WmsMaterialTypeParam();
                 wmsMaterialTypeParam.setType("2");
                 wmsMaterialTypeParam.setMaterialType(fawMtlInfoParam.getMtlType());
                 wmsMaterialTypeParam.setMaterialName(fawMtlInfoParam.getMtlNodes());
@@ -373,20 +397,27 @@ public class FawApiServiceImpl implements FawApiService {
 
         RsBody rsBody = new RsBody();
         RsMsgHeader rsMsgHeader = new RsMsgHeader();
-        rsMsgHeader.setMessageID(msgHeader.getMessageID());
-        rsMsgHeader.setInterfaceID(msgHeader.getInterfaceID());
-        rsMsgHeader.setTransID(msgHeader.getTransID());
+        rsMsgHeader.setMessageID(nullSetValue(msgHeader.getMessageID()));
+        rsMsgHeader.setInterfaceID(nullSetValue(msgHeader.getInterfaceID()));
+        rsMsgHeader.setTransID(nullSetValue(msgHeader.getTransID()));
         rsMsgHeader.setResultType("0");
         rsMsgHeader.setResultCode("");
         rsMsgHeader.setResultMessage("接收成功");
-        rsMsgHeader.setCount(msgHeader.getCount());
-        rsMsgHeader.setComment(msgHeader.getComment());
+        rsMsgHeader.setCount(nullSetValue(msgHeader.getCount()));
+        rsMsgHeader.setComment(nullSetValue(msgHeader.getComment()));
         rsBody.setMsgHeader(rsMsgHeader);
+
+        logger.info("--OVER--");
         return rsBody;
     }
 
     @Override
     public RsMomBody getToolCollection(MsgHeader msgHeader, MsgBodyByMom msgBody) {
+
+        logger.info("--getToolCollection--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+
         String sDateTime = msgBody.getStartTime();
         String eDateTime = msgBody.getEndTime();
         String operator = msgBody.getAccountCode();
@@ -461,7 +492,17 @@ public class FawApiServiceImpl implements FawApiService {
         RsMsgMomBody rsMsgMomBody = new RsMsgMomBody();
         rsMsgMomBody.setToolCollections(toolCollections);
         rsBody.setMsgBody(rsMsgMomBody);
+
+        logger.info("--OVER--");
         return rsBody;
+    }
+
+    private String nullSetValue(String ds) {
+        String rs = "";
+        if (ds != null && !"".equals(ds)) {
+            rs=ds;
+        }
+        return rs;
     }
 
 }

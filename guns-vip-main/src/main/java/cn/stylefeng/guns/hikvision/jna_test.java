@@ -14,6 +14,17 @@ public class jna_test {
     int iErr = 0;
     static int iCharEncodeType = 0;//设备字符集
 
+    //命令值：0- 关闭（对于梯控，表示受控），1- 打开（对于梯控，表示开门），2- 常开（对于梯控，表示自由、通道状态），3- 常关（对于梯控，表示禁用），4- 恢复（梯控，普通状态），5- 访客呼梯（梯控），6- 住户呼梯（梯控）
+    public static void SendDoorKz(int coodeKz) throws InterruptedException {
+        // 用户登陆操作
+        Login_V40("192.168.26.3",(short)8000,"admin","faw123456");
+        //远程控门 1号门 1开 0关
+        boolean openKg=hCNetSDK.NET_DVR_ControlGateway(lUserID,1,coodeKz);
+        if (openKg){
+            System.out.println("门控完成");
+        }
+    }
+
     public static void main(String[] args) throws InterruptedException {
         jna_test test01  = new jna_test();
         // 初始化
@@ -46,7 +57,7 @@ public class jna_test {
      * @param m_sUsername 用户名
      * @param m_sPassword 密码
      */
-    public void Login_V40(String m_sDeviceIP,short wPort,String m_sUsername,String m_sPassword) {
+    public static void Login_V40(String m_sDeviceIP, short wPort, String m_sUsername, String m_sPassword) {
         /* 注册 */
         // 设备登录信息
         HCNetSDK.NET_DVR_USER_LOGIN_INFO m_strLoginInfo = new HCNetSDK.NET_DVR_USER_LOGIN_INFO();
