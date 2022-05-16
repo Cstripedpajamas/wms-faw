@@ -63,6 +63,11 @@ public class WmsWarehouseToolUseTaskServiceImpl extends ServiceImpl<WmsWarehouse
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(WmsWarehouseToolUseTaskParam param) {
+        return this.baseMapper.findByTaskStateOfOperator(param);
+    }
+
     private Serializable getKey(WmsWarehouseToolUseTaskParam param){
         return param.getId();
     }

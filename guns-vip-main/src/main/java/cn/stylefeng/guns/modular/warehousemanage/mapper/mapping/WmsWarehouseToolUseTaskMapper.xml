@@ -283,4 +283,12 @@
         </if>
     </select>
 
+    <select id="findByTaskStateOfOperator"
+            resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseToolUseTaskResult"
+            parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseToolUseTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_tool_use_task where (task_state  = '0'  or task_state  = '1' or task_state  = '2' )  and operator = #{paramCondition.operator}
+    </select>
+
 </mapper>

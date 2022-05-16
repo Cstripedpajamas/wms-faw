@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.hikvision;
 
+import cn.stylefeng.guns.threads.DoorCtonThread;
 import com.sun.jna.Pointer;
 
 import javax.swing.table.DefaultTableModel;
@@ -353,15 +354,9 @@ public class FMSGCallBack_V31 implements HCNetSDK.FMSGCallBack_V31 {
 
                 //人脸识别通过
                 if (strACSInfo.dwMajor == 5 && strACSInfo.dwMinor == 75) {
-                    System.out.println("-------人脸认证通过------");
-                    System.out.println("事件流水号 "+strACSInfo.struAcsEventInfo.dwSerialNo);
-                    System.out.println("卡号 " +new String(strACSInfo.struAcsEventInfo.byCardNo).trim() );
-                    // todo 开门
-                    try {
-                        jna_test.SendDoorKz(1);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    String dwSerialNo= String.valueOf(strACSInfo.struAcsEventInfo.dwSerialNo);
+                    String byCardNo= Arrays.toString(strACSInfo.struAcsEventInfo.byCardNo);
+                    DoorCtonThread.openDoor(dwSerialNo,byCardNo);
                 }
 
                 if (strACSInfo.dwPicDataLen > 0) {

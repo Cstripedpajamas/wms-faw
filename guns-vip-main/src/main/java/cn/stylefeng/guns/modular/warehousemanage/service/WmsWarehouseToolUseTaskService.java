@@ -66,4 +66,9 @@ public interface WmsWarehouseToolUseTaskService extends IService<WmsWarehouseToo
      */
      LayuiPageInfo findPageBySpec(WmsWarehouseToolUseTaskParam param);
 
+    /**
+     *  查询是否存在 为做任务
+     */
+    List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(WmsWarehouseToolUseTaskParam param);
+
 }

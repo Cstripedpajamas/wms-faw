@@ -53,4 +53,10 @@ public interface WmsWarehouseToolUseTaskMapper extends BaseMapper<WmsWarehouseTo
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsWarehouseToolUseTaskParam paramCondition);
 
+    /**
+     * 查询是否存在 为做任务
+     *
+     */
+    List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(@Param("paramCondition") WmsWarehouseToolUseTaskParam paramCondition);
+
 }

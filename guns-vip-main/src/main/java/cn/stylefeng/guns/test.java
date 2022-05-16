@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,23 +18,16 @@ import java.util.List;
 public class test {
 
     public static void main(String[] args) {
-        String a = "x";
-        int b = 1;
-        List<String[]> list = new ArrayList<>();
-        for (int i = 1; i < 3; i++) {
-            for (int i1 = 1; i1 < 11; i1++) {
-                for (int i2 = 1; i2 < 16; i2++) {
-                    String bCode = a + addZero(b);
-                    String[] str = {bCode,i+"",i1+"",i2+"","1"};
-                    list.add(str);
-                    b++;
-                }
-            }
+        Date dateNew=new Date();
+        long dateNewNow=dateNew.getTime();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
-        System.out.println(list.size());
-        for (String[] strings : list) {
-            System.out.println(Arrays.toString(strings));
-        }
+        Date dateNew1=new Date();
+        long dateNewNow1=dateNew1.getTime();
+        System.out.printf(String.valueOf(dateNewNow1-dateNewNow));
     }
 
     public static String addZero(int number){
