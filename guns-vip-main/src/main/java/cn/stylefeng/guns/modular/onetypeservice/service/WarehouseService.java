@@ -39,6 +39,7 @@ import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseStockResult;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTaskOutResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
@@ -198,6 +199,8 @@ public class WarehouseService {
         }
         WmsWarehouseTurnoverResult wm =   wmsWarehouseTurnoverService.findByBarCode(barCode);
         wmsWarehouseTaskOut.setTurnoverNumber(wm.getTurnoverNumber()); // 出库周转箱编号
+        wmsWarehouseTaskOut.setTurnoverType(wm.getTurnoverType()); // 出库周转箱类型
+        wmsWarehouseTaskOut.setTurnoverMouthQuality(wm.getTurnoverMouthQuantity()); // 格口数量
         wmsWarehouseTaskOut.setBarcode(barCode); // 出库周转箱条码
         wmsWarehouseTaskOut.setResTag(StateEnum.TWO.getState()); // 结果标记
         wmsWarehouseTaskOut.setResStatus(StateEnum.TWO.getState()); // 结果状态
@@ -367,8 +370,8 @@ public class WarehouseService {
 
         // 创建出库任务
         WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
-        taskOut.setTurnoverType(wmsWarehouseTurnoverResult.getTurnoverType()); // 周转箱类型
-        taskOut.setTurnoverMouthQuality(wmsWarehouseTurnoverResult.getTurnoverMouthQuantity()); // 周转箱格口数量
+//        taskOut.setTurnoverType(wmsWarehouseTurnoverResult.getTurnoverType()); // 周转箱类型
+//        taskOut.setTurnoverMouthQuality(wmsWarehouseTurnoverResult.getTurnoverMouthQuantity()); // 周转箱格口数量
         taskOut.setMessageId(messageId);// 消息识别ID
         taskOut.setOrderType(ApplyType.A.getType());// 订单类别(A工具领用 B补货出库 C出库)
         taskOut.setTaskMg(toolUseTask.getTaskNumber());// 任务信息
@@ -937,16 +940,16 @@ public class WarehouseService {
 
 
         // 3.todo 创建出库任务 根据物料类型来判断应该出来的空周转箱类型 大小? 有无格口?
-        WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
+        WmsWarehouseTaskOutParam taskOut = new WmsWarehouseTaskOutParam();
         String messageId = RandomStringUtils.randomNumeric(12);
         taskOut.setMessageId(messageId);// 消息识别ID
         taskOut.setOrderType(ApplyType.C.getType());// 订单类别(A工具领用 B补货出库 C出库)
         taskOut.setTaskMg(storageTask.getTaskNumber());// 任务信息
         taskOut.setGoodsType(ApplyType.C.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
-        taskOut.setmNumber(StateEnum.ONE.getState());// 数量
+        taskOut.setMNumber(StateEnum.ONE.getState());// 数量
         taskOut.setSortingInfo("A");// 出仓分拣（A人工/B自动）
         taskOut.setTurnoverType(wmsMaterialTypeResult.getTurnoverType());
-        taskOut.setmBatch("1");
+        taskOut.setMBatch("1");
         taskOut.setMaterialSku("EmptyBox");
         taskOut.setReqTime(new Date());// 请求时间
         taskOut.setResTag(StateEnum.ZERO.getState());// 请求标记（0初始 1请求）
@@ -954,7 +957,7 @@ public class WarehouseService {
         taskOut.setResTag(StateEnum.ZERO.getState());// 结果标记（0初始 1更新 2结束）
         taskOut.setResStatus(StateEnum.ZERO.getState());// 结果状态（0初始 1正在执行 2任务完成 3任务失败）
         taskOut.setDataTime(new Date());// 数据时间
-        wmsWarehouseTaskOutService.save(taskOut);
+        wmsWarehouseTaskOutService.add(taskOut);
         // 4.发送出库任务
         cachedThreadPool.execute(new SendTOWcs(messageId, StateEnum.ZERO));
         // 5.返回页面信息
@@ -1064,15 +1067,17 @@ public class WarehouseService {
         }
         WmsWarehousePurchaseStorageTask wmsWarehousePurchaseStorageTask = wmsWarehousePurchaseStorageTaskService.getOne(new QueryWrapper<WmsWarehousePurchaseStorageTask>().eq("task_number", taskNumber));
         WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getById(wmsWarehousePurchaseStorageTask.getPurchaseId());
+        final WmsMaterialTypeResult materialTypeResult = wmsMaterialTypeService.findById(wmsPurchaseOrderInfo.getMaterialTypeId());
         // 2.创建出库任务
-        WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
+        WmsWarehouseTaskOutParam taskOut = new WmsWarehouseTaskOutParam();
         String messageId = RandomStringUtils.randomNumeric(12);
         taskOut.setMessageId(messageId);// 消息识别ID
         taskOut.setOrderType(ApplyType.C.getType());// 订单类别(A工具领用 B补货出库 C出库)
         taskOut.setTaskMg(taskNumber);// 任务信息
         taskOut.setGoodsType(ApplyType.C.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
-        taskOut.setmNumber(StateEnum.ONE.getState());// 数量
-        taskOut.setmBatch("1");// 批次
+        taskOut.setMNumber(StateEnum.ONE.getState());// 数量
+        taskOut.setTurnoverType(materialTypeResult.getTurnoverType());// 周转箱类型 大 中 小
+        taskOut.setMBatch("1");// 批次
         taskOut.setMaterialSku("EmptyBox"); // 物料SKU
         taskOut.setSortingInfo("A");// 出仓分拣（A人工/B自动）
         taskOut.setReqTime(new Date());// 请求时间
@@ -1081,7 +1086,7 @@ public class WarehouseService {
         taskOut.setResTag(StateEnum.ZERO.getState());// 结果标记（0初始 1更新 2结束）
         taskOut.setResStatus(StateEnum.ZERO.getState());// 结果状态（0初始 1正在执行 2任务完成 3任务失败）
         taskOut.setDataTime(new Date());// 数据时间
-        wmsWarehouseTaskOutService.save(taskOut);
+        wmsWarehouseTaskOutService.add(taskOut);
         // 4.发送出库任务
         cachedThreadPool.execute(new SendTOWcs(messageId, StateEnum.ZERO));
         // 5.返回页面信息
@@ -1260,9 +1265,9 @@ public class WarehouseService {
 
                 // 空周转箱类型
                 if (Objects.equals("C",wmsWarehouseTaskOut.getGoodsType())){
-                    map.put("BoxType", initMap.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+                    map.put("BoxType", inOutType.get(wmsWarehouseTaskOut.getTurnoverType())); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
                 }else {
-                    map.put("BoxType"," ");
+                    map.put("BoxType","");
                 }
 //                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 A 多格口 B 单个口
                 map.put("LatticeType",""); // 格口类型 A 多格口 B 单个口
