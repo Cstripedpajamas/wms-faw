@@ -33,7 +33,8 @@ public class AppConfig implements CommandLineRunner {
         ExecutorService cachedThreadPool = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(), namedThreadFactory);
         cachedThreadPool.execute(new TaskThreadPool());
         cachedThreadPool.execute(new UpDataThreadPool());
-        hisvisonStart();
+        cachedThreadPool.execute(new UpDataThreadPool2());
+//        hisvisonStart();
         logger.info("Test Start up complete");
     }
 
@@ -70,6 +71,20 @@ public class AppConfig implements CommandLineRunner {
         public void run() {
             try {
                 UseAppliesThread.startThread();
+            } catch (Exception e) {
+                logger.info("UpDataThreadPool-->Start exception");
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    static class UpDataThreadPool2 implements Runnable {
+        private final static Logger logger = LoggerFactory.getLogger(UpDataThreadPool2.class);
+
+        @Override
+        public void run() {
+            try {
                 GuiHuanAppliesThread.startThread();
             } catch (Exception e) {
                 logger.info("UpDataThreadPool-->Start exception");
