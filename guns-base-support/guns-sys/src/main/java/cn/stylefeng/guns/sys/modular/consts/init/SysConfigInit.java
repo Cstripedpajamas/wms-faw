@@ -36,7 +36,7 @@ public class SysConfigInit implements CommandLineRunner {
                 ConstantsContext.putConstant(sysConfig.getCode(), sysConfig.getValue());
             }
 
-            log.info("初始化常量" + list.size() + "条！");
+            log.info("Initialization constant" + list.size() + " strip");
         }
 
     }

@@ -50,6 +50,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -57,9 +58,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 import static cn.stylefeng.guns.print.ZplPrinterTest.printFawTroue;
 
@@ -70,7 +69,8 @@ import static cn.stylefeng.guns.print.ZplPrinterTest.printFawTroue;
 @Slf4j
 public class WarehouseService {
 
-    private ExecutorService cachedThreadPool = Executors.newFixedThreadPool(2);
+    ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
+    ExecutorService cachedThreadPool = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(), namedThreadFactory);
 
     // 打印机
     static ZplPrinter p = new ZplPrinter("\\\\192.168.26.96\\ZDesigner ZD888-203dpi ZPL");
@@ -159,7 +159,7 @@ public class WarehouseService {
         // 2.查找符合条件的库位数据
 //        WmsWarehouseStock wmsWarehouseStocks = wmsWarehouseStockService.getOne(new QueryWrapper<WmsWarehouseStock>().eq("loca_state", StateEnum.ONE.getState()).eq("material_type_id",toolUseTask.getMaterialTypeId()).last("limit 1"));
         // old : 查询库存信息表 new: 查询周转箱绑定货物表
-        log.info("提交的物料sku{}", toolUseTask.getMaterialSku());
+        log.info("Submitted material SKU{}", toolUseTask.getMaterialSku());
         WmsWarehouseTurnoverBindResult turnoverBindResult = wmsWarehouseTurnoverBindService.findBySKU(toolUseTask.getMaterialSku());
         if (turnoverBindResult == null) {
             return ResponseData.error("库中" + toolUseTask.getMaterialSku() + "的物料不足");
@@ -458,9 +458,9 @@ public class WarehouseService {
         map.put("Qty",1); // 数量
 //        map.put("Hits","AH1-PLA-A12"); // 分拣工位 A人工 B自动
         map.put("SortingPosition","AH1-PLA-A12"); // 分拣工位 A人工 B自动
-        log.info("出库请求参数为{}",map);
+        log.info("The issue request parameter is{}",map);
         String str = wmsApiService.sendOutReq(map);
-//        log.info("出库返回参数为{}",str);
+        log.info("The return parameter of delivery is{}",str);
         WmsWarehouseTaskOutParam wmsWarehouseTaskOutParam = new WmsWarehouseTaskOutParam();
         ToolUtil.copyProperties(wmsWarehouseTaskOut, wmsWarehouseTaskOutParam);
         wmsWarehouseTaskOutParam.setReqTag(StateEnum.ONE.getState());// 请求标记（0初始 1请求）
@@ -1275,9 +1275,9 @@ public class WarehouseService {
                 map.put("Batch",wmsWarehouseTaskOut.getmBatch()); // 批次
                 map.put("Qty",Integer.parseInt(wmsWarehouseTaskOut.getmNumber())); // 数量
                 map.put("SortingPosition", Objects.equals("A", wmsWarehouseTaskOut.getSortingInfo()) ?"AH1-PLA-A12":"AH1-PLA-A50"); // 分拣工位 A人工 B自动
-                log.info("出库请求参数为{}",map);
+                log.info("The issue request parameter is{}",map);
                 String str = wmsApiService.sendOutReq(map);
-                log.info("出库返回参数为{}",str);
+                log.info("The return parameter of delivery is{}",str);
                 WmsWarehouseTaskOutParam wmsWarehouseTaskOutParam = new WmsWarehouseTaskOutParam();
                 ToolUtil.copyProperties(wmsWarehouseTaskOut, wmsWarehouseTaskOutParam);
                 wmsWarehouseTaskOutParam.setReqTag(StateEnum.ONE.getState());// 请求标记（0初始 1请求）
@@ -1321,9 +1321,9 @@ public class WarehouseService {
                     map.put("BoxInformation", list); // 空
                 }
                 map.put("Hits", Objects.equals("A", wmsWarehouseTaskIn.getSortingInfo()) ?"AH1-PLA-A12":"AH1-PLA-A50"); // 分拣工位 A人工 B自动
-                log.info("入仓请求参数{}",map);
+                log.info("Warehousing request parameters{}",map);
                 String str = wmsApiService.sendInReq(map);
-                log.info("入仓请求响应{}", str);
+                log.info("Warehousing request response{}", str);
                 WmsWarehouseTaskInParam wmsWarehouseTaskInParam = new WmsWarehouseTaskInParam();
                 ToolUtil.copyProperties(wmsWarehouseTaskIn, wmsWarehouseTaskInParam);
                 wmsWarehouseTaskInParam.setReqTag(StateEnum.ONE.getState());// 请求标记（0初始 1请求）

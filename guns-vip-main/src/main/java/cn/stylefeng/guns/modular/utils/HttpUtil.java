@@ -34,7 +34,7 @@ public class HttpUtil {
         restTemplate.getMessageConverters().clear();
         // 转为JSON
         restTemplate.getMessageConverters().add(new FastJsonHttpMessageConverter());
-        logger.info("RestTemplate初始化完成");
+        logger.info("Resttemplate initialization completed");
         return restTemplate;
     }
 }

@@ -86,9 +86,9 @@ public class DataBaseInfoDao {
             preparedStatement.setString(8, DateUtil.formatDateTime(new Date()));
 
             int i = preparedStatement.executeUpdate();
-            log.info("初始化master的databaseInfo信息！初始化" + i + "条！");
+            log.info("Initialize the DatabaseInfo information of the master! initialization" + i + "Bar!");
         } catch (Exception ex) {
-            log.error("初始化master的databaseInfo信息错误！", ex);
+            log.error("Error initializing DatabaseInfo information of master!", ex);
             throw new DataSourceInitException(DataSourceInitException.ExEnum.QUERY_DATASOURCE_INFO_ERROR);
         }
     }
@@ -108,9 +108,9 @@ public class DataBaseInfoDao {
             PreparedStatement preparedStatement = conn.prepareStatement(new DeleteDatabaseInfoSql().getSql(druidProperties.getUrl()));
             preparedStatement.setString(1, MASTER_DATASOURCE_NAME);
             int i = preparedStatement.executeUpdate();
-            log.info("删除master的databaseInfo信息！删除" + i + "条！");
+            log.info("Delete the DatabaseInfo information of the master! delete" + i + "Bar!");
         } catch (Exception ex) {
-            log.info("删除master的databaseInfo信息失败！", ex);
+            log.info("Failed to delete DatabaseInfo information of master!", ex);
             throw new DataSourceInitException(DataSourceInitException.ExEnum.QUERY_DATASOURCE_INFO_ERROR);
         }
     }

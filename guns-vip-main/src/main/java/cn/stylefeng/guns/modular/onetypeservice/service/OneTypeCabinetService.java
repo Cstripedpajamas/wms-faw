@@ -1548,10 +1548,10 @@ public class OneTypeCabinetService {
                                 .eq("loca_state",StateEnum.ONE.getState()).eq("tool_state",StateEnum.ONE.getState())
                                 .eq("lattice_type",wmsIntelligentCabinet1Stock.getLatticeType()).last("limit 1"));
                         // 更新任务信息
-                        log.info("任务编号为{}",taskNumber);
+                        log.info("Task number is{}",taskNumber);
                         WmsCabinet1RenewTask renewTask = wmsCabinet1RenewTaskService.getOne(new QueryWrapper<WmsCabinet1RenewTask>().eq("task_number",taskNumber));
                         renewTask.setTaskState(StateEnum.FOUR.getState());// 取货开始
-                        log.info("查询的库存格口信息{}",haveMaterialCabinet);
+                        log.info("Queried inventory grid information{}",haveMaterialCabinet);
                         renewTask.setnMaterialId(haveMaterialCabinet.getMaterialId()); // 新-物料ID
                         renewTask.setnMaterialSerialNumber(haveMaterialCabinet.getMaterialSerialNumber()); // 新-物料编号
                         renewTask.setTaskStockId(String.valueOf(haveMaterialCabinet.getId())); // 新-库位ID

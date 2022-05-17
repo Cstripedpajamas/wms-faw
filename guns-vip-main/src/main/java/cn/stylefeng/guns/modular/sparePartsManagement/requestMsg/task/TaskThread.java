@@ -380,11 +380,11 @@ public class TaskThread {
             }
 
             finishTask();
-            logger.info("库存不足");
+            logger.info("Insufficient inventory");
             return ResponseData.error("库存不足");
         }
         finishTask();
-        logger.info("无任务执行~");
+        logger.info("No task execution~");
         return ResponseData.error("没有任务了");
     }
 
@@ -551,7 +551,7 @@ public class TaskThread {
 
         // 返回的数据 如果 Result的数据 跟 ScrapNumber数据相同 跳出数据
         Declension declension = taskThread.wmsApiService.StartScrapCount(map);
-        log.info("访问开始报废品计数返回结果{}", declension);
+        log.info("Access the returned result of scrap counting{}", declension);
         return declension;
     }
 
@@ -641,7 +641,7 @@ public class TaskThread {
         turnoverID = taskThread.wmsCabinet2TurnoverService.findIdByTurnoverNumber(HUNumber);
 //        stockID = LocationId;
 //        turnoverID = HUNumber;
-        log.info("出库完成库位ID{},出库完成周转箱ID{}", stockID, turnoverID);
+        log.info("Issue completed location ID{},Delivery completed turnover box ID{}", stockID, turnoverID);
         isOutStockFinish = true;
     }
 

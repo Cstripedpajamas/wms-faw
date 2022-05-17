@@ -37,7 +37,7 @@ public class JavaMailManager implements MailManager {
 
         //校验发送邮件的参数
         assertSendMailParams(sendMailParam);
-        log.info("参数校验成功。。。。");
+        log.info("Parameter verification succeeded");
         //spring发送邮件
         try {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
@@ -48,7 +48,7 @@ public class JavaMailManager implements MailManager {
             mimeMessageHelper.setText(sendMailParam.getContent(), true);
             javaMailSender.send(mimeMessage);
         } catch (MessagingException e) {
-            log.error("发送邮件异常", e);
+            log.error("Sending mail exception", e);
             throw new ServiceException(MailSendResultEnum.MAIL_SEND_ERROR);
         }
     }

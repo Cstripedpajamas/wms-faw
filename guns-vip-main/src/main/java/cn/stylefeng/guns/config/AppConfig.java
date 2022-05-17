@@ -1,8 +1,5 @@
 package cn.stylefeng.guns.config;
 
-import cn.stylefeng.guns.hikvision.FMSGCallBack_V31;
-import cn.stylefeng.guns.hikvision.HCNetSDK;
-import cn.stylefeng.guns.hikvision.jna_User;
 import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBody2Entity;
 import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBodyEntity;
 import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendHeaderEntity;
@@ -25,8 +22,6 @@ public class AppConfig implements CommandLineRunner {
 
     private final static Logger logger = LoggerFactory.getLogger(AppConfig.class);
 
-    static HCNetSDK hCNetSDK = HCNetSDK.INSTANCE;
-
     @Override
     public void run(String... strings) {
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
@@ -34,18 +29,7 @@ public class AppConfig implements CommandLineRunner {
         cachedThreadPool.execute(new TaskThreadPool());
         cachedThreadPool.execute(new UpDataThreadPool());
         cachedThreadPool.execute(new UpDataThreadPool2());
-//        hisvisonStart();
         logger.info("Test Start up complete");
-    }
-
-    private void hisvisonStart(){
-        boolean initSuc = hCNetSDK.NET_DVR_Init();
-        if (!initSuc) {
-            logger.info("hisvison-->初始化失败");
-        }
-        // 打印SDK日志
-        hCNetSDK.NET_DVR_SetLogToFile(3, ".\\SDKLog\\", false);
-        jna_User.startHaK();
     }
 
     static class TaskThreadPool implements Runnable {
@@ -87,7 +71,7 @@ public class AppConfig implements CommandLineRunner {
             try {
                 GuiHuanAppliesThread.startThread();
             } catch (Exception e) {
-                logger.info("UpDataThreadPool-->Start exception");
+                logger.info("UpDataThreadPool2-->Start exception");
                 e.printStackTrace();
             }
         }

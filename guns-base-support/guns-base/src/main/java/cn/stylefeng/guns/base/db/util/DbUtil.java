@@ -131,11 +131,11 @@ public class DbUtil {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
 
             int i = preparedStatement.executeUpdate();
-            log.info("创建数据库！数量：" + i);
+            log.info("Create database! number:" + i);
 
         } catch (Exception ex) {
-            log.error("执行sql出现问题！", ex);
-            throw new ServiceException(500, "创建多租户-执行sql出现问题！");
+            log.error("There is a problem executing SQL!", ex);
+            throw new ServiceException(500, "Create multi tenant - there is a problem executing SQL!");
         }
     }
 

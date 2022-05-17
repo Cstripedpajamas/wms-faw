@@ -41,7 +41,7 @@ public class WebSocket {
     public void onOpen(Session session) {
         onlineCount.incrementAndGet(); // 在线数加1
         clients.put(session.getId(), session);
-        logger.info("有新连接加入：{}，当前在线人数为：{}", session.getId(), onlineCount.get());
+        logger.info("A new connection has been added: {}. The number of people currently online is: {}", session.getId(), onlineCount.get());
 //        try {
 //            Thread.sleep(2000);
 //            this.sendMessage("op900");
@@ -57,7 +57,7 @@ public class WebSocket {
     public void onClose(Session session) {
         onlineCount.decrementAndGet(); // 在线数减1
         clients.remove(session.getId());
-        logger.info("有一连接关闭：{}，当前在线人数为：{}", session.getId(), onlineCount.get());
+        logger.info("One connection is closed: {}, and the current number of online people is: {}", session.getId(), onlineCount.get());
     }
 
     /**
@@ -68,7 +68,7 @@ public class WebSocket {
      */
     @OnMessage
     public void onMessage(String message, Session session) {
-        logger.info("服务端收到客户端[{}]的消息:{}", session.getId(), message);
+        logger.info("The server received a message from the client [{}]: {}", session.getId(), message);
 //        this.sendMessage(message);
         System.out.println(session.getRequestURI());
         if(Objects.equals("0",message)){
@@ -105,7 +105,7 @@ public class WebSocket {
         for (Map.Entry<String, Session> sessionEntry : clients.entrySet()) {
             Session toSession = sessionEntry.getValue();
             toSession.getAsyncRemote().sendText(message);
-            logger.info("服务端给客户端[{}]发送消息{}", toSession.getId(), message);
+            logger.info("The server sends a message {} to the client [{}]", toSession.getId(), message);
         }
     }
 
@@ -115,7 +115,7 @@ public class WebSocket {
     public static void sendMessageOfSession1(String message) {
         Session toSession=sessions[0];
         toSession.getAsyncRemote().sendText(message);
-        logger.info("服务端给客户端[{}]发送消息{}", toSession.getId(), message);
+        logger.info("The server sends a message {} to the client [{}]", toSession.getId(), message);
     }
 
     /*
@@ -124,7 +124,7 @@ public class WebSocket {
     public static void sendMessageOfSession2(String message) {
         Session toSession=sessions[1];
         toSession.getAsyncRemote().sendText(message);
-        logger.info("服务端给客户端[{}]发送消息{}", toSession.getId(), message);
+        logger.info("The server sends a message {} to the client [{}]", toSession.getId(), message);
     }
 
     /*
@@ -133,7 +133,7 @@ public class WebSocket {
     public static void sendMessageOfSession3(String message) {
         Session toSession=sessions[2];
         toSession.getAsyncRemote().sendText(message);
-        logger.info("服务端给客户端[{}]发送消息{}", toSession.getId(), message);
+        logger.info("The server sends a message {} to the client [{}]", toSession.getId(), message);
     }
 
 

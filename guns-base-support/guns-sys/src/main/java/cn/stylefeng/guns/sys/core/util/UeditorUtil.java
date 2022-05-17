@@ -199,14 +199,14 @@ public class UeditorUtil {
             File newfile = new File(file.getParent() + File.separator + newName);
 
             if (file.renameTo(newfile)) {
-                log.info("重命名成功！");
+                log.info("Rename succeeded!");
                 return newfile;
             } else {
-                log.info("重命名失败！新文件名已存在!");
+                log.info("Rename failed! New file name already exists!");
                 return file;
             }
         } else {
-            log.info("重命名文件不存在！");
+            log.info("The renamed file does not exist!");
             return file;
         }
     }

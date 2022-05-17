@@ -4,7 +4,6 @@ import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import cn.stylefeng.guns.hikvision.jna_test;
 import cn.stylefeng.guns.modular.WebApi.Entity.runBatch;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
@@ -407,8 +406,7 @@ public class RedirectConfController extends BaseController {
         String batch =  (String) jsonObject.get("Batch"); // 批次
         String qty =  (String) jsonObject.get("Qty"); // 数量
         String sortingPosition =  (String) jsonObject.get("Hits"); // 分拣位
-        log.info("消息识别id:{},入仓类型:{},周转箱类型:{},格口类型:{},物料sku:{},批次:{},数量:{},分拣位:{}",
-                id,type,boxType,latticeType,sku,batch,qty,sortingPosition);
+        log.info("Message identification ID:{},Warehousing type:{},Turnover box type:{},Lattice type:{},Material SKU:{},batch:{},quantity:{},Sorting position:{}",id,type,boxType,latticeType,sku,batch,qty,sortingPosition);
         Map<String, Object> map = new HashMap<>();
         map.put("InboundId",id);
         map.put("Type",Byte.parseByte(type));
@@ -421,7 +419,7 @@ public class RedirectConfController extends BaseController {
         map.put("Hits",sortingPosition);
         System.out.println(map);
        String str =  wmsApiService.sendOutReq(map);
-       log.info("返回的结果{}",str);
+       log.info("Returned results{}",str);
         return ResponseData.success();
     }
 
@@ -526,24 +524,13 @@ public class RedirectConfController extends BaseController {
         return ResponseData.success();
     }
 
-//    @JmsListener(destination = "mytest.queue")
-//    @SendTo("out.queue") // 双向队列,发送到  @JmsListener(destination = "out.queue")
-//    public String receiveQueue(String text){
-//        System.out.println("我的系统收到的信息为:"+text);
-//        return "嘎嘎嘎过~";
-//    }
-
     /**
      * 门禁 常闭
      */
     @RequestMapping("/KeppClose")
     @ResponseBody
     public ResponseData KeppClose() {
-        try {
-            jna_test.SendDoorKz(3);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        // TODO: 2022/5/17 门禁控制 3
         return ResponseData.success();
     }
 
@@ -553,11 +540,7 @@ public class RedirectConfController extends BaseController {
     @RequestMapping("/KeppOpen")
     @ResponseBody
     public ResponseData KeppOpen() {
-        try {
-            jna_test.SendDoorKz(2);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        // TODO: 2022/5/17 门禁控制 2
         return ResponseData.success();
     }
 
@@ -585,11 +568,7 @@ public class RedirectConfController extends BaseController {
                 break;
         }
         if (code!=999){
-            try {
-                jna_test.SendDoorKz(code);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            // TODO: 2022/5/17 门禁控制 code
         }
         return ResponseData.success();
     }

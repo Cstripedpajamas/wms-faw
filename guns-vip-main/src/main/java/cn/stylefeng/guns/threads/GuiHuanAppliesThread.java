@@ -59,7 +59,7 @@ public class GuiHuanAppliesThread {
     public static void startThread() {
         while (true){
             runThreadMain();
-            logger.info("线程运行-归还申请");
+            logger.info("Task Thread- Return application");
             try {
                 Thread.sleep(1000*10);
             } catch (InterruptedException e) {

@@ -40,7 +40,7 @@ public class WmsApiReceive {
     @RequestMapping(value = "/StaffId",method = RequestMethod.POST)
     @ResponseBody
     public ResponseData checkUserMsg(@RequestBody String StaffId){
-        log.info("一类柜人脸识别编号{}",StaffId);
+        log.info("First class cabinet face recognition number{}",StaffId);
          WmsApiMethods.I(StaffId);
          return ResponseData.success();
     }
@@ -52,7 +52,7 @@ public class WmsApiReceive {
     public ResponseData LockClosed(@RequestBody String LocationId){
         JSONObject jsonObject = JSON.parseObject(LocationId);
         String str = jsonObject.getString("LocationId");
-            log.info("关闭格口编号{}",str);
+            log.info("Closing grid number{}",str);
         WmsIntelligentCabinet1Stock wmsIntelligentCabinet1Stock = wmsIntelligentCabinet1StockService.getOne(new QueryWrapper<WmsIntelligentCabinet1Stock>().eq("loca_serial_number",str));
         if (wmsIntelligentCabinet1Stock!=null&&wmsIntelligentCabinet1Stock.getId()!=null){
             WmsIntelligentCabinet1StockParam stockParam = new WmsIntelligentCabinet1StockParam();

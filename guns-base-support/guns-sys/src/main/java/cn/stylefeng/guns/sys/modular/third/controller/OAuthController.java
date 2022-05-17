@@ -61,7 +61,7 @@ public class OAuthController extends BaseController {
         AuthResponse authResponse = authRequest.login(callback);
 
         AuthUser oauthUser = (AuthUser) authResponse.getData();
-        log.info("第三方登录回调成功：" + oauthUser);
+        log.info("Third party login callback succeeded：" + oauthUser);
 
         //进行第三方用户登录过程
         String token = loginService.oauthLogin(oauthUser);

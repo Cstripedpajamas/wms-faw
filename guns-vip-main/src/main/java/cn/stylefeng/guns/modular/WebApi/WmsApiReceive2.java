@@ -40,7 +40,7 @@ public class WmsApiReceive2 {
     @RequestMapping(value = "/StaffId", method = RequestMethod.POST)
     @ResponseBody
     public ResponseData checkUserMsg(@RequestBody String StaffId) {
-        log.info("人脸识别编号{}",StaffId);
+        log.info("Face recognition number{}",StaffId);
         WmsApiMethods.II(StaffId);
         return ResponseData.success();
     }
@@ -81,8 +81,8 @@ public class WmsApiReceive2 {
         JSONObject jsonObject = JSONObject.parseObject(InboundRequest);
         String HUNumber = jsonObject.getString("HUNumber"); //
         String CheckResult = jsonObject.getString("CheckResult");
-        log.info("入库申请周转箱编号{}",HUNumber);
-        log.info("入库申请检查结果{}",CheckResult);
+        log.info("Warehousing application turnover box No{}",HUNumber);
+        log.info("Warehousing application inspection results{}",CheckResult);
         return ResponseData.success();
     }
 
@@ -122,7 +122,7 @@ public class WmsApiReceive2 {
         // 判断 任务的id
         if (!Objects.equals("", TaskThread._runningId) && Objects.equals(orderId, TaskThread._runningId)) {
             String scrapCount = jsonObject.getString("ScrapCount");
-            log.info("投入报废品数量{}",scrapCount);
+            log.info("Input scrap quantity{}",scrapCount);
             // 更新 领用任务
             wmsCabinet2UseTaskService.updateScropNumber(orderId, scrapCount);
 
@@ -141,7 +141,7 @@ public class WmsApiReceive2 {
     public ResponseData errorMsg(@RequestBody String errorMsg) {
         System.out.println(errorMsg);
         //todo 业务.....
-        log.info("二类柜返回的异常信息{}",errorMsg);
+        log.info("Abnormal information returned by class II cabinet{}",errorMsg);
         return ResponseData.success();
     }
 }
