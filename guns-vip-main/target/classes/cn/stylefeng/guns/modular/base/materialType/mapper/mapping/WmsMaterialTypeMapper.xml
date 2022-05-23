@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.base.materialType.mapper.WmsMaterialTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType">
+        <id column="id" property="id"/>
+        <result column="type" property="type"/>
+        <result column="material_type" property="materialType"/>
+        <result column="material_name" property="materialName"/>
+        <result column="material_sku" property="materialSku"/>
+        <result column="m_unit" property="mUnit"/>
+        <result column="lattice_mouth_type" property="latticeMouthType"/>
+        <result column="data_state" property="dataState"/>
+        <result column="create_time" property="createTime"/>
+        <result column="sort_type" property="sortType"/>
+        <result column="package_type" property="packageType"/>
+        <result column="package_number" property="packageNumber"/>
+        <result column="turnover_type" property="turnoverType"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", type AS "type", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_unit AS "mUnit", lattice_mouth_type AS "latticeMouthType", data_state AS "dataState", create_time AS "createTime",
+        sort_type AS "sortType",package_type AS "packageType",package_number AS "packageNumber",turnover_type AS "turnoverType"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult"
+            parameterType="cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_material_type where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.type != null and paramCondition.type != ''">
+            and type like CONCAT('%',#{paramCondition.type},'%')
+        </if>
+        <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+            and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+        </if>
+        <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+            and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+        </if>
+        <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+            and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+        </if>
+        <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+            and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+        </if>
+        <if test="paramCondition.latticeMouthType != null and paramCondition.latticeMouthType != ''">
+            and lattice_mouth_type like CONCAT('%',#{paramCondition.latticeMouthType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_material_type where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.type != null and paramCondition.type != ''">
+            and type like CONCAT('%',#{paramCondition.type},'%')
+        </if>
+        <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+            and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+        </if>
+        <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+            and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+        </if>
+        <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+            and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+        </if>
+        <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+            and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+        </if>
+        <if test="paramCondition.latticeMouthType != null and paramCondition.latticeMouthType != ''">
+            and lattice_mouth_type like CONCAT('%',#{paramCondition.latticeMouthType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customPageList"
+            resultType="cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult"
+            parameterType="cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam">
+        SELECT wmt.*,wiclt.type_name,wmsp.packge_name AS packageType FROM `wms_material_type` AS wmt
+        LEFT JOIN wms_intelligent_cabinet1_lattice_type AS wiclt
+        ON wmt.lattice_mouth_type=wiclt.id
+        LEFT JOIN wms_packinfo AS wmsp
+        ON wmt.package_type = wmsp.id where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and wmt.id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.type != null and paramCondition.type != ''">
+            and wmt.type like CONCAT('%',#{paramCondition.type},'%')
+        </if>
+        <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+            and wmt.material_type like CONCAT('%',#{paramCondition.materialType},'%')
+        </if>
+        <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+            and wmt.material_name like CONCAT('%',#{paramCondition.materialName},'%')
+        </if>
+        <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+            and wmt.material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+        </if>
+        <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+            and wmt.m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+        </if>
+        <if test="paramCondition.latticeMouthType != null and paramCondition.latticeMouthType != ''">
+            and wmt.lattice_mouth_type like CONCAT('%',#{paramCondition.latticeMouthType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and wmt.data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and wmt.create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_material_type where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.type != null and paramCondition.type != ''">
+            and type like CONCAT('%',#{paramCondition.type},'%')
+        </if>
+        <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+            and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+        </if>
+        <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+            and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+        </if>
+        <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+            and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+        </if>
+        <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+            and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+        </if>
+        <if test="paramCondition.latticeMouthType != null and paramCondition.latticeMouthType != ''">
+            and lattice_mouth_type like CONCAT('%',#{paramCondition.latticeMouthType},'%')
+        </if>
+        <if test="paramCondition.dataState != null and paramCondition.dataState != ''">
+            and data_state like CONCAT('%',#{paramCondition.dataState},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="findById" resultType="cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult" parameterType="string">
+        select
+        id as "id",
+        `type` as "type",
+        case `type` when 1 then "工具" else "备品备件" end as typeEx,
+        material_name as "materialName",
+        material_sku as "materialSku",
+        sort_type as "sortType",
+        turnover_type as "turnoverType"
+        from wms_material_type where 1=1
+        and id = #{id};
+    </select>
+
+    <select id="findByMaterialSku" resultType="cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult"
+            parameterType="cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_material_type where 1 = 1 and material_sku = #{paramCondition.materialSku} limit 1
+    </select>
+
+    <insert id="insertListBatch">
+        insert into wms_material_type (
+        type,material_type,material_name,material_sku,m_unit,lattice_mouth_type,data_state,sort_type,package_type,package_number
+        )
+        values
+        <foreach collection="list" item="paramCondition" index="index" separator=",">
+            (#{paramCondition.type},#{paramCondition.materialType},#{paramCondition.materialName},#{paramCondition.materialSku},#{paramCondition.mUnit},#{paramCondition.latticeMouthType},#{paramCondition.dataState},#{paramCondition.sortType},#{paramCondition.packageType},#{paramCondition.packageNumber})
+        </foreach>
+    </insert>
+
+</mapper>

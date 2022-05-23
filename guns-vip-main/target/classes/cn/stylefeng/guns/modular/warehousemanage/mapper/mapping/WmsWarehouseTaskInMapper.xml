@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseTaskInMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn">
+        <id column="id" property="id" />
+        <result column="message_id" property="messageId" />
+        <result column="order_type" property="orderType" />
+        <result column="task_mg" property="taskMg" />
+        <result column="goods_type" property="goodsType" />
+        <result column="turnover_type" property="turnoverType" />
+        <result column="turnover_number" property="turnoverNumber" />
+        <result column="t_barcode" property="tBarcode" />
+        <result column="req_tag" property="reqTag" />
+        <result column="req_status" property="reqStatus" />
+        <result column="res_tag" property="resTag" />
+        <result column="res_status" property="resStatus" />
+        <result column="loca_number" property="locaNumber" />
+        <result column="task_feedback" property="taskFeedback" />
+        <result column="create_time" property="createTime" />
+        <result column="req_time" property="reqTime" />
+        <result column="data_time" property="dataTime" />
+        <result column="mark" property="mark" />
+        <result column="spare_field" property="spareField" />
+        <result column="turnover_mouth_quality" property="turnoverMouthQuality" />
+        <result column="sorting_info" property="sortingInfo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", message_id AS "messageId", order_type AS "orderType", task_mg AS "taskMg", goods_type AS "goodsType", turnover_type AS "turnoverType", turnover_number AS "turnoverNumber", t_barcode AS "tBarcode",req_tag AS "reqTag", req_status AS "reqStatus", res_tag AS "resTag", res_status AS "resStatus", loca_number AS "locaNumber", task_feedback AS "taskFeedback", create_time AS "createTime", req_time AS "reqTime", data_time AS "dataTime",
+        mark AS "mark",spare_field AS "spareField",turnover_mouth_quality AS "turnoverMouthQuality",sorting_info AS "sortingInfo"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTaskInResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_task_in where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.messageId != null and paramCondition.messageId != ''">
+                and message_id like CONCAT('%',#{paramCondition.messageId},'%')
+            </if>
+            <if test="paramCondition.orderType != null and paramCondition.orderType != ''">
+                and order_type like CONCAT('%',#{paramCondition.orderType},'%')
+            </if>
+            <if test="paramCondition.taskMg != null and paramCondition.taskMg != ''">
+                and task_mg like CONCAT('%',#{paramCondition.taskMg},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.tBarcode != null and paramCondition.tBarcode != ''">
+                and t_barcode like CONCAT('%',#{paramCondition.tBarcode},'%')
+            </if>
+            <if test="paramCondition.reqTag != null and paramCondition.reqTag != ''">
+                and req_tag like CONCAT('%',#{paramCondition.reqTag},'%')
+            </if>
+            <if test="paramCondition.reqStatus != null and paramCondition.reqStatus != ''">
+                and req_status like CONCAT('%',#{paramCondition.reqStatus},'%')
+            </if>
+            <if test="paramCondition.resTag != null and paramCondition.resTag != ''">
+                and res_tag like CONCAT('%',#{paramCondition.resTag},'%')
+            </if>
+            <if test="paramCondition.resStatus != null and paramCondition.resStatus != ''">
+                and res_status like CONCAT('%',#{paramCondition.resStatus},'%')
+            </if>
+            <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+                and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+            </if>
+            <if test="paramCondition.taskFeedback != null and paramCondition.taskFeedback != ''">
+                and task_feedback like CONCAT('%',#{paramCondition.taskFeedback},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_task_in where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.messageId != null and paramCondition.messageId != ''">
+                and message_id like CONCAT('%',#{paramCondition.messageId},'%')
+            </if>
+            <if test="paramCondition.orderType != null and paramCondition.orderType != ''">
+                and order_type like CONCAT('%',#{paramCondition.orderType},'%')
+            </if>
+            <if test="paramCondition.taskMg != null and paramCondition.taskMg != ''">
+                and task_mg like CONCAT('%',#{paramCondition.taskMg},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.tBarcode != null and paramCondition.tBarcode != ''">
+                and t_barcode like CONCAT('%',#{paramCondition.tBarcode},'%')
+            </if>
+            <if test="paramCondition.reqTag != null and paramCondition.reqTag != ''">
+                and req_tag like CONCAT('%',#{paramCondition.reqTag},'%')
+            </if>
+            <if test="paramCondition.reqStatus != null and paramCondition.reqStatus != ''">
+                and req_status like CONCAT('%',#{paramCondition.reqStatus},'%')
+            </if>
+            <if test="paramCondition.resTag != null and paramCondition.resTag != ''">
+                and res_tag like CONCAT('%',#{paramCondition.resTag},'%')
+            </if>
+            <if test="paramCondition.resStatus != null and paramCondition.resStatus != ''">
+                and res_status like CONCAT('%',#{paramCondition.resStatus},'%')
+            </if>
+            <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+                and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+            </if>
+            <if test="paramCondition.taskFeedback != null and paramCondition.taskFeedback != ''">
+                and task_feedback like CONCAT('%',#{paramCondition.taskFeedback},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTaskInResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_task_in where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.messageId != null and paramCondition.messageId != ''">
+                and message_id like CONCAT('%',#{paramCondition.messageId},'%')
+            </if>
+            <if test="paramCondition.orderType != null and paramCondition.orderType != ''">
+                and order_type like CONCAT('%',#{paramCondition.orderType},'%')
+            </if>
+            <if test="paramCondition.taskMg != null and paramCondition.taskMg != ''">
+                and task_mg like CONCAT('%',#{paramCondition.taskMg},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.tBarcode != null and paramCondition.tBarcode != ''">
+                and t_barcode like CONCAT('%',#{paramCondition.tBarcode},'%')
+            </if>
+            <if test="paramCondition.reqTag != null and paramCondition.reqTag != ''">
+                and req_tag like CONCAT('%',#{paramCondition.reqTag},'%')
+            </if>
+            <if test="paramCondition.reqStatus != null and paramCondition.reqStatus != ''">
+                and req_status like CONCAT('%',#{paramCondition.reqStatus},'%')
+            </if>
+            <if test="paramCondition.resTag != null and paramCondition.resTag != ''">
+                and res_tag like CONCAT('%',#{paramCondition.resTag},'%')
+            </if>
+            <if test="paramCondition.resStatus != null and paramCondition.resStatus != ''">
+                and res_status like CONCAT('%',#{paramCondition.resStatus},'%')
+            </if>
+            <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+                and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+            </if>
+            <if test="paramCondition.taskFeedback != null and paramCondition.taskFeedback != ''">
+                and task_feedback like CONCAT('%',#{paramCondition.taskFeedback},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_task_in where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.messageId != null and paramCondition.messageId != ''">
+                and message_id like CONCAT('%',#{paramCondition.messageId},'%')
+            </if>
+            <if test="paramCondition.orderType != null and paramCondition.orderType != ''">
+                and order_type like CONCAT('%',#{paramCondition.orderType},'%')
+            </if>
+            <if test="paramCondition.taskMg != null and paramCondition.taskMg != ''">
+                and task_mg like CONCAT('%',#{paramCondition.taskMg},'%')
+            </if>
+            <if test="paramCondition.goodsType != null and paramCondition.goodsType != ''">
+                and goods_type like CONCAT('%',#{paramCondition.goodsType},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.tBarcode != null and paramCondition.tBarcode != ''">
+                and t_barcode like CONCAT('%',#{paramCondition.tBarcode},'%')
+            </if>
+            <if test="paramCondition.reqTag != null and paramCondition.reqTag != ''">
+                and req_tag like CONCAT('%',#{paramCondition.reqTag},'%')
+            </if>
+            <if test="paramCondition.reqStatus != null and paramCondition.reqStatus != ''">
+                and req_status like CONCAT('%',#{paramCondition.reqStatus},'%')
+            </if>
+            <if test="paramCondition.resTag != null and paramCondition.resTag != ''">
+                and res_tag like CONCAT('%',#{paramCondition.resTag},'%')
+            </if>
+            <if test="paramCondition.resStatus != null and paramCondition.resStatus != ''">
+                and res_status like CONCAT('%',#{paramCondition.resStatus},'%')
+            </if>
+            <if test="paramCondition.locaNumber != null and paramCondition.locaNumber != ''">
+                and loca_number like CONCAT('%',#{paramCondition.locaNumber},'%')
+            </if>
+            <if test="paramCondition.taskFeedback != null and paramCondition.taskFeedback != ''">
+                and task_feedback like CONCAT('%',#{paramCondition.taskFeedback},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+</mapper>

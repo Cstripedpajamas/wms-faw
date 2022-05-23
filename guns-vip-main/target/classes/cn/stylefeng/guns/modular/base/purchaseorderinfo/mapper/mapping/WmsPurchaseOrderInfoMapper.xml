@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.base.purchaseorderinfo.mapper.WmsPurchaseOrderInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderInfo">
+        <id column="id" property="id" />
+        <result column="pur_number" property="purNumber" />
+        <result column="type" property="type" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_type" property="materialType" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="m_unit" property="mUnit" />
+        <result column="m_number" property="mNumber" />
+        <result column="arrival_time" property="arrivalTime" />
+        <result column="arrival_state" property="arrivalState" />
+        <result column="create_time" property="createTime" />
+        <result column="received_quantity" property="receivedQuantity" />
+        <result column="print_num" property="printNum" />
+        <result column="acceptable_quantity" property="acceptableQuantity" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", pur_number AS "purNumber", type AS "type", material_type_id AS "materialTypeId", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_unit AS "mUnit", m_number AS "mNumber", arrival_time AS "arrivalTime", arrival_state AS "arrivalState", create_time AS "createTime",received_quantity AS "receivedQuantity",print_num AS "printNum",acceptable_quantity AS "acceptableQuantity"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_purchase_order_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.purNumber != null and paramCondition.purNumber != ''">
+                and pur_number like CONCAT('%',#{paramCondition.purNumber},'%')
+            </if>
+            <if test="paramCondition.type != null and paramCondition.type != ''">
+                and type like CONCAT('%',#{paramCondition.type},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.arrivalTime != null and paramCondition.arrivalTime != ''">
+                and arrival_time like CONCAT('%',#{paramCondition.arrivalTime},'%')
+            </if>
+            <if test="paramCondition.arrivalState != null and paramCondition.arrivalState != ''">
+                and arrival_state like CONCAT('%',#{paramCondition.arrivalState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_purchase_order_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.purNumber != null and paramCondition.purNumber != ''">
+                and pur_number like CONCAT('%',#{paramCondition.purNumber},'%')
+            </if>
+            <if test="paramCondition.type != null and paramCondition.type != ''">
+                and type like CONCAT('%',#{paramCondition.type},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.arrivalTime != null and paramCondition.arrivalTime != ''">
+                and arrival_time like CONCAT('%',#{paramCondition.arrivalTime},'%')
+            </if>
+            <if test="paramCondition.arrivalState != null and paramCondition.arrivalState != ''">
+                and arrival_state like CONCAT('%',#{paramCondition.arrivalState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_purchase_order_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.purNumber != null and paramCondition.purNumber != ''">
+                and pur_number like CONCAT('%',#{paramCondition.purNumber},'%')
+            </if>
+            <if test="paramCondition.type != null and paramCondition.type != ''">
+                and type like CONCAT('%',#{paramCondition.type},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.arrivalTime != null and paramCondition.arrivalTime != ''">
+                and arrival_time like CONCAT('%',#{paramCondition.arrivalTime},'%')
+            </if>
+            <if test="paramCondition.arrivalState != null and paramCondition.arrivalState != ''">
+                and arrival_state like CONCAT('%',#{paramCondition.arrivalState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_purchase_order_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.purNumber != null and paramCondition.purNumber != ''">
+                and pur_number like CONCAT('%',#{paramCondition.purNumber},'%')
+            </if>
+            <if test="paramCondition.type != null and paramCondition.type != ''">
+                and type like CONCAT('%',#{paramCondition.type},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialType != null and paramCondition.materialType != ''">
+                and material_type like CONCAT('%',#{paramCondition.materialType},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.mUnit != null and paramCondition.mUnit != ''">
+                and m_unit like CONCAT('%',#{paramCondition.mUnit},'%')
+            </if>
+            <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
+                and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
+            </if>
+            <if test="paramCondition.arrivalTime != null and paramCondition.arrivalTime != ''">
+                and arrival_time like CONCAT('%',#{paramCondition.arrivalTime},'%')
+            </if>
+            <if test="paramCondition.arrivalState != null and paramCondition.arrivalState != ''">
+                and arrival_state like CONCAT('%',#{paramCondition.arrivalState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+    </select>
+
+    <insert id="insertListBatch">
+        insert into wms_purchase_order_info (
+        pur_number,type,material_type_id,material_type,material_name,material_sku,m_unit,m_number,arrival_time,arrival_state,received_quantity,print_num,acceptable_quantity
+        )
+        values
+        <foreach collection="list" item="paramCondition" index="index" separator=",">
+            (#{paramCondition.purNumber},#{paramCondition.type},#{paramCondition.materialTypeId},#{paramCondition.materialType},#{paramCondition.materialName},#{paramCondition.materialSku},#{paramCondition.mUnit},#{paramCondition.mNumber},#{paramCondition.arrivalTime},#{paramCondition.arrivalState},#{paramCondition.receivedQuantity},#{paramCondition.printNum},#{paramCondition.acceptableQuantity})
+        </foreach>
+    </insert>
+
+    <update id="updateState" parameterType="string">
+        update  wms_purchase_order_info set arrival_state = #{state} where 1=1 and id = #{orderId}
+    </update>
+
+    <update id="stopTask">
+        update  wms_purchase_order_info set arrival_state = '2' where arrival_state =  '1'
+    </update>
+
+</mapper>

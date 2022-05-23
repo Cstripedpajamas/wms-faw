@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.fawInfo.userInfo.mapper.FawUserInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.fawInfo.userInfo.entity.FawUserInfo">
+        <id column="id" property="id" />
+        <result column="account_code" property="accountCode" />
+        <result column="employee_id" property="employeeId" />
+        <result column="dep_no" property="depNo" />
+        <result column="employee_name" property="employeeName" />
+        <result column="email_address" property="emailAddress" />
+        <result column="class_of_positions" property="classOfPositions" />
+        <result column="faw_cla_of_pos" property="fawClaOfPos" />
+        <result column="jobs" property="jobs" />
+        <result column="director_id" property="directorId" />
+        <result column="director_name" property="directorName" />
+        <result column="object_status" property="objectStatus" />
+        <result column="mdm_type" property="mdmType" />
+        <result column="dept_level" property="deptLevel" />
+        <result column="data_time" property="dataTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", account_code AS "accountCode", employee_id AS "employeeId", dep_no AS "depNo", employee_name AS "employeeName", email_address AS "emailAddress", class_of_positions AS "classOfPositions", faw_cla_of_pos AS "fawClaOfPos", jobs AS "jobs", director_id AS "directorId", director_name AS "directorName", object_status AS "objectStatus", mdm_type AS "mdmType", dept_level AS "deptLevel", data_time AS "dataTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.result.FawUserInfoResult" parameterType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_user_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.accountCode != null and paramCondition.accountCode != ''">
+                and account_code like CONCAT('%',#{paramCondition.accountCode},'%')
+            </if>
+            <if test="paramCondition.employeeId != null and paramCondition.employeeId != ''">
+                and employee_id like CONCAT('%',#{paramCondition.employeeId},'%')
+            </if>
+            <if test="paramCondition.depNo != null and paramCondition.depNo != ''">
+                and dep_no like CONCAT('%',#{paramCondition.depNo},'%')
+            </if>
+            <if test="paramCondition.employeeName != null and paramCondition.employeeName != ''">
+                and employee_name like CONCAT('%',#{paramCondition.employeeName},'%')
+            </if>
+            <if test="paramCondition.emailAddress != null and paramCondition.emailAddress != ''">
+                and email_address like CONCAT('%',#{paramCondition.emailAddress},'%')
+            </if>
+            <if test="paramCondition.classOfPositions != null and paramCondition.classOfPositions != ''">
+                and class_of_positions like CONCAT('%',#{paramCondition.classOfPositions},'%')
+            </if>
+            <if test="paramCondition.fawClaOfPos != null and paramCondition.fawClaOfPos != ''">
+                and faw_cla_of_pos like CONCAT('%',#{paramCondition.fawClaOfPos},'%')
+            </if>
+            <if test="paramCondition.jobs != null and paramCondition.jobs != ''">
+                and jobs like CONCAT('%',#{paramCondition.jobs},'%')
+            </if>
+            <if test="paramCondition.directorId != null and paramCondition.directorId != ''">
+                and director_id like CONCAT('%',#{paramCondition.directorId},'%')
+            </if>
+            <if test="paramCondition.directorName != null and paramCondition.directorName != ''">
+                and director_name like CONCAT('%',#{paramCondition.directorName},'%')
+            </if>
+            <if test="paramCondition.objectStatus != null and paramCondition.objectStatus != ''">
+                and object_status like CONCAT('%',#{paramCondition.objectStatus},'%')
+            </if>
+            <if test="paramCondition.mdmType != null and paramCondition.mdmType != ''">
+                and mdm_type like CONCAT('%',#{paramCondition.mdmType},'%')
+            </if>
+            <if test="paramCondition.deptLevel != null and paramCondition.deptLevel != ''">
+                and dept_level like CONCAT('%',#{paramCondition.deptLevel},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_user_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.accountCode != null and paramCondition.accountCode != ''">
+                and account_code like CONCAT('%',#{paramCondition.accountCode},'%')
+            </if>
+            <if test="paramCondition.employeeId != null and paramCondition.employeeId != ''">
+                and employee_id like CONCAT('%',#{paramCondition.employeeId},'%')
+            </if>
+            <if test="paramCondition.depNo != null and paramCondition.depNo != ''">
+                and dep_no like CONCAT('%',#{paramCondition.depNo},'%')
+            </if>
+            <if test="paramCondition.employeeName != null and paramCondition.employeeName != ''">
+                and employee_name like CONCAT('%',#{paramCondition.employeeName},'%')
+            </if>
+            <if test="paramCondition.emailAddress != null and paramCondition.emailAddress != ''">
+                and email_address like CONCAT('%',#{paramCondition.emailAddress},'%')
+            </if>
+            <if test="paramCondition.classOfPositions != null and paramCondition.classOfPositions != ''">
+                and class_of_positions like CONCAT('%',#{paramCondition.classOfPositions},'%')
+            </if>
+            <if test="paramCondition.fawClaOfPos != null and paramCondition.fawClaOfPos != ''">
+                and faw_cla_of_pos like CONCAT('%',#{paramCondition.fawClaOfPos},'%')
+            </if>
+            <if test="paramCondition.jobs != null and paramCondition.jobs != ''">
+                and jobs like CONCAT('%',#{paramCondition.jobs},'%')
+            </if>
+            <if test="paramCondition.directorId != null and paramCondition.directorId != ''">
+                and director_id like CONCAT('%',#{paramCondition.directorId},'%')
+            </if>
+            <if test="paramCondition.directorName != null and paramCondition.directorName != ''">
+                and director_name like CONCAT('%',#{paramCondition.directorName},'%')
+            </if>
+            <if test="paramCondition.objectStatus != null and paramCondition.objectStatus != ''">
+                and object_status like CONCAT('%',#{paramCondition.objectStatus},'%')
+            </if>
+            <if test="paramCondition.mdmType != null and paramCondition.mdmType != ''">
+                and mdm_type like CONCAT('%',#{paramCondition.mdmType},'%')
+            </if>
+            <if test="paramCondition.deptLevel != null and paramCondition.deptLevel != ''">
+                and dept_level like CONCAT('%',#{paramCondition.deptLevel},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.result.FawUserInfoResult" parameterType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_user_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.accountCode != null and paramCondition.accountCode != ''">
+                and account_code like CONCAT('%',#{paramCondition.accountCode},'%')
+            </if>
+            <if test="paramCondition.employeeId != null and paramCondition.employeeId != ''">
+                and employee_id like CONCAT('%',#{paramCondition.employeeId},'%')
+            </if>
+            <if test="paramCondition.depNo != null and paramCondition.depNo != ''">
+                and dep_no like CONCAT('%',#{paramCondition.depNo},'%')
+            </if>
+            <if test="paramCondition.employeeName != null and paramCondition.employeeName != ''">
+                and employee_name like CONCAT('%',#{paramCondition.employeeName},'%')
+            </if>
+            <if test="paramCondition.emailAddress != null and paramCondition.emailAddress != ''">
+                and email_address like CONCAT('%',#{paramCondition.emailAddress},'%')
+            </if>
+            <if test="paramCondition.classOfPositions != null and paramCondition.classOfPositions != ''">
+                and class_of_positions like CONCAT('%',#{paramCondition.classOfPositions},'%')
+            </if>
+            <if test="paramCondition.fawClaOfPos != null and paramCondition.fawClaOfPos != ''">
+                and faw_cla_of_pos like CONCAT('%',#{paramCondition.fawClaOfPos},'%')
+            </if>
+            <if test="paramCondition.jobs != null and paramCondition.jobs != ''">
+                and jobs like CONCAT('%',#{paramCondition.jobs},'%')
+            </if>
+            <if test="paramCondition.directorId != null and paramCondition.directorId != ''">
+                and director_id like CONCAT('%',#{paramCondition.directorId},'%')
+            </if>
+            <if test="paramCondition.directorName != null and paramCondition.directorName != ''">
+                and director_name like CONCAT('%',#{paramCondition.directorName},'%')
+            </if>
+            <if test="paramCondition.objectStatus != null and paramCondition.objectStatus != ''">
+                and object_status like CONCAT('%',#{paramCondition.objectStatus},'%')
+            </if>
+            <if test="paramCondition.mdmType != null and paramCondition.mdmType != ''">
+                and mdm_type like CONCAT('%',#{paramCondition.mdmType},'%')
+            </if>
+            <if test="paramCondition.deptLevel != null and paramCondition.deptLevel != ''">
+                and dept_level like CONCAT('%',#{paramCondition.deptLevel},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from faw_user_info where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.accountCode != null and paramCondition.accountCode != ''">
+                and account_code like CONCAT('%',#{paramCondition.accountCode},'%')
+            </if>
+            <if test="paramCondition.employeeId != null and paramCondition.employeeId != ''">
+                and employee_id like CONCAT('%',#{paramCondition.employeeId},'%')
+            </if>
+            <if test="paramCondition.depNo != null and paramCondition.depNo != ''">
+                and dep_no like CONCAT('%',#{paramCondition.depNo},'%')
+            </if>
+            <if test="paramCondition.employeeName != null and paramCondition.employeeName != ''">
+                and employee_name like CONCAT('%',#{paramCondition.employeeName},'%')
+            </if>
+            <if test="paramCondition.emailAddress != null and paramCondition.emailAddress != ''">
+                and email_address like CONCAT('%',#{paramCondition.emailAddress},'%')
+            </if>
+            <if test="paramCondition.classOfPositions != null and paramCondition.classOfPositions != ''">
+                and class_of_positions like CONCAT('%',#{paramCondition.classOfPositions},'%')
+            </if>
+            <if test="paramCondition.fawClaOfPos != null and paramCondition.fawClaOfPos != ''">
+                and faw_cla_of_pos like CONCAT('%',#{paramCondition.fawClaOfPos},'%')
+            </if>
+            <if test="paramCondition.jobs != null and paramCondition.jobs != ''">
+                and jobs like CONCAT('%',#{paramCondition.jobs},'%')
+            </if>
+            <if test="paramCondition.directorId != null and paramCondition.directorId != ''">
+                and director_id like CONCAT('%',#{paramCondition.directorId},'%')
+            </if>
+            <if test="paramCondition.directorName != null and paramCondition.directorName != ''">
+                and director_name like CONCAT('%',#{paramCondition.directorName},'%')
+            </if>
+            <if test="paramCondition.objectStatus != null and paramCondition.objectStatus != ''">
+                and object_status like CONCAT('%',#{paramCondition.objectStatus},'%')
+            </if>
+            <if test="paramCondition.mdmType != null and paramCondition.mdmType != ''">
+                and mdm_type like CONCAT('%',#{paramCondition.mdmType},'%')
+            </if>
+            <if test="paramCondition.deptLevel != null and paramCondition.deptLevel != ''">
+                and dept_level like CONCAT('%',#{paramCondition.deptLevel},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <insert id="insertListBatch">
+        insert into faw_user_info (
+        account_code,employee_id,dep_no,employee_name,email_address,class_of_positions,faw_cla_of_pos,jobs,director_id,director_name,object_status,mdm_type,dept_level
+        )
+        values
+        <foreach collection="list" item="paramCondition" index="index" separator=",">
+            (#{paramCondition.accountCode},#{paramCondition.employeeId},#{paramCondition.depNo},#{paramCondition.employeeName},#{paramCondition.emailAddress},#{paramCondition.classOfPositions},#{paramCondition.fawClaOfPos},#{paramCondition.jobs},#{paramCondition.directorId},#{paramCondition.directorName},#{paramCondition.objectStatus},#{paramCondition.mdmType},#{paramCondition.deptLevel})
+        </foreach>
+    </insert>
+
+</mapper>

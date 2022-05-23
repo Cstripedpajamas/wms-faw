@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsCabinet1RenewTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.onetypecabinet.entity.WmsCabinet1RenewTask">
+        <id column="id" property="id" />
+        <result column="task_number" property="taskNumber" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="o_material_id" property="oMaterialId" />
+        <result column="o_material_serial_number" property="oMaterialSerialNumber" />
+        <result column="n_material_id" property="nMaterialId" />
+        <result column="n_material_serial_number" property="nMaterialSerialNumber" />
+        <result column="storage_stock_id" property="storageStockId" />
+        <result column="storage_loca_serial_number" property="storageLocaSerialNumber" />
+        <result column="task_stock_id" property="taskStockId" />
+        <result column="task_loca_serial_number" property="taskLocaSerialNumber" />
+        <result column="operator" property="operator" />
+        <result column="operation_time" property="operationTime" />
+        <result column="task_state" property="taskState" />
+        <result column="error_trag" property="errorTrag" />
+        <result column="tool_error_content" property="toolErrorContent" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="auto_flag" property="autoFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", task_number AS "taskNumber", material_type_id AS "materialTypeId", material_name AS "materialName", material_sku AS "materialSku", o_material_id AS "oMaterialId", o_material_serial_number AS "oMaterialSerialNumber", n_material_id AS "nMaterialId", n_material_serial_number AS "nMaterialSerialNumber", storage_stock_id AS "storageStockId", storage_loca_serial_number AS "storageLocaSerialNumber", task_stock_id AS "taskStockId", task_loca_serial_number AS "taskLocaSerialNumber", operator AS "operator", operation_time AS "operationTime", task_state AS "taskState", error_trag AS "errorTrag",tool_error_content AS "toolErrorContent",create_time AS "createTime", update_time AS "updateTime",auto_flag AS "autoFlag"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsCabinet1RenewTaskResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1RenewTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_renew_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.oMaterialId != null and paramCondition.oMaterialId != ''">
+                and o_material_id like CONCAT('%',#{paramCondition.oMaterialId},'%')
+            </if>
+            <if test="paramCondition.oMaterialSerialNumber != null and paramCondition.oMaterialSerialNumber != ''">
+                and o_material_serial_number like CONCAT('%',#{paramCondition.oMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.nMaterialId != null and paramCondition.nMaterialId != ''">
+                and n_material_id like CONCAT('%',#{paramCondition.nMaterialId},'%')
+            </if>
+            <if test="paramCondition.nMaterialSerialNumber != null and paramCondition.nMaterialSerialNumber != ''">
+                and n_material_serial_number like CONCAT('%',#{paramCondition.nMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.storageStockId != null and paramCondition.storageStockId != ''">
+                and storage_stock_id like CONCAT('%',#{paramCondition.storageStockId},'%')
+            </if>
+            <if test="paramCondition.storageLocaSerialNumber != null and paramCondition.storageLocaSerialNumber != ''">
+                and storage_loca_serial_number like CONCAT('%',#{paramCondition.storageLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.taskStockId != null and paramCondition.taskStockId != ''">
+                and task_stock_id like CONCAT('%',#{paramCondition.taskStockId},'%')
+            </if>
+            <if test="paramCondition.taskLocaSerialNumber != null and paramCondition.taskLocaSerialNumber != ''">
+                and task_loca_serial_number like CONCAT('%',#{paramCondition.taskLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.errorTrag != null and paramCondition.errorTrag != ''">
+                and error_trag like CONCAT('%',#{paramCondition.errorTrag},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1RenewTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_renew_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.oMaterialId != null and paramCondition.oMaterialId != ''">
+                and o_material_id like CONCAT('%',#{paramCondition.oMaterialId},'%')
+            </if>
+            <if test="paramCondition.oMaterialSerialNumber != null and paramCondition.oMaterialSerialNumber != ''">
+                and o_material_serial_number like CONCAT('%',#{paramCondition.oMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.nMaterialId != null and paramCondition.nMaterialId != ''">
+                and n_material_id like CONCAT('%',#{paramCondition.nMaterialId},'%')
+            </if>
+            <if test="paramCondition.nMaterialSerialNumber != null and paramCondition.nMaterialSerialNumber != ''">
+                and n_material_serial_number like CONCAT('%',#{paramCondition.nMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.storageStockId != null and paramCondition.storageStockId != ''">
+                and storage_stock_id like CONCAT('%',#{paramCondition.storageStockId},'%')
+            </if>
+            <if test="paramCondition.storageLocaSerialNumber != null and paramCondition.storageLocaSerialNumber != ''">
+                and storage_loca_serial_number like CONCAT('%',#{paramCondition.storageLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.taskStockId != null and paramCondition.taskStockId != ''">
+                and task_stock_id like CONCAT('%',#{paramCondition.taskStockId},'%')
+            </if>
+            <if test="paramCondition.taskLocaSerialNumber != null and paramCondition.taskLocaSerialNumber != ''">
+                and task_loca_serial_number like CONCAT('%',#{paramCondition.taskLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.errorTrag != null and paramCondition.errorTrag != ''">
+                and error_trag like CONCAT('%',#{paramCondition.errorTrag},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsCabinet1RenewTaskResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1RenewTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_renew_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.oMaterialId != null and paramCondition.oMaterialId != ''">
+                and o_material_id like CONCAT('%',#{paramCondition.oMaterialId},'%')
+            </if>
+            <if test="paramCondition.oMaterialSerialNumber != null and paramCondition.oMaterialSerialNumber != ''">
+                and o_material_serial_number like CONCAT('%',#{paramCondition.oMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.nMaterialId != null and paramCondition.nMaterialId != ''">
+                and n_material_id like CONCAT('%',#{paramCondition.nMaterialId},'%')
+            </if>
+            <if test="paramCondition.nMaterialSerialNumber != null and paramCondition.nMaterialSerialNumber != ''">
+                and n_material_serial_number like CONCAT('%',#{paramCondition.nMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.storageStockId != null and paramCondition.storageStockId != ''">
+                and storage_stock_id like CONCAT('%',#{paramCondition.storageStockId},'%')
+            </if>
+            <if test="paramCondition.storageLocaSerialNumber != null and paramCondition.storageLocaSerialNumber != ''">
+                and storage_loca_serial_number like CONCAT('%',#{paramCondition.storageLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.taskStockId != null and paramCondition.taskStockId != ''">
+                and task_stock_id like CONCAT('%',#{paramCondition.taskStockId},'%')
+            </if>
+            <if test="paramCondition.taskLocaSerialNumber != null and paramCondition.taskLocaSerialNumber != ''">
+                and task_loca_serial_number like CONCAT('%',#{paramCondition.taskLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.errorTrag != null and paramCondition.errorTrag != ''">
+                and error_trag like CONCAT('%',#{paramCondition.errorTrag},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1RenewTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_renew_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.oMaterialId != null and paramCondition.oMaterialId != ''">
+                and o_material_id like CONCAT('%',#{paramCondition.oMaterialId},'%')
+            </if>
+            <if test="paramCondition.oMaterialSerialNumber != null and paramCondition.oMaterialSerialNumber != ''">
+                and o_material_serial_number like CONCAT('%',#{paramCondition.oMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.nMaterialId != null and paramCondition.nMaterialId != ''">
+                and n_material_id like CONCAT('%',#{paramCondition.nMaterialId},'%')
+            </if>
+            <if test="paramCondition.nMaterialSerialNumber != null and paramCondition.nMaterialSerialNumber != ''">
+                and n_material_serial_number like CONCAT('%',#{paramCondition.nMaterialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.storageStockId != null and paramCondition.storageStockId != ''">
+                and storage_stock_id like CONCAT('%',#{paramCondition.storageStockId},'%')
+            </if>
+            <if test="paramCondition.storageLocaSerialNumber != null and paramCondition.storageLocaSerialNumber != ''">
+                and storage_loca_serial_number like CONCAT('%',#{paramCondition.storageLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.taskStockId != null and paramCondition.taskStockId != ''">
+                and task_stock_id like CONCAT('%',#{paramCondition.taskStockId},'%')
+            </if>
+            <if test="paramCondition.taskLocaSerialNumber != null and paramCondition.taskLocaSerialNumber != ''">
+                and task_loca_serial_number like CONCAT('%',#{paramCondition.taskLocaSerialNumber},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.errorTrag != null and paramCondition.errorTrag != ''">
+                and error_trag like CONCAT('%',#{paramCondition.errorTrag},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+</mapper>

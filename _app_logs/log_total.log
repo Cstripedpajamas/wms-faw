@@ -2508,3 +2508,1386 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:66)
 	... 14 common frames omitted
 
+2022-05-23 14:28:03.980  INFO 4168 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-I9LKNAH with PID 4168 (D:\IDEA\IdeaProjects\asd_faw_new\guns-vip-main\target\classes started by ASD-FuBenHao in D:\IDEA\IdeaProjects\asd_faw_new)
+2022-05-23 14:28:03.995  INFO 4168 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-23 14:28:08.431  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$a9cc0120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:08.632  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e3c62377] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:08.647  INFO 4168 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-23 14:28:08.669  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:08.689  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:08.704  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:08.816  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3f2e5e78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:09.170  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d7dc26b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:09.170  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:09.186  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@122635ef' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:09.186  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fcb0c964] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:09.186  INFO 4168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:28:10.052  INFO 4168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-23 14:28:10.090  INFO 4168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-23 14:28:10.090  INFO 4168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-23 14:28:10.090  INFO 4168 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2022-05-23 14:28:10.090  INFO 4168 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-05-23 14:28:10.090  INFO 4168 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-05-23 14:28:10.174  INFO 4168 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2022-05-23 14:28:10.368  INFO 4168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-23 14:28:10.368  INFO 4168 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5210 ms
+2022-05-23 14:28:10.421  WARN 4168 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-23 14:28:15.336 ERROR 4168 --- [main] com.alibaba.druid.pool.DruidDataSource   : init datasource error, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:939)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1376)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1372)
+	at com.alibaba.druid.pool.xa.DruidXADataSource.getXAConnection(DruidXADataSource.java:45)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:43)
+	at com.atomikos.datasource.pool.ConnectionPool.createPooledConnection(ConnectionPool.java:98)
+	at com.atomikos.datasource.pool.ConnectionPool.addConnectionsIfMinPoolSizeNotReached(ConnectionPool.java:86)
+	at com.atomikos.datasource.pool.ConnectionPool.init(ConnectionPool.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.<init>(ConnectionPool.java:49)
+	at com.atomikos.datasource.pool.ConnectionPoolWithConcurrentValidation.<init>(ConnectionPoolWithConcurrentValidation.java:23)
+	at com.atomikos.jdbc.AbstractDataSourceBean.init(AbstractDataSourceBean.java:294)
+	at cn.stylefeng.guns.base.db.factory.AtomikosFactory.create(AtomikosFactory.java:28)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig.dataSourcePrimary(DataSourceConfig.java:58)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.CGLIB$dataSourcePrimary$2(<generated>)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094$$FastClassBySpringCGLIB$$eb6752df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.dataSourcePrimary(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5132)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:932)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:456)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:414)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at cn.stylefeng.guns.GunsApplication.main(GunsApplication.java:40)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 161 common frames omitted
+
+2022-05-23 14:28:15.367 ERROR 4168 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:939)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1376)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1372)
+	at com.alibaba.druid.pool.xa.DruidXADataSource.getXAConnection(DruidXADataSource.java:45)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:43)
+	at com.atomikos.datasource.pool.ConnectionPool.createPooledConnection(ConnectionPool.java:98)
+	at com.atomikos.datasource.pool.ConnectionPool.addConnectionsIfMinPoolSizeNotReached(ConnectionPool.java:86)
+	at com.atomikos.datasource.pool.ConnectionPool.init(ConnectionPool.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.<init>(ConnectionPool.java:49)
+	at com.atomikos.datasource.pool.ConnectionPoolWithConcurrentValidation.<init>(ConnectionPoolWithConcurrentValidation.java:23)
+	at com.atomikos.jdbc.AbstractDataSourceBean.init(AbstractDataSourceBean.java:294)
+	at cn.stylefeng.guns.base.db.factory.AtomikosFactory.create(AtomikosFactory.java:28)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig.dataSourcePrimary(DataSourceConfig.java:58)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.CGLIB$dataSourcePrimary$2(<generated>)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094$$FastClassBySpringCGLIB$$eb6752df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.dataSourcePrimary(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5132)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:932)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:456)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:414)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at cn.stylefeng.guns.GunsApplication.main(GunsApplication.java:40)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 161 common frames omitted
+
+2022-05-23 14:28:15.367  INFO 4168 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-23 14:28:15.367  WARN 4168 --- [main] c.a.jdbc.AtomikosXAConnectionFactory     : XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:939)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1376)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1372)
+	at com.alibaba.druid.pool.xa.DruidXADataSource.getXAConnection(DruidXADataSource.java:45)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:43)
+	at com.atomikos.datasource.pool.ConnectionPool.createPooledConnection(ConnectionPool.java:98)
+	at com.atomikos.datasource.pool.ConnectionPool.addConnectionsIfMinPoolSizeNotReached(ConnectionPool.java:86)
+	at com.atomikos.datasource.pool.ConnectionPool.init(ConnectionPool.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.<init>(ConnectionPool.java:49)
+	at com.atomikos.datasource.pool.ConnectionPoolWithConcurrentValidation.<init>(ConnectionPoolWithConcurrentValidation.java:23)
+	at com.atomikos.jdbc.AbstractDataSourceBean.init(AbstractDataSourceBean.java:294)
+	at cn.stylefeng.guns.base.db.factory.AtomikosFactory.create(AtomikosFactory.java:28)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig.dataSourcePrimary(DataSourceConfig.java:58)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.CGLIB$dataSourcePrimary$2(<generated>)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094$$FastClassBySpringCGLIB$$eb6752df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at cn.stylefeng.guns.config.datasource.DataSourceConfig$$EnhancerBySpringCGLIB$$5fa20094.dataSourcePrimary(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5132)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:932)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:456)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:414)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at cn.stylefeng.guns.GunsApplication.main(GunsApplication.java:40)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 161 common frames omitted
+
+2022-05-23 14:28:19.734 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:24.072 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:24.072  INFO 4168 --- [Druid-ConnectionPool-Create-2111615196] c.a.druid.pool.DruidAbstractDataSource   : {dataSource-1} failContinuous is true
+2022-05-23 14:28:28.948 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:33.819 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:38.717 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:43.582 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:48.469 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:28:53.518 ERROR 4168 --- [Druid-ConnectionPool-Create-2111615196] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://220.185.159.171:3308/asd_faw?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT, errorCode 0, state 08001
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:108)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:87)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:61)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:71)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:932)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:857)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:787)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1646)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2753)
+Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'123.232.83.217' (using password: YES)
+	at sun.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:127)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:819)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:744)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:713)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:135)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:553)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:217)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1411)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:876)
+	... 12 common frames omitted
+
+2022-05-23 14:30:25.924  INFO 36176 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-I9LKNAH with PID 36176 (D:\IDEA\IdeaProjects\asd_faw_new\guns-vip-main\target\classes started by ASD-FuBenHao in D:\IDEA\IdeaProjects\asd_faw_new)
+2022-05-23 14:30:25.926  INFO 36176 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-23 14:30:27.882  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$d80732f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:27.951  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$12015547] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:27.969  INFO 36176 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-23 14:30:27.973  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:27.977  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:27.978  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.020  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d699048] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.103  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6175882] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.107  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.109  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3592c1c4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.110  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2aebfb34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.115  INFO 36176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:30:28.355  INFO 36176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-23 14:30:28.379  INFO 36176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-23 14:30:28.379  INFO 36176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-23 14:30:28.383  INFO 36176 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2022-05-23 14:30:28.383  INFO 36176 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-05-23 14:30:28.383  INFO 36176 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-05-23 14:30:28.386  INFO 36176 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2022-05-23 14:30:28.529  INFO 36176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-23 14:30:28.529  INFO 36176 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2449 ms
+2022-05-23 14:30:28.590  WARN 36176 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-23 14:30:29.924  INFO 36176 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-23 14:30:30.273  WARN 36176 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@5002fde9: WARNING: transaction manager not running?
+2022-05-23 14:30:35.934  INFO 36176 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2022-05-23 14:30:36.501  INFO 36176 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2022-05-23 14:30:37.544  INFO 36176 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-23 14:30:38.047  INFO 36176 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-23 14:30:40.267  INFO 36176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-23 14:30:40.267  INFO 36176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-23 14:30:40.267  INFO 36176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-23 14:30:40.267  INFO 36176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-23 14:30:40.304  INFO 36176 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-23 14:30:40.358  INFO 36176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@85c3522, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c9ef9c9, org.springframework.security.web.header.HeaderWriterFilter@6c19769c, org.springframework.web.filter.CorsFilter@18be3205, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@5dd747c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1324e70a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@123c48d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fd97fd1, org.springframework.security.web.session.SessionManagementFilter@3dee3a6c, org.springframework.security.web.access.ExceptionTranslationFilter@185a0811, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25765a49]
+2022-05-23 14:30:40.448  INFO 36176 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2022-05-23 14:30:40.518  INFO 36176 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-23 14:30:41.039  INFO 36176 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-23 14:30:41.140  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/Maven/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-23 14:30:41.143  WARN 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-23 14:30:41.145  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\IDEA\IdeaProjects\asd_faw_new\transaction-logs
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 2.0.0.1.tm
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-23 14:30:41.146  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-23 14:30:41.147  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-23 14:30:41.147  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-23 14:30:41.147  INFO 36176 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-23 14:30:41.220  INFO 36176 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-23 14:30:42.178  INFO 36176 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-23 14:30:42.186  INFO 36176 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-23 14:30:42.187  INFO 36176 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-23 14:30:42.187  INFO 36176 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-23 14:30:42.187  INFO 36176 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-23 14:30:42.187  INFO 36176 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-23 14:30:42.188  INFO 36176 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-23 14:30:42.188  INFO 36176 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2d1f3639
+2022-05-23 14:30:42.359  INFO 36176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-23 14:30:42.380  INFO 36176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-23 14:30:42.429  INFO 36176 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-23 14:30:42.587  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-23 14:30:42.588  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-23 14:30:42.590  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-23 14:30:42.591  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-23 14:30:42.642  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-23 14:30:42.651  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-23 14:30:42.655  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-23 14:30:42.760  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-23 14:30:42.776  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2022-05-23 14:30:42.814  INFO 36176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-23 14:30:42.824  INFO 36176 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-23 14:30:42.824  INFO 36176 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-23 14:30:42.928  INFO 36176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-23 14:30:42.931  INFO 36176 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 17.428 seconds (JVM running for 20.428)
+2022-05-23 14:30:42.935  INFO 36176 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-23 14:30:43.431  INFO 36176 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant16 strip
+2022-05-23 14:30:43.434  INFO 36176 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2022-05-23 14:30:43.486  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:30:43.516  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:30:53.559  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:30:53.586  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:03.636  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:03.636  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:13.708  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:13.708  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:23.772  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:23.772  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:33.849  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:33.849  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:43.928  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:43.928  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:31:54.006  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:31:54.006  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:04.112  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:04.112  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:14.182  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:14.182  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:24.262  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:24.262  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:34.325  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:34.325  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:44.369  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:32:44.369  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:54.407  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:32:54.407  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:04.453  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:04.453  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:33:14.508  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:14.508  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:33:24.569  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:24.569  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:33:34.613  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:33:34.613  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:44.659  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:33:44.660  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:54.703  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:33:54.704  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:04.756  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:34:04.756  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:14.806  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:14.806  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:34:24.871  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:24.871  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:34:34.935  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:34:34.935  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:44.977  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:34:44.977  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:55.031  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:34:55.031  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:05.073  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:35:05.073  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:15.114  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:35:15.114  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:25.162  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:25.162  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:35:35.228  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:35:35.228  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:45.268  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:45.268  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:35:55.306  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:35:55.306  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:05.346  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:05.346  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:15.392  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:15.392  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:25.440  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:25.440  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:35.499  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:35.499  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:45.542  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:45.542  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:36:55.593  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:36:55.593  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:05.639  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:05.639  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:15.696  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:15.696  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:25.743  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:25.743  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:35.792  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:35.792  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:45.831  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:45.847  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:37:55.872  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:37:55.909  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:05.917  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:05.949  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:15.959  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:15.987  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:26.000  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:26.028  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:36.042  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:36.074  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:46.093  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:46.126  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:38:56.141  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:38:56.176  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:06.192  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:06.223  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:16.233  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:16.266  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:26.296  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:26.318  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:36.347  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:36.362  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:46.387  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:46.408  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:39:46.813  INFO 36176 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-23 14:39:46.813  INFO 36176 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-23 14:39:46.822  INFO 36176 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-05-23 14:39:56.449  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:39:56.508  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:06.492  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:06.567  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:16.539  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:16.630  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:26.589  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:26.718  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:36.630  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:36.771  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:46.678  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:46.815  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:40:56.732  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:40:56.856  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:06.803  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:06.915  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:16.867  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:16.986  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:26.909  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:27.034  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:36.953  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:37.095  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:47.004  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:47.151  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:41:57.095  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:41:57.198  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:07.139  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:07.247  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:17.180  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:17.312  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:27.257  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:27.368  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:37.295  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:37.406  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:47.367  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:47.463  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:42:57.411  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:42:57.523  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:07.454  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:07.577  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:17.501  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:17.625  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:27.569  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:27.688  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:37.613  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:37.738  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:47.656  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:47.783  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:43:57.695  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:43:57.825  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:07.761  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:07.864  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:17.814  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:17.918  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:27.887  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:27.975  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:37.956  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:38.063  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:48.034  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:48.138  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:44:58.098  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:44:58.213  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:45:08.172  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:45:08.257  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:45:16.588  INFO 36176 --- [Thread-28] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-23 14:45:16.588  INFO 36176 --- [Thread-28] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2022-05-23 14:45:16.588  INFO 36176 --- [Thread-28] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-23 14:45:16.588  INFO 36176 --- [Thread-28] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-23 14:45:16.589  INFO 36176 --- [Thread-28] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-23 14:45:16.590  INFO 36176 --- [Thread-28] c.a.icatch.imp.TransactionServiceImp     : Transaction Service: Entering shutdown (false, 9223372036854775807)...
+2022-05-23 14:45:16.664  INFO 36176 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-23 14:45:16.668  INFO 36176 --- [Thread-28] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': destroying pool...
+2022-05-23 14:45:16.668  WARN 36176 --- [Thread-28] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': connection is still in use on pool destroy: an AtomikosXAPooledConnection with a SessionHandleState with 1 context(s) - please check your shutdown sequence to avoid heuristic termination of ongoing transactions!
+2022-05-23 14:45:18.182  WARN 36176 --- [demo-pool-1] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-23 14:45:18.266  WARN 36176 --- [demo-pool-1] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.267  WARN 36176 --- [demo-pool-1] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.267  WARN 36176 --- [demo-pool-1] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.330  WARN 36176 --- [demo-pool-1] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.331  INFO 36176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:45:18.332  WARN 36176 --- [demo-pool-0] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.332  WARN 36176 --- [demo-pool-0] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.332  WARN 36176 --- [demo-pool-0] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.398  WARN 36176 --- [demo-pool-0] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@13ae19b8: WARNING: transaction manager not running?
+2022-05-23 14:45:18.398  INFO 36176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:45:27.437  INFO 43328 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-I9LKNAH with PID 43328 (D:\IDEA\IdeaProjects\asd_faw_new\guns-vip-main\target\classes started by ASD-FuBenHao in D:\IDEA\IdeaProjects\asd_faw_new)
+2022-05-23 14:45:27.439  INFO 43328 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-23 14:45:29.412  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$9cf0c972] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.490  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d6eaebc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.508  INFO 43328 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-23 14:45:29.513  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.518  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.519  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.566  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$325326ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.647  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$cb00ef04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.650  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.653  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2d5a1588' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.657  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$efd591b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.661  INFO 43328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-23 14:45:29.897  INFO 43328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-23 14:45:29.920  INFO 43328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-23 14:45:29.921  INFO 43328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-23 14:45:29.925  INFO 43328 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2022-05-23 14:45:29.925  INFO 43328 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-05-23 14:45:29.925  INFO 43328 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-05-23 14:45:29.928  INFO 43328 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2022-05-23 14:45:30.079  INFO 43328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-23 14:45:30.079  INFO 43328 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2481 ms
+2022-05-23 14:45:30.141  WARN 43328 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-23 14:45:31.852  INFO 43328 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-23 14:45:32.639  WARN 43328 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f559c74: WARNING: transaction manager not running?
+2022-05-23 14:45:39.670  INFO 43328 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2022-05-23 14:45:40.092  INFO 43328 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2022-05-23 14:45:41.074  INFO 43328 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-23 14:45:41.435  INFO 43328 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-23 14:45:43.073  INFO 43328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-23 14:45:43.074  INFO 43328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-23 14:45:43.074  INFO 43328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-23 14:45:43.074  INFO 43328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-23 14:45:43.105  INFO 43328 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-23 14:45:43.163  INFO 43328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18be3205, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f976c, org.springframework.security.web.header.HeaderWriterFilter@434d001d, org.springframework.web.filter.CorsFilter@6fd97fd1, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@136fece2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cc6f036, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14fff5e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12c78f36, org.springframework.security.web.session.SessionManagementFilter@62de20d3, org.springframework.security.web.access.ExceptionTranslationFilter@77fb1002, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38caad07]
+2022-05-23 14:45:43.216  INFO 43328 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2022-05-23 14:45:43.260  INFO 43328 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-23 14:45:43.611  INFO 43328 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-23 14:45:43.711  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/Maven/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-23 14:45:43.713  WARN 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\IDEA\IdeaProjects\asd_faw_new\transaction-logs
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 2.0.0.1.tm
+2022-05-23 14:45:43.716  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-23 14:45:43.717  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-23 14:45:43.717  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-23 14:45:43.717  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-23 14:45:43.717  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-23 14:45:43.717  INFO 43328 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-23 14:45:43.829  INFO 43328 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-23 14:45:44.617  INFO 43328 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-23 14:45:44.626  INFO 43328 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-23 14:45:44.626  INFO 43328 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-23 14:45:44.627  INFO 43328 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-23 14:45:44.627  INFO 43328 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-23 14:45:44.627  INFO 43328 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-23 14:45:44.627  INFO 43328 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-23 14:45:44.627  INFO 43328 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@c14bbab
+2022-05-23 14:45:44.798  INFO 43328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-23 14:45:44.813  INFO 43328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-23 14:45:44.843  INFO 43328 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-23 14:45:44.946  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-23 14:45:44.947  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-23 14:45:44.948  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-23 14:45:44.949  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-23 14:45:45.002  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-23 14:45:45.009  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-23 14:45:45.013  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-23 14:45:45.116  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-23 14:45:45.132  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2022-05-23 14:45:45.146  INFO 43328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-23 14:45:45.155  INFO 43328 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-23 14:45:45.155  INFO 43328 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-23 14:45:45.186  INFO 43328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-23 14:45:45.189  INFO 43328 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 18.194 seconds (JVM running for 21.05)
+2022-05-23 14:45:45.193  INFO 43328 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-23 14:45:45.849  INFO 43328 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant16 strip
+2022-05-23 14:45:45.851  INFO 43328 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2022-05-23 14:45:45.903  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:45:45.910  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:45:55.975  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:45:55.975  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:06.027  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:06.030  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:16.079  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:16.085  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:18.061  INFO 43328 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-23 14:46:18.061  INFO 43328 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-23 14:46:18.070  INFO 43328 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-05-23 14:46:26.129  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:26.131  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:36.175  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:36.178  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:46.231  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:46.232  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:46:56.278  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:46:56.309  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:06.355  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:06.355  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:16.409  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:16.412  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:26.461  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:26.463  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:36.505  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:36.508  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:46.558  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:47:46.562  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:56.605  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:47:56.608  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:06.686  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:48:06.686  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:16.760  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:16.760  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:48:26.808  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:26.834  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:48:36.882  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:36.882  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:48:46.940  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:46.940  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:48:57.017  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:48:57.017  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:07.088  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:07.371  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:49:17.165  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:17.447  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:49:27.216  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:27.526  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:49:37.285  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:37.564  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:49:47.347  INFO 43328 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-05-23 14:49:47.603  INFO 43328 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-05-23 14:49:55.355  INFO 43328 --- [Thread-30] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-23 14:49:55.356  INFO 43328 --- [Thread-30] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2022-05-23 14:49:55.356  INFO 43328 --- [Thread-30] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-23 14:49:55.356  INFO 43328 --- [Thread-30] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-23 14:49:55.356  INFO 43328 --- [Thread-30] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-23 14:49:55.357  INFO 43328 --- [Thread-30] c.a.icatch.imp.TransactionServiceImp     : Transaction Service: Entering shutdown (false, 9223372036854775807)...
+2022-05-23 14:49:55.415  INFO 43328 --- [Thread-30] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-23 14:49:55.420  INFO 43328 --- [Thread-30] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': destroying pool...
+2022-05-23 14:49:55.420  WARN 43328 --- [Thread-30] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': connection is still in use on pool destroy: an AtomikosXAPooledConnection with a SessionHandleState with 1 context(s) - please check your shutdown sequence to avoid heuristic termination of ongoing transactions!

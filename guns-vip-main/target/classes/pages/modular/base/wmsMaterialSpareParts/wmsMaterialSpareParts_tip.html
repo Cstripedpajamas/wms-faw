@@ -1,0 +1,47 @@
+@layout("/common/_container.html",{js:["/assets/modular/base/wmsMaterialSpareParts/wmsMaterialSpareParts_tip.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">备品备件-物料信息表管理</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                    </div>
+                    <table class="layui-table" id="wmsMaterialSparePartsTable" lay-filter="wmsMaterialSparePartsTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-group-bottom text-center">
+    <button id="btnAdd" class="layui-btn">&emsp;确定&emsp;</button>
+    <button type="reset" class="layui-btn layui-btn-primary" ew-event="closeDialog">&emsp;取消&emsp;</button>
+</div>
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+<script type="text/html" id="storageAddressTpl">
+    {{#  if(d.storageAddress === '1'){ }}
+    <span class="layui-btn-xs">立体仓库</span>
+    {{#  } else if(d.storageAddress === '2'){ }}
+    <span class="layui-btn-xs">Ⅱ类柜</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="storageStateTpl">
+    {{#  if(d.storageState === '0'){ }}
+    <span class="layui-btn-xs">初始</span>
+    {{#  } else if(d.storageState === '1'){ }}
+    <span class="layui-btn-xs">库内</span>
+    {{#  } else if(d.storageState === '2'){ }}
+    <span class="layui-btn-xs">库外</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="statusTpl">
+    <input type="checkbox" lay-filter="status" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" {{d.dataState=='0'?'checked':''}} />
+</script>
+@}

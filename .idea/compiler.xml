@@ -37,7 +37,7 @@
       <module name="guns-base-auth" options="-parameters" />
       <module name="guns-base-email" options="-parameters" />
       <module name="guns-base-sms" options="-parameters" />
-      <module name="guns-base-support" options="-parameters" />
+      <module name="guns-base-support" options="" />
       <module name="guns-base-timers" options="-parameters" />
       <module name="guns-sys" options="-parameters" />
       <module name="guns-vip-gen" options="-parameters" />

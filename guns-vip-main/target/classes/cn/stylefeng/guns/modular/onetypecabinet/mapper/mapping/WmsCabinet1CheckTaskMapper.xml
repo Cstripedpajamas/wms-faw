@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsCabinet1CheckTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.onetypecabinet.entity.WmsCabinet1CheckTask">
+        <id column="id" property="id" />
+        <result column="task_number" property="taskNumber" />
+        <result column="task_rmk" property="taskRmk" />
+        <result column="operator" property="operator" />
+        <result column="operation_time" property="operationTime" />
+        <result column="task_state" property="taskState" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", task_number AS "taskNumber", task_rmk AS "taskRmk", operator AS "operator", operation_time AS "operationTime", task_state AS "taskState", create_time AS "createTime", update_time AS "updateTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsCabinet1CheckTaskResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1CheckTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_check_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.taskRmk != null and paramCondition.taskRmk != ''">
+                and task_rmk like CONCAT('%',#{paramCondition.taskRmk},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1CheckTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_check_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.taskRmk != null and paramCondition.taskRmk != ''">
+                and task_rmk like CONCAT('%',#{paramCondition.taskRmk},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsCabinet1CheckTaskResult" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1CheckTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_check_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.taskRmk != null and paramCondition.taskRmk != ''">
+                and task_rmk like CONCAT('%',#{paramCondition.taskRmk},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1CheckTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_check_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.taskRmk != null and paramCondition.taskRmk != ''">
+                and task_rmk like CONCAT('%',#{paramCondition.taskRmk},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+                and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.updateTime != null and paramCondition.updateTime != ''">
+                and update_time like CONCAT('%',#{paramCondition.updateTime},'%')
+            </if>
+    </select>
+
+</mapper>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.statistics.tooluse.mapper.WmsToolUseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse">
+        <id column="id" property="id" />
+        <result column="operator" property="operator" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="material_name" property="materialName" />
+        <result column="material_sku" property="materialSku" />
+        <result column="material_id" property="materialId" />
+        <result column="material_serial_number" property="materialSerialNumber" />
+        <result column="data_time" property="dataTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", operator AS "operator", material_type_id AS "materialTypeId", material_name AS "materialName", material_sku AS "materialSku", material_id AS "materialId", material_serial_number AS "materialSerialNumber", data_time AS "dataTime"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.operator != null and paramCondition.operator != ''">
+                and operator like CONCAT('%',#{paramCondition.operator},'%')
+            </if>
+            <if test="paramCondition.materialTypeId != null and paramCondition.materialTypeId != ''">
+                and material_type_id like CONCAT('%',#{paramCondition.materialTypeId},'%')
+            </if>
+            <if test="paramCondition.materialName != null and paramCondition.materialName != ''">
+                and material_name like CONCAT('%',#{paramCondition.materialName},'%')
+            </if>
+            <if test="paramCondition.materialSku != null and paramCondition.materialSku != ''">
+                and material_sku like CONCAT('%',#{paramCondition.materialSku},'%')
+            </if>
+            <if test="paramCondition.materialId != null and paramCondition.materialId != ''">
+                and material_id like CONCAT('%',#{paramCondition.materialId},'%')
+            </if>
+            <if test="paramCondition.materialSerialNumber != null and paramCondition.materialSerialNumber != ''">
+                and material_serial_number like CONCAT('%',#{paramCondition.materialSerialNumber},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customListA" resultType="cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1 and data_time > #{paramCondition.operator}
+    </select>
+
+    <select id="customListB" resultType="cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1 and data_time &lt; #{paramCondition.operator}
+    </select>
+
+    <select id="customListC" resultType="cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult" parameterType="cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_tool_use where 1 = 1 and data_time between #{paramCondition.operator} and #{paramCondition.materialTypeId}
+    </select>
+
+</mapper>

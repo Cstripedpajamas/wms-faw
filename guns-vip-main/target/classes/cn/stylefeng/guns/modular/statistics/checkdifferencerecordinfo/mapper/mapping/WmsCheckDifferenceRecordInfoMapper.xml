@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.mapper.WmsCheckDifferenceRecordInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap"
+               type="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.entity.WmsCheckDifferenceRecordInfo">
+        <id column="id" property="id"/>
+        <result column="check_warehouse" property="checkWarehouse"/>
+        <result column="check_task" property="checkTask"/>
+        <result column="location_info" property="locationInfo"/>
+        <result column="difference_type" property="differenceType"/>
+        <result column="difference_describe" property="differenceDescribe"/>
+        <result column="operator" property="operator"/>
+        <result column="operation_time" property="operationTime"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", check_warehouse AS "checkWarehouse", check_task AS "checkTask", location_info AS "locationInfo", difference_type AS "differenceType", difference_describe AS "differenceDescribe", operator AS "operator", operation_time AS "operationTime", create_time AS "createTime"
+    </sql>
+
+
+    <select id="customList"
+            resultType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.result.WmsCheckDifferenceRecordInfoResult"
+            parameterType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.params.WmsCheckDifferenceRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_check_difference_record_info where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.checkWarehouse != null and paramCondition.checkWarehouse != ''">
+            and check_warehouse like CONCAT('%',#{paramCondition.checkWarehouse},'%')
+        </if>
+        <if test="paramCondition.checkTask != null and paramCondition.checkTask != ''">
+            and check_task like CONCAT('%',#{paramCondition.checkTask},'%')
+        </if>
+        <if test="paramCondition.locationInfo != null and paramCondition.locationInfo != ''">
+            and location_info like CONCAT('%',#{paramCondition.locationInfo},'%')
+        </if>
+        <if test="paramCondition.differenceType != null and paramCondition.differenceType != ''">
+            and difference_type like CONCAT('%',#{paramCondition.differenceType},'%')
+        </if>
+        <if test="paramCondition.differenceDescribe != null and paramCondition.differenceDescribe != ''">
+            and difference_describe like CONCAT('%',#{paramCondition.differenceDescribe},'%')
+        </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator like CONCAT('%',#{paramCondition.operator},'%')
+        </if>
+        <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+            and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.params.WmsCheckDifferenceRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_check_difference_record_info where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.checkWarehouse != null and paramCondition.checkWarehouse != ''">
+            and check_warehouse like CONCAT('%',#{paramCondition.checkWarehouse},'%')
+        </if>
+        <if test="paramCondition.checkTask != null and paramCondition.checkTask != ''">
+            and check_task like CONCAT('%',#{paramCondition.checkTask},'%')
+        </if>
+        <if test="paramCondition.locationInfo != null and paramCondition.locationInfo != ''">
+            and location_info like CONCAT('%',#{paramCondition.locationInfo},'%')
+        </if>
+        <if test="paramCondition.differenceType != null and paramCondition.differenceType != ''">
+            and difference_type like CONCAT('%',#{paramCondition.differenceType},'%')
+        </if>
+        <if test="paramCondition.differenceDescribe != null and paramCondition.differenceDescribe != ''">
+            and difference_describe like CONCAT('%',#{paramCondition.differenceDescribe},'%')
+        </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator like CONCAT('%',#{paramCondition.operator},'%')
+        </if>
+        <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+            and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+    <select id="customPageList"
+            resultType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.result.WmsCheckDifferenceRecordInfoResult"
+            parameterType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.params.WmsCheckDifferenceRecordInfoParam">
+        SELECT wcdri.*,
+        (
+        case wcdri.check_warehouse
+        when "1" then ct1.task_number
+        when "2" then ct2.task_number
+        end
+        )
+        task_number,
+        (
+        case wcdri.check_warehouse
+        when "1" then s1.loca_serial_number
+        when "2" then s2.loca_number
+        end
+        )
+        loca_serial_number
+        FROM `wms_check_difference_record_info` AS wcdri
+        LEFT JOIN wms_cabinet1_check_task AS ct1 on wcdri.check_task=ct1.id
+        LEFT JOIN wms_cabinet2_check_task AS ct2 on wcdri.check_task=ct2.id
+        LEFT JOIN wms_intelligent_cabinet1_stock AS s1 ON wcdri.location_info=s1.id
+        LEFT JOIN wms_cabinet2_stock AS s2 ON wcdri.location_info=s2.id
+        where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and wcdri.id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.checkWarehouse != null and paramCondition.checkWarehouse != ''">
+            and wcdri.check_warehouse like CONCAT('%',#{paramCondition.checkWarehouse},'%')
+        </if>
+        <if test="paramCondition.checkTask != null and paramCondition.checkTask != ''">
+            and wcdri.check_task like CONCAT('%',#{paramCondition.checkTask},'%')
+        </if>
+        <if test="paramCondition.locationInfo != null and paramCondition.locationInfo != ''">
+            and wcdri.location_info like CONCAT('%',#{paramCondition.locationInfo},'%')
+        </if>
+        <if test="paramCondition.differenceType != null and paramCondition.differenceType != ''">
+            and wcdri.difference_type like CONCAT('%',#{paramCondition.differenceType},'%')
+        </if>
+        <if test="paramCondition.differenceDescribe != null and paramCondition.differenceDescribe != ''">
+            and wcdri.difference_describe like CONCAT('%',#{paramCondition.differenceDescribe},'%')
+        </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and wcdri.operator like CONCAT('%',#{paramCondition.operator},'%')
+        </if>
+        <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+            and wcdri.operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+        </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map"
+            parameterType="cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.params.WmsCheckDifferenceRecordInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_check_difference_record_info where 1 = 1
+        <if test="paramCondition.id != null and paramCondition.id != ''">
+            and id like CONCAT('%',#{paramCondition.id},'%')
+        </if>
+        <if test="paramCondition.checkWarehouse != null and paramCondition.checkWarehouse != ''">
+            and check_warehouse like CONCAT('%',#{paramCondition.checkWarehouse},'%')
+        </if>
+        <if test="paramCondition.checkTask != null and paramCondition.checkTask != ''">
+            and check_task like CONCAT('%',#{paramCondition.checkTask},'%')
+        </if>
+        <if test="paramCondition.locationInfo != null and paramCondition.locationInfo != ''">
+            and location_info like CONCAT('%',#{paramCondition.locationInfo},'%')
+        </if>
+        <if test="paramCondition.differenceType != null and paramCondition.differenceType != ''">
+            and difference_type like CONCAT('%',#{paramCondition.differenceType},'%')
+        </if>
+        <if test="paramCondition.differenceDescribe != null and paramCondition.differenceDescribe != ''">
+            and difference_describe like CONCAT('%',#{paramCondition.differenceDescribe},'%')
+        </if>
+        <if test="paramCondition.operator != null and paramCondition.operator != ''">
+            and operator like CONCAT('%',#{paramCondition.operator},'%')
+        </if>
+        <if test="paramCondition.operationTime != null and paramCondition.operationTime != ''">
+            and operation_time like CONCAT('%',#{paramCondition.operationTime},'%')
+        </if>
+        <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+            and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+        </if>
+    </select>
+
+</mapper>

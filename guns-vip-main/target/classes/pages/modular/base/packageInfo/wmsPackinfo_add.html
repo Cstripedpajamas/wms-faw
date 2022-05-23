@@ -1,0 +1,45 @@
+@layout("/common/_form.html",{js:["/assets/modular/base/packageInfo/wmsPackinfo_add.js"]}){
+
+<form class="layui-form" id="wmsPackinfoForm" lay-filter="wmsPackinfoForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">基本信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input name="id" type="hidden"/>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">包装名称<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="packgeName" name="packgeName" placeholder="请输入包装名称" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">包装规格<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="packgeSpecif" name="packgeSpecif" placeholder="请输入包装规格" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备注<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mark" name="mark" placeholder="请输入备注" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+<!--                    <div class="layui-inline layui-col-md12">-->
+<!--                        <label class="layui-form-label">数据时间<span style="color: red;">*</span></label>-->
+<!--                        <div class="layui-input-block">-->
+<!--                            <input id="createTime" name="createTime" placeholder="请输入数据时间" type="text" class="layui-input" lay-verify="required" required/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button>
+        <button type="reset" class="layui-btn layui-btn-primary" ew-event="closeDialog">&emsp;取消&emsp;</button>
+    </div>
+
+</form>
+
+@}

@@ -31,10 +31,10 @@ public class LoginPDAController {
                               @ApiParam(value = "用户密码") @RequestParam String password){
         WmsUser wmsUser = wmsUserService.getOne(new QueryWrapper<WmsUser>().eq("serial_number",serialNumber));
         if(wmsUser == null){
-            return ResponseData.error("没有此用户");
+            return ResponseData.error("账号不存在");
         }
         if(!Objects.equals(wmsUser.getuPwd(),password)){
-            return ResponseData.error("用户密码不对");
+            return ResponseData.error("账号密码错误");
         }
         return ResponseData.success(wmsUser);
     }

@@ -1,0 +1,54 @@
+@layout("/common/_container.html",{js:["/assets/modular/base/wmsPurchaseOrderInfo/wmsPurchaseOrderInfo.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">采购订单信息表管理</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input id="materialName" class="layui-input" type="text" placeholder="名称"/>
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加</button>
+                                <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出</button>
+                                <button id="upload" class="layui-btn icon-btn"><i class="layui-icon">&#xe601;</i>同步更新</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="wmsPurchaseOrderInfoTable" lay-filter="wmsPurchaseOrderInfoTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+<script type="text/html" id="typeTpl">
+    {{#  if(d.type === '1'){ }}
+    <span class="layui-btn-xs">工具</span>
+    {{#  } else if(d.type === '2'){ }}
+    <span class="layui-btn-xs">备品备件</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="arrivalStateTpl">
+    {{#  if(d.arrivalState === '0'){ }}
+    <span class="layui-btn-xs">初始</span>
+    {{#  } else if(d.arrivalState === '1'){ }}
+    <span class="layui-btn-xs">入库</span>
+    {{#  } else if(d.arrivalState === '2'){ }}
+    <span class="layui-btn-xs">接收</span>
+    {{#  } else if(d.arrivalState === '3'){ }}
+    <span class="layui-btn-xs">退还</span>
+    {{#  } }}
+</script>
+@}

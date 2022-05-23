@@ -78,7 +78,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // 登录接口放开过滤
                 .antMatchers("/login").permitAll()
-                .antMatchers("/pda/*").permitAll()
+                .antMatchers("/pda/**").permitAll()
                 .antMatchers("/cabinet/*").permitAll()
                 .antMatchers("/check/*").permitAll()
                 .antMatchers("/give-back/*").permitAll()

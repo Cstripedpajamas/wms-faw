@@ -1,0 +1,282 @@
+@layout("/common/_form.html",{js:["/assets/modular/base/redirect.js"]}){
+
+<form class="layui-form" id="wmsIntelligentCabinet2ConfForm" lay-filter="wmsIntelligentCabinet2ConfForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">门禁控制柜 {0-关闭 1-打开 2-常开 3-常关}</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">命令代码</label>
+                        <div class="layui-input-block">
+                            <input id="doorCodeId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: right;" id="SendDoor">&emsp;发送&emsp;
+                    </button>
+                    <button class="layui-btn" type="button" style="float: right;margin-right: 30px" id="KeppClose">&emsp;常闭&emsp;
+                    </button>
+                    <button class="layui-btn" type="button" style="float: right;margin-right: 30px" id="KeppOpen">&emsp;常开&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">打开格口数据</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">格口编码</label>
+                        <div class="layui-input-block">
+                            <input id="LocationId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" style="float: right" type="button" id="LockClosed">&emsp;关闭格口&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">入库请求数据</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">订单ID</label>
+                        <div class="layui-input-block">
+                            <input id="twoOrderId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">箱号</label>
+                        <div class="layui-input-block">
+                            <input id="twoHUNumber" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">检查结果</label>
+                        <div class="layui-input-block">
+                            <input id="twoLocationId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" style="float: right" type="button" id="InboundResult">&emsp;完成入库&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">出库请求数据</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">订单ID</label>
+                        <div class="layui-input-block">
+                            <input id="threeOrderId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">箱号</label>
+                        <div class="layui-input-block">
+                            <input id="threeHUNumber" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">检查结果</label>
+                        <div class="layui-input-block">
+                            <input id="threeLocationId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" style="float: right" type="button" id="OutboundResult">&emsp;完成出库&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">投入计数数据</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">订单ID</label>
+                        <div class="layui-input-block">
+                            <input id="fourOrderId" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">报废个数</label>
+                        <div class="layui-input-block">
+                            <input id="fourScrapNumber" type="text"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" style="float: right" type="button" id="ScrapCountResult">&emsp;完成投入&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">面容登录</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">识别信息码</label>
+                        <div class="layui-input-block">
+                            <input id="userId" type="text" value="147"
+                                   class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: right;" id="StaffInfoOne">&emsp;Ⅰ类柜面容登录&emsp;
+                    </button>
+                    <button class="layui-btn" type="button" style="float: right;margin-right: 30px" id="StaffInfoTwo">&emsp;Ⅱ类柜面容登录&emsp;
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">分拣站</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">任务标识</label>
+                        <div class="layui-input-block">
+                            <input id="sort_1" type="text" value="147" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">任务状态</label>
+                        <div class="layui-input-block">
+                            <input id="sort_2" type="text" value="147" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">任务数量</label>
+                        <div class="layui-input-block">
+                            <input id="sort_3" type="text" value="147" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">实际分拣</label>
+                        <div class="layui-input-block">
+                            <input id="sort_4_1" type="text" value="147" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">异常代码</label>
+                        <div class="layui-input-block">
+                            <input id="sort_4_2" type="text" value="147" class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: right;" id="sendBatchRun">&emsp;执行分拣&emsp;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">立库入库申请</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">消息识别ID</label>
+                        <div class="layui-input-block">
+                            <input id="req_1" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">入仓类型</label>
+                        <div class="layui-input-block">
+                            <input id="req_2" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">周转箱类型</label>
+                        <div class="layui-input-block">
+                            <input id="req_3" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">周转箱编号</label>
+                        <div class="layui-input-block">
+                            <input id="req_9" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">格口类型</label>
+                        <div class="layui-input-block">
+                            <input id="req_4" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">物料SKU</label>
+                        <div class="layui-input-block">
+                            <input id="req_5" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">批次</label>
+                        <div class="layui-input-block">
+                            <input id="req_6" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">数量</label>
+                        <div class="layui-input-block">
+                            <input id="req_7" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">分拣位</label>
+                        <div class="layui-input-block">
+                            <input id="req_8" type="text" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: right;" id="reqSubmit">&emsp;申请入库&emsp;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">打印</div>
+            <div class="layui-card-body">
+
+                <div class="layui-form-item layui-row">
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">周转箱类型</label>
+                        <div class="layui-input-block">
+                            <select id="turnType">
+                                <option value=""></option>
+                                <option value="1">小</option>
+                                <option value="2">中</option>
+                                <option value="3">大</option>
+                            </select>
+<!--                            <input id="startNumber" type="text" lay-verify="number" value="" class="layui-input"/>-->
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">开始数字</label>
+                        <div class="layui-input-block">
+                            <input id="startNumber" type="text" lay-verify="number" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md2">
+                        <label class="layui-form-label">结束数字</label>
+                        <div class="layui-input-block">
+                            <input id="endNumber" type="text" lay-verify="number" value="" class="layui-input"/>
+                        </div>
+                    </div>
+                    <button class="layui-btn" type="button" style="float: left;" id="print">&emsp;打印&emsp;</button>
+                    <button class="layui-btn" type="button" style="float: right;" id="printTest">测试打印</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@}
