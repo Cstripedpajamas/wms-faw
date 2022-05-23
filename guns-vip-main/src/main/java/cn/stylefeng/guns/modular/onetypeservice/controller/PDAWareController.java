@@ -69,6 +69,9 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData doingTask() {
         WmsPurchaseOrderInfoResult task = warehouseService.doingTask();
+        if (task == null){
+            return ResponseData.error("暂无执行中的采购任务");
+        }
         return ResponseData.success(task);
     }
 
@@ -151,7 +154,7 @@ public class PDAWareController {
     }
 
     /**
-     * 所有的工备品备件
+     * 所有的备品备件
      */
     @RequestMapping("/apply-spare-all")
     @ResponseBody
@@ -184,8 +187,13 @@ public class PDAWareController {
      * */
     @RequestMapping("/tool_apply_list")
     @ResponseBody
-    public LayuiPageInfo toolApplyList(String serialNumber) {
-        return warehouseService.claimList(serialNumber);
+    public ResponseData toolApplyList(String serialNumber) {
+        LayuiPageInfo layuiPageInfo = warehouseService.claimList(serialNumber);
+        final List data = layuiPageInfo.getData();
+        if (layuiPageInfo.getData().size() == 0){
+            return ResponseData.error("工具领用列表为空");
+        }
+        return ResponseData.success(data);
     }
 
     /**
@@ -206,6 +214,9 @@ public class PDAWareController {
     @RequestMapping("/tool_apply_commit")
     @ResponseBody
     public ResponseData toolApplyCommit(WarehouseTurnoverModify modify) {
+        if (modify.getMaterialSerialNumber() == null){
+            return ResponseData.error("请先绑定工具信息");
+        }
         WmsWarehouseTaskIn wmsWarehouseTaskIn = oneTypeCabinetService.padSortingConform(modify);
         warehouseService.sendTask(wmsWarehouseTaskIn.getMessageId());
         return ResponseData.success();
@@ -218,6 +229,9 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData spareInExecution(){
         WmsWarehouseReplenishmentTaskResult wr =  wmsWarehouseReplenishmentTaskService.inExecution();
+        if (wr == null){
+            return  ResponseData.error("暂无执行中的补货任务");
+        }
         return ResponseData.success(wr);
     }
 
@@ -258,23 +272,27 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData recentTask() {
         List<WmsSortingTaskResult> list = this.wmsSortingTaskService.findRecentTask();
+        if (list.size() == 0){
+            return ResponseData.error("暂无分拣记录");
+        }
         return ResponseData.success(list);
     }
 
     /**
      * todo 自动分拣 提交
      * 1. 创建出库任务并执行
-     * 2. 创建自动分拣任务 关联补货任务
      *
      * 其他接口回调
-     * 3. 出库完成 - 发送分拣任务
+     * 2. 出库完成 - 创建自动分拣任务 - 关联补货任务
+     * 3. 发送分拣任务并执行
      * 4. 分拣完成 - 回调 更新周转箱信息 更新补货任务信息 更新分拣任务信息
      * 5. 创建入库任务并执行
      * 6. 入库完成 - 跟新周转箱和库位信息
      * */
     @RequestMapping("/autoSort")
     @ResponseBody
-    public ResponseData autoSort() {
+    public ResponseData autoSort(String taskNumber) {
+
         return ResponseData.success("接口业务暂定");
     }
 
