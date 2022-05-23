@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.onetypeservice.controller;
 
+import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
@@ -12,6 +13,10 @@ import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.*;
@@ -21,6 +26,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 import java.util.Objects;
 
 @Controller
@@ -35,6 +41,10 @@ public class PDAWareController {
     private WarehouseService warehouseService;
     @Autowired
     private WmsUserService wmsUserService;
+    @Autowired
+    private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
+    @Autowired
+    private WmsSortingTaskService wmsSortingTaskService;
 
     /**
      * 登录
@@ -168,4 +178,113 @@ public class PDAWareController {
         return ResponseData.success();
     }
 
+    /**
+     * 工具领用列表
+     * serialNumber 人员编号
+     * */
+    @RequestMapping("/tool_apply_list")
+    @ResponseBody
+    public LayuiPageInfo toolApplyList(String serialNumber) {
+        return warehouseService.claimList(serialNumber);
+    }
+
+    /**
+     * 工具领用
+     * serialNumber 用户编号
+     * taskNumber 任务编号
+     * */
+    @RequestMapping("/tool_apply_config")
+    @ResponseBody
+    public ResponseData toolApplyConfig(String serialNumber, String taskNumber) {
+        return warehouseService.claimConform(serialNumber,taskNumber);
+    }
+
+    /**
+     * 工具领用提交
+     * WarehouseTurnoverModify
+     * */
+    @RequestMapping("/tool_apply_commit")
+    @ResponseBody
+    public ResponseData toolApplyCommit(WarehouseTurnoverModify modify) {
+        WmsWarehouseTaskIn wmsWarehouseTaskIn = oneTypeCabinetService.padSortingConform(modify);
+        warehouseService.sendTask(wmsWarehouseTaskIn.getMessageId());
+        return ResponseData.success();
+    }
+
+    /**
+     * 备件执行中的补货任务
+     * */
+    @RequestMapping("/spare_in_execution")
+    @ResponseBody
+    public ResponseData spareInExecution(){
+        WmsWarehouseReplenishmentTaskResult wr =  wmsWarehouseReplenishmentTaskService.inExecution();
+        return ResponseData.success(wr);
+    }
+
+    /**
+     * 备件补货出库
+     * taskNumber 补货任务编号
+     * */
+    @RequestMapping("/spare_out")
+    @ResponseBody
+    public ResponseData spareOut(String taskNumber){
+        return warehouseService.replenishmentCreateOutTask(taskNumber);
+    }
+
+    /**
+     * 备件补货 分拣-提交
+     * WarehouseTurnoverModify
+     * */
+    @RequestMapping("/sorting-commit")
+    @ResponseBody
+    public ResponseData sortingCommit(WarehouseTurnoverModify modify){
+        return oneTypeCabinetService.padSortingConform2(modify);
+    }
+
+    /**
+     * 备件补货 分拣-入库
+     * taskNumber 补货任务编号
+     * */
+    @RequestMapping("/sorting-in")
+    @ResponseBody
+    public ResponseData sortingIn(String taskNumber){
+        return warehouseService.replenishmentInTask(taskNumber);
+    }
+
+    /**
+     *  备件补货 自动分拣记录
+     * */
+    @RequestMapping("/recentTask")
+    @ResponseBody
+    public ResponseData recentTask() {
+        List<WmsSortingTaskResult> list = this.wmsSortingTaskService.findRecentTask();
+        return ResponseData.success(list);
+    }
+
+    /**
+     * todo 自动分拣 提交
+     * 1. 创建出库任务并执行
+     * 2. 创建自动分拣任务 关联补货任务
+     *
+     * another one interface callback
+     * 3. 出库完成 - 发送分拣任务
+     * 4. 分拣完成 - 回调 更新周转箱信息 更新补货任务信息 更新分拣任务信息
+     * 5. 创建入库任务并执行
+     * 6. 入库完成 - 跟新周转箱和库位信息
+     * */
+    @RequestMapping("/autoSort")
+    @ResponseBody
+    public ResponseData autoSort() {
+        return ResponseData.success("接口业务暂定");
+    }
+
+    /**
+     * 补货完成
+     * taskNumber 补货任务编号
+     * */
+    @RequestMapping("/task_finished")
+    @ResponseBody
+    public ResponseData taskFinished(String taskNumber) {
+        return warehouseService.replenishmentConformTask(taskNumber);
+    }
 }

@@ -593,7 +593,7 @@ public class WarehouseService {
         wmsWarehouseTaskIn.setLocaNumber(locaNumber);
         WmsWarehouseStock wmsWarehouseStock = wmsWarehouseStockService.getOne(new QueryWrapper<WmsWarehouseStock>().eq("loca_number", locaNumber));
         WmsWarehouseTurnover turnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("turnover_number", wmsWarehouseTaskIn.getTurnoverNumber()));
-        ToolClaimModel toolClaimModel = new ToolClaimModel();
+//        ToolClaimModel toolClaimModel = new ToolClaimModel();
         if (ApplyType.A.getType().equals(wmsWarehouseTaskIn.getGoodsType())) {// 工具入库
             // 1.更新入库任务完成
             updateInTask(wmsWarehouseTaskIn);
@@ -620,43 +620,6 @@ public class WarehouseService {
             ToolUtil.copyProperties(wmsWarehouseStock, stockParam);
             wmsWarehouseStockService.update(stockParam);
         }
-        String strA = "";
-        String strB = "";
-        WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
-        wmsWarehouseTurnoverBindParam.setTurnoverId(String.valueOf(turnover.getId()));
-        List<WmsWarehouseTurnoverBindResult> bindResultList = wmsWarehouseTurnoverBindService.findListTurnover(wmsWarehouseTurnoverBindParam);
-        if (!bindResultList.isEmpty()) {
-            strA = bindResultList.get(0).getLatticeCode();
-            if (bindResultList.size() > 1) {
-                strB = bindResultList.get(1).getLatticeCode();
-            }
-        }
-        toolClaimModel.setTaskState(StateEnum.THREE.getState());// 任务状态（0初始 1开始 2出库中 3完成)
-        toolClaimModel.setSortingStatus(StateEnum.ZERO.getState());// 分拣状态(0:为分拣，1:已分拣)
-        toolClaimModel.setMessageId(messageId);// 出库任务编号
-        toolClaimModel.setTurnoverNumber(wmsWarehouseStock.getLocaNumber());// 出库周转箱编号
-        toolClaimModel.setALatticeCode(strA);// 周转箱A格口
-        toolClaimModel.setBLatticeCode(strB);// 周转箱B格口
-        toolClaimModel.setCode(StateEnum.ONE.getState());
-        toolClaimModel.setState(StateEnum.FOUR.getState());
-
-        Object claimModel = replenishmentMap.get("replenishment");
-        if (!Objects.equals(claimModel, null)) {
-            ToolClaimModel toolClaimModelMap = (ToolClaimModel) claimModel;
-            ToolUtil.copyProperties(toolClaimModel, toolClaimModelMap);
-            toolClaimModelMap.setState(StateEnum.FOUR.getState());
-            replenishmentMap.put("replenishment", toolClaimModelMap);
-            replenishmentMap.put("state", StateEnum.FOUR);// 入库完成
-
-            Map<String, Object> map = BeanUtil.beanToMap(toolClaimModelMap);
-            String json = JSONObject.toJSONString(map);
-            WebSocket.sendMessageOfSession3(json);
-        } else {
-            Map<String, Object> map = BeanUtil.beanToMap(toolClaimModel);
-            String json = JSONObject.toJSONString(map);
-            WebSocket.sendMessageOfSession3(json);
-        }
-
     }
 
     // 更新库位信息
