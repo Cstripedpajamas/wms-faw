@@ -266,7 +266,7 @@ public class PDAWareController {
      * 1. 创建出库任务并执行
      * 2. 创建自动分拣任务 关联补货任务
      *
-     * another one interface callback
+     * 其他接口回调
      * 3. 出库完成 - 发送分拣任务
      * 4. 分拣完成 - 回调 更新周转箱信息 更新补货任务信息 更新分拣任务信息
      * 5. 创建入库任务并执行
