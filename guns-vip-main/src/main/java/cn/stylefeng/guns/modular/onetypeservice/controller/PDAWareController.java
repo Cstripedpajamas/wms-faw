@@ -1,5 +1,7 @@
 package cn.stylefeng.guns.modular.onetypeservice.controller;
 
+import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
+import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
@@ -26,6 +28,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,6 +49,9 @@ public class PDAWareController {
     private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
     @Autowired
     private WmsSortingTaskService wmsSortingTaskService;
+
+    @Autowired
+    private WmsMaterialTypeService wmsMaterialTypeService;
 
     /**
      * 登录
@@ -137,7 +144,11 @@ public class PDAWareController {
     @RequestMapping("/apply-tool-all")
     @ResponseBody
     public ResponseData padApplyToolAll() {
-        return oneTypeCabinetService.padToolAll();
+        List<WmsMaterialType> tools = this.wmsMaterialTypeService.list(new QueryWrapper<WmsMaterialType>().eq("type",StateEnum.ONE.getState()).eq("data_state",StateEnum.ZERO.getState()));
+        if(tools.isEmpty()){
+            return ResponseData.error(500, "无工具类型", new ArrayList());
+        }
+        return ResponseData.success(tools);
     }
 
     /**
@@ -159,7 +170,11 @@ public class PDAWareController {
     @RequestMapping("/apply-spare-all")
     @ResponseBody
     public ResponseData padApplySpareAll() {
-        return oneTypeCabinetService.padApplySpareAll();
+        List<WmsMaterialType> types = wmsMaterialTypeService.list(new QueryWrapper<WmsMaterialType>().eq("type",StateEnum.TWO.getState()).eq("data_state",StateEnum.ZERO.getState()));
+        if(types.isEmpty()){
+            return ResponseData.error(500, "无备品备件类型", new ArrayList());
+        }
+        return ResponseData.success(types);
     }
 
     /**
