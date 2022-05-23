@@ -68,6 +68,11 @@ public class WmsSortingTaskServiceImpl extends ServiceImpl<WmsSortingTaskMapper,
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public List<WmsSortingTaskResult> findRecentTask() {
+        return this.baseMapper.findRecentTask();
+    }
+
     private Serializable getKey(WmsSortingTaskParam param){
         return param.getId();
     }

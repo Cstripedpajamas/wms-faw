@@ -1,7 +1,9 @@
 package cn.stylefeng.guns.modular.onetypeservice.controller;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -53,6 +55,13 @@ public class WarehousePurchaseStorageController {
     @GetMapping(value = "/out")
     public ResponseData purchaseOutTask(@ApiParam(value = "任务编号") @RequestParam String taskNumber){
         return warehouseService.purchaseOutTask(taskNumber);
+    }
+
+    @ApiOperation(value = "5.执行中的采购任务")
+    @GetMapping(value = "/doingTask")
+    public ResponseData doingTask(){
+      WmsPurchaseOrderInfoResult task =  warehouseService.doingTask();
+      return ResponseData.success(task);
     }
 
 

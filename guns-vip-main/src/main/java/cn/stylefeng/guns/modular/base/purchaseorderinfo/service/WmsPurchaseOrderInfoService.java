@@ -69,4 +69,7 @@ public interface WmsPurchaseOrderInfoService extends IService<WmsPurchaseOrderIn
 
     void insertListBatch(List<WmsPurchaseOrderInfoParam> param);
 
+    void updateState(String state,String orderId);
+
+    void stopTask();
 }

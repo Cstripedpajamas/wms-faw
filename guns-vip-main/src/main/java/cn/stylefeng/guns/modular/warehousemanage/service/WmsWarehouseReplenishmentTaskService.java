@@ -4,6 +4,7 @@ import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseReplenishmentTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseReplenishmentTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -69,4 +70,10 @@ public interface WmsWarehouseReplenishmentTaskService extends IService<WmsWareho
     WmsWarehouseReplenishmentTaskResult findByTaskNumber(String taskNumber);
 
     void updatePickNumber(String taskNumber, String pickNumber);
+
+    void stopTask();
+
+    LayuiPageInfo findList(WmsWarehouseReplenishmentTaskParam param);
+
+    WmsWarehouseReplenishmentTaskResult inExecution();
 }

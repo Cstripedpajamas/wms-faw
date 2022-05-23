@@ -144,4 +144,28 @@
             </if>
     </select>
 
+    <select id="findByOrderId" parameterType="string" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+         from wms_warehouse_purchase_storage_task where 1 = 1
+          and purchase_id = #{orderId} ;
+    </select>
+
+    <update id="updateState" parameterType="string">
+        update  wms_warehouse_purchase_storage_task
+        set task_state = #{state} where  purchase_id = #{orderId}
+    </update>
+
+    <update id="stopTask">
+        update wms_warehouse_purchase_storage_task set task_state = '2' where task_state = '1'
+    </update>
+
+    <select id="doingTask" resultType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult">
+        select
+        w.*,p.task_number
+        from wms_purchase_order_info w
+        left join wms_warehouse_purchase_storage_task p on w.id = p.purchase_id
+        where p.task_state = '1'
+    </select>
+
 </mapper>

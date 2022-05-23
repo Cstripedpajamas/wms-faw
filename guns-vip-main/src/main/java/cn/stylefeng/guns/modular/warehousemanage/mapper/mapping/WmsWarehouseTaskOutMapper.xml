@@ -351,4 +351,11 @@
             </if>
     </select>
 
+    <select id="findByTaskNumber" resultType="cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskOut" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_warehouse_task_out where 1 = 1
+        and  task_mg = #{taskNumber}
+    </select>
+
 </mapper>

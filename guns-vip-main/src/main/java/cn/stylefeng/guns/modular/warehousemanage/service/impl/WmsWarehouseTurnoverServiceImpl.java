@@ -83,6 +83,11 @@ public class WmsWarehouseTurnoverServiceImpl extends ServiceImpl<WmsWarehouseTur
         return this.baseMapper.findByBarCode(barCode);
     }
 
+    @Override
+    public List<WmsWarehouseTurnover> findEmptyType(String turnoverType) {
+        return this.baseMapper.findEmptyType(turnoverType);
+    }
+
     private Serializable getKey(WmsWarehouseTurnoverParam param){
         return param.getId();
     }

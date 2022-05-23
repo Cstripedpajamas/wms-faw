@@ -205,4 +205,12 @@
         </foreach>
     </insert>
 
+    <update id="updateState" parameterType="string">
+        update  wms_purchase_order_info set arrival_state = #{state} where 1=1 and id = #{orderId}
+    </update>
+
+    <update id="stopTask">
+        update  wms_purchase_order_info set arrival_state = '2' where arrival_state =  '1'
+    </update>
+
 </mapper>

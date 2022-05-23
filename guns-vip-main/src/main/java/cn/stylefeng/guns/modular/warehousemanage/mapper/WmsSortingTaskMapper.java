@@ -55,4 +55,5 @@ public interface WmsSortingTaskMapper extends BaseMapper<WmsSortingTask> {
 
     WmsSortingTaskResult findByTaskStateOne();
 
+    List<WmsSortingTaskResult> findRecentTask();
 }

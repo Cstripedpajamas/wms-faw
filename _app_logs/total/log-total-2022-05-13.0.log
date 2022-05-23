@@ -1,0 +1,855 @@
+2022-05-13 09:27:41.556 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.141 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.144 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.187 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.188 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.188 ERROR 50008 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.719 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.722 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.722 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.722 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.723 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:42.724 ERROR 50008 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.700 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.700 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.700 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.701 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.701 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.701 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:27:46.701 ERROR 50008 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.292 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:35:19.293 ERROR 50008 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:48:14.804  INFO 30124 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 30124 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd-faw)
+2022-05-13 09:48:14.809  INFO 30124 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-13 09:48:28.347  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$d225f6e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.505  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c201939] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.558  INFO 30124 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-13 09:48:28.572  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.593  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.595  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.678  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6788543a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.863  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$361c74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.871  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.873  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3ece79fe' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.878  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$250abf26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:28.884  INFO 30124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:48:29.325  INFO 30124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-13 09:48:29.371  INFO 30124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-13 09:48:29.371  INFO 30124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-13 09:48:29.577  INFO 30124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-13 09:48:29.578  INFO 30124 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 14330 ms
+2022-05-13 09:48:29.651  WARN 30124 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-13 09:48:31.197  INFO 30124 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-13 09:48:31.738  WARN 30124 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@5b742bc8: WARNING: transaction manager not running?
+2022-05-13 09:48:36.716  INFO 30124 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 删除master的databaseInfo信息！删除1条！
+2022-05-13 09:48:36.771  INFO 30124 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 初始化master的databaseInfo信息！初始化1条！
+2022-05-13 09:48:37.509  INFO 30124 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-13 09:48:37.966  INFO 30124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-13 09:48:40.363  INFO 30124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-13 09:48:40.363  INFO 30124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-13 09:48:40.363  INFO 30124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-13 09:48:40.363  INFO 30124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-13 09:48:40.398  INFO 30124 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-13 09:48:40.456  INFO 30124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fe13916, org.springframework.security.web.context.SecurityContextPersistenceFilter@6abd8bcd, org.springframework.security.web.header.HeaderWriterFilter@8f09a02, org.springframework.web.filter.CorsFilter@5ea0a7a9, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@abc7005, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79424f25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f430ea8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@278c998, org.springframework.security.web.session.SessionManagementFilter@45451333, org.springframework.security.web.access.ExceptionTranslationFilter@1203d787, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53c40ed6]
+2022-05-13 09:48:40.539  INFO 30124 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 09:48:40.604  INFO 30124 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-13 09:48:41.315  INFO 30124 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-13 09:48:41.430  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-13 09:48:41.433  WARN 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd-faw\transaction-logs
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-13 09:48:41.437  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.4.174.tm
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-13 09:48:41.438  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-13 09:48:41.439  INFO 30124 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-13 09:48:41.505  INFO 30124 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-13 09:48:41.714  INFO 30124 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-13 09:48:41.724  INFO 30124 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-13 09:48:41.724  INFO 30124 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-13 09:48:41.725  INFO 30124 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-13 09:48:41.726  INFO 30124 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-13 09:48:41.726  INFO 30124 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-13 09:48:41.726  INFO 30124 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-13 09:48:41.726  INFO 30124 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@eabecf5
+2022-05-13 09:48:41.915  INFO 30124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-13 09:48:41.962  INFO 30124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-13 09:48:42.000  INFO 30124 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-13 09:48:42.207  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-13 09:48:42.210  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-13 09:48:42.213  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-13 09:48:42.216  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-13 09:48:42.352  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-13 09:48:42.363  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-13 09:48:42.368  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-13 09:48:42.518  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-13 09:48:42.559  INFO 30124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-13 09:48:42.572  INFO 30124 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-13 09:48:42.573  INFO 30124 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-13 09:48:42.619  INFO 30124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-13 09:48:42.622  INFO 30124 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 28.788 seconds (JVM running for 31.126)
+2022-05-13 09:48:42.626  INFO 30124 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-13 09:48:43.076  INFO 30124 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-13 09:48:43.076  INFO 30124 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-13 09:48:43.088  INFO 30124 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2022-05-13 09:48:43.100 ERROR 30124 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:48:43.101 ERROR 30124 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->2srlnhuudse9fiomdg1zq639kxd1q4b0，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:49:44.955  INFO 23904 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 23904 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd-faw)
+2022-05-13 09:49:44.970  INFO 23904 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-13 09:49:47.271  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$2af2a8b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.366  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$64eccb0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.391  INFO 23904 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-13 09:49:47.396  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.403  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.404  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.465  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c055060d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.578  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$5902ce47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.585  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.588  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@20801cbb' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.593  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$7dd770f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.599  INFO 23904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 09:49:47.950  INFO 23904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-13 09:49:47.989  INFO 23904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-13 09:49:47.989  INFO 23904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-13 09:49:48.314  INFO 23904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-13 09:49:48.314  INFO 23904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3117 ms
+2022-05-13 09:49:48.399  WARN 23904 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-13 09:49:48.635  INFO 23904 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-13 09:49:49.058  WARN 23904 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@2b7facc7: WARNING: transaction manager not running?
+2022-05-13 09:49:52.596  INFO 23904 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 删除master的databaseInfo信息！删除1条！
+2022-05-13 09:49:52.643  INFO 23904 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 初始化master的databaseInfo信息！初始化1条！
+2022-05-13 09:49:53.131  INFO 23904 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-13 09:49:53.550  INFO 23904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-13 09:49:55.617  INFO 23904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-13 09:49:55.617  INFO 23904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-13 09:49:55.617  INFO 23904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-13 09:49:55.617  INFO 23904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-13 09:49:55.652  INFO 23904 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-13 09:49:55.713  INFO 23904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5340ccb9, org.springframework.security.web.context.SecurityContextPersistenceFilter@305289b3, org.springframework.security.web.header.HeaderWriterFilter@3c6b300a, org.springframework.web.filter.CorsFilter@2bc8caa7, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@32b95de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4037cdb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d5a72cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@582ea164, org.springframework.security.web.session.SessionManagementFilter@4189e668, org.springframework.security.web.access.ExceptionTranslationFilter@3c116f26, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42ef5216]
+2022-05-13 09:49:55.781  INFO 23904 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 09:49:55.835  INFO 23904 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-13 09:49:56.305  INFO 23904 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-13 09:49:56.404  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-13 09:49:56.406  WARN 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd-faw\transaction-logs
+2022-05-13 09:49:56.410  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.4.174.tm
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-13 09:49:56.411  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-13 09:49:56.412  INFO 23904 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-13 09:49:56.464  INFO 23904 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-13 09:49:56.602  INFO 23904 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-13 09:49:56.614  INFO 23904 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-13 09:49:56.614  INFO 23904 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-13 09:49:56.615  INFO 23904 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-13 09:49:56.616  INFO 23904 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-13 09:49:56.616  INFO 23904 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-13 09:49:56.616  INFO 23904 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-13 09:49:56.616  INFO 23904 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@b6b746b
+2022-05-13 09:49:56.810  INFO 23904 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-13 09:49:56.831  INFO 23904 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-13 09:49:56.872  INFO 23904 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-13 09:49:57.002  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-13 09:49:57.004  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-13 09:49:57.006  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-13 09:49:57.007  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-13 09:49:57.069  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-13 09:49:57.078  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-13 09:49:57.083  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-13 09:49:57.212  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-13 09:49:57.245  INFO 23904 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-13 09:49:57.255  INFO 23904 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-13 09:49:57.255  INFO 23904 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-13 09:49:57.293  INFO 23904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-13 09:49:57.296  INFO 23904 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 14.493 seconds (JVM running for 16.717)
+2022-05-13 09:49:57.300  INFO 23904 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-13 09:49:57.531  INFO 23904 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-13 09:49:57.531  INFO 23904 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-13 09:49:57.544  INFO 23904 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-05-13 09:49:57.556 ERROR 23904 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:49:57.557 ERROR 23904 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->uupj4oe7rh401a814j3psxyr6k1cfhlr，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.861 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.861 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.861 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.862 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.862 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.863 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.863 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:10.863 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.478 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET_EXPIRE，采用默认值：1天，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.647 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.671 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.671 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.724 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.724 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.725 ERROR 23904 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.913 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.914 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.914 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.914 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.914 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.914 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:17.915 ERROR 23904 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.349 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.350 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.350 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.350 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.350 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.350 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:21.351 ERROR 23904 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.813 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.813 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.813 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.814 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.814 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.814 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:23.814 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 09:50:30.821  INFO 23904 --- [http-nio-8099-exec-9] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 10:01:55.283 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.285 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.285 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.288 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.288 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.288 ERROR 23904 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.539 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.539 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.539 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.539 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.540 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.540 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.540 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.540 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.540 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.541 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.541 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 10:01:55.541 ERROR 23904 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:12:19.836  INFO 53884 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 53884 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd-faw)
+2022-05-13 16:12:19.873  INFO 53884 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-13 16:12:29.666  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$8e007c3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:29.765  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c7fa9e96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:29.786  INFO 53884 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-13 16:12:29.791  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:29.813  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:29.813  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:29.889  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2362d997] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.022  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$bc10a1d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.027  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.029  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@131a7516' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.030  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e0e54483] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.035  INFO 53884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:12:30.434  INFO 53884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-13 16:12:30.466  INFO 53884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-13 16:12:30.466  INFO 53884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-13 16:12:30.648  INFO 53884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-13 16:12:30.648  INFO 53884 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10131 ms
+2022-05-13 16:12:30.736  WARN 53884 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-13 16:12:31.995  INFO 53884 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-13 16:12:32.388  WARN 53884 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@14457a95: WARNING: transaction manager not running?
+2022-05-13 16:12:36.889  INFO 53884 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 删除master的databaseInfo信息！删除1条！
+2022-05-13 16:12:36.935  INFO 53884 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 初始化master的databaseInfo信息！初始化1条！
+2022-05-13 16:12:37.508  INFO 53884 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-13 16:12:37.958  INFO 53884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-13 16:12:40.468  INFO 53884 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-13 16:12:40.468  INFO 53884 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-13 16:12:40.468  INFO 53884 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-13 16:12:40.468  INFO 53884 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-13 16:12:40.516  INFO 53884 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-13 16:12:40.586  INFO 53884 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3180aee, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e14d520, org.springframework.security.web.header.HeaderWriterFilter@3c116f26, org.springframework.web.filter.CorsFilter@5d94ac8a, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@5b1ff8cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a589eed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a34505a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@288b73c1, org.springframework.security.web.session.SessionManagementFilter@1253b822, org.springframework.security.web.access.ExceptionTranslationFilter@5030997b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4dd752e8]
+2022-05-13 16:12:40.727  INFO 53884 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 16:12:40.795  INFO 53884 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-13 16:12:41.386  INFO 53884 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-13 16:12:41.502  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-13 16:12:41.505  WARN 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-13 16:12:41.508  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-13 16:12:41.508  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd-faw\transaction-logs
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.4.174.tm
+2022-05-13 16:12:41.509  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-13 16:12:41.510  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-13 16:12:41.510  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-13 16:12:41.510  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-13 16:12:41.510  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-13 16:12:41.510  INFO 53884 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-13 16:12:41.542  INFO 53884 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-13 16:12:41.753  INFO 53884 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-13 16:12:41.763  INFO 53884 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-13 16:12:41.763  INFO 53884 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-13 16:12:41.763  INFO 53884 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-13 16:12:41.764  INFO 53884 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-13 16:12:41.764  INFO 53884 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-13 16:12:41.764  INFO 53884 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-13 16:12:41.764  INFO 53884 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@110318a7
+2022-05-13 16:12:41.944  INFO 53884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-13 16:12:41.972  INFO 53884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-13 16:12:42.023  INFO 53884 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-13 16:12:42.169  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-13 16:12:42.170  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-13 16:12:42.172  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-13 16:12:42.172  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-13 16:12:42.228  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-13 16:12:42.237  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-13 16:12:42.241  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-13 16:12:42.358  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-13 16:12:42.391  INFO 53884 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-13 16:12:42.404  INFO 53884 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-13 16:12:42.404  INFO 53884 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-13 16:12:42.443  INFO 53884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-13 16:12:42.446  INFO 53884 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 23.577 seconds (JVM running for 26.246)
+2022-05-13 16:12:42.450  INFO 53884 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-13 16:15:56.834  INFO 53884 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-13 16:15:56.834  INFO 53884 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-13 16:15:56.847  INFO 53884 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-05-13 16:15:56.859 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:56.860 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->ghhuopjsqmp14cd7vu2fdhxd91eqxp52，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.109 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.110 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.110 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.111 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.111 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.111 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.111 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:15:57.111 ERROR 53884 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.061 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET_EXPIRE，采用默认值：1天，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.329 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.353 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.353 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.429 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.429 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.429 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.661 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.662 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.663 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.663 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:16:10.663 ERROR 53884 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.761 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.761 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.761 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.761 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.761 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.762 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:34.762 ERROR 53884 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.077 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:38.078 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.228 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.228 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.229 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.229 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.229 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.229 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:44.229 ERROR 53884 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.801 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:17:47.802 ERROR 53884 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.289 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.289 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:19:14.290 ERROR 53884 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:21:45.414  INFO 77488 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 77488 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd-faw)
+2022-05-13 16:21:45.417  INFO 77488 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-13 16:21:47.636  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$381b0f9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:47.803  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$721531f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:47.828  INFO 77488 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-13 16:21:47.834  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:47.841  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:47.842  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:47.902  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd7d6cf2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.017  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$662b352c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.023  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.026  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@42ea7565' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.027  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$8affd7de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.032  INFO 77488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:21:48.357  INFO 77488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-13 16:21:48.405  INFO 77488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-13 16:21:48.406  INFO 77488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-13 16:21:48.683  INFO 77488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-13 16:21:48.683  INFO 77488 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3016 ms
+2022-05-13 16:21:48.751  WARN 77488 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-13 16:21:48.932  INFO 77488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-13 16:21:49.440  WARN 77488 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@5e9bf744: WARNING: transaction manager not running?
+2022-05-13 16:21:53.277  INFO 77488 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 删除master的databaseInfo信息！删除1条！
+2022-05-13 16:21:53.315  INFO 77488 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 初始化master的databaseInfo信息！初始化1条！
+2022-05-13 16:21:53.850  INFO 77488 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-13 16:21:54.259  INFO 77488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-13 16:21:56.333  INFO 77488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-13 16:21:56.334  INFO 77488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-13 16:21:56.334  INFO 77488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-13 16:21:56.334  INFO 77488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-13 16:21:56.373  INFO 77488 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-13 16:21:56.439  INFO 77488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51b59d58, org.springframework.security.web.context.SecurityContextPersistenceFilter@54970127, org.springframework.security.web.header.HeaderWriterFilter@b787274, org.springframework.web.filter.CorsFilter@4ca4f762, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@6fd7aba8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@749ee0e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dbeaef8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c5d36c3, org.springframework.security.web.session.SessionManagementFilter@5a8656a2, org.springframework.security.web.access.ExceptionTranslationFilter@4189e668, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3de383f7]
+2022-05-13 16:21:56.509  INFO 77488 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 16:21:56.560  INFO 77488 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-13 16:21:57.007  INFO 77488 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-13 16:21:57.103  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-13 16:21:57.106  WARN 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd-faw\transaction-logs
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-13 16:21:57.109  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.4.174.tm
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-13 16:21:57.110  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-13 16:21:57.111  INFO 77488 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-13 16:21:57.165  INFO 77488 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-13 16:21:57.309  INFO 77488 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-13 16:21:57.319  INFO 77488 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-13 16:21:57.319  INFO 77488 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-13 16:21:57.320  INFO 77488 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-13 16:21:57.320  INFO 77488 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-13 16:21:57.321  INFO 77488 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-13 16:21:57.321  INFO 77488 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-13 16:21:57.321  INFO 77488 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39fc17be
+2022-05-13 16:21:57.489  INFO 77488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-13 16:21:57.506  INFO 77488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-13 16:21:57.540  INFO 77488 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-13 16:21:57.655  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-13 16:21:57.656  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-13 16:21:57.658  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-13 16:21:57.659  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-13 16:21:57.716  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-13 16:21:57.726  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-13 16:21:57.730  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-13 16:21:57.861  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-13 16:21:57.894  INFO 77488 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-13 16:21:57.904  INFO 77488 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-13 16:21:57.904  INFO 77488 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-13 16:21:57.941  INFO 77488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-13 16:21:57.944  INFO 77488 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 15.253 seconds (JVM running for 17.526)
+2022-05-13 16:21:57.947  INFO 77488 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-13 16:22:20.657  INFO 73552 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 73552 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd-faw)
+2022-05-13 16:22:20.661  INFO 73552 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-05-13 16:22:23.554  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$3c93794c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.650  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$768d9ba3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.676  INFO 73552 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-13 16:22:23.681  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.690  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.691  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.759  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1f5d6a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.895  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6aa39ede] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.901  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.903  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@75d366c2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.904  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$8f784190] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:23.910  INFO 73552 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-13 16:22:24.236  INFO 73552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-05-13 16:22:24.270  INFO 73552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-13 16:22:24.271  INFO 73552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-05-13 16:22:24.421  INFO 73552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-05-13 16:22:24.421  INFO 73552 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2685 ms
+2022-05-13 16:22:24.487  WARN 73552 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-05-13 16:22:24.659  INFO 73552 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-13 16:22:25.012  WARN 73552 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@1cde374: WARNING: transaction manager not running?
+2022-05-13 16:22:28.132  INFO 73552 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 删除master的databaseInfo信息！删除1条！
+2022-05-13 16:22:28.170  INFO 73552 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : 初始化master的databaseInfo信息！初始化1条！
+2022-05-13 16:22:28.657  INFO 73552 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-05-13 16:22:29.138  INFO 73552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-13 16:22:31.098  INFO 73552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-05-13 16:22:31.098  INFO 73552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-05-13 16:22:31.099  INFO 73552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-05-13 16:22:31.099  INFO 73552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-05-13 16:22:31.147  INFO 73552 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-05-13 16:22:31.206  INFO 73552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d4a34ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b423f90, org.springframework.security.web.header.HeaderWriterFilter@1ead3c67, org.springframework.web.filter.CorsFilter@7cbede2b, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@121cf6f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c7673ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ff8d39b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ef04613, org.springframework.security.web.session.SessionManagementFilter@5cc075da, org.springframework.security.web.access.ExceptionTranslationFilter@77f529a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69c227fd]
+2022-05-13 16:22:31.269  INFO 73552 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : RestTemplate初始化完成
+2022-05-13 16:22:31.313  INFO 73552 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-05-13 16:22:31.733  INFO 73552 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-05-13 16:22:31.828  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-05-13 16:22:31.831  WARN 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd-faw\transaction-logs
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-05-13 16:22:31.834  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.4.174.tm
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-05-13 16:22:31.835  INFO 73552 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-05-13 16:22:31.944  INFO 73552 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-05-13 16:22:32.080  INFO 73552 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-05-13 16:22:32.089  INFO 73552 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-13 16:22:32.089  INFO 73552 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-05-13 16:22:32.089  INFO 73552 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-05-13 16:22:32.090  INFO 73552 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-13 16:22:32.090  INFO 73552 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-13 16:22:32.090  INFO 73552 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-05-13 16:22:32.090  INFO 73552 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7fe0ca60
+2022-05-13 16:22:32.264  INFO 73552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-13 16:22:32.283  INFO 73552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-13 16:22:32.342  INFO 73552 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-13 16:22:32.480  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-05-13 16:22:32.482  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-05-13 16:22:32.485  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-05-13 16:22:32.486  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-05-13 16:22:32.550  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-05-13 16:22:32.561  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-05-13 16:22:32.566  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-05-13 16:22:32.695  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-05-13 16:22:32.728  INFO 73552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-05-13 16:22:32.737  INFO 73552 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-05-13 16:22:32.737  INFO 73552 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-13 16:22:32.776  INFO 73552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-05-13 16:22:32.779  INFO 73552 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 12.895 seconds (JVM running for 15.028)
+2022-05-13 16:22:32.783  INFO 73552 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-05-13 16:23:01.892  INFO 73552 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-13 16:23:01.892  INFO 73552 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-13 16:23:01.903  INFO 73552 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2022-05-13 16:23:01.914 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:01.914 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->p0qu1mwxnsdic6txacsfdxawjr3j6lwc，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.101 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.101 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.101 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.102 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.103 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.103 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.103 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:02.103 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.453 ERROR 73552 --- [http-nio-8099-exec-5] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET_EXPIRE，采用默认值：1天，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.591 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.601 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.601 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.624 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.624 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.624 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.778 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.779 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.779 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.779 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.779 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.779 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:07.780 ERROR 73552 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.874 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:14.875 ERROR 73552 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.920 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.920 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.920 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.921 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.921 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.921 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:19.921 ERROR 73552 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.880 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.880 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.880 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.881 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.881 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.881 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:26.881 ERROR 73552 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.958 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_OAUTH2_PREFIX，采用默认值：oauth2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.959 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.959 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.961 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.961 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:53.961 ERROR 73552 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.097 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_DEFAULT_PASSWORD，采用默认密码：111111，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.097 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.097 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.098 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.099 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.099 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.099 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.108 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:23:54.109 ERROR 73552 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.648 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.648 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.648 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.649 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.650 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.650 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 16:27:36.650 ERROR 73552 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-13 17:10:26.425 ERROR 73552 --- [http-nio-8099-exec-8] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+java.lang.NullPointerException: null
+	at cn.stylefeng.guns.modular.utils.WebSocket.WebSocket.sendMessageOfSession3(WebSocket.java:135)
+	at cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService.padSortingConform(OneTypeCabinetService.java:1315)
+	at cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService$$FastClassBySpringCGLIB$$9c626be2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService$$EnhancerBySpringCGLIB$$74f90a38.padSortingConform(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PDAController.padSortingConform(PDAController.java:178)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PDAController$$FastClassBySpringCGLIB$$747af459.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PDAController$$EnhancerBySpringCGLIB$$8a2425fd.padSortingConform(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+

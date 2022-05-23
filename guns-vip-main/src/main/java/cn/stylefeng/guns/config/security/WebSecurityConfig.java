@@ -108,13 +108,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/ws/**").permitAll()
 
                 //获取租户列表的接口
-                .antMatchers("/tenantInfo/listTenants").permitAll()
+                    .antMatchers("/tenantInfo/listTenants").permitAll()
                 .antMatchers("/WmsApi/**").permitAll()
                 .antMatchers("/wmsUser/**").permitAll()
                 .antMatchers("/redirect/**").permitAll()
                 .antMatchers("/connectWebSocket/oneToMany").permitAll()
                 .antMatchers("/requestMsg/**").permitAll()
                 .antMatchers("/wmsCabinet2Stock/**").permitAll()
+                .antMatchers("/wmsSortingTask/**").permitAll()
 
                 .anyRequest().authenticated();
 

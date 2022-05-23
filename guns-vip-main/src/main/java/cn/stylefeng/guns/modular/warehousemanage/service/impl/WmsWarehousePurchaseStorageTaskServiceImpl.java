@@ -2,6 +2,7 @@ package cn.stylefeng.guns.modular.warehousemanage.service.impl;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageFactory;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
 import cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehousePurchaseStorageTaskMapper;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
@@ -61,6 +62,26 @@ public class WmsWarehousePurchaseStorageTaskServiceImpl extends ServiceImpl<WmsW
         Page pageContext = getPageContext();
         IPage page = this.baseMapper.customPageList(pageContext, param);
         return LayuiPageFactory.createPageInfo(page);
+    }
+
+    @Override
+    public WmsWarehousePurchaseStorageTaskResult findByOrderId(String purNumber) {
+        return this.baseMapper.findByOrderId(purNumber);
+    }
+
+    @Override
+    public void updateState(String state,String OrderId) {
+        this.baseMapper.updateState(state,OrderId);
+    }
+
+    @Override
+    public void stopTask() {
+        baseMapper.stopTask();
+    }
+
+    @Override
+    public WmsPurchaseOrderInfoResult doingTask() {
+        return this.baseMapper.doingTask();
     }
 
     private Serializable getKey(WmsWarehousePurchaseStorageTaskParam param){

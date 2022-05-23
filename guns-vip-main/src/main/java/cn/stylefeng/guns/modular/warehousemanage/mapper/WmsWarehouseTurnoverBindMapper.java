@@ -63,4 +63,6 @@ public interface WmsWarehouseTurnoverBindMapper extends BaseMapper<WmsWarehouseT
     WmsWarehouseTurnoverBindResult findBySKU(@Param("materialSku")String materialSku);
 
     Page<WmsWarehouseTurnoverBindResult> findTurnoverMsg(@Param("page") Page pageContext, @Param("paramCondition")WmsWarehouseTurnoverBindParam param);
+
+    WmsWarehouseTurnoverBindResult findByMaterial(@Param("materialSerialNumber")String materialSerialNumber);
 }

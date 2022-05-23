@@ -6,7 +6,9 @@ import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.request.ApplySpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.response.SpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.request.WarehouseTurnoverModify;
+import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.*;
@@ -24,6 +26,8 @@ public class PDAController {
 
     @Autowired
     private OneTypeCabinetService oneTypeCabinetService;
+    @Autowired
+    private WarehouseService warehouseService;
 
     @GetMapping("/tool")
     @ApiOperation(value = "工具-PDA：1.扫描格口获取信息")
@@ -123,6 +127,9 @@ public class PDAController {
     @ApiOperation(value = "立库组盘-PDA：3.1 查找工具数据")
     public ResponseData padWarehouseDishToolData(@ApiParam(value = "工具编号") @RequestParam String materialSerialNumber){
         WmsMaterialTool wmsMaterialTool = oneTypeCabinetService.findToolByMaterialSerialNumber(materialSerialNumber);
+        if (wmsMaterialTool == null){
+            return  ResponseData.error("无此工具信息");
+        }
         return ResponseData.success(wmsMaterialTool);
     }
 
@@ -173,9 +180,17 @@ public class PDAController {
     }
 
     @GetMapping("/sorting-conform")
-    @ApiOperation(value = "立库分拣-PDA：5.分拣完成")
+    @ApiOperation(value = "立库工具分拣-PDA：5.分拣完成")
     public ResponseData padSortingConform(WarehouseTurnoverModify modify){
-        return oneTypeCabinetService.padSortingConform(modify);
+       WmsWarehouseTaskIn wmsWarehouseTaskIn = oneTypeCabinetService.padSortingConform(modify);
+        warehouseService.sendTask(wmsWarehouseTaskIn.getMessageId());
+        return ResponseData.success();
+    }
+
+    @GetMapping("/sorting-conform2")
+    @ApiOperation(value = "立库备件分拣-PDA：5.分拣完成")
+    public ResponseData padSortingConform2(WarehouseTurnoverModify modify){
+        return oneTypeCabinetService.padSortingConform2(modify);
     }
 
     @GetMapping("/apply-tool-all")

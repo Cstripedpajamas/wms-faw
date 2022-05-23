@@ -234,5 +234,25 @@
         where task_number = #{taskNumber}
     </update>
 
+    <update id="stopTask">
+        update  wms_warehouse_replenishment_task set task_state = '2' where task_state = '1'
+    </update>
+
+    <select id="findList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        wms_warehouse_replenishment_task
+        where  task_state != '3'
+    </select>
+
+    <select id="inExecution" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        wms_warehouse_replenishment_task
+        where  task_state = '2' limit 1
+    </select>
+
 
 </mapper>

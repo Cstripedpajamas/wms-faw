@@ -53,4 +53,5 @@ public interface WmsWarehouseTaskOutMapper extends BaseMapper<WmsWarehouseTaskOu
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsWarehouseTaskOutParam paramCondition);
 
+    WmsWarehouseTaskOut findByTaskNumber(@Param("taskNumber")String taskNumber);
 }

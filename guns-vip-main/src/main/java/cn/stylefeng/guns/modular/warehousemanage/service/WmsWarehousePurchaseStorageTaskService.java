@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.modular.warehousemanage.service;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult;
@@ -66,4 +67,11 @@ public interface WmsWarehousePurchaseStorageTaskService extends IService<WmsWare
      */
      LayuiPageInfo findPageBySpec(WmsWarehousePurchaseStorageTaskParam param);
 
+    WmsWarehousePurchaseStorageTaskResult findByOrderId(String purNumber);
+
+    void updateState(String state,String orderId);
+
+    void stopTask();
+
+    WmsPurchaseOrderInfoResult doingTask();
 }

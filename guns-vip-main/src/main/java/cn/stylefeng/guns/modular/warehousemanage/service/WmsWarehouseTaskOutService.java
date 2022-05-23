@@ -66,4 +66,5 @@ public interface WmsWarehouseTaskOutService extends IService<WmsWarehouseTaskOut
      */
      LayuiPageInfo findPageBySpec(WmsWarehouseTaskOutParam param);
 
+    WmsWarehouseTaskOut findByTaskNumber(String taskNumber);
 }

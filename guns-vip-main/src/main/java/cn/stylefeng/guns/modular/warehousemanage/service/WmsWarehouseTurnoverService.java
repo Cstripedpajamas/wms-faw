@@ -73,4 +73,6 @@ public interface WmsWarehouseTurnoverService extends IService<WmsWarehouseTurnov
     WmsWarehouseTurnoverResult findById(String turnoverId);
 
     WmsWarehouseTurnoverResult findByBarCode(String barCode);
+
+    List<WmsWarehouseTurnover> findEmptyType(String turnoverType);
 }

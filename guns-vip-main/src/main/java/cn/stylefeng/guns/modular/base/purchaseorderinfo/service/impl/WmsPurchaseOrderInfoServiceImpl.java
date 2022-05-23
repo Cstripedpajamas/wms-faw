@@ -68,6 +68,16 @@ public class WmsPurchaseOrderInfoServiceImpl extends ServiceImpl<WmsPurchaseOrde
         this.baseMapper.insertListBatch(param);
     }
 
+    @Override
+    public void updateState(String state,String orderId) {
+        baseMapper.updateState(state,orderId);
+    }
+
+    @Override
+    public void stopTask() {
+        baseMapper.stopTask();
+    }
+
     private Serializable getKey(WmsPurchaseOrderInfoParam param){
         return param.getId();
     }

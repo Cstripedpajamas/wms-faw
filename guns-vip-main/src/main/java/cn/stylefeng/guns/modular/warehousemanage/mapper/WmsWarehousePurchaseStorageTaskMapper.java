@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.warehousemanage.mapper;
 
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult;
@@ -53,4 +54,11 @@ public interface WmsWarehousePurchaseStorageTaskMapper extends BaseMapper<WmsWar
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsWarehousePurchaseStorageTaskParam paramCondition);
 
+    WmsWarehousePurchaseStorageTaskResult findByOrderId(@Param("orderId")String orderId);
+
+    void updateState(@Param("state")String state,@Param("orderId")String orderId);
+
+    void stopTask();
+
+    WmsPurchaseOrderInfoResult doingTask();
 }

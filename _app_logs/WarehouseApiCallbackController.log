@@ -1,0 +1,14 @@
+2022-05-11 11:36:05.491  INFO 43388 --- [http-nio-8099-exec-6] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:130081426076,周转箱条码:1000000676,出库状态:2,异常信息:1111
+2022-05-11 11:37:44.674  INFO 43388 --- [http-nio-8099-exec-10] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:130081426076,周转箱条码:1000000676,出库状态:2,异常信息:1111
+2022-05-11 11:44:28.029  INFO 43388 --- [http-nio-8099-exec-5] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:052387535021,库位信息:W1_1Z0010101120101,入库状态:2,异常信息:1111
+2022-05-11 12:08:27.203  INFO 25240 --- [http-nio-8099-exec-2] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:884626493676,周转箱条码:1000000676,出库状态:2,异常信息:1111
+2022-05-11 12:10:56.989  INFO 25240 --- [http-nio-8099-exec-1] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:318684657121,库位信息:W1_1Z0010101120101,入库状态:2,异常信息:1111
+2022-05-11 12:15:10.515  INFO 25240 --- [http-nio-8099-exec-10] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:229215512048,库位信息:W1_1Z0010101120101,入库状态:2,异常信息:1111
+2022-05-11 12:15:40.705  INFO 25240 --- [http-nio-8099-exec-3] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:579700606415,库位信息:W1_1Z0010101120101,入库状态:2,异常信息:1111
+2022-05-11 12:16:54.664  INFO 25240 --- [http-nio-8099-exec-5] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:579700606415,周转箱条码:null,出库状态:2,异常信息:1111
+2022-05-11 12:18:00.930  INFO 25240 --- [http-nio-8099-exec-10] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:579700606415,周转箱条码:1000000676,出库状态:2,异常信息:1111
+2022-05-11 17:22:39.394  INFO 24920 --- [http-nio-8099-exec-3] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:999876093409,周转箱条码:1000000075,出库状态:2,异常信息:1111
+2022-05-11 17:34:27.076  INFO 24920 --- [http-nio-8099-exec-6] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:350842601928,库位信息:W1_1Z0010102060202,入库状态:2,异常信息:1111
+2022-05-11 21:24:31.484  INFO 66532 --- [http-nio-8099-exec-10] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:559968808396,周转箱条码:1000000218,出库状态:2,异常信息:1111
+2022-05-11 21:25:37.058  INFO 66532 --- [http-nio-8099-exec-7] s.g.m.o.c.WarehouseApiCallbackController : 出库结果:流程单号:252241526057,周转箱条码:1000000218,出库状态:2,异常信息:1111
+2022-05-11 22:30:09.650  INFO 56668 --- [http-nio-8099-exec-8] s.g.m.o.c.WarehouseApiCallbackController : 入库结果:流程单号:447757236447,库位信息:W1_1Z0010101120101,入库状态:2,异常信息:1111

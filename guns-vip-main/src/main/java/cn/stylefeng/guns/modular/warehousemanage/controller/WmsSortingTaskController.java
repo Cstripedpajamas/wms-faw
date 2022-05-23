@@ -3,13 +3,17 @@ package cn.stylefeng.guns.modular.warehousemanage.controller;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsSortingTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 
 /**
@@ -20,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/wmsSortingTask")
+@CrossOrigin
 public class WmsSortingTaskController extends BaseController {
 
     private String PREFIX = "/warehousemanage/wmsSortingTask";
@@ -122,6 +127,13 @@ public class WmsSortingTaskController extends BaseController {
     @RequestMapping("/list")
     public LayuiPageInfo list(WmsSortingTaskParam wmsSortingTaskParam) {
         return this.wmsSortingTaskService.findPageBySpec(wmsSortingTaskParam);
+    }
+
+    @ResponseBody
+    @RequestMapping("/recentTask")
+    public ResponseData recentTask() {
+        List<WmsSortingTaskResult> list = this.wmsSortingTaskService.findRecentTask();
+        return ResponseData.success(list);
     }
 
 }

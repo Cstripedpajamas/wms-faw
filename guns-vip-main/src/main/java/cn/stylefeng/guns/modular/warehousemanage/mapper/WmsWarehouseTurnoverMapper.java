@@ -60,4 +60,6 @@ public interface WmsWarehouseTurnoverMapper extends BaseMapper<WmsWarehouseTurno
     WmsWarehouseTurnoverResult findById(@Param("turnoverId")String turnoverId);
 
     WmsWarehouseTurnoverResult findByBarCode(@Param("barCode")String barCode);
+
+    List<WmsWarehouseTurnover> findEmptyType(@Param("turnoverType")String turnoverType);
 }

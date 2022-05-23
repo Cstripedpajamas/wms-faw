@@ -2,6 +2,8 @@ package cn.stylefeng.guns.modular.onetypeservice.controller;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,17 +24,28 @@ public class WarehouseReplenishmentController {
     @Autowired
     private WarehouseService warehouseService;
 
+    @Autowired
+    private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
+
     @ApiOperation(value = "1.获取补货出库任务")
     @GetMapping("/task")
     public LayuiPageInfo replenishmentList(){
         return warehouseService.replenishmentList();
     }
 
-    @ApiOperation(value = "2.获取补货出库任务")
+    @ApiOperation(value = "2.执行补货出库任务")
     @GetMapping("/create")
     public ResponseData replenishmentCreateOutTask(@ApiParam(value = "任务编号") @RequestParam String taskNumber){
-        return warehouseService.replenishmentCreateOutTask(taskNumber);
+         warehouseService.startReplenishment(taskNumber);
+         return ResponseData.success();
     }
+    @ApiOperation(value = "new.执行中的补货出库任务")
+    @GetMapping("/inExecution")
+    public ResponseData replenishmentCreateOutTask(){
+        WmsWarehouseReplenishmentTaskResult wr =  wmsWarehouseReplenishmentTaskService.inExecution();
+        return ResponseData.success(wr);
+    }
+
 
     @ApiOperation(value = "3.补货入库")
     @GetMapping("/in")
@@ -49,7 +62,6 @@ public class WarehouseReplenishmentController {
     @ApiOperation(value = "5.补货出库")
     @GetMapping("/out")
     public ResponseData replenishmentOutTask(@ApiParam(value = "出库任务编号") @RequestParam String taskNumber){
-//        return warehouseService.replenishmentOutTask(taskNumber);
         return warehouseService.replenishmentCreateOutTask(taskNumber);
     }
 

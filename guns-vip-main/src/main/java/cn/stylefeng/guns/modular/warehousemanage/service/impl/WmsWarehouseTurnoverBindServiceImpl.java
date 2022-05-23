@@ -97,6 +97,11 @@ public class WmsWarehouseTurnoverBindServiceImpl extends ServiceImpl<WmsWarehous
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsWarehouseTurnoverBindResult findByMaterial(String materialSerialNumber) {
+        return this.baseMapper.findByMaterial(materialSerialNumber);
+    }
+
     private Serializable getKey(WmsWarehouseTurnoverBindParam param){
         return param.getId();
     }

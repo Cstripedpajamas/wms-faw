@@ -77,4 +77,5 @@ public interface WmsWarehouseTurnoverBindService extends IService<WmsWarehouseTu
 
     LayuiPageInfo findTurnoverMsg(WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam);
 
+    WmsWarehouseTurnoverBindResult findByMaterial(String materialSerialNumber);
 }

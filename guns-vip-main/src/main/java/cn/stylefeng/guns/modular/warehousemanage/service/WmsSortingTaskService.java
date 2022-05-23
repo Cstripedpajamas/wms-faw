@@ -68,4 +68,5 @@ public interface WmsSortingTaskService extends IService<WmsSortingTask> {
      */
      LayuiPageInfo findPageBySpec(WmsSortingTaskParam param);
 
+    List<WmsSortingTaskResult> findRecentTask();
 }

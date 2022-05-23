@@ -42,19 +42,18 @@ public class LoginWarehouseController {
         if(!Objects.equals(wmsUser.getuPwd(),password)){
             return ResponseData.error("用户密码不对");
         }
-        user = wmsUser;
         List<LoginWarehouseResponse> list = new ArrayList<>();
-        if(Objects.equals(user.getUserType(),"A")){
+        if(Objects.equals(wmsUser.getUserType(),"A")){
+            user = wmsUser;
             user.setUserType("管理员");
-            list.add(new LoginWarehouseResponse("工具领用","1","main/toolAccessPage/step1"));
+//            list.add(new LoginWarehouseResponse("工具领用","1","main/toolAccessPage/step1"));
             list.add(new LoginWarehouseResponse("采购入库","2","main/purchaseWarehousingPage/step1"));
-            list.add(new LoginWarehouseResponse("入库","3","main/instoragePage"));
             list.add(new LoginWarehouseResponse("备品备件补货出库","4","main/replenishmentPage/step1"));
             list.add(new LoginWarehouseResponse("工具条码打印","5","main/printerPage/step1"));
+            list.add(new LoginWarehouseResponse("入库","3","main/instoragePage"));
             list.add(new LoginWarehouseResponse("出库","6","main/outstoragePage"));
         } else {
-            user.setUserType("操作员");
-            list.add(new LoginWarehouseResponse("工具领用","1","main/toolAccessPage/step1"));
+           return ResponseData.error("您不是管理员,无法登入");
         }
         Map<String,Object> map = new HashMap<>();
         map.put("user",user);

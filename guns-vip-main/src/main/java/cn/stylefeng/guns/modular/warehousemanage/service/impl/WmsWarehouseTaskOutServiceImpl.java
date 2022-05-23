@@ -63,6 +63,11 @@ public class WmsWarehouseTaskOutServiceImpl extends ServiceImpl<WmsWarehouseTask
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsWarehouseTaskOut findByTaskNumber(String taskNumber) {
+        return this.baseMapper.findByTaskNumber(taskNumber);
+    }
+
     private Serializable getKey(WmsWarehouseTaskOutParam param){
         return param.getId();
     }

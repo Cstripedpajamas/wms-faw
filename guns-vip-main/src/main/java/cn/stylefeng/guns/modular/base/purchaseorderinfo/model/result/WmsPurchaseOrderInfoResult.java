@@ -93,4 +93,10 @@ public class WmsPurchaseOrderInfoResult implements Serializable {
      */
     private String acceptableQuantity;
 
+
+    /**
+     * 采购订单任务编号
+     * */
+    private String taskNumber;
+
 }
