@@ -7,7 +7,10 @@ import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMateria
 import cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderInfo;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
 import cn.stylefeng.guns.modular.onetypeservice.enums.ApplyType;
@@ -18,12 +21,15 @@ import cn.stylefeng.guns.modular.onetypeservice.response.SpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskOut;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehousePurchaseStorageTaskService;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTaskOutService;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
@@ -64,6 +70,12 @@ public class PDAWareController {
     private WmsWarehouseTaskOutService wmsWarehouseTaskOutService;
     @Autowired
     private WmsMaterialSparePartsService wmsMaterialSparePartsService;
+
+    @Autowired
+    private WmsWarehousePurchaseStorageTaskService wmsWarehousePurchaseStorageTaskService;
+
+    @Autowired
+    private WmsPurchaseOrderInfoService wmsPurchaseOrderInfoService;
 
     /**
      * 登录
@@ -164,6 +176,28 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData purchaseScanOutTask(String serialNumber, String turnoverNumber, String taskNumber) {
         return warehouseService.purchaseScanInTask(serialNumber, turnoverNumber, taskNumber);
+    }
+
+    /**
+     * 采购入库任务 完成
+     */
+    @RequestMapping("/doingTaskOver")
+    @ResponseBody
+    public ResponseData doingTaskOver(String taskNumber) {
+        WmsWarehousePurchaseStorageTask wmsWarehousePurchaseStorageTask = wmsWarehousePurchaseStorageTaskService.getOne(new QueryWrapper<WmsWarehousePurchaseStorageTask>().eq("task_number", taskNumber));
+        WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getById(wmsWarehousePurchaseStorageTask.getPurchaseId());
+
+        WmsWarehousePurchaseStorageTaskParam wmsWarehousePurchaseStorageTaskParam=new WmsWarehousePurchaseStorageTaskParam();
+        wmsWarehousePurchaseStorageTaskParam.setId(wmsWarehousePurchaseStorageTask.getId());
+        wmsWarehousePurchaseStorageTaskParam.setTaskState("3");
+        wmsWarehousePurchaseStorageTaskService.update(wmsWarehousePurchaseStorageTaskParam);
+
+        WmsPurchaseOrderInfoParam wmsPurchaseOrderInfoParam=new WmsPurchaseOrderInfoParam();
+        wmsPurchaseOrderInfoParam.setId(wmsPurchaseOrderInfo.getId());
+        wmsPurchaseOrderInfoParam.setArrivalState("3");
+        wmsPurchaseOrderInfoService.update(wmsPurchaseOrderInfoParam);
+
+        return ResponseData.success();
     }
 
     /**
