@@ -3,6 +3,9 @@ package cn.stylefeng.guns.modular.onetypeservice.controller;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
+import cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult;
+import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
@@ -53,6 +56,9 @@ public class PDAWareController {
     @Autowired
     private WmsMaterialTypeService wmsMaterialTypeService;
 
+    @Autowired
+    private WmsMaterialSparePartsService wmsMaterialSparePartsService;
+
     /**
      * 登录
      */
@@ -77,7 +83,7 @@ public class PDAWareController {
     public ResponseData doingTask() {
         WmsPurchaseOrderInfoResult task = warehouseService.doingTask();
         if (task == null){
-            return ResponseData.error("暂无执行中的采购任务");
+            return ResponseData.error(500, "暂无执行中的采购任务", new WmsPurchaseOrderInfoResult());
         }
         return ResponseData.success(task);
     }
@@ -111,9 +117,25 @@ public class PDAWareController {
     public ResponseData padWarehouseDishToolData(String materialSerialNumber) {
         WmsMaterialTool wmsMaterialTool = oneTypeCabinetService.findToolByMaterialSerialNumber(materialSerialNumber);
         if (wmsMaterialTool == null) {
-            return ResponseData.error("无此工具信息");
+            return ResponseData.error(500, "无此工具信息", new WmsMaterialTool());
         }
         return ResponseData.success(wmsMaterialTool);
+    }
+
+    /**
+     * 备品备件信息
+     * 工具条码:materialSerialNumber
+     */
+    @RequestMapping("/dish-spareparts-data")
+    @ResponseBody
+    public ResponseData padWarehouseMaterialSparePartsData(String materialTypeId) {
+        WmsMaterialSparePartsParam param=new WmsMaterialSparePartsParam();
+        param.setMaterialTypeId(materialTypeId);
+        List<WmsMaterialSparePartsResult> wmsMaterialSparePartsResultList = this.wmsMaterialSparePartsService.findAllByMaterialTypeId(param);
+        if (wmsMaterialSparePartsResultList == null||wmsMaterialSparePartsResultList.isEmpty()) {
+            return ResponseData.error(500, "无此类型备品备件信息", new ArrayList<>());
+        }
+        return ResponseData.success(wmsMaterialSparePartsResultList);
     }
 
     /**

@@ -54,4 +54,6 @@ public interface WmsMaterialSparePartsMapper extends BaseMapper<WmsMaterialSpare
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsMaterialSparePartsParam paramCondition);
 
     List<WmsMaterialSparePartsResult> findAll();
+
+    List<WmsMaterialSparePartsResult> findAllByMaterialTypeId(@Param("paramCondition") WmsMaterialSparePartsParam paramCondition);
 }

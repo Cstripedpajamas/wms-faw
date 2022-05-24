@@ -67,4 +67,6 @@ public interface WmsMaterialSparePartsService extends IService<WmsMaterialSpareP
      LayuiPageInfo findPageBySpec(WmsMaterialSparePartsParam param);
 
     List<WmsMaterialSparePartsResult> findAll();
+
+    List<WmsMaterialSparePartsResult> findAllByMaterialTypeId(WmsMaterialSparePartsParam param);
 }
