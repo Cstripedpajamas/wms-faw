@@ -1138,6 +1138,7 @@ public class OneTypeCabinetService {
             if (Objects.equals("0",wmsWarehouseTurnoverBind.getmNumber())){
                 wmsWarehouseTurnoverBind.setmNumber(StateEnum.ONE.getState());
                 receiveNumber =receiveNumber +Integer.parseInt(modify.getNumber());
+                wmsWarehouseTurnoverBind.setmNumber(modify.getNumber());
             }
             else {
                 // 已绑定类型
@@ -1165,7 +1166,7 @@ public class OneTypeCabinetService {
             wmsWarehouseTurnoverBind.setMaterialSku(spareParts.getMaterialSku());// 物料SKU
             wmsWarehouseTurnoverBind.setmUnit(spareParts.getmUnit());// 单位
             wmsWarehouseTurnoverBind.setmBatch(spareParts.getmBatch());// 批次
-            wmsWarehouseTurnoverBind.setmNumber(modify.getNumber());// 数量
+            wmsWarehouseTurnoverBind.setmNumber(wmsWarehouseTurnoverBind.getmNumber());// 数量
             wmsWarehouseTurnoverBind.setLatticeState(StateEnum.ONE.getState());
         }
         WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
