@@ -7,10 +7,14 @@ import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.entity.WmsMaterialSpareParts;
+import cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
 import cn.stylefeng.guns.modular.base.materialtool.service.WmsMaterialToolService;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderInfo;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
 import cn.stylefeng.guns.modular.onetypecabinet.entity.*;
 import cn.stylefeng.guns.modular.onetypecabinet.model.params.*;
@@ -46,6 +50,7 @@ import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
@@ -180,6 +185,10 @@ public class OneTypeCabinetService {
     private WmsWarehouseTaskInService wmsWarehouseTaskInService;
     @Autowired
     private WarehouseService warehouseService;
+    @Autowired
+    private WmsWarehousePurchaseStorageTaskService wmsWarehousePurchaseStorageTaskService;
+    @Autowired
+    private WmsPurchaseOrderInfoService wmsPurchaseOrderInfoService;
 
     // 获取工具异常信息接口
     public ResponseData toolErrorContent() {
@@ -1078,30 +1087,41 @@ public class OneTypeCabinetService {
 
     // 立库周转箱组盘 - 提交绑定内容
     public ResponseData padWarehouseDishConform(WarehouseTurnoverModify modify) {
+        // 获取任务
+        WmsWarehousePurchaseStorageTask wmsWarehousePurchaseStorageTask = wmsWarehousePurchaseStorageTaskService.getOne(new QueryWrapper<WmsWarehousePurchaseStorageTask>().eq("task_number", modify.getTaskNumber()));
+        WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getById(wmsWarehousePurchaseStorageTask.getPurchaseId());
         WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getById(modify.getId());
+        int receiveNumber = 0;
+        if ( !Objects.equals("",wmsPurchaseOrderInfo.getReceivedQuantity())){
+            receiveNumber =Integer.parseInt(wmsWarehousePurchaseStorageTask.getReceivedQuantity()); // 已接收数量
+        }
         WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParamC = new WmsWarehouseTurnoverBindParam();
         wmsWarehouseTurnoverBindParamC.setTurnoverId(modify.getId().toString());
-        List<WmsWarehouseTurnoverBindResult> wmsWarehouseTurnoverBindResult=wmsWarehouseTurnoverBindService.findListTurnover(wmsWarehouseTurnoverBindParamC);
-
-        if (!wmsWarehouseTurnoverBindResult.isEmpty()){
-            for (WmsWarehouseTurnoverBindResult warehouseTurnoverBindResult : wmsWarehouseTurnoverBindResult) {
-                // 匹配组盘的格口
-                if (Objects.equals(modify.getLatticeCode(),warehouseTurnoverBindResult.getLatticeCode())){
-                    // 查询周转箱格口数量是否为0 或者为空
-                    if (Objects.equals("",warehouseTurnoverBindResult.getMNumber()) || Objects.equals(null,warehouseTurnoverBindResult.getMNumber()) || Objects.equals("0",warehouseTurnoverBindResult.getMNumber())){
-                        wmsWarehouseTurnover.setTurnoverState(StateEnum.ONE.getState()); // 周转箱状态
-
-                    }
-                    else {
-                        return ResponseData.error("此格口有货 不允许绑定");
-                    }
-                }
-            }
-        }
         wmsWarehouseTurnover.setTurnoverState(StateEnum.ONE.getState());
         WmsWarehouseTurnoverBind wmsWarehouseTurnoverBind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id",modify.getId()).eq("lattice_code",modify.getLatticeCode()));
         if(StateEnum.ONE.getState().equals(modify.getTaskType())){
             WmsMaterialTool wmsMaterialTool = wmsMaterialToolService.getOne(new QueryWrapper<WmsMaterialTool>().eq("material_serial_number",modify.getMaterialSerialNumber()));
+            if (Objects.equals("0",wmsWarehouseTurnoverBind.getmNumber())){
+                wmsWarehouseTurnoverBind.setmNumber(StateEnum.ONE.getState());
+                receiveNumber =receiveNumber + 1;
+            }
+            else {
+                // 已绑定类型
+                String materialTypeId = wmsWarehouseTurnoverBind.getMaterialTypeId();
+                // 已绑定数量
+                String number = wmsWarehouseTurnoverBind.getmNumber();
+                // 查询传递的工具类型
+                if (Objects.equals(materialTypeId,wmsMaterialTool.getMaterialTypeId())){
+                    int i = Integer.parseInt(number);
+                    int total = i +1;
+                    receiveNumber =  receiveNumber + 1;
+                    wmsWarehouseTurnoverBind.setmNumber(Integer.toString(total));
+                }
+                else {
+                    return ResponseData.error("格口绑定的工具类型不一致");
+                }
+            }
+
             wmsWarehouseTurnoverBind.setGoodsType(StateEnum.ONE.getState());// 货物类型（1工具/2备品备件）
             // 查工具物料编码
             wmsWarehouseTurnoverBind.setMaterialSerialNumber(wmsMaterialTool.getMaterialSerialNumber());// 物料编码
@@ -1111,9 +1131,30 @@ public class OneTypeCabinetService {
             wmsWarehouseTurnoverBind.setMaterialName(wmsMaterialTool.getMaterialName());// 物料名称
             wmsWarehouseTurnoverBind.setMaterialSku(wmsMaterialTool.getMaterialSku());// 物料SKU
             wmsWarehouseTurnoverBind.setmUnit(wmsMaterialTool.getmUnit());// 单位
-            wmsWarehouseTurnoverBind.setmNumber(StateEnum.ONE.getState());
             wmsWarehouseTurnoverBind.setLatticeState(StateEnum.ONE.getState());
         } else {
+            String sparsId = modify.getSparePartsId().toString();
+            WmsMaterialSparePartsResult wmsMaterialSparePartsResult =   wmsMaterialSparePartsService.findById(sparsId);
+            if (Objects.equals("0",wmsWarehouseTurnoverBind.getmNumber())){
+                wmsWarehouseTurnoverBind.setmNumber(StateEnum.ONE.getState());
+                receiveNumber =receiveNumber +Integer.parseInt(modify.getNumber());
+            }
+            else {
+                // 已绑定类型
+                String materialTypeId = wmsWarehouseTurnoverBind.getMaterialTypeId();
+                // 已绑定数量
+                String number = wmsWarehouseTurnoverBind.getmNumber();
+                // 查询传递的备件类型
+                if (Objects.equals(materialTypeId,wmsMaterialSparePartsResult.getMaterialTypeId()) && Objects.equals(wmsMaterialSparePartsResult.getMBatch(),wmsWarehouseTurnoverBind.getmBatch()) ){
+                    int i = Integer.parseInt(number);
+                    int total = i +Integer.parseInt(modify.getNumber());
+                    receiveNumber =receiveNumber +Integer.parseInt(modify.getNumber());
+                    wmsWarehouseTurnoverBind.setmNumber(Integer.toString(total));
+                }
+                else {
+                    return ResponseData.error("格口绑定的备件类型或批次不一致");
+                }
+            }
             wmsWarehouseTurnoverBind.setGoodsType(StateEnum.TWO.getState());// 货物类型（1工具/2备品备件）
             // 查备品备件物料编码
             WmsMaterialSpareParts spareParts = wmsMaterialSparePartsService.getOne(new QueryWrapper<WmsMaterialSpareParts>().eq("id",modify.getSparePartsId()));
@@ -1133,6 +1174,31 @@ public class OneTypeCabinetService {
         WmsWarehouseTurnoverParam turnoverParam = new WmsWarehouseTurnoverParam();
         ToolUtil.copyProperties(wmsWarehouseTurnover,turnoverParam);
         wmsWarehouseTurnoverService.update(turnoverParam);
+
+
+        // 3.更新订单中信息
+        if (Objects.equals(wmsPurchaseOrderInfo.getReceivedQuantity(), "") || Objects.equals(wmsPurchaseOrderInfo.getReceivedQuantity(), null)) {
+            wmsPurchaseOrderInfo.setReceivedQuantity(String.valueOf(receiveNumber));// 接收数量
+        } else {
+            wmsPurchaseOrderInfo.setReceivedQuantity(String.valueOf(receiveNumber));// 接收数量
+        }
+        Integer acceptableQuantity = Integer.parseInt(wmsPurchaseOrderInfo.getmNumber()) - Integer.parseInt(wmsPurchaseOrderInfo.getReceivedQuantity());
+        wmsPurchaseOrderInfo.setAcceptableQuantity(String.valueOf(acceptableQuantity));// 可接收数量
+        WmsPurchaseOrderInfoParam orderInfoParam = new WmsPurchaseOrderInfoParam();
+        ToolUtil.copyProperties(wmsPurchaseOrderInfo, orderInfoParam);
+        wmsPurchaseOrderInfoService.update(orderInfoParam);
+        // 4.更新执行任务信息
+        wmsWarehousePurchaseStorageTask.setAcceptableQuantity(wmsPurchaseOrderInfo.getAcceptableQuantity());// 可接收数量
+        wmsWarehousePurchaseStorageTask.setReceivedQuantity(wmsPurchaseOrderInfo.getReceivedQuantity()); // 已接收数量
+        if (Objects.equals(wmsWarehousePurchaseStorageTask.getReceivedQuantity(), "") || Objects.equals(wmsWarehousePurchaseStorageTask.getReceivedQuantity(), null)) {
+            wmsWarehousePurchaseStorageTask.setReceivedQuantity(StateEnum.ONE.getState());// 已接收数量
+        } else {
+            Integer value = Integer.valueOf(wmsWarehousePurchaseStorageTask.getReceivedQuantity());
+            wmsWarehousePurchaseStorageTask.setReceivedQuantity(String.valueOf(value));// 已组盘数量
+        }
+        WmsWarehousePurchaseStorageTaskParam storageTaskParam = new WmsWarehousePurchaseStorageTaskParam();
+        ToolUtil.copyProperties(wmsWarehousePurchaseStorageTask, storageTaskParam);
+        wmsWarehousePurchaseStorageTaskService.update(storageTaskParam);
         return ResponseData.success();
     }
 

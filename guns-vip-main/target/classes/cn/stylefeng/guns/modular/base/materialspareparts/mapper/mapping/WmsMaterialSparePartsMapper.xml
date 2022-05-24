@@ -204,4 +204,10 @@
         from wms_material_spare_parts where data_state = "0" and material_type_id = #{paramCondition.materialTypeId}
     </select>
 
+    <select id="findById" resultType="cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_material_spare_parts where id = #{sparsId}
+    </select>
+
 </mapper>

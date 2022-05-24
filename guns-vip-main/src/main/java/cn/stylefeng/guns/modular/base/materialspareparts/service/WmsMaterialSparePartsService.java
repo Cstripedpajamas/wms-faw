@@ -68,5 +68,7 @@ public interface WmsMaterialSparePartsService extends IService<WmsMaterialSpareP
 
     List<WmsMaterialSparePartsResult> findAll();
 
+    WmsMaterialSparePartsResult findById(String sparsId);
+
     List<WmsMaterialSparePartsResult> findAllByMaterialTypeId(WmsMaterialSparePartsParam param);
 }

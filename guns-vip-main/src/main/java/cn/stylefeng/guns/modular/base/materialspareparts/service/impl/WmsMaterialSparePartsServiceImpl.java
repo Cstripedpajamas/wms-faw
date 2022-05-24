@@ -73,6 +73,11 @@ public class WmsMaterialSparePartsServiceImpl extends ServiceImpl<WmsMaterialSpa
         return this.baseMapper.findAllByMaterialTypeId(param);
     }
 
+    @Override
+    public WmsMaterialSparePartsResult findById(String sparsId) {
+        return this.baseMapper.findById(sparsId);
+    }
+
     private Serializable getKey(WmsMaterialSparePartsParam param){
         return param.getId();
     }

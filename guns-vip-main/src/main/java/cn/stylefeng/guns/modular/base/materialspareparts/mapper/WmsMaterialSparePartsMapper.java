@@ -56,4 +56,6 @@ public interface WmsMaterialSparePartsMapper extends BaseMapper<WmsMaterialSpare
     List<WmsMaterialSparePartsResult> findAll();
 
     List<WmsMaterialSparePartsResult> findAllByMaterialTypeId(@Param("paramCondition") WmsMaterialSparePartsParam paramCondition);
+
+    WmsMaterialSparePartsResult findById(@Param("sparsId")String sparsId);
 }

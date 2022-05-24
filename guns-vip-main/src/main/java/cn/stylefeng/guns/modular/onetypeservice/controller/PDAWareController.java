@@ -10,6 +10,7 @@ import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
+import cn.stylefeng.guns.modular.onetypeservice.enums.ApplyType;
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
 import cn.stylefeng.guns.modular.onetypeservice.request.ApplySpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.request.WarehouseTurnoverModify;
@@ -18,13 +19,17 @@ import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskOut;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTaskOutService;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.*;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -32,7 +37,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -55,7 +60,8 @@ public class PDAWareController {
 
     @Autowired
     private WmsMaterialTypeService wmsMaterialTypeService;
-
+    @Autowired
+    private WmsWarehouseTaskOutService wmsWarehouseTaskOutService;
     @Autowired
     private WmsMaterialSparePartsService wmsMaterialSparePartsService;
 
@@ -330,7 +336,37 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData autoSort(String taskNumber) {
 
-        return ResponseData.success("接口业务暂定");
+        WmsWarehouseReplenishmentTaskResult task = wmsWarehouseReplenishmentTaskService.findByTaskNumber(taskNumber);
+        if (!Objects.equals("1", task.getTaskState())) {
+            return ResponseData.error("此任务未执行");
+        }
+
+
+        WmsMaterialType wmsMaterialType = wmsMaterialTypeService.getById(task.getMaterialTypeId());
+
+        // 创建出库任务
+        WmsWarehouseTaskOut out = new WmsWarehouseTaskOut();
+        String messageId = RandomStringUtils.randomNumeric(12);
+        out.setMessageId(messageId);// 消息识别ID
+        out.setOrderType(ApplyType.A.getType());// 订单类别(A工具领用 B补货出库 C出库)
+        out.setTaskMg(task.getTaskNumber());// 任务信息
+        out.setGoodsType(ApplyType.A.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
+        out.setMaterialTypeId(task.getMaterialTypeId());// 物料类型ID
+        out.setMaterialSku(wmsMaterialType.getMaterialSku());// 物料SKU
+        out.setMaterialType(wmsMaterialType.getMaterialType());// 物料类型
+        out.setMaterialName(task.getMaterialName());// 物料名称
+        out.setmBatch(task.getMBatch()); // 批次
+        out.setmNumber(task.getMNumber());// 数量
+        out.setResTag(StateEnum.ZERO.getState());// 请求标记（0初始 1请求）
+        out.setReqStatus(StateEnum.ZERO.getState());// 请求状态（0初始 1成功 2失败）
+        out.setResTag(StateEnum.ZERO.getState());// 结果标记（0初始 1更新 2结束）
+        out.setResStatus(StateEnum.ZERO.getState());// 结果状态（0初始 1正在执行 2任务完成 3任务失败）
+        out.setSortingInfo("B");
+        out.setDataTime(new Date());// 数据时间
+        wmsWarehouseTaskOutService.save(out);
+        // 发送出库任务
+        warehouseService.sendTaskOut(messageId);
+        return ResponseData.success("出库成功");
     }
 
     /**
