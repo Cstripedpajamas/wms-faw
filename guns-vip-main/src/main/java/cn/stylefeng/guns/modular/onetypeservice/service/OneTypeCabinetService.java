@@ -50,10 +50,7 @@ import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
@@ -1347,6 +1344,20 @@ public class OneTypeCabinetService {
 
     // 立库备件分拣 - 分拣完成
     public ResponseData padSortingConform2(WarehouseTurnoverModify modify) {
+        WmsWarehouseReplenishmentTaskResult wmsWarehouseReplenishmentTaskResult = wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
+
+        // 总数量
+        int total = Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getMNumber());
+        // 分拣数量
+        int sortNumber = Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getSortingNum());
+        // 提交数量
+        int comNumber = Integer.parseInt(modify.getNumber());
+
+        if (comNumber > total - sortNumber){
+            return ResponseData.error(500,"分拣数量超出总数量,最多分拣"+(total - sortNumber)+"个",new ArrayList<>());
+        }
+
+
         // 查询出的绑定信息
         WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id", modify.getId()).eq("lattice_code", modify.getLatticeCode()));
 
@@ -1397,9 +1408,16 @@ public class OneTypeCabinetService {
             wmsWarehouseTurnoverBindService.update(bindParam);
         }
 
-        WmsWarehouseReplenishmentTaskResult wmsWarehouseReplenishmentTaskResult = wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
+
         Integer pickNumber = Integer.parseInt(modify.getNumber()) + Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getSortingNum());
         wmsWarehouseReplenishmentTaskService.updatePickNumber(modify.getTaskNumber(), pickNumber.toString());
+        if (pickNumber >= total){
+            WmsWarehouseReplenishmentTaskResult result = wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
+            result.setTaskState("3");
+            WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
+            ToolUtil.copyProperties(result,wmsWarehouseReplenishmentTaskParam);
+            wmsWarehouseReplenishmentTaskService.update(wmsWarehouseReplenishmentTaskParam);
+        }
         return ResponseData.success();
     }
 

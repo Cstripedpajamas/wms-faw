@@ -232,7 +232,7 @@ public class WarehouseService {
                     WmsWarehouseTurnoverBindParam params = new WmsWarehouseTurnoverBindParam();
                     ToolUtil.copyProperties(turnoverResult, params);
                     WmsWarehouseTurnoverBindResult turnoverBindInfo = wmsWarehouseTurnoverBindService.findByTurnoverId(params);
-                    WmsSortingTask sortingTask = createSpareSortingTask(turnover,turnoverBindInfo,wmsWarehouseReplenishmentTask);
+                    WmsSortingTask sortingTask = createSpareSortingTask(turnover, turnoverBindInfo, wmsWarehouseReplenishmentTask);
                     // todo 发送分拣任务
 
 
@@ -289,7 +289,7 @@ public class WarehouseService {
     // 领用 - 创建机器人分拣任务
     private WmsSortingTask createSortingTask(WmsWarehouseTurnover turnover, WmsWarehouseToolUseTask wmsWarehouseToolUseTask, WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBind) {
         WmsSortingTask wmsSortingTask = new WmsSortingTask();
-        String taskNumber = "tool-"+wmsWarehouseToolUseTask.getTaskNumber()+"-"+RandomStringUtils.randomNumeric(12);
+        String taskNumber = "tool-" + wmsWarehouseToolUseTask.getTaskNumber() + "-" + RandomStringUtils.randomNumeric(12);
         wmsSortingTask.setTaskNumber(taskNumber);// 任务编号
         wmsSortingTask.setTurnoverType(turnover.getTurnoverType());// 周转箱类型(A 小 B 中 C 大 )
         wmsSortingTask.setTurnoverNumber(turnover.getTurnoverNumber());// 周转箱编号
@@ -310,7 +310,7 @@ public class WarehouseService {
     }
 
     // 备件补货出库分拣任务
-    private WmsSortingTask createSpareSortingTask(WmsWarehouseTurnover turnover,WmsWarehouseTurnoverBindResult turnoverBind,WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask){
+    private WmsSortingTask createSpareSortingTask(WmsWarehouseTurnover turnover, WmsWarehouseTurnoverBindResult turnoverBind, WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask) {
         // 获取总数量
         int number = Integer.parseInt(wmsWarehouseReplenishmentTask.getmNumber());
         // 获取已分拣数量
@@ -318,17 +318,17 @@ public class WarehouseService {
         // 获取周转箱绑定的数量
         int have = Integer.parseInt(turnoverBind.getMNumber());
         // 剩余分拣数量
-       int other =  number - sortingNum;
+        int other = number - sortingNum;
         WmsSortingTask wmsSortingTask = new WmsSortingTask();
-        String taskNumber = "spare-"+wmsWarehouseReplenishmentTask.getTaskNumber()+"-"+RandomStringUtils.randomNumeric(12);
+        String taskNumber = "spare-" + wmsWarehouseReplenishmentTask.getTaskNumber() + "-" + RandomStringUtils.randomNumeric(12);
         wmsSortingTask.setTaskNumber(taskNumber);// 任务编号
         wmsSortingTask.setTurnoverType(turnover.getTurnoverType());// 周转箱类型(A 小 B 中 C 大 )
         wmsSortingTask.setTurnoverNumber(turnover.getTurnoverNumber());// 周转箱编号
         wmsSortingTask.setBarcode(turnover.getBarcode());// 周转箱条码
 
-        if (other > have){
+        if (other > have) {
             wmsSortingTask.setSortingNum(Integer.toString(have));// 分拣数量
-        }else {
+        } else {
             wmsSortingTask.setSortingNum(Integer.toString(other));// 分拣数量
         }
 
@@ -538,29 +538,7 @@ public class WarehouseService {
     }
 
     public ResponseData replenishmentCreateOutTask(String taskNumber) {
-        // 1.校验库中是否有同类型的物料
         WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask = wmsWarehouseReplenishmentTaskService.getOne(new QueryWrapper<WmsWarehouseReplenishmentTask>().eq("task_number", taskNumber));
-        List<WmsWarehouseTurnoverBind> wmsWarehouseStocks = wmsWarehouseTurnoverBindService.list(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("material_type_id", wmsWarehouseReplenishmentTask.getMaterialTypeId()));
-        if (wmsWarehouseStocks.size() <= 0) {
-            return ResponseData.error("该任务物料类型库存不足 无法继续操作!");
-        }
-        List<String> localNumbers = new ArrayList<>();
-        for (WmsWarehouseTurnoverBind wmsWarehouseStock : wmsWarehouseStocks) {
-            localNumbers.add(wmsWarehouseStock.getTurnoverId());
-        }
-        List<WmsWarehouseTurnoverBind> wmsWarehouseTurnoverBinds = wmsWarehouseTurnoverBindService.list(new QueryWrapper<WmsWarehouseTurnoverBind>().in("turnover_id", localNumbers));
-        int number = 0;
-        for (WmsWarehouseTurnoverBind wmsWarehouseTurnoverBind : wmsWarehouseTurnoverBinds) {
-            if (!Objects.equals(wmsWarehouseTurnoverBind.getmNumber(), "") && !Objects.equals(wmsWarehouseTurnoverBind.getmNumber(), null)) {
-                number += Integer.parseInt(wmsWarehouseTurnoverBind.getmNumber());
-            }
-        }
-        // 总的补货数量 - 已分拣的数量 > 现在库存的数量
-        Integer need = Integer.parseInt(wmsWarehouseReplenishmentTask.getmNumber()) - Integer.parseInt(wmsWarehouseReplenishmentTask.getSortingNum());
-        if (need > number) {
-            return ResponseData.error("该任务物料类型库存不足 无法继续操作!");
-        }
-        // 2.
         WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
         String messageId = RandomStringUtils.randomNumeric(12);
         taskOut.setMessageId(messageId);// 消息识别ID
@@ -572,8 +550,7 @@ public class WarehouseService {
         taskOut.setMaterialType(wmsWarehouseReplenishmentTask.getMaterialId());// 物料类型
         taskOut.setMaterialName(wmsWarehouseReplenishmentTask.getMaterialName());// 物料名称
         taskOut.setmBatch(wmsWarehouseReplenishmentTask.getmBatch());// 批次
-
-        taskOut.setmNumber(need.toString());// 数量
+        taskOut.setmNumber(wmsWarehouseReplenishmentTask.getmNumber());// 数量
         if (StateEnum.ZERO.getState().equals(wmsWarehouseReplenishmentTask.getSortingType())) {
             taskOut.setSortingInfo(ApplyType.A.getType());// 出仓分拣（A人工/B自动）
         } else if (StateEnum.ONE.getState().equals(wmsWarehouseReplenishmentTask.getSortingType())) {
@@ -586,6 +563,12 @@ public class WarehouseService {
         taskOut.setDataTime(new Date());// 数据时间
         wmsWarehouseTaskOutService.save(taskOut);
         cachedThreadPool.execute(new SendTOWcs(messageId, StateEnum.ZERO));
+
+        // 更新任务状态为出库中
+        wmsWarehouseReplenishmentTask.setTaskState("2");
+        final WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
+        ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, wmsWarehouseReplenishmentTaskParam);
+        wmsWarehouseReplenishmentTaskService.update(wmsWarehouseReplenishmentTaskParam);
         return ResponseData.success();
     }
 
@@ -1043,19 +1026,36 @@ public class WarehouseService {
     }
 
     // 执行备件补货任务
-    public WmsWarehouseReplenishmentTaskResult startReplenishment(String taskNumber) {
-//        wmsWarehouseReplenishmentTaskService.stopTask();
+    public ResponseData startReplenishment(String taskNumber) {
         WmsWarehouseReplenishmentTaskResult wr = wmsWarehouseReplenishmentTaskService.inExecution();
         if (wr != null) {
-            return wr;
+            return ResponseData.error(500, "当前有任务正在执行", new ArrayList<>());
         } else {
             WmsWarehouseReplenishmentTaskResult byTaskNumber = wmsWarehouseReplenishmentTaskService.findByTaskNumber(taskNumber);
+            List<WmsWarehouseTurnoverBind> wmsWarehouseStocks = wmsWarehouseTurnoverBindService.list(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("material_type_id", byTaskNumber.getMaterialTypeId()));
+            if (wmsWarehouseStocks.size() <= 0) {
+                return ResponseData.error(500, "该任务物料类型库存不足 无法继续操作!", new ArrayList<>());
+            }
+            List<String> localNumbers = new ArrayList<>();
+            for (WmsWarehouseTurnoverBind wmsWarehouseStock : wmsWarehouseStocks) {
+                localNumbers.add(wmsWarehouseStock.getTurnoverId());
+            }
+            List<WmsWarehouseTurnoverBind> wmsWarehouseTurnoverBinds = wmsWarehouseTurnoverBindService.list(new QueryWrapper<WmsWarehouseTurnoverBind>().in("turnover_id", localNumbers));
+            int number = 0;
+            for (WmsWarehouseTurnoverBind wmsWarehouseTurnoverBind : wmsWarehouseTurnoverBinds) {
+                if (!Objects.equals(wmsWarehouseTurnoverBind.getmNumber(), "") && !Objects.equals(wmsWarehouseTurnoverBind.getmNumber(), null)) {
+                    number += Integer.parseInt(wmsWarehouseTurnoverBind.getmNumber());
+                }
+            }
+            if (number < Integer.parseInt(byTaskNumber.getMNumber())) {
+                return ResponseData.error(500, "该任务物料类型库存不足 无法继续操作!", new ArrayList<>());
+            }
             byTaskNumber.setTaskState("1");
             WmsWarehouseReplenishmentTaskParam wms = new WmsWarehouseReplenishmentTaskParam();
             ToolUtil.copyProperties(byTaskNumber, wms);
             wmsWarehouseReplenishmentTaskService.update(wms);
         }
-        return null;
+        return ResponseData.success();
     }
 
     // 发送任务到WCS

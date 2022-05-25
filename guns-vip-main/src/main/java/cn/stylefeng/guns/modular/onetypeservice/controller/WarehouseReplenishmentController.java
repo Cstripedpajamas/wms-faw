@@ -36,8 +36,8 @@ public class WarehouseReplenishmentController {
     @ApiOperation(value = "2.执行补货出库任务")
     @GetMapping("/create")
     public ResponseData replenishmentCreateOutTask(@ApiParam(value = "任务编号") @RequestParam String taskNumber){
-         warehouseService.startReplenishment(taskNumber);
-         return ResponseData.success();
+        return  warehouseService.startReplenishment(taskNumber);
+
     }
     @ApiOperation(value = "new.执行中的补货出库任务")
     @GetMapping("/inExecution")
