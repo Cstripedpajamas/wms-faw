@@ -345,7 +345,7 @@ public class PDAWareController {
     public ResponseData spareInExecution(){
         WmsWarehouseReplenishmentTaskResult wr =  wmsWarehouseReplenishmentTaskService.inExecution();
         if (wr == null){
-            return  ResponseData.error("暂无执行中的补货任务");
+            return ResponseData.error(500, "暂无执行中的补货任务", new WmsWarehouseReplenishmentTaskResult());
         }
         return ResponseData.success(wr);
     }
