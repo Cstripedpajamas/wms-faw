@@ -1102,7 +1102,8 @@ public class WarehouseService {
                 } else {
                     map.put("BoxType", "");
                 }
-                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
+//                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
+                map.put("LatticeType", ""); // 格口类型 4 多格口 1 单个口
                 map.put("Sku", wmsWarehouseTaskOut.getMaterialSku()); // 物料sku
                 map.put("Batch", wmsWarehouseTaskOut.getmBatch()); // 批次
                 map.put("Qty", Integer.parseInt(wmsWarehouseTaskOut.getmNumber())); // 数量
