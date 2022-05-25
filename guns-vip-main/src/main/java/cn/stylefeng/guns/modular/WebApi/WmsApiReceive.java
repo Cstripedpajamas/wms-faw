@@ -127,7 +127,17 @@ public class WmsApiReceive {
         RedirectConfController.sort_3= String.valueOf(jsonObject.get("task_number"));
         RedirectConfController.sort_4_1= String.valueOf(jsonObject.get("sorting_number"));
         RedirectConfController.sort_4_2= String.valueOf(jsonObject.get("er_code"));
-        // todo 业务逻辑
+
+        String orderId= String.valueOf(jsonObject.get("order_id"));
+        if (orderId.split("-")[0].equals("tool")){
+            // todo 工具领用 自动分拣业务
+
+        }
+        if (orderId.split("-")[0].equals("spare")){
+            // todo 备件补货 自动分拣业务
+
+        }
+
         cn.hutool.json.JSONObject object = new cn.hutool.json.JSONObject();
         object.put("Code", 200);
         object.put("errMsg", "成功");

@@ -21,17 +21,17 @@ import cn.stylefeng.guns.modular.onetypeservice.response.SpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
+import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
+import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskOut;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehousePurchaseStorageTaskService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTaskOutService;
+import cn.stylefeng.guns.modular.warehousemanage.service.*;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.*;
@@ -76,6 +76,12 @@ public class PDAWareController {
 
     @Autowired
     private WmsPurchaseOrderInfoService wmsPurchaseOrderInfoService;
+
+    @Autowired
+    private WmsWarehouseToolUseTaskService wmsWarehouseToolUseTaskService;
+
+    @Autowired
+    private WmsToolUseService wmsToolUseService;
 
     /**
      * 登录
@@ -265,10 +271,10 @@ public class PDAWareController {
     @RequestMapping("/tool_apply_list")
     @ResponseBody
     public ResponseData toolApplyList(String serialNumber) {
-        LayuiPageInfo layuiPageInfo = warehouseService.claimList(serialNumber);
-        final List data = layuiPageInfo.getData();
+        LayuiPageInfo layuiPageInfo = warehouseService.claimListA(serialNumber);
+        final List<WmsWarehouseToolUseTask> data = layuiPageInfo.getData();
         if (layuiPageInfo.getData().size() == 0){
-            return ResponseData.error("工具领用列表为空");
+            return ResponseData.error(500, "无工具领用任务", new ArrayList());
         }
         return ResponseData.success(data);
     }
@@ -296,6 +302,38 @@ public class PDAWareController {
         }
         WmsWarehouseTaskIn wmsWarehouseTaskIn = oneTypeCabinetService.padSortingConform(modify);
         warehouseService.sendTask(wmsWarehouseTaskIn.getMessageId());
+        //更新任务完成
+        WmsWarehouseToolUseTask toolUseTask = new WmsWarehouseToolUseTask();
+        toolUseTask.setTaskState(StateEnum.THREE.getState());
+        wmsWarehouseToolUseTaskService.update(toolUseTask,new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number",modify.getTaskNumber()));
+        return ResponseData.success();
+    }
+
+    /**
+     * 工具领用 完成提交 自动分拣
+     * WarehouseTurnoverModify
+     * */
+    @RequestMapping("/tool_apply_commit_over")
+    @ResponseBody
+    public ResponseData toolApplyCommitRib(String materialSerialNumber,String taskNumber) {
+
+        //更新任务完成
+        WmsWarehouseToolUseTask toolUseTask = new WmsWarehouseToolUseTask();
+        toolUseTask.setTaskState(StateEnum.THREE.getState());
+        wmsWarehouseToolUseTaskService.update(toolUseTask,new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number",taskNumber));
+
+        //添加领用工具信息
+        WmsWarehouseToolUseTask wmsWarehouseToolUseTask = wmsWarehouseToolUseTaskService.getOne(new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", taskNumber));
+        WmsToolUse wmsToolUse = new WmsToolUse();
+        wmsToolUse.setOperator(wmsWarehouseToolUseTask.getOperator());// 人员信息
+        wmsToolUse.setMaterialTypeId(wmsWarehouseToolUseTask.getMaterialTypeId());// 物料类型ID
+        wmsToolUse.setMaterialName(wmsWarehouseToolUseTask.getMaterialName());// 物料名称
+        wmsToolUse.setMaterialSku(wmsWarehouseToolUseTask.getMaterialSku());// 物料SKU
+        wmsToolUse.setMaterialId(wmsWarehouseToolUseTask.getMaterialId());// 物料信息ID
+        wmsToolUse.setMaterialSerialNumber(materialSerialNumber);// 物料编码
+        wmsToolUse.setDataTime(new Date());// 数据时间
+        wmsToolUseService.save(wmsToolUse);
+
         return ResponseData.success();
     }
 

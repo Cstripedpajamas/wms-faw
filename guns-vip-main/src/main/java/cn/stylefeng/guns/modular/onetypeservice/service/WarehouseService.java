@@ -139,6 +139,12 @@ public class WarehouseService {
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    public LayuiPageInfo claimListA(String serialNumber) {
+        Page pageContext = LayuiPageFactory.defaultPage();
+        IPage<WmsWarehouseToolUseTask> page = wmsWarehouseToolUseTaskService.page(pageContext, new QueryWrapper<WmsWarehouseToolUseTask>().eq("operator", serialNumber).ne("task_state", StateEnum.THREE.getState()));
+        return LayuiPageFactory.createPageInfo(page);
+    }
+
     // 领用 - 领用申请列表
     @SuppressWarnings("All")
     public LayuiPageInfo claimUseApply(String serialNumber) {
@@ -219,17 +225,6 @@ public class WarehouseService {
                 updateWarehouseToolUseTask(wmsWarehouseStock, wmsWarehouseToolUseTask); // 2.更新任务信息
                 updateWarehouseStock(wmsWarehouseStock);// 4.更新库位信息为空
                 updateTurnoverToEmpty(turnover);// 5.更新周转箱信息
-
-                // 4.添加领用工具信息
-                WmsToolUse wmsToolUse = new WmsToolUse();
-                wmsToolUse.setOperator(wmsWarehouseToolUseTask.getOperator());// 人员信息
-                wmsToolUse.setMaterialTypeId(wmsWarehouseToolUseTask.getMaterialTypeId());// 物料类型ID
-                wmsToolUse.setMaterialName(wmsWarehouseToolUseTask.getMaterialName());// 物料名称
-                wmsToolUse.setMaterialSku(wmsWarehouseToolUseTask.getMaterialSku());// 物料SKU
-                wmsToolUse.setMaterialId(wmsWarehouseToolUseTask.getMaterialId());// 物料信息ID
-                wmsToolUse.setMaterialSerialNumber(wmsWarehouseToolUseTask.getMaterialSerialNumber());// 物料编码
-                wmsToolUse.setDataTime(new Date());// 数据时间
-                wmsToolUseService.save(wmsToolUse);
             } else if (ApplyType.B.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 补货出库
                 WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask = wmsWarehouseReplenishmentTaskService.getOne(new QueryWrapper<WmsWarehouseReplenishmentTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
                 if (Objects.equals("1", wmsWarehouseReplenishmentTask.getSortingType())) {
@@ -281,12 +276,11 @@ public class WarehouseService {
 
     // 领用 - 更新工具领用任务
     private void updateWarehouseToolUseTask(WmsWarehouseStock wmsWarehouseStock, WmsWarehouseToolUseTask wmsWarehouseToolUseTask) {
-        wmsWarehouseToolUseTask.setTaskState(StateEnum.THREE.getState());// 出库任务 0初始 1开始 2出库中 3完成
-        wmsWarehouseToolUseTask.setInterfaceState(StateEnum.ONE.getState());// 接口状态 0.初始；1.调用
+        wmsWarehouseToolUseTask.setTaskState(StateEnum.TWO.getState());// 出库任务 0初始 1开始 2出库中 3完成
+        wmsWarehouseToolUseTask.setInterfaceState(StateEnum.ZERO.getState());// 接口状态 0.初始；1.调用
         wmsWarehouseToolUseTask.setStockId(String.valueOf(wmsWarehouseStock.getId()));//库存信息ID
         wmsWarehouseToolUseTask.setLocaNumber(wmsWarehouseStock.getLocaNumber());//库位编号
         wmsWarehouseToolUseTask.setTurnoverId(wmsWarehouseStock.getTurnoverId());//周转箱信息ID
-//        wmsWarehouseToolUseTask.setLatticeCode();//格口编号
         WmsWarehouseToolUseTaskParam toolUseTaskParam = new WmsWarehouseToolUseTaskParam();
         ToolUtil.copyProperties(wmsWarehouseToolUseTask, toolUseTaskParam);
         wmsWarehouseToolUseTaskService.update(toolUseTaskParam);
@@ -295,7 +289,7 @@ public class WarehouseService {
     // 领用 - 创建机器人分拣任务
     private WmsSortingTask createSortingTask(WmsWarehouseTurnover turnover, WmsWarehouseToolUseTask wmsWarehouseToolUseTask, WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBind) {
         WmsSortingTask wmsSortingTask = new WmsSortingTask();
-        String taskNumber = RandomStringUtils.randomNumeric(12);
+        String taskNumber = "tool-"+wmsWarehouseToolUseTask.getTaskNumber()+"-"+RandomStringUtils.randomNumeric(12);
         wmsSortingTask.setTaskNumber(taskNumber);// 任务编号
         wmsSortingTask.setTurnoverType(turnover.getTurnoverType());// 周转箱类型(A 小 B 中 C 大 )
         wmsSortingTask.setTurnoverNumber(turnover.getTurnoverNumber());// 周转箱编号
@@ -326,7 +320,8 @@ public class WarehouseService {
         // 剩余分拣数量
        int other =  number - sortingNum;
         WmsSortingTask wmsSortingTask = new WmsSortingTask();
-        wmsSortingTask.setTaskNumber(wmsWarehouseReplenishmentTask.getTaskNumber());// 任务编号
+        String taskNumber = "spare-"+wmsWarehouseReplenishmentTask.getTaskNumber()+"-"+RandomStringUtils.randomNumeric(12);
+        wmsSortingTask.setTaskNumber(taskNumber);// 任务编号
         wmsSortingTask.setTurnoverType(turnover.getTurnoverType());// 周转箱类型(A 小 B 中 C 大 )
         wmsSortingTask.setTurnoverNumber(turnover.getTurnoverNumber());// 周转箱编号
         wmsSortingTask.setBarcode(turnover.getBarcode());// 周转箱条码
