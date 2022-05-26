@@ -165,7 +165,7 @@
         w.*,p.task_number
         from wms_purchase_order_info w
         left join wms_warehouse_purchase_storage_task p on w.id = p.purchase_id
-        where p.task_state = '1'
+        where p.task_state = '1' or p.task_state = '2'
     </select>
 
 </mapper>
