@@ -311,7 +311,7 @@ public class FawApiServiceImpl implements FawApiService {
         logger.info(msgHeader.toString());
         logger.info(msgBody.toString());
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 
         List<FawMtlInfoResult> fawMtlInfoResultList = this.fawMtlInfoService.findListBySpec(new FawMtlInfoParam());
 

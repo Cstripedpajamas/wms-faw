@@ -251,7 +251,7 @@
         <include refid="Base_Column_List"/>
         from
         wms_warehouse_replenishment_task
-        where  task_state = '1' limit 1
+        where  task_state = '1' or task_state = '2'  limit 1
     </select>
 
 

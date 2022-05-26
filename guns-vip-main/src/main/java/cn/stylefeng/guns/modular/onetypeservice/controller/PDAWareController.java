@@ -17,31 +17,24 @@ import cn.stylefeng.guns.modular.onetypeservice.enums.ApplyType;
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
 import cn.stylefeng.guns.modular.onetypeservice.request.ApplySpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.request.WarehouseTurnoverModify;
-import cn.stylefeng.guns.modular.onetypeservice.response.SpareParts;
 import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
-import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entity.WmsCabinet2CheckTask;
 import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStorageTask;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskOut;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
+import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
-import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import io.swagger.annotations.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -82,6 +75,12 @@ public class PDAWareController {
 
     @Autowired
     private WmsToolUseService wmsToolUseService;
+
+    @Autowired
+    private WmsWarehouseTurnoverService wmsWarehouseTurnoverService;
+
+    @Autowired
+    private WmsWarehouseTurnoverBindService wmsWarehouseTurnoverBindService;
 
     /**
      * 登录
@@ -438,7 +437,7 @@ public class PDAWareController {
         wmsWarehouseTaskOutService.save(out);
         // 发送出库任务
         warehouseService.sendTaskOut(messageId);
-        return ResponseData.success("出库成功");
+        return ResponseData.success();
     }
 
     /**
@@ -449,5 +448,18 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData taskFinished(String taskNumber) {
         return warehouseService.replenishmentConformTask(taskNumber);
+    }
+
+    /**
+     * 清空格口
+     * taskNumber 补货任务编号
+     * */
+    @RequestMapping("/clear_latter")
+    @ResponseBody
+    public ResponseData clearLatter(String turnoverId,String latticeCode) {
+
+        oneTypeCabinetService.padWarehouseTurnoverCabinetOneCabinet(Long.valueOf(turnoverId),latticeCode);
+
+        return ResponseData.success();
     }
 }

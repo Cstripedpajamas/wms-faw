@@ -3,6 +3,8 @@ package cn.stylefeng.guns;
 import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import com.alibaba.fastjson.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -18,16 +20,13 @@ import java.util.List;
 public class test {
 
     public static void main(String[] args) {
-        Date dateNew=new Date();
-        long dateNewNow=dateNew.getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        String ki="2022-05-26T02:43:48";
         try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
+            System.out.printf(sdf.parse(ki).toString());
+        } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        Date dateNew1=new Date();
-        long dateNewNow1=dateNew1.getTime();
-        System.out.printf(String.valueOf(dateNewNow1-dateNewNow));
     }
 
     public static String addZero(int number){
