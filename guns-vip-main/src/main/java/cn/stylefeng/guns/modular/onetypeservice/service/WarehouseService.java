@@ -604,6 +604,36 @@ public class WarehouseService {
         return ResponseData.success();
     }
 
+    @SuppressWarnings("all")
+    public ResponseData replenishmentInTask2(String turnoverNumber,String taskNumber) {
+        WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("turnover_number", turnoverNumber).orderByDesc("id").last("limit 1"));
+        WmsWarehouseTaskIn wmsWarehouseTaskIn = new WmsWarehouseTaskIn();
+        wmsWarehouseTaskIn.setSortingInfo("0");
+        String messageIdTwo = RandomStringUtils.randomNumeric(12);
+        wmsWarehouseTaskIn.setMessageId(messageIdTwo);// 消息识别ID
+        wmsWarehouseTaskIn.setTaskMg(taskNumber);
+        wmsWarehouseTaskIn.setSortingInfo("0");
+        wmsWarehouseTaskIn.setOrderType(ApplyType.B.getType());// 订单类别(A采购入库 B入库)
+        wmsWarehouseTaskIn.setTurnoverMouthQuality(wmsWarehouseTurnover.getTurnoverMouthQuantity());
+        if (StateEnum.ZERO.getState().equals(wmsWarehouseTurnover.getTurnoverState())) {
+            wmsWarehouseTaskIn.setGoodsType(ApplyType.C.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
+        } else {
+            wmsWarehouseTaskIn.setGoodsType(ApplyType.B.getType());// 入仓货物类型（A工具/B备品备件/C空周转箱）
+        }
+        wmsWarehouseTaskIn.setTurnoverType(wmsWarehouseTurnover.getTurnoverType());// 周转箱类型(A单格口/B双格口)
+        wmsWarehouseTaskIn.setTurnoverNumber(wmsWarehouseTurnover.getTurnoverNumber());// 周转箱编号
+        wmsWarehouseTaskIn.settBarcode(wmsWarehouseTurnover.getBarcode());// 周转箱条码
+        wmsWarehouseTaskIn.setReqTag(StateEnum.ONE.getState());//请求标记（0初始 1请求）
+        wmsWarehouseTaskIn.setReqStatus(StateEnum.ONE.getState());//请求状态（0初始 1成功 2失败）
+        wmsWarehouseTaskIn.setResStatus(StateEnum.ONE.getState());//结果状态（0初始 1正在执行 2任务完成 3任务失败）
+        wmsWarehouseTaskIn.setReqTime(new Date());// 请求时间
+        wmsWarehouseTaskIn.setDataTime(new Date());// 数据时间
+        wmsWarehouseTaskInService.save(wmsWarehouseTaskIn);
+        // 1.发送请求到WMS
+        cachedThreadPool.execute(new SendTOWcs(messageIdTwo, StateEnum.ONE));
+        return ResponseData.success();
+    }
+
     // 入库完成回调接口
     public void claimInCallback(String messageId, String locaNumber) {
         // 更新中间表任务

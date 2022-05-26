@@ -1354,7 +1354,7 @@ public class OneTypeCabinetService {
         int comNumber = Integer.parseInt(modify.getNumber());
 
         if (comNumber > total - sortNumber){
-            return ResponseData.error(500,"分拣数量超出总数量,最多分拣"+(total - sortNumber)+"个",new ArrayList<>());
+            return ResponseData.error("分拣数量超出总数量,最多分拣"+(total - sortNumber)+"个");
         }
 
 

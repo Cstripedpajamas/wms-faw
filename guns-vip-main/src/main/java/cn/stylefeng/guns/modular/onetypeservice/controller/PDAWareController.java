@@ -376,8 +376,8 @@ public class PDAWareController {
      * */
     @RequestMapping("/sorting-in")
     @ResponseBody
-    public ResponseData sortingIn(String taskNumber){
-        return warehouseService.replenishmentInTask(taskNumber);
+    public ResponseData sortingIn(String taskNumber,String turnoverNumber){
+        return warehouseService.replenishmentInTask2(turnoverNumber,taskNumber);
     }
 
     /**
