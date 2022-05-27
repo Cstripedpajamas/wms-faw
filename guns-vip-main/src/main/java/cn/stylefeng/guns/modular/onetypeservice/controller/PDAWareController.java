@@ -1,12 +1,15 @@
 package cn.stylefeng.guns.modular.onetypeservice.controller;
 
+import cn.stylefeng.guns.config.AppConfig;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.materialspareparts.entity.WmsMaterialSpareParts;
 import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
 import cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
+import cn.stylefeng.guns.modular.base.materialtool.service.WmsMaterialToolService;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderInfo;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
@@ -24,12 +27,15 @@ import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -45,6 +51,8 @@ import java.util.Objects;
 @RequestMapping("/pda/warehouse")
 @Validated
 public class PDAWareController {
+
+    private final static Logger logger = LoggerFactory.getLogger(AppConfig.class);
 
     @Autowired
     private OneTypeCabinetService oneTypeCabinetService;
@@ -81,6 +89,9 @@ public class PDAWareController {
 
     @Autowired
     private WmsWarehouseTurnoverBindService wmsWarehouseTurnoverBindService;
+
+    @Autowired
+    private WmsMaterialToolService wmsMaterialToolService;
 
     /**
      * 登录
@@ -366,6 +377,7 @@ public class PDAWareController {
     @RequestMapping("/sorting-commit")
     @ResponseBody
     public ResponseData sortingCommit(WarehouseTurnoverModify modify){
+        logger.info("/sorting-commit "+modify.getNumber());
         return oneTypeCabinetService.padSortingConform2(modify);
     }
 
@@ -461,5 +473,137 @@ public class PDAWareController {
         oneTypeCabinetService.padWarehouseTurnoverCabinetOneCabinet(Long.valueOf(turnoverId),latticeCode);
 
         return ResponseData.success();
+    }
+
+    /**
+     * 周转箱ID latticeCode
+     * 物料编码
+     * 备品备件ID 数量
+     * */
+    @RequestMapping("/add_latter")
+    @ResponseBody
+    public ResponseData addLatter(WarehouseTurnoverModify modify) {
+        boolean upTurnoverKg=false;
+        boolean upTurnoverBindKg=false;
+
+        String goodsType = "";
+        String materialTypeId = "";
+        String materialId = "";
+        String materialType = "";
+        String materialName = "";
+        String materialSku = "";
+        String mUnit = "";
+        String materialSerialNumber = "";
+        String mBatch = "";
+        String mNumber = "";
+
+        WmsWarehouseTurnoverBind wmsWarehouseTurnoverBind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id", modify.getId()).eq("lattice_code", modify.getLatticeCode()));
+        WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getById(modify.getId());
+        //工具
+        if("1".equals(modify.getTaskType())){
+            WmsMaterialTool wmsMaterialTool = wmsMaterialToolService.getOne(new QueryWrapper<WmsMaterialTool>().eq("material_serial_number", modify.getMaterialSerialNumber()));
+            if ("0".equals(wmsWarehouseTurnoverBind.getLatticeState())){
+                upTurnoverBindKg=true;
+                goodsType="1";
+                materialTypeId=wmsMaterialTool.getMaterialTypeId();
+                materialId=String.valueOf(wmsMaterialTool.getId());
+                materialType=wmsMaterialTool.getMaterialType();
+                materialName=wmsMaterialTool.getMaterialName();
+                materialSku=wmsMaterialTool.getMaterialSku();
+                mUnit=wmsMaterialTool.getmUnit();
+                materialSerialNumber=wmsMaterialTool.getMaterialSerialNumber();
+                mBatch="";
+                mNumber="1";
+
+                upTurnoverKg=true;
+            }
+            if ("1".equals(wmsWarehouseTurnoverBind.getLatticeState())){
+                String materialSerialNumberA=wmsWarehouseTurnoverBind.getMaterialSerialNumber()+","+wmsMaterialTool.getMaterialSerialNumber();
+                int num=Integer.parseInt(wmsWarehouseTurnoverBind.getmNumber())+1;
+                upTurnoverBindKg=true;
+                goodsType="1";
+                materialTypeId=wmsMaterialTool.getMaterialTypeId();
+                materialId=String.valueOf(wmsMaterialTool.getId());
+                materialType=wmsMaterialTool.getMaterialType();
+                materialName=wmsMaterialTool.getMaterialName();
+                materialSku=wmsMaterialTool.getMaterialSku();
+                mUnit=wmsMaterialTool.getmUnit();
+                materialSerialNumber=materialSerialNumberA;
+                mBatch="";
+                mNumber=String.valueOf(num);
+            }
+        }
+        //备件
+        if("2".equals(modify.getTaskType())){
+            WmsMaterialSpareParts wmsMaterialSpareParts = wmsMaterialSparePartsService.getById(modify.getSparePartsId());
+            if ("0".equals(wmsWarehouseTurnoverBind.getLatticeState())){
+                upTurnoverBindKg=true;
+                goodsType="2";
+                materialTypeId=wmsMaterialSpareParts.getMaterialTypeId();
+                materialId=String.valueOf(wmsMaterialSpareParts.getId());
+                materialType=wmsMaterialSpareParts.getMaterialType();
+                materialName=wmsMaterialSpareParts.getMaterialName();
+                materialSku=wmsMaterialSpareParts.getMaterialSku();
+                mUnit=wmsMaterialSpareParts.getmUnit();
+                materialSerialNumber="";
+                mBatch=wmsMaterialSpareParts.getmBatch();
+                mNumber=modify.getNumber();
+
+                upTurnoverKg=true;
+            }
+            if ("1".equals(wmsWarehouseTurnoverBind.getLatticeState())){
+                int num=Integer.parseInt(wmsWarehouseTurnoverBind.getmNumber())+Integer.parseInt(modify.getNumber());
+                upTurnoverBindKg=true;
+                goodsType="2";
+                materialTypeId=wmsMaterialSpareParts.getMaterialTypeId();
+                materialId=String.valueOf(wmsMaterialSpareParts.getId());
+                materialType=wmsMaterialSpareParts.getMaterialType();
+                materialName=wmsMaterialSpareParts.getMaterialName();
+                materialSku=wmsMaterialSpareParts.getMaterialSku();
+                mUnit=wmsMaterialSpareParts.getmUnit();
+                materialSerialNumber="";
+                mBatch=wmsMaterialSpareParts.getmBatch();
+                mNumber=String.valueOf(num);
+            }
+        }
+
+        if (upTurnoverKg){
+            WmsWarehouseTurnoverParam wmsWarehouseTurnoverParam=new WmsWarehouseTurnoverParam();
+            wmsWarehouseTurnoverParam.setId(wmsWarehouseTurnover.getId());
+            wmsWarehouseTurnoverParam.setTurnoverState("1");
+            wmsWarehouseTurnoverService.update(wmsWarehouseTurnoverParam);
+        }
+
+        if (upTurnoverBindKg){
+            WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam=new WmsWarehouseTurnoverBindParam();
+            wmsWarehouseTurnoverBindParam.setId(wmsWarehouseTurnoverBind.getId());
+            wmsWarehouseTurnoverBindParam.setGoodsType(goodsType);
+            wmsWarehouseTurnoverBindParam.setMaterialTypeId(materialTypeId);
+            wmsWarehouseTurnoverBindParam.setMaterialId(materialId);
+            wmsWarehouseTurnoverBindParam.setMaterialType(materialType);
+            wmsWarehouseTurnoverBindParam.setMaterialName(materialName);
+            wmsWarehouseTurnoverBindParam.setMaterialSku(materialSku);
+            wmsWarehouseTurnoverBindParam.setMUnit(mUnit);
+            wmsWarehouseTurnoverBindParam.setMaterialSerialNumber(materialSerialNumber);
+            wmsWarehouseTurnoverBindParam.setMBatch(mBatch);
+            wmsWarehouseTurnoverBindParam.setMNumber(mNumber);
+            wmsWarehouseTurnoverBindParam.setLatticeState("1");
+            wmsWarehouseTurnoverBindService.update(wmsWarehouseTurnoverBindParam);
+        }
+        return ResponseData.success();
+    }
+
+    /**
+     * 备品备件信息
+     * 工具条码:materialSerialNumber
+     */
+    @RequestMapping("/spare-data-all")
+    @ResponseBody
+    public ResponseData padWarehouseMaterialSparePartsDataAll() {
+        List<WmsMaterialSparePartsResult> wmsMaterialSparePartsResultList = this.wmsMaterialSparePartsService.findAll();
+        if (wmsMaterialSparePartsResultList == null||wmsMaterialSparePartsResultList.isEmpty()) {
+            return ResponseData.error(500, "无此类型备品备件信息", new ArrayList<>());
+        }
+        return ResponseData.success(wmsMaterialSparePartsResultList);
     }
 }
