@@ -237,11 +237,11 @@ public class WarehouseService {
 
 
                 }
-                // 1.更新任务信息
-                wmsWarehouseReplenishmentTask.setTaskState(StateEnum.THREE.getState());// 出库任务 0初始 1开始 2出库中 3完成
-                WmsWarehouseReplenishmentTaskParam replenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
-                ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, replenishmentTaskParam);
-                wmsWarehouseReplenishmentTaskService.update(replenishmentTaskParam);
+//                // 1.更新任务信息
+//                wmsWarehouseReplenishmentTask.setTaskState(StateEnum.THREE.getState());// 出库任务 0初始 1开始 2出库中 3完成
+//                WmsWarehouseReplenishmentTaskParam replenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
+//                ToolUtil.copyProperties(wmsWarehouseReplenishmentTask, replenishmentTaskParam);
+//                wmsWarehouseReplenishmentTaskService.update(replenishmentTaskParam);
                 updateWarehouseStock(wmsWarehouseStock);// 3.更新库位信息为空1
                 updateTurnoverToEmpty(turnover);// 4.更新周转箱信息
 
@@ -606,13 +606,13 @@ public class WarehouseService {
 
     @SuppressWarnings("all")
     public ResponseData replenishmentInTask2(String turnoverNumber,String taskNumber) {
+        WmsWarehouseTaskOut wmsWarehouseTaskOut = wmsWarehouseTaskOutService.getOne(new QueryWrapper<WmsWarehouseTaskOut>().eq("task_mg", taskNumber).orderByDesc("id").last("limit 1"));
         WmsWarehouseTurnover wmsWarehouseTurnover = wmsWarehouseTurnoverService.getOne(new QueryWrapper<WmsWarehouseTurnover>().eq("turnover_number", turnoverNumber).orderByDesc("id").last("limit 1"));
         WmsWarehouseTaskIn wmsWarehouseTaskIn = new WmsWarehouseTaskIn();
-        wmsWarehouseTaskIn.setSortingInfo("0");
         String messageIdTwo = RandomStringUtils.randomNumeric(12);
         wmsWarehouseTaskIn.setMessageId(messageIdTwo);// 消息识别ID
         wmsWarehouseTaskIn.setTaskMg(taskNumber);
-        wmsWarehouseTaskIn.setSortingInfo("0");
+        wmsWarehouseTaskIn.setSortingInfo(wmsWarehouseTaskOut.getSortingInfo());
         wmsWarehouseTaskIn.setOrderType(ApplyType.B.getType());// 订单类别(A采购入库 B入库)
         wmsWarehouseTaskIn.setTurnoverMouthQuality(wmsWarehouseTurnover.getTurnoverMouthQuantity());
         if (StateEnum.ZERO.getState().equals(wmsWarehouseTurnover.getTurnoverState())) {

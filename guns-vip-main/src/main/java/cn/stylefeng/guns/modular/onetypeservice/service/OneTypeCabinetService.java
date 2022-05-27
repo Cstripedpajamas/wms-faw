@@ -1280,7 +1280,7 @@ public class OneTypeCabinetService {
     public WmsWarehouseTaskIn padSortingConform(WarehouseTurnoverModify modify) {
         WmsWarehouseTaskOut wmsWarehouseTaskOut = wmsWarehouseTaskOutService.findByTaskNumber(modify.getTaskNumber());
 
-        // todo 工具条码有多条
+        // 查询工具条码
         WmsWarehouseTurnoverBindResult result = wmsWarehouseTurnoverBindService.findByMaterial(modify.getMaterialSerialNumber());
         // 查询出的绑定信息
         WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id", modify.getId()).eq("lattice_code", result.getLatticeCode()));
