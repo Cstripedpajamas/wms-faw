@@ -554,8 +554,8 @@ public class PDAWareController {
         }
         //备件
         if("2".equals(modify.getTaskType())){
-            WmsMaterialSpareParts wmsMaterialSpareParts = wmsMaterialSparePartsService.getById(modify.getSparePartsId());
             if ("0".equals(wmsWarehouseTurnoverBind.getLatticeState())){
+                WmsMaterialSpareParts wmsMaterialSpareParts = wmsMaterialSparePartsService.getById(modify.getSparePartsId());
                 upTurnoverBindKg=true;
                 goodsType="2";
                 materialTypeId=wmsMaterialSpareParts.getMaterialTypeId();
@@ -574,14 +574,14 @@ public class PDAWareController {
                 int num=Integer.parseInt(wmsWarehouseTurnoverBind.getmNumber())+Integer.parseInt(modify.getNumber());
                 upTurnoverBindKg=true;
                 goodsType="2";
-                materialTypeId=wmsMaterialSpareParts.getMaterialTypeId();
-                materialId=String.valueOf(wmsMaterialSpareParts.getId());
-                materialType=wmsMaterialSpareParts.getMaterialType();
-                materialName=wmsMaterialSpareParts.getMaterialName();
-                materialSku=wmsMaterialSpareParts.getMaterialSku();
-                mUnit=wmsMaterialSpareParts.getmUnit();
+                materialTypeId=wmsWarehouseTurnoverBind.getMaterialTypeId();
+                materialId=String.valueOf(wmsWarehouseTurnoverBind.getId());
+                materialType=wmsWarehouseTurnoverBind.getMaterialType();
+                materialName=wmsWarehouseTurnoverBind.getMaterialName();
+                materialSku=wmsWarehouseTurnoverBind.getMaterialSku();
+                mUnit=wmsWarehouseTurnoverBind.getmUnit();
                 materialSerialNumber="";
-                mBatch=wmsMaterialSpareParts.getmBatch();
+                mBatch=wmsWarehouseTurnoverBind.getmBatch();
                 mNumber=String.valueOf(num);
             }
         }
