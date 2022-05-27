@@ -26,11 +26,13 @@ import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.modular.warehousemanage.entity.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseReplenishmentTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
+import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -389,6 +391,23 @@ public class PDAWareController {
     @ResponseBody
     public ResponseData sortingIn(String taskNumber,String turnoverNumber){
         return warehouseService.replenishmentInTask2(turnoverNumber,taskNumber);
+    }
+
+    /**
+     * [备件补货  完成]
+     * @author       : [ASD-FuBenHao]
+     * @version      : [v1.0]
+     * @createTime   : [2022/5/27 15:42]
+     **/
+    @RequestMapping("/sorting-in-over")
+    @ResponseBody
+    public ResponseData sortingOver(String taskNumber) {
+        WmsWarehouseReplenishmentTaskResult result = wmsWarehouseReplenishmentTaskService.findByTaskNumber(taskNumber);
+        result.setTaskState("3");
+        WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
+        ToolUtil.copyProperties(result, wmsWarehouseReplenishmentTaskParam);
+        wmsWarehouseReplenishmentTaskService.update(wmsWarehouseReplenishmentTaskParam);
+        return ResponseData.success();
     }
 
     /**

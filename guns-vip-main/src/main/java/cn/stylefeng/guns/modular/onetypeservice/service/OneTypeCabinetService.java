@@ -1421,17 +1421,8 @@ public class OneTypeCabinetService {
             ToolUtil.copyProperties(bind, bindParam);
             wmsWarehouseTurnoverBindService.update(bindParam);
         }
-
-
         int pickNumber = Integer.parseInt(modify.getNumber()) + Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getSortingNum());
         wmsWarehouseReplenishmentTaskService.updatePickNumber(modify.getTaskNumber(), Integer.toString(pickNumber));
-        if (pickNumber >= total) {
-            WmsWarehouseReplenishmentTaskResult result = wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
-            result.setTaskState("3");
-            WmsWarehouseReplenishmentTaskParam wmsWarehouseReplenishmentTaskParam = new WmsWarehouseReplenishmentTaskParam();
-            ToolUtil.copyProperties(result, wmsWarehouseReplenishmentTaskParam);
-            wmsWarehouseReplenishmentTaskService.update(wmsWarehouseReplenishmentTaskParam);
-        }
         return ResponseData.success();
     }
 
