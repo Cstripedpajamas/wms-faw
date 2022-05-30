@@ -109,4 +109,18 @@ public class WmsCabinet2UseTaskResult implements Serializable {
      */
     private Date updateTime;
 
+    /**
+     * 物料 SKU
+     * */
+    private String materialSku;
+
+    /**
+     * 物料名称
+     * */
+    private String materialName;
+
+    /**
+     *
+     * */
+
 }

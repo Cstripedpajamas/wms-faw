@@ -26,6 +26,7 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.service
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -176,15 +177,16 @@ public class TaskThread {
     // 任务线程
     private void startTask() {
         new Thread(new Runnable() {
+            @SneakyThrows
             @Override
             public void run() {
                 while (true) {
-                    try {
+//                    try {
                         runTask();
                         Thread.sleep(1000);
-                    } catch (Exception e) {
-                        System.out.println("异常操作");
-                    }
+//                    } catch (Exception e) {
+//                        System.out.println(e.getMessage());
+//                    }
                 }
             }
         }).start();
@@ -301,6 +303,7 @@ public class TaskThread {
                         WmsCabinet2TurnoverBindResult wtb = taskThread.wmsCabinet2TurnoverBindService.findByTurnId(turnoverID);
                         // 领用的数量
                         WmsCabinet2UseTaskResult byId = taskThread.wmsCabinet2UseTaskService.findById(_runningId);
+
                         // 判断是否全部取完
                         int i = Integer.parseInt(wtb.getMNumber());
                         int i1 = Integer.parseInt(byId.getUseNumber());
@@ -599,11 +602,12 @@ public class TaskThread {
     private static boolean outStockMsg(String matterTypeID, String matterNumber) {
         // 1 查询库存的数量 获取库存id 周转箱的id 根据周转箱的id去查询出绑定的数量 如果够用 绑定 库位锁定
 //        WmsCabinet2StockResult wsp = taskThread.wmsCabinet2StockService.findNumberInfo(matterTypeID, matterNumber);
-
+        System.out.println("物料类型id" + matterTypeID + "物料数量" + matterNumber);
         // 1. 查询出周转箱绑定货物信息表
         WmsCabinet2TurnoverBindResult wtr = taskThread.wmsCabinet2TurnoverBindService.findNumberInfo(matterTypeID, matterNumber);
         if (wtr != null) {
             // 1.更新库位为锁定
+            System.out.println("周转箱信息:" + wtr);
             taskThread.wmsCabinet2StockService.updateStateByTurnId(wtr.getTurnoverId(), "2");
             // 根据周转箱的id查询出库位的id
             WmsCabinet2StockResult wsp = taskThread.wmsCabinet2StockService.findByTurnId(wtr.getTurnoverId());

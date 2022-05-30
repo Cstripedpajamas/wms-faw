@@ -62,15 +62,11 @@
 
     <select id="customPageList2" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">
         select
-        <include refid="Base_Column_List"/>
-        from wms_cabinet2_use_task where 1 = 1
-        <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
-            and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
-        </if>
-        <if test="paramCondition.operator != null and paramCondition.operator != ''">
-            and operator = #{paramCondition.operator}
-        </if>
-        and task_state = "0"
+        wt.*,wm.material_type as materialType,wm.material_sku as materialSku,wm.material_name
+        from wms_cabinet2_use_task wt left join wms_material_type wm on wt.use_material_type_id = wm.id
+        where 1 = 1
+        and wt.operator = #{paramCondition.operator}
+        and wt.task_state = "0"
     </select>
 
     <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam">

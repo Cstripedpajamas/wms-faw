@@ -1359,7 +1359,13 @@ public class OneTypeCabinetService {
     // 立库备件分拣 - 分拣完成
     public ResponseData padSortingConform2(WarehouseTurnoverModify modify) {
         WmsWarehouseReplenishmentTaskResult wmsWarehouseReplenishmentTaskResult = wmsWarehouseReplenishmentTaskService.findByTaskNumber(modify.getTaskNumber());
+        String materialTypeId = wmsWarehouseReplenishmentTaskResult.getMaterialTypeId();
+        // 查询出的绑定信息
+        WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id", modify.getId()).eq("lattice_code", modify.getLatticeCode()));
 
+        if (!Objects.equals(materialTypeId,bind.getMaterialTypeId())){
+            return ResponseData.error("分拣的物料类型和申请的物料类型不一致~");
+        }
         // 总数量
         int total = Integer.parseInt(wmsWarehouseReplenishmentTaskResult.getMNumber());
         // 分拣数量
@@ -1372,8 +1378,7 @@ public class OneTypeCabinetService {
         }
 
 
-        // 查询出的绑定信息
-        WmsWarehouseTurnoverBind bind = wmsWarehouseTurnoverBindService.getOne(new QueryWrapper<WmsWarehouseTurnoverBind>().eq("turnover_id", modify.getId()).eq("lattice_code", modify.getLatticeCode()));
+
 
         // 查询周转箱信息
         WmsWarehouseTurnover turnover = wmsWarehouseTurnoverService.getById(modify.getId());
