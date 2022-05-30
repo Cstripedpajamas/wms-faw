@@ -53,7 +53,7 @@ public class WmsMaterialTypeServiceImpl extends ServiceImpl<WmsMaterialTypeMappe
 
     @Override
     public List<WmsMaterialTypeResult> findListBySpec(WmsMaterialTypeParam param){
-        return null;
+        return this.baseMapper.customList(param);
     }
 
     @Override

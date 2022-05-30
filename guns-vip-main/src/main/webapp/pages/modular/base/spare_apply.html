@@ -1,0 +1,87 @@
+@layout("/common/_form.html",{js:["/assets/modular/base/spare_apply.js"]}){
+
+<form class="layui-form" id="spaceApply" lay-filter="spaceApply">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">申请信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input id="operator" name="operator" type="hidden"/>
+                    <input id="materialId" name="materialId" type="hidden"/>
+                    <input id="scrapMaterialId" name="scrapMaterialId" type="hidden"/>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请-名称<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <select id="materialName" name="materialName"  lay-filter="materialName" lay-verify="required" lay-search>
+                                <option value="">请选择一个物料名称</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请-类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="materialType" name="materialType" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请-SKU<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="materialSku" name="materialSku" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请原因<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="processReason" name="processReason" placeholder="请输入申请原因"
+                                   type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请数量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mNumber" name="mNumber" placeholder="请输入申请数量"
+                                   type="number" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">报废-名称<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <select id="scrapMaterialName" name="scrapMaterialName"  lay-filter="scrapMaterialName" lay-verify="required" lay-search>
+                                <option value="">请选择一个物料名称</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">报废-类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="scrapMaterialType" name="materialType" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">报废-SKU<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="scrapMaterialSku" name="materialSku" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">报废数量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="scrapNum" name="scrapNum" placeholder="请输入报废数量"
+                                   type="number" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button></button>
+    </div>
+
+</form>
+
+@}
