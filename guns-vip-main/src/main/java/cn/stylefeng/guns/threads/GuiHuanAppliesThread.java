@@ -4,6 +4,7 @@ import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.onetypecabinet.entity.WmsCabinet1ReturnTask;
+import cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsCabinet1ReturnTaskParam;
 import cn.stylefeng.guns.modular.onetypecabinet.service.WmsCabinet1ReturnTaskService;
 import cn.stylefeng.guns.modular.onetypeservice.enums.CodeProviderEnum;
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
@@ -96,11 +97,15 @@ public class GuiHuanAppliesThread {
                 returnTask.setMaterialId(apply.getMaterialId());
                 //物料编码
 //                returnTask.setMaterialSerialNumber(wmsMaterialType.getMaterialSerialNumber());
+
+                returnTask.setToolErrorContent(apply.getReturnReason());
                 //操作人
                 returnTask.setOperator(apply.getOperator());
                 //任务状态(0初始 1开始 2开始存储 3存储完成 4结束)
                 returnTask.setTaskState(StateEnum.ZERO.getState());
-                thread.wmsCabinet1ReturnTaskService.save(returnTask);
+                WmsCabinet1ReturnTaskParam wms = new WmsCabinet1ReturnTaskParam();
+                ToolUtil.copyProperties(returnTask,wms);
+                thread.wmsCabinet1ReturnTaskService.add(wms);
             }
         }
     }
