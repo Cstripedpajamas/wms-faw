@@ -181,7 +181,7 @@ public class ApplyController extends BaseController {
         apply.setmNumber(StateEnum.ONE.getState());
         apply.setDataTime(new Date());
         apply.setReturnReason(wmsReturnApplyParam.getReturnReason());
-        apply.setDataState(StateEnum.ZERO.getState());
+        apply.setDataState(StateEnum.TWO.getState());
         wmsReturnApplyService.save(apply);
         return ResponseData.success();
     }

@@ -21,6 +21,8 @@ import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
 import cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam;
 import cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
+import cn.stylefeng.guns.sys.modular.system.model.UserDto;
+import cn.stylefeng.guns.sys.modular.system.service.UserService;
 import cn.stylefeng.guns.webservice.entity.*;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.extension.api.R;
@@ -32,10 +34,7 @@ import org.springframework.stereotype.Component;
 import javax.jws.WebService;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @ClassName FawApiServiceImpl
@@ -72,6 +71,9 @@ public class FawApiServiceImpl implements FawApiService {
 
     @Autowired
     private WmsMaterialTypeService wmsMaterialTypeService;
+
+    @Autowired
+    private UserService userService;
 
     @Override
     public RsBody setUserInfo(MsgHeader msgHeader, MsgBody msgBody) {
@@ -126,10 +128,28 @@ public class FawApiServiceImpl implements FawApiService {
             List<WmsUserParam> wmsUserParams = new ArrayList<>();
             for (FawUserInfoParam fawUserInfoParam : fawUserInfoParamList) {
                 WmsUserParam wmsUserParam = new WmsUserParam();
-                wmsUserParam.setSerialNumber(fawUserInfoParam.getAccountCode());
+                wmsUserParam.setSerialNumber(fawUserInfoParam.getEmployeeId());
                 wmsUserParam.setUserName(fawUserInfoParam.getEmployeeName());
+                wmsUserParam.setWorkTeam(fawUserInfoParam.getDepNo());
+                wmsUserParam.setJobResponsibility(fawUserInfoParam.getJobs());
+                wmsUserParam.setIdInfo(fawUserInfoParam.getEmployeeId());
+                wmsUserParam.setUserType("C");
+                wmsUserParam.setUPwd("123456");
                 wmsUserParam.setDataState("0");
                 wmsUserParams.add(wmsUserParam);
+
+                UserDto user=new UserDto();
+                user.setAccount(fawUserInfoParam.getEmployeeId());
+                user.setPassword("123456");
+                user.setName(fawUserInfoParam.getEmployeeName());
+                user.setBirthday(new Date());
+                user.setSex("M");
+                user.setEmail(fawUserInfoParam.getEmailAddress());
+                user.setPhone("00000000");
+                user.setDeptId(Long.parseLong("1531450546655285250"));
+                user.setPosition("1531451053394317313");
+                user.setRoleId("1531456276884049922");
+                this.userService.addUser(user);
             }
             this.wmsUserService.insertListBatch(wmsUserParams);
         }
@@ -373,10 +393,15 @@ public class FawApiServiceImpl implements FawApiService {
             List<WmsMaterialTypeParam> wmsMaterialTypeParamList = new ArrayList<>();
             for (FawMtlInfoParam fawMtlInfoParam : fawMtlInfoParams) {
                 WmsMaterialTypeParam wmsMaterialTypeParam = new WmsMaterialTypeParam();
-                wmsMaterialTypeParam.setType("2");
+                if (fawMtlInfoParam.getMtlType().equals("GJ")){
+                    wmsMaterialTypeParam.setType("1");
+                }
+                if (fawMtlInfoParam.getMtlType().equals("BJ")){
+                    wmsMaterialTypeParam.setType("2");
+                }
                 wmsMaterialTypeParam.setMaterialType(fawMtlInfoParam.getMtlType());
                 wmsMaterialTypeParam.setMaterialName(fawMtlInfoParam.getMtlNodes());
-                wmsMaterialTypeParam.setMaterialSku(fawMtlInfoParam.getMtlNo());
+                wmsMaterialTypeParam.setMaterialSku(fawMtlInfoParam.getMtlNo()+"-"+fawMtlInfoParam.getPlant());
                 wmsMaterialTypeParam.setMUnit(fawMtlInfoParam.getMeasurebaseunit());
                 wmsMaterialTypeParam.setLatticeMouthType("");
                 wmsMaterialTypeParam.setDataState("1");

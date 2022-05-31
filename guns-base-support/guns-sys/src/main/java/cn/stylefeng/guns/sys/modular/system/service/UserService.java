@@ -122,7 +122,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         this.setStatus(userId, ManagerStatus.DELETED.getCode());
 
         //删除对应的oauth2绑定表
-        SqlRunner.db().delete("delete from oauth_user_info where user_id = {0}", userId);
+//        SqlRunner.db().delete("delete from oauth_user_info where user_id = {0}", userId);
 
         //删除职位关联
         userPosService.remove(new QueryWrapper<UserPos>().eq("user_id", userId));

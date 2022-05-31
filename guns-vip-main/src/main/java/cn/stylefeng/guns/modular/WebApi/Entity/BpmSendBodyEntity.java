@@ -55,4 +55,9 @@ public class BpmSendBodyEntity implements Serializable {
      * 物料SKU
      */
     private String materialSku;
+
+    /**
+     * 审批人 ,
+     */
+    private String approver;
 }

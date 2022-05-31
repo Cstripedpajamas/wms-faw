@@ -1,8 +1,15 @@
 package cn.stylefeng.guns.threads;
 
+import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBody2Entity;
+import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBodyEntity;
+import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendHeaderEntity;
+import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
+import cn.stylefeng.guns.modular.fawInfo.userInfo.entity.FawUserInfo;
+import cn.stylefeng.guns.modular.fawInfo.userInfo.model.result.FawUserInfoResult;
+import cn.stylefeng.guns.modular.fawInfo.userInfo.service.FawUserInfoService;
 import cn.stylefeng.guns.modular.onetypecabinet.service.WmsCabinet1ReturnTaskService;
 import cn.stylefeng.guns.modular.onetypeservice.enums.ApplyType;
 import cn.stylefeng.guns.modular.onetypeservice.enums.CodeProviderEnum;
@@ -24,6 +31,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -56,6 +64,13 @@ public class UseAppliesThread{
     @Autowired
     private Map<String, Code> mapCodeGenerator;
 
+    @Autowired
+    private WmsApiService wmsApiService;
+
+    @Autowired
+    private FawUserInfoService fawUserInfoService;
+
+
 
     @PostConstruct
     public void init() {
@@ -65,11 +80,58 @@ public class UseAppliesThread{
     public static void startThread() {
         while (true){
             runThreadMain();
+//            runThreadMainA();
+//            runThreadMainB();
             logger.info("Task Thread- Requisition application");
             try {
                 Thread.sleep(1000*10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+            }
+        }
+    }
+
+    /**
+     * [查询BPM 处理进度]
+     * @author       : [ASD-FuBenHao]
+     * @version      : [v1.0]
+     * @createTime   : [2022/5/31 14:17]
+     **/
+    private static void runThreadMainB(){
+        List<WmsUseApply> wmsUseApplies = thread.wmsUseApplyService.list(new QueryWrapper<WmsUseApply>().eq("data_state", StateEnum.ONE.getState()));
+        if (wmsUseApplies.size() > 0) {
+            for (WmsUseApply apply : wmsUseApplies) {
+                WmsUseApplyParam useApplyParam = new WmsUseApplyParam();
+                ToolUtil.copyProperties(apply, useApplyParam);
+                int rs=findBpmRs(apply);
+                if (rs==1){
+                    useApplyParam.setDataState(StateEnum.TWO.getState());
+                    thread.wmsUseApplyService.update(useApplyParam);
+                }
+                if (rs==2){
+                    useApplyParam.setDataState(StateEnum.THREE.getState());
+                    thread.wmsUseApplyService.update(useApplyParam);
+                }
+            }
+        }
+    }
+
+    /**
+     * [提交BPM申请]
+     * @author       : [ASD-FuBenHao]
+     * @version      : [v1.0]
+     * @createTime   : [2022/5/31 13:49]
+     **/
+    private static void runThreadMainA(){
+        List<WmsUseApply> wmsUseApplies = thread.wmsUseApplyService.list(new QueryWrapper<WmsUseApply>().eq("data_state", StateEnum.ZERO.getState()));
+        if (wmsUseApplies.size() > 0) {
+            for (WmsUseApply apply : wmsUseApplies) {
+                if (sendBpmRs(apply)){
+                    WmsUseApplyParam useApplyParam = new WmsUseApplyParam();
+                    ToolUtil.copyProperties(apply, useApplyParam);
+                    useApplyParam.setDataState(StateEnum.ONE.getState());
+                    thread.wmsUseApplyService.update(useApplyParam);
+                }
             }
         }
     }
@@ -153,4 +215,74 @@ public class UseAppliesThread{
         }
     }
 
+    private static int findBpmRs(WmsUseApply apply){
+        int rs=0;
+        BpmSendHeaderEntity bpmSendHeaderEntity=new BpmSendHeaderEntity();
+        bpmSendHeaderEntity.setReceiver("JF_BPM");
+        bpmSendHeaderEntity.setSender("JF_TWMS");
+        bpmSendHeaderEntity.setTransID("1");
+        bpmSendHeaderEntity.setCount("1");
+        bpmSendHeaderEntity.setMessageID("1");
+        bpmSendHeaderEntity.setComment("1");
+        bpmSendHeaderEntity.setInterfaceID("TWMS-BPM-001");
+        BpmSendBody2Entity bpmSendBody2Entity=new BpmSendBody2Entity();
+        bpmSendBody2Entity.setPageNo(1);
+        bpmSendBody2Entity.setPageSize(3);
+        bpmSendBody2Entity.setEmployeeId(apply.getOperator());
+        List<Map<String, String>> mapList=thread.wmsApiService.queryBpm(bpmSendHeaderEntity,bpmSendBody2Entity);
+        if (mapList!=null){
+            if (!mapList.isEmpty()){
+                for (Map<String, String> stringStringMap : mapList) {
+                    String processNo=stringStringMap.get("processNo");
+                    String status=stringStringMap.get("status");
+                    if (processNo.equals(apply.getProcessNumber())){
+                        if (status!=null){
+                            if (status.equals("COMPLETED")){
+                                rs=1;
+                            }
+                            if (status.equals("REJECT")){
+                                rs=2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return rs;
+    }
+
+    private static boolean sendBpmRs(WmsUseApply apply){
+        WmsMaterialType wmsMaterialType = thread.wmsMaterialTypeService.getById(apply.getMaterialId());
+        List<FawUserInfo> fawUserInfoResultList = thread.fawUserInfoService.list(new QueryWrapper<FawUserInfo>().eq("faw_cla_of_pos","10").or().eq("faw_cla_of_pos","9"));
+        List<String> stringList=new ArrayList<>();
+        if (!fawUserInfoResultList.isEmpty()){
+            for (FawUserInfo fawUserInfo : fawUserInfoResultList) {
+                stringList.add(fawUserInfo.getEmployeeId());
+            }
+        }
+        String stringFromList = String.join(",", stringList);
+        BpmSendHeaderEntity bpmSendHeaderEntity=new BpmSendHeaderEntity();
+        bpmSendHeaderEntity.setReceiver("JF_BPM");
+        bpmSendHeaderEntity.setSender("JF_TWMS");
+        bpmSendHeaderEntity.setTransID("1");
+        bpmSendHeaderEntity.setCount("1");
+        bpmSendHeaderEntity.setMessageID("1");
+        bpmSendHeaderEntity.setComment("1");
+        bpmSendHeaderEntity.setInterfaceID("TWMS-BPM-002");
+        int applyType=1;
+        if(ApplyType.B.getType().equals(apply.getProcessType())){
+            applyType=2;
+        }
+        BpmSendBodyEntity bpmSendBodyEntity=new BpmSendBodyEntity();
+        bpmSendBodyEntity.setApplyType(applyType);
+        bpmSendBodyEntity.setMaterialName(wmsMaterialType.getMaterialName());
+        bpmSendBodyEntity.setMaterialNumber(wmsMaterialType.getMaterialType());
+        bpmSendBodyEntity.setApplyReason(apply.getProcessReason());
+        bpmSendBodyEntity.setEmployeeId(apply.getOperator());
+        bpmSendBodyEntity.setMaterialQuantity(Integer.valueOf(apply.getmNumber()));
+        bpmSendBodyEntity.setProcessNo(apply.getProcessNumber());
+        bpmSendBodyEntity.setMaterialSku(wmsMaterialType.getMaterialSku());
+        bpmSendBodyEntity.setApprover(stringFromList);
+        return thread.wmsApiService.sendBpm(bpmSendHeaderEntity,bpmSendBodyEntity);
+    }
 }

@@ -217,11 +217,11 @@
 
     <insert id="insertListBatch">
         insert into wms_user (
-        serial_number,user_name,data_state
+        serial_number,user_name,work_team,job_responsibility,id_info,user_type,u_pwd,data_state
         )
         values
         <foreach collection="list" item="paramCondition" index="index" separator=",">
-            (#{paramCondition.serialNumber},#{paramCondition.userName},#{paramCondition.dataState})
+            (#{paramCondition.serialNumber},#{paramCondition.userName},#{paramCondition.workTeam},#{paramCondition.jobResponsibility},#{paramCondition.idInfo},#{paramCondition.userType},#{paramCondition.uPwd},#{paramCondition.dataState})
         </foreach>
     </insert>
 
