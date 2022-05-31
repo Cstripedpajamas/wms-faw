@@ -191,6 +191,7 @@
         <include refid="Base_Column_List"/>
         from wms_warehouse_stock where 1 = 1
         and turnover_id = #{turnoverId}
+        order by create_time desc limit 1
     </select>
 
     <select id="findAll" resultType="cn.stylefeng.guns.modular.warehousemanage.model.params.StockSync">
