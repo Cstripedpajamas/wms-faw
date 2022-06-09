@@ -93,11 +93,64 @@ public class WmsMaterialType implements Serializable {
       @TableField(value = "package_number")
       private String packageNumber;
 
+
     /**
      * 周转箱类型
      * */
     @TableField(value = "turnover_type")
     private String turnoverType;
+
+    /**
+     * 周转箱格口数量
+     * */
+    @TableField(value = "turnover_lattice_type")
+    private String turnoverLatticeType;
+
+
+
+    /**
+     *  RFID 标识
+     * */
+    @TableField(value = "label")
+    private String label;
+
+
+    @Override
+    public String toString() {
+        return "WmsMaterialType{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", materialType='" + materialType + '\'' +
+                ", materialName='" + materialName + '\'' +
+                ", materialSku='" + materialSku + '\'' +
+                ", mUnit='" + mUnit + '\'' +
+                ", latticeMouthType='" + latticeMouthType + '\'' +
+                ", dataState='" + dataState + '\'' +
+                ", createTime=" + createTime +
+                ", sortType='" + sortType + '\'' +
+                ", packageType='" + packageType + '\'' +
+                ", packageNumber='" + packageNumber + '\'' +
+                ", turnoverType='" + turnoverType + '\'' +
+                ", turnoverLatticeType='" + turnoverLatticeType + '\'' +
+                ", label='" + label + '\'' +
+                '}';
+    }
+
+    public String getTurnoverLatticeType() {
+        return turnoverLatticeType;
+    }
+
+    public void setTurnoverLatticeType(String turnoverLatticeType) {
+        this.turnoverLatticeType = turnoverLatticeType;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
     public String getTurnoverType() {
         return turnoverType;
@@ -203,22 +256,4 @@ public class WmsMaterialType implements Serializable {
         this.packageNumber = packageNumber;
     }
 
-    @Override
-    public String toString() {
-        return "WmsMaterialType{" +
-                "id=" + id +
-                ", type='" + type + '\'' +
-                ", materialType='" + materialType + '\'' +
-                ", materialName='" + materialName + '\'' +
-                ", materialSku='" + materialSku + '\'' +
-                ", mUnit='" + mUnit + '\'' +
-                ", latticeMouthType='" + latticeMouthType + '\'' +
-                ", dataState='" + dataState + '\'' +
-                ", createTime=" + createTime +
-                ", sortType='" + sortType + '\'' +
-                ", packageType='" + packageType + '\'' +
-                ", packageNumber='" + packageNumber + '\'' +
-                ", turnoverType='" + turnoverType + '\'' +
-                '}';
-    }
 }

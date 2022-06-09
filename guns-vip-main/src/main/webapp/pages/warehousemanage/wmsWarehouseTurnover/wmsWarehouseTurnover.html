@@ -17,8 +17,8 @@
                             <div class="layui-inline">
                                 <select id="affWarehouse2">
                                     <option value="">归属仓库</option>
-                                    <option value="0">备品备件库</option>
-                                    <option value="1">工具库</option>
+                                    <option value="0">12巷道</option>
+                                    <option value="1">3巷道</option>
                                 </select>
 <!--                                <input id="affWarehouse2" class="layui-input" type="text" placeholder="归属仓库"/>-->
                             </div>
@@ -45,9 +45,9 @@
 </script>
 <script type="text/html" id="affWarehouse">
     {{# if(d.affWarehouse == '0'){ }}
-    <span style="color: #2BCCCE">备品备件库</span>
+    <span style="color: #2BCCCE">12巷道</span>
     {{# } else if(d.affWarehouse == '1'){ }}
-    <span style="color: #4DAF29">工具库</span>
+    <span style="color: #4DAF29">3巷道</span>
     {{# } }}
 </script>
 

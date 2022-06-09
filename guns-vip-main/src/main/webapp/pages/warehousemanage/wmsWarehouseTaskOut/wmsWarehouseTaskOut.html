@@ -35,9 +35,9 @@
 
 <script type="text/html" id="orderTypeTpl">
     {{# if(d.orderType == 'A'){ }}
-    <span style="color: #2BCCCE">工具领用</span>
+    <span style="color: #2BCCCE">大件物料领用</span>
     {{# } else if(d.orderType == 'B'){ }}
-    <span style="color: #4DAF29">补货出库</span>
+    <span style="color: #4DAF29">小件物料补货出库</span>
     {{# } else if(d.orderType == 'C'){ }}
     <span style="color: #4DAF29">出库</span>
     {{# } }}
@@ -45,9 +45,9 @@
 
 <script type="text/html" id="goodsTypeTpl">
     {{# if(d.goodsType == 'A'){ }}
-    <span style="color: #2BCCCE">工具</span>
+    <span style="color: #2BCCCE">大件物料</span>
     {{# } else if(d.goodsType == 'B'){ }}
-    <span style="color: #4DAF29">备品备件</span>
+    <span style="color: #4DAF29">小件物料</span>
     {{# } else if(d.goodsType == 'C'){ }}
     <span style="color: #4DAF29">空周转箱</span>
     {{# } }}

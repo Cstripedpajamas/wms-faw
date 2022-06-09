@@ -38,9 +38,9 @@
 </script>
 <script type="text/html" id="typeTpl">
     {{#  if(d.type === '1'){ }}
-    <span class="layui-btn-xs">工具</span>
+    <span class="layui-btn-xs">大件物料</span>
     {{#  } else if(d.type === '2'){ }}
-    <span class="layui-btn-xs">备品备件</span>
+    <span class="layui-btn-xs">小件物料</span>
     {{#  } }}
 </script>
 <script type="text/html" id="sortType">
@@ -59,4 +59,20 @@
     <span class="layui-btn-xs">大箱</span>
     {{#  } }}
 </script>
+<script type="text/html" id="turnoverLatticeType">
+    {{#  if(d.turnoverLatticeType === '0'){ }}
+    <span class="layui-btn-xs">单格口</span>
+    {{#  } else if(d.turnoverLatticeType === '1'){ }}
+    <span class="layui-btn-xs">多格口</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="label">
+    {{#  if(d.label === '0'){ }}
+    <span class="layui-btn-xs">是</span>
+    {{#  } else if(d.label === '1'){ }}
+    <span class="layui-btn-xs">否</span>
+    {{#  } }}
+</script>
+
+
 @}

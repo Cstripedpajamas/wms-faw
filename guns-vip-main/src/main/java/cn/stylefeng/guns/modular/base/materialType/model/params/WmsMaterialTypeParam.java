@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.base.materialType.model.params;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
 import java.util.Date;
@@ -84,6 +85,16 @@ public class WmsMaterialTypeParam implements Serializable, BaseValidatingParam {
      * 周转箱类型
      * */
     private String turnoverType;
+
+    /**
+     * 周转箱格口数量
+     * */
+    private String turnoverLatticeType;
+
+    /**
+     *  RFID 标识
+     * */
+    private String label;
 
     @Override
     public String checkParam() {

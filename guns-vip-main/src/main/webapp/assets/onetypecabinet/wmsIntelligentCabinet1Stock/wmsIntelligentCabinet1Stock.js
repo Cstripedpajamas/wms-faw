@@ -34,7 +34,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
             {field: 'materialSku', sort: true, title: '物料SKU',minWidth: 120},
             {field: 'materialSerialNumber', sort: true, title: '物料编码',minWidth: 120},
             {field: 'mNumber', sort: true, title: '数量'},
-            {field: 'toolState', sort: true, title: '工具状态',templet: '#toolStateTpl'},
+            {field: 'toolState', sort: true, title: '大件物料状态',templet: '#toolStateTpl'},
             {field: 'createTime', sort: true, title: '数据时间',minWidth: 160},
             {align: 'center', toolbar: '#tableBar', title: '操作',minWidth: 160}
         ]];

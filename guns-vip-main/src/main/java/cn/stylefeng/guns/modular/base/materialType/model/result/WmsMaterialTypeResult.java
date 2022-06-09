@@ -96,6 +96,17 @@ public class WmsMaterialTypeResult implements Serializable {
     private String number;
 
 
+    /**
+     * 周转箱格口数量
+     * */
+    private String turnoverLatticeType;
+
+    /**
+     *  RFID 标识
+     * */
+    private String label;
+
+
 
 
 }

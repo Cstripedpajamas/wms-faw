@@ -21,7 +21,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
             {field: 'id', hide: true, title: '记录ID'},
             {align: 'center',field: 'processNumber', sort: true, title: '流程单号'},
             {align: 'center',field: 'operator', sort: true, title: '人员信息'},
-            {align: 'center',field: 'materialId', sort: true, title: '物料信息'},
+            {align: 'center',field: 'materialId', sort: true, title: '大件物料信息'},
             {align: 'center',field: 'mNumber', sort: true, title: '物料数量'},
             {align: 'center',field: 'returnReason', sort: true, title: '归还原因'},
             {align: 'center',field: 'dataTime', sort: true, title: '数据时间'},

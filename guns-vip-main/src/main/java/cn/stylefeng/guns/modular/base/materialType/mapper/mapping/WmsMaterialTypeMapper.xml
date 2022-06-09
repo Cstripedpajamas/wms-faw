@@ -17,12 +17,14 @@
         <result column="package_type" property="packageType"/>
         <result column="package_number" property="packageNumber"/>
         <result column="turnover_type" property="turnoverType"/>
+        <result column="turnover_lattice_type" property="turnoverLatticeType"/>
+        <result column="label" property="label"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id AS "id", type AS "type", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_unit AS "mUnit", lattice_mouth_type AS "latticeMouthType", data_state AS "dataState", create_time AS "createTime",
-        sort_type AS "sortType",package_type AS "packageType",package_number AS "packageNumber",turnover_type AS "turnoverType"
+        sort_type AS "sortType",package_type AS "packageType",package_number AS "packageNumber",turnover_type AS "turnoverType",turnover_lattice_type AS "turnoverLatticeType",label AS "label"
     </sql>
 
 
