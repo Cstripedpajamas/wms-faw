@@ -89,5 +89,4 @@ public class WmsMaterialToolParam implements Serializable, BaseValidatingParam {
     public String checkParam() {
         return null;
     }
-
 }

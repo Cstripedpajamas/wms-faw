@@ -96,6 +96,12 @@ public class WmsMaterialTypeParam implements Serializable, BaseValidatingParam {
      * */
     private String label;
 
+
+    /**
+     *  RFID条码
+     * */
+    private  String materialSerialNumber;
+
     @Override
     public String checkParam() {
         return null;

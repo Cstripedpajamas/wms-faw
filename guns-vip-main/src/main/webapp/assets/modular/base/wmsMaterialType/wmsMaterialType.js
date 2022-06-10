@@ -34,7 +34,7 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
             {align: 'center',field: 'label', sort: true, title: 'RFID标识',templet: '#label'},
             {align: 'center',field: 'dataState', sort: true, templet: '#statusTpl', title: '数据状态'},
             {field: 'createTime', sort: true, title: '数据时间'},
-            {align: 'center', toolbar: '#tableBar', title: '操作'}
+            {align: 'right', toolbar: '#tableBar', title: '操作',fixed: 'right',width:180}
         ]];
     };
 
@@ -43,7 +43,10 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
      */
     WmsMaterialType.search = function () {
         var queryData = {};
+        queryData['type'] = $("#type").val();
         queryData['materialName'] = $("#materialName").val();
+        queryData['materialSku'] = $("#materialSKU").val();
+        queryData['label'] = $("#labelTag").val();
         table.reload(WmsMaterialType.tableId, {
             where: queryData, page: {curr: 1}
         });
@@ -140,6 +143,38 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
     WmsMaterialType.upload = function () {
         Feng.success("更新成功")
     };
+
+    /**
+     * 添加物料信息
+     * */
+
+    WmsMaterialType.addMaterialInfo = function(data){
+        layer.prompt({title: '请输入RFID条码', formType: 0,maxlength:8}, function(pass, index){
+            var isNum = /^\d+$/.test(pass.substr(1,pass.length));
+            if (pass.startsWith('B') &&  isNum ){
+
+                data['materialSerialNumber'] = pass;
+                console.log(data)
+                var ajax = new $ax(Feng.ctxPath + "/wmsMaterialTool/addItemFromMaterialType", function (data) {
+                    Feng.success("添加成功!");
+                }, function (data) {
+                    Feng.error("添加失败!" + data.responseJSON.message);
+                    table.reload(WmsMaterialType.tableId);
+                });
+                ajax.set(data);
+                ajax.start();
+
+                layer.close(index);
+            }
+            else {
+                Feng.error("您输入的条码不是RFID条码,请检查");
+
+
+
+            }
+
+        });
+    }
     // 工具条点击事件
     table.on('tool(' + WmsMaterialType.tableId + ')', function (obj) {
         var data = obj.data;
@@ -149,6 +184,8 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
             WmsMaterialType.openEditDlg(data);
         } else if (layEvent === 'delete') {
             WmsMaterialType.onDeleteItem(data);
+        }else if (layEvent === 'add'){
+           WmsMaterialType.addMaterialInfo(data)
         }
     });
 

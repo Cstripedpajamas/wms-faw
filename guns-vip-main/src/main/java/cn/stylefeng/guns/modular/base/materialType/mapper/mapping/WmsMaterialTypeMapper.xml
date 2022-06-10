@@ -131,6 +131,9 @@
         <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
             and wmt.create_time like CONCAT('%',#{paramCondition.createTime},'%')
         </if>
+        <if test="paramCondition.label != null and paramCondition.label != ''">
+            and wmt.label like CONCAT('%',#{paramCondition.label},'%')
+        </if>
     </select>
 
     <select id="customPageMapList" resultType="map"

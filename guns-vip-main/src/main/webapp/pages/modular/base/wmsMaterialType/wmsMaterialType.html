@@ -12,7 +12,24 @@
                     <div class="layui-form toolbar">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <input id="materialName" class="layui-input" type="text" placeholder="名称"/>
+                                <select id="type" name="type" lay-search lay-verify="required">
+                                    <option value="">类型</option>
+                                    <option value="1">大件物料</option>
+                                    <option value="2">小件物料</option>
+                                </select>
+                            </div>
+                            <div class="layui-inline">
+                                <input id="materialName" class="layui-input" type="text" placeholder="物料名称"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input id="materialSKU" class="layui-input" type="text" placeholder="物料SKU"/>
+                            </div>
+                            <div class="layui-inline">
+                                <select id="labelTag" name="labelTag" lay-search lay-verify="required">
+                                    <option value="">RFID标识</option>
+                                    <option value="0">是</option>
+                                    <option value="1">否</option>
+                                </select>
                             </div>
                             <div class="layui-inline">
                                 <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
@@ -30,6 +47,9 @@
 </div>
 
 <script type="text/html" id="tableBar">
+    {{#  if(d.label === '0'){ }}
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="add">添加</a>
+    {{#  } }}
     <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
 </script>
