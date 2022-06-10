@@ -57,11 +57,14 @@ layui.use(['form', 'admin', 'ax'], function () {
         if (choice == 1) {
             //工具
             $("#latticeMouthTypeDiv").show();
+            $("#labelDIV").show();
             typeFlag = true;
         } else {
             //备品备件
             $("#latticeMouthTypeDiv").hide();
             $("#latticeMouthType").val("");
+            $("#labelDIV").hide();
+            $("#label").val("");
             typeFlag = false;
             form.render('select')
         }

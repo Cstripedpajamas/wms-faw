@@ -26,6 +26,7 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
             {field: 'materialSku', title: '物料SKU'},
             {field: 'mUnit', title: '单位'},
             {field: 'typeName', title: '格口类型'},
+            {field: 'label', title: 'RFID标识',templet: '#label'},
             {align: 'center', field: 'dataState', templet: '#statusTpl', title: '数据状态'},
             {field: 'createTime', title: '数据时间'}
         ]];

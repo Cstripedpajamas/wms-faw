@@ -42,4 +42,14 @@
     <span class="layui-btn-xs">备品备件</span>
     {{#  } }}
 </script>
+
+<script type="text/html" id="label">
+    {{#  if(d.label === '0'){ }}
+    <span class="layui-btn-xs">是</span>
+    {{#  } else if(d.label === '1'){ }}
+    <span class="layui-btn-xs">否</span>
+    {{#  } }}
+</script>
+
+
 @}
