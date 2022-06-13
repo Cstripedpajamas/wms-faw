@@ -32,6 +32,7 @@ layui.use(['table', 'admin', 'ax', 'func', 'form'], function () {
             {align: 'center',field: 'turnoverType', sort: true, title: '周转箱类型',templet: '#turnoverType'},
             {align: 'center',field: 'turnoverLatticeType', sort: true, title: '周转箱格口类型',templet: '#turnoverLatticeType'},
             {align: 'center',field: 'label', sort: true, title: 'RFID标识',templet: '#label'},
+            {align: 'center',field: 'source', sort: true, title: '来源',templet: '#source'},
             {align: 'center',field: 'dataState', sort: true, templet: '#statusTpl', title: '数据状态'},
             {field: 'createTime', sort: true, title: '数据时间'},
             {align: 'right', toolbar: '#tableBar', title: '操作',fixed: 'right',width:180}

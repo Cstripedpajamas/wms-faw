@@ -19,12 +19,13 @@
         <result column="turnover_type" property="turnoverType"/>
         <result column="turnover_lattice_type" property="turnoverLatticeType"/>
         <result column="label" property="label"/>
+        <result column="source" property="source"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id AS "id", type AS "type", material_type AS "materialType", material_name AS "materialName", material_sku AS "materialSku", m_unit AS "mUnit", lattice_mouth_type AS "latticeMouthType", data_state AS "dataState", create_time AS "createTime",
-        sort_type AS "sortType",package_type AS "packageType",package_number AS "packageNumber",turnover_type AS "turnoverType",turnover_lattice_type AS "turnoverLatticeType",label AS "label"
+        sort_type AS "sortType",package_type AS "packageType",package_number AS "packageNumber",turnover_type AS "turnoverType",turnover_lattice_type AS "turnoverLatticeType",label AS "label",source AS "source"
     </sql>
 
 
@@ -192,11 +193,11 @@
 
     <insert id="insertListBatch">
         insert into wms_material_type (
-        type,material_type,material_name,material_sku,m_unit,lattice_mouth_type,data_state,sort_type,package_type,package_number
+        type,material_type,material_name,material_sku,m_unit,lattice_mouth_type,data_state,sort_type,package_type,package_number,source
         )
         values
         <foreach collection="list" item="paramCondition" index="index" separator=",">
-            (#{paramCondition.type},#{paramCondition.materialType},#{paramCondition.materialName},#{paramCondition.materialSku},#{paramCondition.mUnit},#{paramCondition.latticeMouthType},#{paramCondition.dataState},#{paramCondition.sortType},#{paramCondition.packageType},#{paramCondition.packageNumber})
+            (#{paramCondition.type},#{paramCondition.materialType},#{paramCondition.materialName},#{paramCondition.materialSku},#{paramCondition.mUnit},#{paramCondition.latticeMouthType},#{paramCondition.dataState},#{paramCondition.sortType},#{paramCondition.packageType},#{paramCondition.packageNumber},#{paramCondition.source})
         </foreach>
     </insert>
 

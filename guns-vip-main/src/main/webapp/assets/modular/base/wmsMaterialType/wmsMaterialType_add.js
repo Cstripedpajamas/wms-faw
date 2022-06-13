@@ -33,7 +33,7 @@ layui.use(['form', 'admin', 'ax'], function () {
                 Feng.error("请填写大于0的数量");
                 return false;
             }
-            data.field["turnoverLatticeType"] = '0'
+            data.field["turnoverLatticeType"] = '0';
         }
         var ajax = new $ax(Feng.ctxPath + "/wmsMaterialType/addItem", function (data) {
             if (data.code == 200) {
@@ -86,9 +86,6 @@ layui.use(['form', 'admin', 'ax'], function () {
             $("#packageType").val("");
             flag = true;
             $("#turnoverType option[value='2']").removeAttr("disabled");
-            // let optionText = '大箱';
-            // let optionValue = '2';
-            // $('#turnoverType').append(`<option value=${optionValue}"> ${optionText} </option>`);
             form.render('select')
 
         } else {
@@ -96,7 +93,6 @@ layui.use(['form', 'admin', 'ax'], function () {
             $("#packageNumberDiv").show();
             $("#turnoverLatticeDiv").hide();
             flag= false;
-            console.log(123)
             $("#turnoverType option[value='2']").attr("disabled","disabled");
             form.render('select')
         }

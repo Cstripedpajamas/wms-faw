@@ -106,6 +106,8 @@ public class WmsMaterialTypeResult implements Serializable {
      * */
     private String label;
 
+    private String source;
+
 
 
 

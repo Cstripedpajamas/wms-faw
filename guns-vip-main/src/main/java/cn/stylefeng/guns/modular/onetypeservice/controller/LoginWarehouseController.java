@@ -48,8 +48,8 @@ public class LoginWarehouseController {
             user.setUserType("管理员");
 //            list.add(new LoginWarehouseResponse("工具领用","1","main/toolAccessPage/step1"));
             list.add(new LoginWarehouseResponse("采购入库","2","main/purchaseWarehousingPage/step1"));
-            list.add(new LoginWarehouseResponse("备品备件补货出库","4","main/replenishmentPage/step1"));
-            list.add(new LoginWarehouseResponse("工具条码打印","5","main/printerPage/step1"));
+            list.add(new LoginWarehouseResponse("小件物料补货出库","4","main/replenishmentPage/step1"));
+            list.add(new LoginWarehouseResponse("大件物料条码打印","5","main/printerPage/step1"));
             list.add(new LoginWarehouseResponse("入库","3","main/instoragePage"));
             list.add(new LoginWarehouseResponse("出库","6","main/outstoragePage"));
         } else {

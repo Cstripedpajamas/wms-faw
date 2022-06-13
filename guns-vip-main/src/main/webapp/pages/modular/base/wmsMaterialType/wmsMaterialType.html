@@ -94,5 +94,13 @@
     {{#  } }}
 </script>
 
+<script type="text/html" id="source">
+    {{#  if(d.source === '0'){ }}
+    <span class="layui-btn-xs">人工</span>
+    {{#  } else if(d.source === '1'){ }}
+    <span class="layui-btn-xs">ERP</span>
+    {{#  } }}
+</script>
+
 
 @}

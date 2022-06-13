@@ -9,6 +9,7 @@ import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
+import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
 import cn.stylefeng.guns.modular.base.materialtool.service.WmsMaterialToolService;
@@ -882,6 +883,28 @@ public class WarehouseService {
     public ResponseData purchaseConform(String serialNumber, String purNumber) {
         WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getOne(new QueryWrapper<WmsPurchaseOrderInfo>().eq("pur_number", purNumber));
         WmsMaterialTypeResult wmsMaterialTypeResult = wmsMaterialTypeService.findById(wmsPurchaseOrderInfo.getMaterialTypeId());
+
+        if (wmsMaterialTypeResult ==null){
+             return  ResponseData.error("物料类型不存在,请先维护");
+        }
+
+        if (Objects.equals("1",wmsMaterialTypeResult.getDataState())){
+            return ResponseData.error("请先配置好相应物料类型信息再执行");
+        }
+        if (Objects.equals("2",wmsMaterialTypeResult.getType())){
+            WmsMaterialSparePartsParam param = new WmsMaterialSparePartsParam();
+            param.setMaterialTypeId(wmsMaterialTypeResult.getId().toString());
+            param.setMaterialType(wmsMaterialTypeResult.getMaterialType());
+            param.setMaterialName(wmsMaterialTypeResult.getMaterialName());
+            param.setMaterialSku(wmsMaterialTypeResult.getMaterialSku());
+            param.setMUnit(wmsMaterialTypeResult.getMUnit());
+            param.setStorageState("0");
+            param.setStorageAddress("");
+            param.setDataState("1");
+            param.setMBatch(purNumber);
+            param.setMinPackageSize(wmsMaterialTypeResult.getPackageNumber());
+
+        }
 
         // 1.校验库中是否有空周转箱
         String turnoverType = Objects.equals("0", wmsMaterialTypeResult.getTurnoverType()) ? "A" : Objects.equals("1", wmsMaterialTypeResult.getTurnoverType()) ? "B" : "C";

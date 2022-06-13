@@ -117,6 +117,8 @@ public class WmsMaterialTypeController extends BaseController {
         if (!Objects.isNull(one)) {
             return ResponseData.error("物料SKU已存在！");
         }
+        wmsMaterialTypeParam.setSource("0");
+        wmsMaterialTypeParam.setDataState("0");
         this.wmsMaterialTypeService.add(wmsMaterialTypeParam);
         return ResponseData.success();
     }

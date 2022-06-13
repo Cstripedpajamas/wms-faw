@@ -114,6 +114,11 @@ public class WmsMaterialType implements Serializable {
     @TableField(value = "label")
     private String label;
 
+    /**
+     * 来源
+     * */
+    @TableField(value = "source")
+    private String source;
 
     @Override
     public String toString() {
@@ -133,7 +138,16 @@ public class WmsMaterialType implements Serializable {
                 ", turnoverType='" + turnoverType + '\'' +
                 ", turnoverLatticeType='" + turnoverLatticeType + '\'' +
                 ", label='" + label + '\'' +
+                ", source='" + source + '\'' +
                 '}';
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public String getTurnoverLatticeType() {

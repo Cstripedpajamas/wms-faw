@@ -408,6 +408,7 @@ public class FawApiServiceImpl implements FawApiService {
                 wmsMaterialTypeParam.setSortType("0");
                 wmsMaterialTypeParam.setPackageType("");
                 wmsMaterialTypeParam.setPackageNumber("0");
+                wmsMaterialTypeParam.setSource("1");
                 wmsMaterialTypeParamList.add(wmsMaterialTypeParam);
             }
             this.wmsMaterialTypeService.insertListBatch(wmsMaterialTypeParamList);
