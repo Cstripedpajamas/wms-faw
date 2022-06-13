@@ -63,6 +63,16 @@ public class WmsPrintInfoServiceImpl extends ServiceImpl<WmsPrintInfoMapper, Wms
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsPrintInfoResult findLastCode() {
+        return this.baseMapper.findLastCode();
+    }
+
+    @Override
+    public void insertMatch(List<WmsPrintInfo> wmsPrintInfos) {
+        this.baseMapper.insertMatch(wmsPrintInfos);
+    }
+
     private Serializable getKey(WmsPrintInfoParam param){
         return param.getId();
     }

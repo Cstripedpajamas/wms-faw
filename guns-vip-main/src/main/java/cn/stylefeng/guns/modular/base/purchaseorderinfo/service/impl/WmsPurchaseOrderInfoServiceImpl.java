@@ -64,6 +64,13 @@ public class WmsPurchaseOrderInfoServiceImpl extends ServiceImpl<WmsPurchaseOrde
     }
 
     @Override
+    public LayuiPageInfo findPageBySpec2(WmsPurchaseOrderInfoParam param){
+        Page pageContext = getPageContext();
+        IPage page = this.baseMapper.customPageList2(pageContext, param);
+        return LayuiPageFactory.createPageInfo(page);
+    }
+
+    @Override
     public void insertListBatch(List<WmsPurchaseOrderInfoParam> param) {
         this.baseMapper.insertListBatch(param);
     }

@@ -72,4 +72,6 @@ public interface WmsPurchaseOrderInfoService extends IService<WmsPurchaseOrderIn
     void updateState(String state,String orderId);
 
     void stopTask();
+
+    LayuiPageInfo findPageBySpec2(WmsPurchaseOrderInfoParam infoParam);
 }

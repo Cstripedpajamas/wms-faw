@@ -153,6 +153,15 @@
             </if>
     </select>
 
+    <select id="customPageList2"  resultType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
+      SELECT poi.*,wmt.id
+        FROM `wms_purchase_order_info` as poi
+            JOIN wms_material_type as wmt ON
+                poi.`material_type_id` = wmt.`id`
+            AND poi.`type` = '1'
+            AND wmt.`label` = '1'
+    </select>
+
     <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam">
         select
         <include refid="Base_Column_List"/>

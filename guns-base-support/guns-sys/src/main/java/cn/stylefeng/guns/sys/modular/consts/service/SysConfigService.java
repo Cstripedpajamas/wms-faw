@@ -66,4 +66,5 @@ public interface SysConfigService extends IService<SysConfig> {
      */
     LayuiPageInfo findPageBySpec(SysConfigParam param);
 
+    void updateByCode(String toolCard, String code);
 }

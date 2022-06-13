@@ -66,4 +66,7 @@ public interface WmsPrintInfoService extends IService<WmsPrintInfo> {
      */
      LayuiPageInfo findPageBySpec(WmsPrintInfoParam param);
 
+    WmsPrintInfoResult findLastCode();
+
+    void insertMatch(List<WmsPrintInfo> wmsPrintInfos);
 }

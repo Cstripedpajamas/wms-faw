@@ -59,4 +59,6 @@ public interface WmsPurchaseOrderInfoMapper extends BaseMapper<WmsPurchaseOrderI
     void updateState(@Param("state")String state,@Param("orderId")String orderId);
 
     void stopTask();
+
+    IPage customPageList2(@Param("page")Page pageContext,@Param("paramCondition") WmsPurchaseOrderInfoParam param);
 }

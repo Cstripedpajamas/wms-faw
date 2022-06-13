@@ -66,4 +66,5 @@ public interface WmsMaterialToolService extends IService<WmsMaterialTool> {
      */
      LayuiPageInfo findPageBySpec(WmsMaterialToolParam param);
 
+    void insertTools(List<WmsMaterialTool> materialTools);
 }

@@ -283,4 +283,11 @@ public class ConstantsContext {
         }
     }
 
+    public static String getToolCard() {
+        String toolCard = (String) CONSTNTS_HOLDER.get("TOOL_CARD");
+        if (ToolUtil.isEmpty(toolCard)) {
+            return "";
+        }
+        return toolCard;
+    }
 }

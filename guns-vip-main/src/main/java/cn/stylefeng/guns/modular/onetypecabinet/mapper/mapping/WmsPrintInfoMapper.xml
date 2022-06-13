@@ -127,4 +127,19 @@
             </if>
     </select>
 
+    <select id="findLastCode" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsPrintInfoResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_print_info where 1 = 1 order by id desc limit 1;
+    </select>
+
+    <insert id="insertMatch" >
+        insert into wms_print_info  (material_serial_number,operator,print_type,print_stu) values
+        <foreach collection="list" separator="," item="item">
+            (
+            #{item.materialSerialNumber},#{item.operator},#{item.printType},#{item.printStu}
+            )
+        </foreach>
+    </insert>
+
 </mapper>

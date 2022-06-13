@@ -63,6 +63,11 @@ public class WmsMaterialToolServiceImpl extends ServiceImpl<WmsMaterialToolMappe
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public void insertTools(List<WmsMaterialTool> materialTools) {
+        this.baseMapper.insertTools(materialTools);
+    }
+
     private Serializable getKey(WmsMaterialToolParam param){
         return param.getId();
     }

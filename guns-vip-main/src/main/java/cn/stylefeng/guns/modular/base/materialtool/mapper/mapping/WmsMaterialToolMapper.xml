@@ -205,4 +205,15 @@
             </if>
     </select>
 
+    <insert id="insertTools">
+        insert into  wms_material_tool
+        (material_type_id,material_type,material_name,material_sku,material_serial_number,m_unit,material_state,storage_state,storage_address,data_state,pur_number)
+        values
+        <foreach collection="list" separator="," item="item">
+            (
+            #{item.materialTypeId},#{item.materialType},#{item.materialName},#{item.materialSku},#{item.materialSerialNumber},
+            #{item.mUnit},#{item.materialState},#{item.storageState},#{item.storageAddress},#{item.dataState},#{item.purNumber}
+            )
+        </foreach>
+    </insert>
 </mapper>

@@ -45,9 +45,8 @@ public class PrintInfoController {
     @ApiOperation(value = "4.采购生成条码任务")
     public ResponseData generatorCode(@ApiParam(value = "用户编号") @RequestParam String serialNumber,
                                            @ApiParam(value = "采购单号") @RequestParam String purNumber,
-                                           @ApiParam(value = "打印数量") @RequestParam String printNum,
-                                           @ApiParam(value = "起始号码") @RequestParam String startCode){
-        warehouseService.printGeneratorCode(serialNumber,purNumber,printNum,startCode);
+                                           @ApiParam(value = "打印数量") @RequestParam String printNum){
+        warehouseService.printGeneratorCode(serialNumber,purNumber,printNum);
         return ResponseData.success();
     }
 

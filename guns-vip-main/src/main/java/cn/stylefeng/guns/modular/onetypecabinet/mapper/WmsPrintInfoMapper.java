@@ -53,4 +53,7 @@ public interface WmsPrintInfoMapper extends BaseMapper<WmsPrintInfo> {
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsPrintInfoParam paramCondition);
 
+    WmsPrintInfoResult findLastCode();
+
+    void insertMatch(@Param("list")List<WmsPrintInfo> wmsPrintInfos);
 }

@@ -53,4 +53,5 @@ public interface WmsMaterialToolMapper extends BaseMapper<WmsMaterialTool> {
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsMaterialToolParam paramCondition);
 
+    void insertTools(@Param("list")List<WmsMaterialTool> materialTools);
 }

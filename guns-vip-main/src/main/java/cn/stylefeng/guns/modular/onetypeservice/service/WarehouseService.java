@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.modular.onetypeservice.service;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.stylefeng.guns.base.consts.ConstantsContext;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageFactory;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
@@ -21,6 +22,7 @@ import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchase
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
 import cn.stylefeng.guns.modular.onetypecabinet.entity.WmsPrintInfo;
 import cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsPrintInfoParam;
+import cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsPrintInfoResult;
 import cn.stylefeng.guns.modular.onetypecabinet.service.WmsPrintInfoService;
 import cn.stylefeng.guns.modular.onetypeservice.enums.ApplyType;
 import cn.stylefeng.guns.modular.onetypeservice.enums.CodeProviderEnum;
@@ -42,6 +44,7 @@ import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.*;
 import cn.stylefeng.guns.modular.warehousemanage.service.*;
 import cn.stylefeng.guns.print.ZplPrinter;
+import cn.stylefeng.guns.sys.modular.consts.service.SysConfigService;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
@@ -55,6 +58,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.tools.Tool;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -129,6 +133,9 @@ public class WarehouseService {
 
     @Autowired
     private WmsApiService wmsApiService;
+
+    @Autowired
+    private SysConfigService sysConfigService;
 
 
     // 领用 - 领用任务列表
@@ -722,31 +729,88 @@ public class WarehouseService {
     // 条码打印 - 获取采购订单信息
     public LayuiPageInfo printPurchase() {
         WmsPurchaseOrderInfoParam infoParam = new WmsPurchaseOrderInfoParam();
-        return wmsPurchaseOrderInfoService.findPageBySpec(infoParam);
+        return wmsPurchaseOrderInfoService.findPageBySpec2(infoParam);
     }
 
     // 条码打印 - 采购订单信息生成打印条码
-    public void printGeneratorCode(String serialNumber, String purNumber, String printNum, String startCode) {
-        Integer number = Integer.valueOf(printNum);
+    public void printGeneratorCode(String serialNumber, String purNumber, String printNum) {
+
+        // 打印集合
+        List<WmsPrintInfo> wmsPrintInfos = new ArrayList<>();
+
+        // 工具集合
+        List<WmsMaterialTool> materialTools = new ArrayList<>();
+
+        int number = Integer.parseInt(printNum);
         WmsPurchaseOrderInfo wmsPurchaseOrderInfo = wmsPurchaseOrderInfoService.getOne(new QueryWrapper<WmsPurchaseOrderInfo>().eq("pur_number", purNumber));
         if (Objects.equals(wmsPurchaseOrderInfo.getPrintNum(), "") || Objects.equals(wmsPurchaseOrderInfo.getPrintNum(), null)) {
             wmsPurchaseOrderInfo.setPrintNum(printNum);
         } else {
-            Integer value = Integer.valueOf(wmsPurchaseOrderInfo.getPrintNum()) + number;
+            Integer value = Integer.parseInt(wmsPurchaseOrderInfo.getPrintNum()) + number;
             wmsPurchaseOrderInfo.setPrintNum(String.valueOf(value));
         }
         WmsPurchaseOrderInfoParam wmsPurchaseOrderInfoParam = new WmsPurchaseOrderInfoParam();
         ToolUtil.copyProperties(wmsPurchaseOrderInfo, wmsPurchaseOrderInfoParam);
         wmsPurchaseOrderInfoService.update(wmsPurchaseOrderInfoParam);
+
+        String toolCard =  ConstantsContext.getToolCard();
+        String[] codes = addCodeNumber(toolCard,number);
         for (int i = 0; i < number; i++) {
+            // 条码信息
             WmsPrintInfo wmsPrintInfo = new WmsPrintInfo();
-            wmsPrintInfo.setMaterialSerialNumber(startCode + RandomStringUtils.randomNumeric(8));// '工具编码'
+            wmsPrintInfo.setMaterialSerialNumber(codes[i]);// '工具编码'
             wmsPrintInfo.setOperator(serialNumber);// '操作人'
             wmsPrintInfo.setPrintType(ApplyType.B.getType());// '打印类型（A补打 B采购）'
             wmsPrintInfo.setPrintStu(StateEnum.ZERO.getState());// '打印状态（0生成 1打印 2完成 3失败 4结束）'
             wmsPrintInfo.setDataTime(new Date());// 数据时间
-            wmsPrintInfoService.save(wmsPrintInfo);
+            wmsPrintInfos.add(wmsPrintInfo);
+
+            // 工具信息
+            WmsMaterialTool wmsMaterialTool = new WmsMaterialTool();
+            wmsMaterialTool.setMaterialTypeId(wmsPurchaseOrderInfo.getMaterialTypeId());
+            wmsMaterialTool.setMaterialType(wmsPurchaseOrderInfo.getType());
+            wmsMaterialTool.setMaterialName(wmsPurchaseOrderInfo.getMaterialName());
+            wmsMaterialTool.setMaterialSku(wmsPurchaseOrderInfo.getMaterialSku());
+            wmsMaterialTool.setMaterialSerialNumber(codes[i]);
+            wmsMaterialTool.setmUnit(wmsPurchaseOrderInfo.getmUnit());
+            wmsMaterialTool.setMaterialState("0");
+            wmsMaterialTool.setStorageState("0");
+            wmsMaterialTool.setStorageAddress("");
+            wmsMaterialTool.setDataState("0");
+            wmsMaterialTool.setPurNumber(purNumber);
+            materialTools.add(wmsMaterialTool);
         }
+        wmsPrintInfoService.insertMatch(wmsPrintInfos);
+
+        // 更新缓存
+        ConstantsContext.putConstant("TOOL_CARD",codes[codes.length -1]);
+
+        // 更新数据库
+        sysConfigService.updateByCode("TOOL_CARD",codes[codes.length -1]);
+
+
+        // 生成工具信息
+        wmsMaterialToolService.insertTools(materialTools);
+
+
+
+
+
+
+    }
+
+    /**
+     * 字符串添加
+     * */
+    public String[] addCodeNumber(String startCode, int number){
+        String[] codes = new String[number];
+        String r = startCode.replace("R", "1"); // R0000001 -> 10000001
+        for (int i1 = 0; i1 < number; i1++) {
+            int i = Integer.parseInt(r) + i1 + 1 ;
+            String str = Integer.toString(i);
+            codes[i1] = "R"+ str.substring(1);
+        }
+        return codes;
     }
 
     public LayuiPageInfo useToolInfo(String serialNumber) {

@@ -112,6 +112,11 @@ public class SysConfigServiceImpl extends ServiceImpl<SysConfigMapper, SysConfig
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public void updateByCode(String toolCard, String code) {
+        this.baseMapper.updateByCode(toolCard, code);
+    }
+
     private Serializable getKey(SysConfigParam param) {
         return param.getId();
     }

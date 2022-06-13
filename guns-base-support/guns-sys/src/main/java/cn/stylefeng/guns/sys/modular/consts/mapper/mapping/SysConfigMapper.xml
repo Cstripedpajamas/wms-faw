@@ -97,4 +97,8 @@
         </if>
     </select>
 
+    <update id="updateByCode" parameterType="string">
+        update sys_config set value = #{code} where code = #{toolCard}
+    </update>
+
 </mapper>
