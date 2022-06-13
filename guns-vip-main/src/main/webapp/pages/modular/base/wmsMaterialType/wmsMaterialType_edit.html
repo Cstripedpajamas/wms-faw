@@ -19,11 +19,13 @@
                         <div class="layui-input-block">
 <!--                            <input id="materialType" name="materialType" placeholder="请输入物料类型" type="text"-->
 <!--                                   class="layui-input" lay-verify="required" required/>-->
-                            <select id="materialType" name="materialType" lay-search>
-                                <option value="">请选择物料类型</option>
-                                <option value="GJ">工具</option>
-                                <option value="BJ">备件</option>
-                            </select>
+<!--                            <select id="materialType" name="materialType" lay-search>-->
+<!--                                <option value="">请选择物料类型</option>-->
+<!--                                <option value="GJ">工具</option>-->
+<!--                                <option value="BJ">备件</option>-->
+<!--                            </select>-->
+                            <input id="materialType" name="materialType" placeholder="请输入物料类型" type="text"
+                                   class="layui-input" lay-verify="required" required/>
                         </div>
                     </div>
                     <div class="layui-inline layui-col-md12">
@@ -71,10 +73,10 @@
                         </div>
                     </div>
 
-                    <div class="layui-inline layui-col-md12">
+                    <div class="layui-inline layui-col-md12" id="turnoverLatticeDiv">
                         <label class="layui-form-label">周转箱格口类型<span style="color: red;">*</span></label>
                         <div class="layui-input-block">
-                            <select id="turnoverLatticeType" name="turnoverLatticeType" lay-search lay-verify="required">
+                            <select id="turnoverLatticeType" name="turnoverLatticeType" lay-search>
                                 <option value="">请选择周转箱类型</option>
                                 <option value="0">单格口</option>
                                 <option value="1">多格口</option>
@@ -82,10 +84,10 @@
                         </div>
                     </div>
 
-                    <div class="layui-inline layui-col-md12">
+                    <div class="layui-inline layui-col-md12" id="labelDIV">
                         <label class="layui-form-label">RFID标志<span style="color: red;">*</span></label>
                         <div class="layui-input-block">
-                            <select id="label" name="label" lay-search lay-verify="required">
+                            <select id="label" name="label" lay-search>
                                 <option value="">请选择RFID标志</option>
                                 <option value="0">是</option>
                                 <option value="1">否</option>

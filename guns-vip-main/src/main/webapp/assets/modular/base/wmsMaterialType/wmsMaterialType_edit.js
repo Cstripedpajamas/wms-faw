@@ -13,10 +13,14 @@ layui.use(['form', 'admin', 'ax'], function () {
     if (result.data.type==1){
         //工具
         $("#latticeMouthTypeDiv").show();
+        $("#labelDIV").show();
         typeFlag = true;
     }else {
         //备品备件
         $("#latticeMouthTypeDiv").hide();
+        $("#labelDIV").hide();
+        $("#latticeMouthTypeDiv").hide();
+        $("#turnoverLatticeDiv").hide();
         typeFlag = false;
     }
 
@@ -47,12 +51,16 @@ layui.use(['form', 'admin', 'ax'], function () {
                 return  false;
             }
             var number = $("#packageNumber").val();
-            console.log(number)
             if (!(/(^[1-9]\d*$)/.test(number))){
                 Feng.error("请填写正确的数量")
                 return false;
             }
+            if (+number < 0){
+                Feng.error("请填写大于0的数量");
+                return false;
+            }
         }
+        data.field["dataState"] = "0";
         var ajax = new $ax(Feng.ctxPath + "/wmsMaterialType/editItem", function (data) {
             if (data.code == 200) {
                 Feng.success("更新成功！");
@@ -80,12 +88,16 @@ layui.use(['form', 'admin', 'ax'], function () {
         if (choice == 1) {
             //工具
             $("#latticeMouthTypeDiv").show();
+            $("#labelDIV").show();
             typeFlag = true;
         } else {
             //备品备件
             $("#latticeMouthTypeDiv").hide();
+            $("#latticeMouthTypeDiv").val("");
             $("#latticeMouthType").val("");
             typeFlag = false;
+            $("#labelDIV").hide();
+            $("#labelDIV").val("0");
             form.render('select')
         }
     });
@@ -103,6 +115,7 @@ layui.use(['form', 'admin', 'ax'], function () {
         } else {
             $("#packageTypeDiv").show();
             $("#packageNumberDiv").show();
+            $("#turnoverLatticeType").val("0");
             flag =true;
             form.render('select')
         }

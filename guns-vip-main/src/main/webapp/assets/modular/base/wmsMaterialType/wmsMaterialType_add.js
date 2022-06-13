@@ -17,7 +17,7 @@ layui.use(['form', 'admin', 'ax'], function () {
             }
         }
 
-        if (flag){
+        if (!flag){
           var len =   $("#packageType").val();
             if (len ==  null || len == ""){
                 Feng.error("请选择包装类型")
@@ -29,6 +29,11 @@ layui.use(['form', 'admin', 'ax'], function () {
                 Feng.error("请填写正确的数量")
                 return false;
             }
+            if (+number < 0){
+                Feng.error("请填写大于0的数量");
+                return false;
+            }
+            data.field["turnoverLatticeType"] = '0'
         }
         var ajax = new $ax(Feng.ctxPath + "/wmsMaterialType/addItem", function (data) {
             if (data.code == 200) {
@@ -74,17 +79,26 @@ layui.use(['form', 'admin', 'ax'], function () {
     form.on('radio(typeFilter2)', function (data) {
         var choice = data.value;//被点击的radio的value值
         if (choice == "0") {
-            $("#packageNumber").val("0");
+            $("#packageNumber").val(0);
             $("#packageTypeDiv").hide();
             $("#packageNumberDiv").hide();
-            flag = false;
+            $("#turnoverLatticeDiv").show();
+            $("#packageType").val("");
+            flag = true;
 
         } else {
             $("#packageTypeDiv").show();
             $("#packageNumberDiv").show();
-            flag= true;
+            $("#turnoverLatticeDiv").hide();
+            flag= false;
             form.render('select')
         }
     });
+
+    (function () {
+        $("#packageTypeDiv").hide();
+        $("#packageNumberDiv").hide();
+        $("#packageNumber").val(0);
+    })()
 
 });
