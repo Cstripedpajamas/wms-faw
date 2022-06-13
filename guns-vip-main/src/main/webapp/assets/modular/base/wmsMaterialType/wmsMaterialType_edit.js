@@ -59,6 +59,12 @@ layui.use(['form', 'admin', 'ax'], function () {
                 Feng.error("请填写大于0的数量");
                 return false;
             }
+          let turnoverType =   $("#turnoverType").val();
+            console.log(turnoverType)
+            if (turnoverType == "2"){
+                Feng.error("自动分拣只可选择小中箱");
+                return false;
+            }
         }
         data.field["dataState"] = "0";
         var ajax = new $ax(Feng.ctxPath + "/wmsMaterialType/editItem", function (data) {
@@ -110,13 +116,17 @@ layui.use(['form', 'admin', 'ax'], function () {
             $("#packageType").val("");
             $("#packageTypeDiv").hide();
             $("#packageNumberDiv").hide();
+            $("#turnoverType option[value='2']").removeAttr("disabled");
             flag = false;
 
         } else {
             $("#packageTypeDiv").show();
             $("#packageNumberDiv").show();
             $("#turnoverLatticeType").val("0");
+            $("#turnoverLatticeDiv").hide();
+            $("#turnoverType").val("");
             flag =true;
+            $("#turnoverType option[value='2']").attr("disabled","disabled");
             form.render('select')
         }
     });

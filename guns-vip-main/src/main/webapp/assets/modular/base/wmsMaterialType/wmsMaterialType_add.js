@@ -85,12 +85,19 @@ layui.use(['form', 'admin', 'ax'], function () {
             $("#turnoverLatticeDiv").show();
             $("#packageType").val("");
             flag = true;
+            $("#turnoverType option[value='2']").removeAttr("disabled");
+            // let optionText = '大箱';
+            // let optionValue = '2';
+            // $('#turnoverType').append(`<option value=${optionValue}"> ${optionText} </option>`);
+            form.render('select')
 
         } else {
             $("#packageTypeDiv").show();
             $("#packageNumberDiv").show();
             $("#turnoverLatticeDiv").hide();
             flag= false;
+            console.log(123)
+            $("#turnoverType option[value='2']").attr("disabled","disabled");
             form.render('select')
         }
     });
