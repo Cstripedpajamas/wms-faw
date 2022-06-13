@@ -841,8 +841,12 @@ public class WarehouseService {
     public ResponseData printSupplement(ApplyType applyType) {
         List<WmsPrintInfo> infos = wmsPrintInfoService.list(new QueryWrapper<WmsPrintInfo>().eq("print_type", applyType.getType()).eq("print_stu", StateEnum.ZERO.getState()));
         for (WmsPrintInfo info : infos) {
-            System.out.println(info);
+            p.resetZpl();//清除
+            printFawTroue(p, info.getMaterialSerialNumber()); // 工具条码
+            info.setPrintStu("1");
+            p.resetZpl();
         }
+        wmsPrintInfoService.updateMatch(infos);
         return ResponseData.success();
     }
 

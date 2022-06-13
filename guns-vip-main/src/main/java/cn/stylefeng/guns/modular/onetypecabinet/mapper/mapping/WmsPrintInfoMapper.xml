@@ -142,4 +142,13 @@
         </foreach>
     </insert>
 
+    <update id="updateMatch">
+        update wms_print_info set print_stu = '1' where id in (
+        <foreach collection="list" separator="," item="item">
+            #{item.id}
+        </foreach>
+        )
+
+    </update>
+
 </mapper>

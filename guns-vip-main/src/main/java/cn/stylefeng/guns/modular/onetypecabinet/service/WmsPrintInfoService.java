@@ -69,4 +69,6 @@ public interface WmsPrintInfoService extends IService<WmsPrintInfo> {
     WmsPrintInfoResult findLastCode();
 
     void insertMatch(List<WmsPrintInfo> wmsPrintInfos);
+
+    void updateMatch(List<WmsPrintInfo> infos);
 }

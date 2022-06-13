@@ -73,6 +73,11 @@ public class WmsPrintInfoServiceImpl extends ServiceImpl<WmsPrintInfoMapper, Wms
         this.baseMapper.insertMatch(wmsPrintInfos);
     }
 
+    @Override
+    public void updateMatch(List<WmsPrintInfo> infos) {
+        this.baseMapper.updateMatch(infos);
+    }
+
     private Serializable getKey(WmsPrintInfoParam param){
         return param.getId();
     }

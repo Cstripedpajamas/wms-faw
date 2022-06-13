@@ -174,7 +174,7 @@
         select
         id as "id",
         `type` as "type",
-        case `type` when 1 then "工具" else "备品备件" end as typeEx,
+        case `type` when 1 then "大件物料" else "小件物料" end as typeEx,
         material_name as "materialName",
         material_sku as "materialSku",
         sort_type as "sortType",

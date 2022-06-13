@@ -56,4 +56,6 @@ public interface WmsPrintInfoMapper extends BaseMapper<WmsPrintInfo> {
     WmsPrintInfoResult findLastCode();
 
     void insertMatch(@Param("list")List<WmsPrintInfo> wmsPrintInfos);
+
+    void updateMatch(@Param("list")List<WmsPrintInfo> infos);
 }
