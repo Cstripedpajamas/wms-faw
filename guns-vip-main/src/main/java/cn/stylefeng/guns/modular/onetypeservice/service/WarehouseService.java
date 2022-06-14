@@ -10,6 +10,7 @@ import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeP
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
+import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
 import cn.stylefeng.guns.modular.base.materialtool.service.WmsMaterialToolService;
@@ -137,6 +138,9 @@ public class WarehouseService {
 
     @Autowired
     private SysConfigService sysConfigService;
+
+    @Autowired
+    private WmsMaterialSparePartsService wmsMaterialSparePartsService;
 
 
     // 领用 - 领用任务列表
@@ -903,7 +907,7 @@ public class WarehouseService {
             param.setDataState("1");
             param.setMBatch(purNumber);
             param.setMinPackageSize(wmsMaterialTypeResult.getPackageNumber());
-
+            wmsMaterialSparePartsService.add(param);
         }
 
         // 1.校验库中是否有空周转箱
