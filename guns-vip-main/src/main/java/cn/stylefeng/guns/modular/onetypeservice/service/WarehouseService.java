@@ -10,6 +10,7 @@ import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeP
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
+import cn.stylefeng.guns.modular.base.materialspareparts.model.result.WmsMaterialSparePartsResult;
 import cn.stylefeng.guns.modular.base.materialspareparts.service.WmsMaterialSparePartsService;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
@@ -892,10 +893,21 @@ public class WarehouseService {
              return  ResponseData.error("物料类型不存在,请先维护");
         }
 
+
         if (Objects.equals("1",wmsMaterialTypeResult.getDataState())){
             return ResponseData.error("请先配置好相应物料类型信息再执行");
         }
-        if (Objects.equals("2",wmsMaterialTypeResult.getType())){
+        // 查询 相同批次 相同物料类型的 物料信息是否存在
+        WmsMaterialSparePartsParam tag = new WmsMaterialSparePartsParam();
+        tag.setMaterialTypeId(wmsMaterialTypeResult.getId().toString());
+        List<WmsMaterialSparePartsResult> all = wmsMaterialSparePartsService.findAllByMaterialTypeId(tag);
+
+        boolean flag = false;
+        if (all.size() >0){
+            flag = all.stream().anyMatch(e -> Objects.equals(e.getMBatch(), purNumber));
+
+        }
+        if (Objects.equals("2",wmsMaterialTypeResult.getType()) && !flag){
             WmsMaterialSparePartsParam param = new WmsMaterialSparePartsParam();
             param.setMaterialTypeId(wmsMaterialTypeResult.getId().toString());
             param.setMaterialType(wmsMaterialTypeResult.getMaterialType());
