@@ -65,6 +65,7 @@ import org.springframework.stereotype.Component;
 import javax.tools.Tool;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
 import static cn.stylefeng.guns.print.ZplPrinterTest.printFawTroue;
 
@@ -448,7 +449,7 @@ public class WarehouseService {
     }
 
     // 空周转箱出库
-    public ResponseData outWarehouse_empty() {
+    public ResponseData outWarehouse_empty(WmsMaterialTypeResult wmsMaterialTypeResult) {
         WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
         String messageId = RandomStringUtils.randomNumeric(12);
         taskOut.setMessageId(messageId);// 消息识别ID
@@ -458,14 +459,17 @@ public class WarehouseService {
         taskOut.setReqStatus(StateEnum.ZERO.getState());// 请求状态（0初始 1成功 2失败）
         taskOut.setResTag(StateEnum.ZERO.getState());// 结果标记（0初始 1更新 2结束）
         taskOut.setResStatus(StateEnum.ZERO.getState());// 结果状态（0初始 1正在执行 2任务完成 3任务失败）
+        taskOut.setTurnoverType(wmsMaterialTypeResult.getTurnoverType()); // 周转箱类型
+        taskOut.setTurnoverMouthQuality(wmsMaterialTypeResult.getTurnoverLatticeType());
         taskOut.setDataTime(new Date());// 数据时间
+
         wmsWarehouseTaskOutService.save(taskOut);
         WmsWarehouseTaskOut wmsWarehouseTaskOut = wmsWarehouseTaskOutService.getOne(new QueryWrapper<WmsWarehouseTaskOut>().eq("message_id", messageId));
         Map<String, Object> map = new HashMap<>();
         map.put("OutfeedId", messageId); // 消息识别id
         map.put("Type", Byte.parseByte("3")); // 出仓类型
-        map.put("BoxType", ""); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
-        map.put("LatticeType", ""); // 格口类型 1 单格口 4 多格口
+        map.put("BoxType", taskOut.getTurnoverType()); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+        map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 1 单格口 4 多格口
         map.put("Sku", "EmptyBox"); // 物料sku
         map.put("Batch", "1"); // 批次
         map.put("Qty", 1); // 数量
@@ -1147,7 +1151,8 @@ public class WarehouseService {
 
     public ResponseData findMaterialTypeAll() {
         List<WmsMaterialType> types = wmsMaterialTypeService.list();
-        return ResponseData.success(types);
+        List<WmsMaterialType> collect = types.stream().sorted(Comparator.comparing(WmsMaterialType::getId).reversed()).collect(Collectors.toList());
+        return ResponseData.success(collect);
     }
 
     @SuppressWarnings("all")

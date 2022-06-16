@@ -54,8 +54,8 @@ public class WarehouseOutInController {
     @GetMapping(value = "/out-warehouse")
     public ResponseData outWarehouse(@ApiParam(value = "物料类型") @RequestParam String materialTypeId){
         WmsMaterialTypeResult byId = wmsMaterialTypeService.findById(materialTypeId);
-        if (Objects.equals("001",byId.getMaterialSku())){
-            return  warehouseService.outWarehouse_empty(); // 空周转箱出库
+        if (byId.getMaterialSku().startsWith("box_")){
+            return  warehouseService.outWarehouse_empty(byId); // 空周转箱出库
         }
         return warehouseService.outWarehouse(materialTypeId);
     }
