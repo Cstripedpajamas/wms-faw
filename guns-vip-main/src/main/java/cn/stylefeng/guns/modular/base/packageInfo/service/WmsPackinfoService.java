@@ -66,4 +66,5 @@ public interface WmsPackinfoService extends IService<WmsPackinfo> {
      */
      LayuiPageInfo findPageBySpec(WmsPackinfoParam param);
 
+    WmsPackinfo findByMaterialTypeId(String id);
 }

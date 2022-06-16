@@ -53,4 +53,5 @@ public interface WmsPackinfoMapper extends BaseMapper<WmsPackinfo> {
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsPackinfoParam paramCondition);
 
+    WmsPackinfo findByMaterialTypeId(@Param("id")String id);
 }

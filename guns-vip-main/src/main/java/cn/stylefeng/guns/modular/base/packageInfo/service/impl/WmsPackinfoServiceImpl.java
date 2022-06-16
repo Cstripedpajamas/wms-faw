@@ -63,6 +63,11 @@ public class WmsPackinfoServiceImpl extends ServiceImpl<WmsPackinfoMapper, WmsPa
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsPackinfo findByMaterialTypeId(String id) {
+        return this.baseMapper.findByMaterialTypeId(id);
+    }
+
     private Serializable getKey(WmsPackinfoParam param){
         return param.getId();
     }

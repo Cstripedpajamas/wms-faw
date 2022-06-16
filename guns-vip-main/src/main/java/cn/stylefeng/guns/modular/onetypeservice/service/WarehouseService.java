@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.stylefeng.guns.base.consts.ConstantsContext;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageFactory;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.WebApi.Entity.runBatch;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
@@ -143,6 +144,10 @@ public class WarehouseService {
     @Autowired
     private WmsMaterialSparePartsService wmsMaterialSparePartsService;
 
+    @Autowired
+    private WmsPackinfoService wmsPackinfoService;
+
+
 
     // 领用 - 领用任务列表
     @SuppressWarnings("All")
@@ -233,7 +238,17 @@ public class WarehouseService {
                     WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBindResult = wmsWarehouseTurnoverBindService.findByTurnoverId(wmsWarehouseTurnoverBindParam);
                     // 创建自动分拣任务 分拣数量默认为 1
                     WmsSortingTask sortingTask = createSortingTask(turnover, wmsWarehouseToolUseTask, wmsWarehouseTurnoverBindResult);
-                    // todo 发送分拣任务
+
+                    // 发送分拣任务
+                    WmsSortingTaskResult result = new WmsSortingTaskResult();
+                    ToolUtil.copyProperties(sortingTask,result);
+                    WmsMaterialTypeParam param = new WmsMaterialTypeParam();
+                    param.setMaterialSku(wmsWarehouseToolUseTask.getMaterialSku());
+                    WmsMaterialTypeResult byMaterialSku = wmsMaterialTypeService.findByMaterialSku(param);
+                    WmsPackinfo packInfo =  wmsPackinfoService.findByMaterialTypeId(byMaterialSku.getId().toString());
+                    runBatch runBatchRe = wmsApiService.getRunBatchRe(result, packInfo);
+
+
                 }
                 updateWarehouseToolUseTask(wmsWarehouseStock, wmsWarehouseToolUseTask); // 2.更新任务信息
                 updateWarehouseStock(wmsWarehouseStock);// 4.更新库位信息为空
@@ -241,12 +256,21 @@ public class WarehouseService {
             } else if (ApplyType.B.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 补货出库
                 WmsWarehouseReplenishmentTask wmsWarehouseReplenishmentTask = wmsWarehouseReplenishmentTaskService.getOne(new QueryWrapper<WmsWarehouseReplenishmentTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
                 if (Objects.equals("1", wmsWarehouseReplenishmentTask.getSortingType())) {
+
                     //自动分拣 创建分拣任务
                     WmsWarehouseTurnoverBindParam params = new WmsWarehouseTurnoverBindParam();
                     ToolUtil.copyProperties(turnoverResult, params);
                     WmsWarehouseTurnoverBindResult turnoverBindInfo = wmsWarehouseTurnoverBindService.findByTurnoverId(params);
                     WmsSortingTask sortingTask = createSpareSortingTask(turnover, turnoverBindInfo, wmsWarehouseReplenishmentTask);
-                    // todo 发送分拣任务
+
+                    // 发送分拣任务
+                    WmsSortingTaskResult result = new WmsSortingTaskResult();
+                    ToolUtil.copyProperties(sortingTask,result);
+                    WmsMaterialTypeParam param = new WmsMaterialTypeParam();
+                    param.setMaterialSku(wmsWarehouseReplenishmentTask.getMaterialSku());
+                    WmsMaterialTypeResult byMaterialSku = wmsMaterialTypeService.findByMaterialSku(param);
+                    WmsPackinfo packInfo =  wmsPackinfoService.findByMaterialTypeId(byMaterialSku.getId().toString());
+                    runBatch runBatchRe = wmsApiService.getRunBatchRe(result, packInfo);
 
 
                 }
@@ -1239,8 +1263,8 @@ public class WarehouseService {
                 } else {
                     map.put("BoxType", "");
                 }
-//                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
-                map.put("LatticeType", ""); // 格口类型 4 多格口 1 单个口
+                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
+//                map.put("LatticeType", ""); // 格口类型 4 多格口 1 单个口
                 map.put("Sku", wmsWarehouseTaskOut.getMaterialSku()); // 物料sku
                 map.put("Batch", wmsWarehouseTaskOut.getmBatch()); // 批次
                 map.put("Qty", Integer.parseInt(wmsWarehouseTaskOut.getmNumber())); // 数量

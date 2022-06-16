@@ -65,4 +65,12 @@
             </if>
     </select>
 
+    <select id="findByMaterialTypeId" parameterType="string" resultType="cn.stylefeng.guns.modular.base.packageInfo.entity.WmsPackinfo">
+        SELECT
+        wp.*
+        FROM wms_packinfo AS wp
+        JOIN wms_material_type AS wmt
+        ON wp.id = wmt.package_type AND wmt.id = #{id}
+    </select>
+
 </mapper>

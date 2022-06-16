@@ -83,6 +83,8 @@ public class WmsPurchaseOrderInfoController extends BaseController {
         if (!Objects.isNull(one)) {
             return ResponseData.error("此采购单号已存在！");
         }
+        wmsPurchaseOrderInfoParam.setReceivedQuantity("0");
+        wmsPurchaseOrderInfoParam.setAcceptableQuantity(wmsPurchaseOrderInfoParam.getMNumber());
         this.wmsPurchaseOrderInfoService.add(wmsPurchaseOrderInfoParam);
         return ResponseData.success();
     }
