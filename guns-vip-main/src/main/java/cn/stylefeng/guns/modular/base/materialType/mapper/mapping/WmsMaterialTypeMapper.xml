@@ -179,7 +179,12 @@
         material_name as "materialName",
         material_sku as "materialSku",
         sort_type as "sortType",
-        turnover_type as "turnoverType"
+        turnover_type as "turnoverType",
+        lattice_mouth_type as "latticeMouthType",
+        package_type as "packageType",
+        package_number as "packageNumber",
+        turnover_type as  "turnoverType",
+        turnover_lattice_type as "turnoverLatticeType"
         from wms_material_type where 1=1
         and id = #{id};
     </select>
@@ -200,5 +205,11 @@
             (#{paramCondition.type},#{paramCondition.materialType},#{paramCondition.materialName},#{paramCondition.materialSku},#{paramCondition.mUnit},#{paramCondition.latticeMouthType},#{paramCondition.dataState},#{paramCondition.sortType},#{paramCondition.packageType},#{paramCondition.packageNumber},#{paramCondition.source})
         </foreach>
     </insert>
+
+    <select id="findAll" resultType="cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType">
+        select
+        <include refid="Base_Column_List"/>
+        from  wms_material_type where 1=1 and  data_state = '0'
+    </select>
 
 </mapper>

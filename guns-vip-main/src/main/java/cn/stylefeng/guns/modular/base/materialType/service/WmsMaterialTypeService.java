@@ -72,4 +72,6 @@ public interface WmsMaterialTypeService extends IService<WmsMaterialType> {
     WmsMaterialTypeResult findByMaterialSku(WmsMaterialTypeParam param);
 
     void insertListBatch(List<WmsMaterialTypeParam> param);
+
+    List<WmsMaterialType> findAll();
 }

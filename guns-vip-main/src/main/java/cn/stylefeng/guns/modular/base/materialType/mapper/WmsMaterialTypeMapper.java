@@ -59,4 +59,6 @@ public interface WmsMaterialTypeMapper extends BaseMapper<WmsMaterialType> {
     WmsMaterialTypeResult findByMaterialSku(@Param("paramCondition") WmsMaterialTypeParam paramCondition);
 
     void insertListBatch(@Param("list")List<WmsMaterialTypeParam> paramCondition);
+
+    List<WmsMaterialType> findAll();
 }

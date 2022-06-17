@@ -468,12 +468,12 @@ public class WarehouseService {
         Map<String, Object> map = new HashMap<>();
         map.put("OutfeedId", messageId); // 消息识别id
         map.put("Type", Byte.parseByte("3")); // 出仓类型
-        map.put("BoxType", taskOut.getTurnoverType()); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
-        map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 1 单格口 4 多格口
+        int turnoverType = Integer.parseInt(taskOut.getTurnoverType()) + 1 ;
+        map.put("BoxType", ""+turnoverType); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
+        map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 0 ? 4 : 1); // 格口类型 1 单格口 4 多格口
         map.put("Sku", "EmptyBox"); // 物料sku
         map.put("Batch", "1"); // 批次
         map.put("Qty", 1); // 数量
-//        map.put("Hits","AH1-PLA-A12"); // 分拣工位 A人工 B自动
         map.put("SortingPosition", "AH1-PLA-A12"); // 分拣工位 A人工 B自动
         log.info("The issue request parameter is{}", map);
         String str = wmsApiService.sendOutReq(map);
@@ -1150,7 +1150,7 @@ public class WarehouseService {
     }
 
     public ResponseData findMaterialTypeAll() {
-        List<WmsMaterialType> types = wmsMaterialTypeService.list();
+        List<WmsMaterialType> types = wmsMaterialTypeService.findAll();
         List<WmsMaterialType> collect = types.stream().sorted(Comparator.comparing(WmsMaterialType::getId).reversed()).collect(Collectors.toList());
         return ResponseData.success(collect);
     }
@@ -1268,8 +1268,8 @@ public class WarehouseService {
                 } else {
                     map.put("BoxType", "");
                 }
-                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
-//                map.put("LatticeType", ""); // 格口类型 4 多格口 1 单个口
+//                map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 4 多格口 1 单个口
+                map.put("LatticeType", ""); // 格口类型 4 多格口 1 单个口
                 map.put("Sku", wmsWarehouseTaskOut.getMaterialSku()); // 物料sku
                 map.put("Batch", wmsWarehouseTaskOut.getmBatch()); // 批次
                 map.put("Qty", Integer.parseInt(wmsWarehouseTaskOut.getmNumber())); // 数量

@@ -78,6 +78,11 @@ public class WmsMaterialTypeServiceImpl extends ServiceImpl<WmsMaterialTypeMappe
         this.baseMapper.insertListBatch(param);
     }
 
+    @Override
+    public List<WmsMaterialType> findAll() {
+        return this.baseMapper.findAll();
+    }
+
     private Serializable getKey(WmsMaterialTypeParam param){
         return param.getId();
     }
