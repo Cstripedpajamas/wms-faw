@@ -44,6 +44,7 @@ layui.use(['table', 'admin', 'ax', 'func','form','upload'], function () {
         var queryData = {};
         queryData['barcode'] = $("#barcode").val();
         queryData['affWarehouse'] = $("#affWarehouse2").val();
+        queryData['turnoverState'] = $("#ifHave").val();
         console.log( $("#affWarehouse2").val());
         table.reload(WmsWarehouseTurnover.tableId, {
             where: queryData, page: {curr: 1}

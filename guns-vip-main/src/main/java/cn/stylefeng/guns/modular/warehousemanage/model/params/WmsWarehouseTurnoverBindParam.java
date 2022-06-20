@@ -97,6 +97,17 @@ public class WmsWarehouseTurnoverBindParam implements Serializable, BaseValidati
     private Date createTime;
 
     /**
+     * 开始时间
+     * */
+    private String startTime;
+
+    /**
+     * 结束时间
+     * */
+
+    private String endTime;
+
+    /**
      * 格口状态
      * */
     private String latticeState;

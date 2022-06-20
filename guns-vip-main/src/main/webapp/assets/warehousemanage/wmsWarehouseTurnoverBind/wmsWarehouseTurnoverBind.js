@@ -1,9 +1,10 @@
-layui.use(['table', 'admin', 'ax', 'func'], function () {
+layui.use(['table', 'admin', 'ax', 'func','laydate'], function () {
     var $ = layui.$;
     var table = layui.table;
     var $ax = layui.ax;
     var admin = layui.admin;
     var func = layui.func;
+    var laydate = layui.laydate;
 
     /**
      * 立库-周转箱绑定货物信息表管理
@@ -11,6 +12,21 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
     var WmsWarehouseTurnoverBind = {
         tableId: "wmsWarehouseTurnoverBindTable"
     };
+    //日期范围
+
+        // laydate.render({
+        //     elem: '#test1',
+        //     type:'datetime',
+        //     rang:"~",
+        //     format: 'yyyy-MM-dd-HHmm'
+        // });
+
+    laydate.render({
+        elem: '#time'
+        ,type: 'datetime'
+        ,range: '~'
+        ,format: 'yyyy-MM-dd'
+    });
 
     /**
      * 初始化表格的列
@@ -42,7 +58,11 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsWarehouseTurnoverBind.search = function () {
         var queryData = {};
-        queryData['turnoverId'] = $("#condition").val();
+        queryData['materialType'] = $("#materialType").val();
+        queryData['materialName'] = $("#materialName").val();
+        queryData['goodsType'] = $("#goodsType").val();
+        queryData['startTime'] = $("#time").val().split("~")[0].trim();
+        queryData['endTime'] = $("#time").val().split("~")[1].trim();
         table.reload(WmsWarehouseTurnoverBind.tableId, {
             where: queryData, page: {curr: 1}
         });

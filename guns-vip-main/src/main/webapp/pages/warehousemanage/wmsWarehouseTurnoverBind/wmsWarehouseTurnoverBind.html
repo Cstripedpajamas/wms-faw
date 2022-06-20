@@ -12,16 +12,37 @@
                     <div class="layui-form toolbar">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <input id="condition" class="layui-input" type="text" placeholder="名称"/>
+                                <select id="goodsType">
+                                    <option value="">货物类型</option>
+                                    <option value="1">大件物料</option>
+                                    <option value="1">小件物料</option>
+                                </select>
+                                <!--                                <input id="affWarehouse2" class="layui-input" type="text" placeholder="归属仓库"/>-->
                             </div>
                             <div class="layui-inline">
-                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
-                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加</button>
-                                <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出</button>
+                                <input id="materialType" class="layui-input" type="text" placeholder="物料类型"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input id="materialName" class="layui-input" type="text" placeholder="物料名称"/>
+                            </div>
+
+                            <div class="layui-inline"  style="width: 250px">
+                                <input id="time" autocomplete="off" class="layui-input" type="text" placeholder="入库时间"/>
+                            </div>
+
+
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索
+                                </button>
+                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加
+                                </button>
+                                <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <table class="layui-table" id="wmsWarehouseTurnoverBindTable" lay-filter="wmsWarehouseTurnoverBindTable"></table>
+                    <table class="layui-table" id="wmsWarehouseTurnoverBindTable"
+                           lay-filter="wmsWarehouseTurnoverBindTable"></table>
                 </div>
             </div>
         </div>

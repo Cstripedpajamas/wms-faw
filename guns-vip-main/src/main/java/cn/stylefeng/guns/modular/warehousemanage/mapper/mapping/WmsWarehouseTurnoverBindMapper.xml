@@ -172,8 +172,8 @@
             <if test="paramCondition.mNumber != null and paramCondition.mNumber != ''">
                 and m_number like CONCAT('%',#{paramCondition.mNumber},'%')
             </if>
-            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
-                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            <if test="paramCondition.startTime != null and paramCondition.startTime != '' and paramCondition.endTime != null and paramCondition.endTime != null">
+                    and DATE_FORMAT(create_time,'%Y-%m-%d') between DATE_FORMAT(#{paramCondition.startTime},'%Y-%m-%d') and DATE_FORMAT(#{paramCondition.endTime},'%Y-%m-%d')
             </if>
         <if test="paramCondition.latticeState != null and paramCondition.latticeState != ''">
             and lattice_state like CONCAT('%',#{paramCondition.latticeState},'%')
