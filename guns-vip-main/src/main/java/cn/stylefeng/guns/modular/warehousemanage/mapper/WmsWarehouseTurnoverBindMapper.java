@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.warehousemanage.mapper;
 
+import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
@@ -62,7 +63,7 @@ public interface WmsWarehouseTurnoverBindMapper extends BaseMapper<WmsWarehouseT
 
     WmsWarehouseTurnoverBindResult findBySKU(@Param("materialSku")String materialSku);
 
-    Page<WmsWarehouseTurnoverBindResult> findTurnoverMsg(@Param("page") Page pageContext, @Param("paramCondition")WmsWarehouseTurnoverBindParam param);
+    Page<WmsWarehouseTurnoverBindResult> findTurnoverMsg(@Param("page") Page pageContext, @Param("paramCondition") WmsMaterialTypeResult param);
 
     WmsWarehouseTurnoverBindResult findByMaterial(@Param("materialSerialNumber")String materialSerialNumber);
 }

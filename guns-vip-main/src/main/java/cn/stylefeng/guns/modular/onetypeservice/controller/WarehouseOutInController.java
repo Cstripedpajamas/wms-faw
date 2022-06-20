@@ -43,9 +43,12 @@ public class WarehouseOutInController {
     @GetMapping(value = "/out-type-list")
     public LayuiPageInfo findList(String materialTypeId){
         WmsMaterialTypeResult byId = wmsMaterialTypeService.findById(materialTypeId);
-        WmsWarehouseTurnoverBindParam wm = new WmsWarehouseTurnoverBindParam();
-        if (Objects.equals("001",byId.getMaterialSku())){
-           return  wmsWarehouseTurnoverBindService.findTurnoverMsg(wm);
+        if (byId.getMaterialSku().startsWith("box_")){
+            String turnoverType = byId.getTurnoverType();
+            String turnoverLatticeType = byId.getTurnoverLatticeType();
+            byId.setTurnoverType(Objects.equals("0",turnoverType)? "A" :Objects.equals("1",turnoverType) ? "B" : "C");
+            byId.setTurnoverLatticeType(Objects.equals("0",turnoverLatticeType)?"1" : "4");
+            return  wmsWarehouseTurnoverBindService.findTurnoverMsg(byId);
         }
         return warehouseService.findWarehouseList(materialTypeId);
     }
@@ -55,7 +58,15 @@ public class WarehouseOutInController {
     public ResponseData outWarehouse(@ApiParam(value = "物料类型") @RequestParam String materialTypeId){
         WmsMaterialTypeResult byId = wmsMaterialTypeService.findById(materialTypeId);
         if (byId.getMaterialSku().startsWith("box_")){
-            return  warehouseService.outWarehouse_empty(byId); // 空周转箱出库
+                String turnoverType = byId.getTurnoverType();
+                String turnoverLatticeType = byId.getTurnoverLatticeType();
+                byId.setTurnoverType(Objects.equals("0",turnoverType)? "A" :Objects.equals("1",turnoverType) ? "B" : "C");
+                byId.setTurnoverLatticeType(Objects.equals("0",turnoverLatticeType)?"1" : "4");
+                LayuiPageInfo turnoverMsg = wmsWarehouseTurnoverBindService.findTurnoverMsg(byId);
+                if (turnoverMsg.getData().size() > 0){
+                    return  warehouseService.outWarehouse_empty(byId); // 空周转箱出库
+                }
+                else return ResponseData.error("空周转箱不足~");
         }
         return warehouseService.outWarehouse(materialTypeId);
     }

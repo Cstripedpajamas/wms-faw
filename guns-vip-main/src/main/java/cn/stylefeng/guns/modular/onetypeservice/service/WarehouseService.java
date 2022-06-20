@@ -413,6 +413,10 @@ public class WarehouseService {
     // 手动出库操作
     public ResponseData outWarehouse(String materialTypeId) {
         WmsMaterialType wmsMaterialType = wmsMaterialTypeService.getById(materialTypeId);
+        WmsWarehouseTurnoverBindResult bySKU1 = wmsWarehouseTurnoverBindService.findBySKU(wmsMaterialType.getMaterialSku());
+        if (bySKU1 == null ){
+            return  ResponseData.error("物料不足");
+        }
         // 1.创建出库任务
         WmsWarehouseTaskOut taskOut = new WmsWarehouseTaskOut();
         String messageId = RandomStringUtils.randomNumeric(12);

@@ -2,6 +2,7 @@ package cn.stylefeng.guns.modular.warehousemanage.service.impl;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageFactory;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
 import cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseTurnoverBindMapper;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
@@ -91,7 +92,7 @@ public class WmsWarehouseTurnoverBindServiceImpl extends ServiceImpl<WmsWarehous
     }
 
     @Override
-    public LayuiPageInfo findTurnoverMsg(WmsWarehouseTurnoverBindParam param) {
+    public LayuiPageInfo findTurnoverMsg(WmsMaterialTypeResult param) {
         Page pageContext = getPageContext();
         IPage page = this.baseMapper.findTurnoverMsg(pageContext, param);
         return LayuiPageFactory.createPageInfo(page);

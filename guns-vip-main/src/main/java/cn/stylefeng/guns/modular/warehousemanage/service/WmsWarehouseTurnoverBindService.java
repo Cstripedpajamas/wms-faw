@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.modular.warehousemanage.service;
 
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
+import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
@@ -75,7 +76,7 @@ public interface WmsWarehouseTurnoverBindService extends IService<WmsWarehouseTu
 
     WmsWarehouseTurnoverBindResult findBySKU(String materialSku);
 
-    LayuiPageInfo findTurnoverMsg(WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam);
+    LayuiPageInfo findTurnoverMsg(WmsMaterialTypeResult wmsWarehouseTurnoverBindParam);
 
     WmsWarehouseTurnoverBindResult findByMaterial(String materialSerialNumber);
 }

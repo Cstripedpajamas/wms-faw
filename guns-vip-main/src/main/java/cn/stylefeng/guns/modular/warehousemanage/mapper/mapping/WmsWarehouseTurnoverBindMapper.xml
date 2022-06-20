@@ -259,9 +259,10 @@
 
     <select id="findTurnoverMsg" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam">
         select
-          *
+       *
         from wms_warehouse_turnover_bind AS wmb
-        LEFT JOIN wms_warehouse_turnover AS wm ON wmb.`turnover_id` = wm.`id` AND wm.`turnover_state` = '0'
+        LEFT JOIN wms_warehouse_turnover AS wm ON wmb.`turnover_id` = wm.`id` where  wm.`turnover_state` = '0'
+        and wm.turnover_type = #{paramCondition.turnoverType} and wm.turnover_mouth_quantity = #{paramCondition.turnoverLatticeType}
     </select>
 
     <select id="findByMaterial" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="string">
