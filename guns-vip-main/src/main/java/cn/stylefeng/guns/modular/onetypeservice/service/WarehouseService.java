@@ -877,7 +877,12 @@ public class WarehouseService {
     }
 
     public ResponseData printSupplement(ApplyType applyType) {
+
         List<WmsPrintInfo> infos = wmsPrintInfoService.list(new QueryWrapper<WmsPrintInfo>().eq("print_type", applyType.getType()).eq("print_stu", StateEnum.ZERO.getState()));
+        System.out.println(infos.size());
+        if (infos.size() == 0){
+            return ResponseData.error("暂无需要打印的数据");
+        }
         for (WmsPrintInfo info : infos) {
             p.resetZpl();//清除
             printFawTroue(p, info.getMaterialSerialNumber()); // 工具条码

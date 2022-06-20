@@ -53,8 +53,8 @@ public class PrintInfoController {
     @GetMapping("/generator-code-print")
     @ApiOperation(value = "5.采购打印生成条码")
     public ResponseData generatorCodePrint(){
-        warehouseService.printSupplement(ApplyType.B);
-        return ResponseData.success();
+        return warehouseService.printSupplement(ApplyType.B);
+
     }
 
     @GetMapping("/use-tool")
