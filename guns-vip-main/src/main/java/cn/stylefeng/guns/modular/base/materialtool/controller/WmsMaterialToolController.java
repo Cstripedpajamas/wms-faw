@@ -1,5 +1,6 @@
 package cn.stylefeng.guns.modular.base.materialtool.controller;
 
+import cn.stylefeng.guns.base.consts.ConstantsContext;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
@@ -7,6 +8,7 @@ import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
 import cn.stylefeng.guns.modular.base.materialtool.service.WmsMaterialToolService;
 import cn.stylefeng.guns.modular.utils.JudgeUtil;
+import cn.stylefeng.guns.sys.modular.consts.service.SysConfigService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -33,6 +35,8 @@ public class WmsMaterialToolController extends BaseController {
 
     @Autowired
     private WmsMaterialToolService wmsMaterialToolService;
+    @Autowired
+    private SysConfigService sysConfigService;
 
     /**
      * 跳转到主页面
@@ -86,17 +90,36 @@ public class WmsMaterialToolController extends BaseController {
     @RequestMapping("/addItem")
     @ResponseBody
     public ResponseData addItem(WmsMaterialToolParam wmsMaterialToolParam) {
-        // 查看编号是否存在
-        QueryWrapper<WmsMaterialTool> wrapper = new QueryWrapper<>();
-        wrapper.eq("material_serial_number", wmsMaterialToolParam.getMaterialSerialNumber());
-        WmsMaterialTool one = wmsMaterialToolService.getOne(wrapper);
-        // 如果不为空，则说明编号存在
-        if (!Objects.isNull(one)) {
-            return ResponseData.error("物料编号已存在！");
-        }
+//        // 查看编号是否存在(手动添加的时候)
+//        QueryWrapper<WmsMaterialTool> wrapper = new QueryWrapper<>();
+//        wrapper.eq("material_serial_number", wmsMaterialToolParam.getMaterialSerialNumber());
+//        WmsMaterialTool one = wmsMaterialToolService.getOne(wrapper);
+//        // 如果不为空，则说明编号存在
+//        if (!Objects.isNull(one)) {
+//            return ResponseData.error("物料编号已存在！");
+//        }
 
+        String toolCard =  ConstantsContext.getToolCard();
+        String[] codes = addCodeNumber(toolCard, 1);
+        wmsMaterialToolParam.setMaterialSerialNumber(codes[0]);
         this.wmsMaterialToolService.add(wmsMaterialToolParam);
+        // 更新缓存
+        ConstantsContext.putConstant("TOOL_CARD",codes[codes.length -1]);
+
+        // 更新数据库
+        sysConfigService.updateByCode("TOOL_CARD",codes[codes.length -1]);
         return ResponseData.success();
+    }
+
+    public  String[] addCodeNumber(String startCode, int number){
+        String[] codes = new String[number];
+        String r = startCode.replace("R", "1"); // R0000001 -> 10000001
+        for (int i1 = 0; i1 < number; i1++) {
+            int i = Integer.parseInt(r) + i1 + 1 ;
+            String str = Integer.toString(i);
+            codes[i1] = "R"+ str.substring(1);
+        }
+        return codes;
     }
 
     /**

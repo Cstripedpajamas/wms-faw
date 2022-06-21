@@ -472,9 +472,9 @@ public class WarehouseService {
         Map<String, Object> map = new HashMap<>();
         map.put("OutfeedId", messageId); // 消息识别id
         map.put("Type", Byte.parseByte("3")); // 出仓类型
-        int turnoverType = Integer.parseInt(taskOut.getTurnoverType()) + 1 ;
+        int turnoverType = Integer.parseInt(Objects.equals("A",taskOut.getTurnoverType()) ? "0" :Objects.equals("B",taskOut.getTurnoverType())? "1" : "2") + 1 ;
         map.put("BoxType", ""+turnoverType); // 周转箱类型(A 小 B 中 C 大)  // 转换为 1 2 3
-        map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 0 ? 4 : 1); // 格口类型 1 单格口 4 多格口
+        map.put("LatticeType", Integer.parseInt(wmsWarehouseTaskOut.getTurnoverMouthQuality()) > 1 ? 4 : 1); // 格口类型 1 单格口 4 多格口
         map.put("Sku", "EmptyBox"); // 物料sku
         map.put("Batch", "1"); // 批次
         map.put("Qty", 1); // 数量
@@ -840,7 +840,7 @@ public class WarehouseService {
     /**
      * 字符串添加
      * */
-    public String[] addCodeNumber(String startCode, int number){
+    public  String[] addCodeNumber(String startCode, int number){
         String[] codes = new String[number];
         String r = startCode.replace("R", "1"); // R0000001 -> 10000001
         for (int i1 = 0; i1 < number; i1++) {
@@ -893,11 +893,10 @@ public class WarehouseService {
         return ResponseData.success();
     }
 
-    public LayuiPageInfo printMaterial(String materialTypeId) {
+    public LayuiPageInfo printMaterial(String materialTypeId,String barCode) {
         WmsMaterialToolParam wmsMaterialToolParam = new WmsMaterialToolParam();
-        if (!Objects.equals(materialTypeId, "") || !Objects.equals(materialTypeId, null)) {
-            wmsMaterialToolParam.setMaterialTypeId(materialTypeId);
-        }
+        wmsMaterialToolParam.setMaterialTypeId(materialTypeId);
+        wmsMaterialToolParam.setMaterialSerialNumber(barCode);
         return wmsMaterialToolService.findPageBySpec(wmsMaterialToolParam);
     }
 

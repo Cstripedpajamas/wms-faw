@@ -61,8 +61,11 @@ layui.use(['table', 'admin', 'ax', 'func','laydate'], function () {
         queryData['materialType'] = $("#materialType").val();
         queryData['materialName'] = $("#materialName").val();
         queryData['goodsType'] = $("#goodsType").val();
-        queryData['startTime'] = $("#time").val().split("~")[0].trim();
-        queryData['endTime'] = $("#time").val().split("~")[1].trim();
+       let time =  $("#time").val();
+        if (time !=null && time != ""){
+            queryData['startTime'] = $("#time").val().split("~")[0].trim();
+            queryData['endTime'] = $("#time").val().split("~")[1].trim();
+        }
         table.reload(WmsWarehouseTurnoverBind.tableId, {
             where: queryData, page: {curr: 1}
         });

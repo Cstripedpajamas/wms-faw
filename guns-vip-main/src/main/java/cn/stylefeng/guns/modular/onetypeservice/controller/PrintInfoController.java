@@ -85,8 +85,8 @@ public class PrintInfoController {
 
     @GetMapping("/print-material")
     @ApiOperation(value = "10.获取所有工具信息")
-    public LayuiPageInfo printMaterial(@ApiParam(value = "物料类型Id") @RequestParam String materialTypeId){
-        return warehouseService.printMaterial(materialTypeId);
+    public LayuiPageInfo printMaterial(@ApiParam(value = "物料类型Id") @RequestParam String materialTypeId,@RequestParam String barCode){
+        return warehouseService.printMaterial(materialTypeId,barCode);
     }
 
 
