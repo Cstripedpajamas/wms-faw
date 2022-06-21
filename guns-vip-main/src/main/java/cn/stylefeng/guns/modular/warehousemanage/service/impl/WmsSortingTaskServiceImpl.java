@@ -73,6 +73,11 @@ public class WmsSortingTaskServiceImpl extends ServiceImpl<WmsSortingTaskMapper,
         return this.baseMapper.findRecentTask();
     }
 
+    @Override
+    public WmsSortingTaskResult findById(String orderId) {
+        return this.baseMapper.findById(orderId);
+    }
+
     private Serializable getKey(WmsSortingTaskParam param){
         return param.getId();
     }

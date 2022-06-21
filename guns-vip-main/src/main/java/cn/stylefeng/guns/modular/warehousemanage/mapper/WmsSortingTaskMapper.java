@@ -56,4 +56,6 @@ public interface WmsSortingTaskMapper extends BaseMapper<WmsSortingTask> {
     WmsSortingTaskResult findByTaskStateOne();
 
     List<WmsSortingTaskResult> findRecentTask();
+
+    WmsSortingTaskResult findById(@Param("orderId") String orderId);
 }

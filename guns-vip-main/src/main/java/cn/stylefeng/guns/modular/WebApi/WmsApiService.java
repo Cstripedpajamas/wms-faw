@@ -18,10 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static cn.stylefeng.guns.modular.utils.HttpUtil.restTemplate;
 
@@ -43,8 +40,8 @@ public class WmsApiService {
     private static final  String startScrapUrl ="http://192.168.26.31:9092/Plc";
 
     // 机械手 发送波次分拣任务
-//    private static final String runBatchUrl = "http://192.168.8.102:7002/api/cmd/run_batch";
-    private static final String runBatchUrl = "http://127.0.0.1:8099/faw/WmsApi/Receive/test";
+    private static final String runBatchUrl = "http://192.168.26.50:7002/api/cmd/run_batch";
+//    private static final String runBatchUrl = "http://127.0.0.1:8099/faw/WmsApi/Receive/test";
 
     // 立库 基本url地址
     private static final  String requestWarehouse = "http://192.168.26.96:8092/PHS";
@@ -151,7 +148,9 @@ public class WmsApiService {
         }else {
             map.put("pick_tote",0); // 料箱类型(0.大 1.小)
         }
-        map.put("dimension",splitByS(wmsPackinfo.getPackgeSpecif()));
+        double[] doubles = splitByS(wmsPackinfo.getPackgeSpecif());
+        System.out.println(Arrays.toString(doubles));
+        map.put("dimension",doubles);
         System.out.println(map);
         ResponseEntity<String> exchange = restTemplate().postForEntity(runBatchUrl, toJSON(map), String.class);
         String resultRemote = exchange.getBody();

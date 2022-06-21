@@ -194,4 +194,11 @@
         order by id desc  limit 5
     </select>
 
+    <select id="findById" parameterType="string" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task
+        where id = #{orderId}
+    </select>
+
 </mapper>
