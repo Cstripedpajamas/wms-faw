@@ -39,6 +39,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsPurchaseOrderInfo.search = function () {
         var queryData = {};
+        queryData['purNumber'] = $("#purNumber").val();
         queryData['materialName'] = $("#materialName").val();
         table.reload(WmsPurchaseOrderInfo.tableId, {
             where: queryData, page: {curr: 1}

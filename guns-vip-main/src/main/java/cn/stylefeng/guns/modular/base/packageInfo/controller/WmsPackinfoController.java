@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/wmsPackinfo")
 public class WmsPackinfoController extends BaseController {
 
-    private String PREFIX = "/modular/base//packageInfo";
+    private String PREFIX = "/modular/base/packageInfo";
 
     @Autowired
     private WmsPackinfoService wmsPackinfoService;

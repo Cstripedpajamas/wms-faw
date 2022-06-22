@@ -32,7 +32,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsPackinfo.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['packgeName'] = $("#packgeName").val();
         table.reload(WmsPackinfo.tableId, {
             where: queryData, page: {curr: 1}
         });

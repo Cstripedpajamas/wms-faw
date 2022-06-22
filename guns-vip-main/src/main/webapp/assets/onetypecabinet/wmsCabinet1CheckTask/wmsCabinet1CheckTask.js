@@ -36,6 +36,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
     WmsCabinet1CheckTask.search = function () {
         var queryData = {};
         queryData['taskNumber'] = $("#condition").val();
+        queryData['operator'] = $("#operator").val();
         table.reload(WmsCabinet1CheckTask.tableId, {
             where: queryData, page: {curr: 1}
         });

@@ -45,7 +45,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsIntelligentCabinet1Stock.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['materialName'] = $("#materialName").val();
         table.reload(WmsIntelligentCabinet1Stock.tableId, {
             where: queryData, page: {curr: 1}
         });

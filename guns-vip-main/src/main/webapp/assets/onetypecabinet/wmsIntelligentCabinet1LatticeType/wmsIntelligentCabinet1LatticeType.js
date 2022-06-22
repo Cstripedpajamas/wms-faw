@@ -34,7 +34,7 @@ layui.use(['table', 'admin', 'ax', 'func','form'], function () {
      */
     WmsIntelligentCabinet1LatticeType.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['typeName'] = $("#typeName").val();
         table.reload(WmsIntelligentCabinet1LatticeType.tableId, {
             where: queryData, page: {curr: 1}
         });
