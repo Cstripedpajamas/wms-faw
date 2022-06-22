@@ -148,22 +148,20 @@ public class WmsApiReceive {
     public cn.hutool.json.JSONObject TaskcbackInfo(@RequestBody String param) {
         JSONObject jsonObject = JSON.parseObject(param);
         // 任务标识(order_id), 任务状态(task_status:OK / ER), 任务数量(task_number), 实际分拣数量(sorting_number), 异常代码(er_code: ER1/ER2)
-        System.out.println(jsonObject.get("order_id"));
-        System.out.println(jsonObject.get("task_status"));
-        System.out.println(jsonObject.get("task_number"));
-        System.out.println(jsonObject.get("sorting_number"));
-        System.out.println(jsonObject.get("er_code"));
         RedirectConfController.sort_1 = String.valueOf(jsonObject.get("order_id"));
         RedirectConfController.sort_2 = String.valueOf(jsonObject.get("task_status"));
         RedirectConfController.sort_3 = String.valueOf(jsonObject.get("task_number"));
         RedirectConfController.sort_4_1 = String.valueOf(jsonObject.get("sorting_number"));
         RedirectConfController.sort_4_2 = String.valueOf(jsonObject.get("er_code"));
 
+
         String orderId = String.valueOf(jsonObject.get("order_id"));
         String taskNumber = String.valueOf(jsonObject.get("task_number"));
         String sortingNumber = String.valueOf(jsonObject.get("sorting_number"));
+        String er_code = String.valueOf(jsonObject.get("er_code"));
 
-//        if (taskNumber.split("-")[0].equals("tool")) {
+
+        if (taskNumber.split("-")[0].equals("tool")) {
             WmsSortingTaskResult wmsSortTask = wmsSortingTaskService.findById(orderId);
             String barcode = wmsSortTask.getBarcode();
             WmsWarehouseTurnoverResult turnover = wmsWarehouseTurnoverService.findByBarCode(barcode);
@@ -204,12 +202,12 @@ public class WmsApiReceive {
             // 执行入库
             warehouseService.sendTask(messageId);
 
-//        }
-//        if (taskNumber.split("-")[0].equals("spare")) {
-//            // todo 备件补货 自动分拣业务
-//
-//
-//        }
+        }
+        if (taskNumber.split("-")[0].equals("spare")) {
+            // todo 备件补货 自动分拣业务
+
+
+        }
 
         cn.hutool.json.JSONObject object = new cn.hutool.json.JSONObject();
         object.put("Code", 200);

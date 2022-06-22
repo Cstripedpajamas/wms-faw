@@ -229,7 +229,7 @@ public class WarehouseService {
 
         // 判断出库类型(A 工具领用 B 补货出库 C 出库)
         if (stock != null) {
-            if (ApplyType.A.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 工具领用出库
+            if (ApplyType.A.getType().equals(wmsWarehouseTaskOut.getOrderType())) {// 大件物料领用出库
                 //根据任务编号获取领用任务
                 WmsWarehouseToolUseTask wmsWarehouseToolUseTask = wmsWarehouseToolUseTaskService.getOne(new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", wmsWarehouseTaskOut.getTaskMg()));
                 if (StateEnum.ONE.getState().equals(wmsWarehouseToolUseTask.getSortingType())) {// 1.判断分拣任务是否自动分拣
@@ -326,6 +326,8 @@ public class WarehouseService {
 
     // 领用 - 创建机器人分拣任务
     private WmsSortingTask createSortingTask(WmsWarehouseTurnover turnover, WmsWarehouseToolUseTask wmsWarehouseToolUseTask, WmsWarehouseTurnoverBindResult wmsWarehouseTurnoverBind) {
+
+        // todo 判断领用数量和分拣数量
         WmsSortingTask wmsSortingTask = new WmsSortingTask();
         String taskNumber = "tool-" + wmsWarehouseToolUseTask.getTaskNumber() + "-" + RandomStringUtils.randomNumeric(12);
         wmsSortingTask.setTaskNumber(taskNumber);// 任务编号
