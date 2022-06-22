@@ -39,7 +39,7 @@ layui.use(['table', 'admin', 'ax', 'func','upload'], function () {
      */
     WmsWarehouseStock.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['locaState'] = $("#condition").val();
         table.reload(WmsWarehouseStock.tableId, {
             where: queryData, page: {curr: 1}
         });

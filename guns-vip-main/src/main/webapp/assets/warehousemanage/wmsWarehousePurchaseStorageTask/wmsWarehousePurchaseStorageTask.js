@@ -38,7 +38,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsWarehousePurchaseStorageTask.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['taskNumber'] = $("#condition").val();
         table.reload(WmsWarehousePurchaseStorageTask.tableId, {
             where: queryData, page: {curr: 1}
         });

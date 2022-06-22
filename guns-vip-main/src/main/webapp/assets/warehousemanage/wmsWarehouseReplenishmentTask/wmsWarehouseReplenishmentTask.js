@@ -45,7 +45,7 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
      */
     WmsWarehouseReplenishmentTask.search = function () {
         var queryData = {};
-        queryData['condition'] = $("#condition").val();
+        queryData['materialName'] = $("#condition").val();
         table.reload(WmsWarehouseReplenishmentTask.tableId, {
             where: queryData, page: {curr: 1}
         });

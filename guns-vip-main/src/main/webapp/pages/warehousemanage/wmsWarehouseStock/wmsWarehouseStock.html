@@ -12,7 +12,11 @@
                     <div class="layui-form toolbar">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <input id="condition" class="layui-input" type="text" placeholder="名称"/>
+                               <select id="condition" >
+                                   <option value="">选择状态</option>
+                                   <option value="1">有货</option>
+                                   <option value="0">无货</option>
+                               </select>
                             </div>
                             <div class="layui-inline">
                                 <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
@@ -20,7 +24,7 @@
                                 <button id="btnExp" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导出</button>
                                 <button id="btnTemplate" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>模板下载</button>
                                 <button id="btnExp2" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>导入</button>
-                                <button id="btnExp3" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>库存同步</button>
+<!--                                <button id="btnExp3" class="layui-btn icon-btn"><i class="layui-icon">&#xe67d;</i>库存同步</button>-->
                             </div>
                         </div>
                     </div>
