@@ -8,19 +8,15 @@ import cn.stylefeng.guns.modular.onetypecabinet.service.WmsIntelligentCabinet1St
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnover;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTaskInParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverResult;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTaskInService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTurnoverBindService;
-import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTurnoverService;
+import cn.stylefeng.guns.modular.warehousemanage.service.*;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSON;
@@ -66,6 +62,12 @@ public class WmsApiReceive {
 
     @Autowired
     private WarehouseService warehouseService;
+
+    @Autowired
+    private WmsWarehouseToolUseTaskService wmsWarehouseToolUseTaskService;
+
+    @Autowired
+    private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
 
     // 认证人员信息 工具柜界面
     @RequestMapping(value = "/StaffId", method = RequestMethod.POST)
@@ -161,53 +163,65 @@ public class WmsApiReceive {
         String er_code = String.valueOf(jsonObject.get("er_code"));
 
 
+        WmsSortingTaskResult wmsSortTask = wmsSortingTaskService.findById(orderId);
+        String barcode = wmsSortTask.getBarcode();
+        WmsWarehouseTurnoverResult turnover = wmsWarehouseTurnoverService.findByBarCode(barcode);
+        WmsWarehouseTurnoverBindParam param1 = new WmsWarehouseTurnoverBindParam();
+        param1.setTurnoverId(turnover.getId().toString());
+        WmsWarehouseTurnoverBindResult turnoverBind = wmsWarehouseTurnoverBindService.findByTurnoverId(param1);
+
+        int sortNumber = Integer.parseInt(sortingNumber); // 分拣数量
+        int total = Integer.parseInt(turnoverBind.getMNumber()); // 周转箱绑定的数量
+
+        if (sortNumber == total) {
+            // 更新周转箱信息为空闲
+            WmsWarehouseTurnoverParam wmsWarehouseTurnoverParam = new WmsWarehouseTurnoverParam();
+            turnover.setTurnoverState("0");
+            ToolUtil.copyProperties(turnover, wmsWarehouseTurnoverParam);
+            wmsWarehouseTurnoverService.update(wmsWarehouseTurnoverParam);
+
+            // 更新周转箱绑定信息
+            updateTurnoverBind(turnoverBind);
+        } else {
+            // 更新周转箱绑定的数量
+            int rem = total - sortNumber;
+            turnoverBind.setMNumber("" + rem);
+            WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
+            ToolUtil.copyProperties(turnoverBind, wmsWarehouseTurnoverBindParam);
+            wmsWarehouseTurnoverBindService.update(wmsWarehouseTurnoverBindParam);
+        }
+
+        // 更新分拣任务状态为已完成
+        wmsSortTask.setTaskState("3");
+        WmsSortingTaskParam wmsSortingTaskParam = new WmsSortingTaskParam();
+        ToolUtil.copyProperties(wmsSortTask, wmsSortingTaskParam);
+        wmsSortingTaskService.update(wmsSortingTaskParam);
+
+        String useTaskNumber = taskNumber.split("-")[1];
+
+        // 更新
         if (taskNumber.split("-")[0].equals("tool")) {
-            WmsSortingTaskResult wmsSortTask = wmsSortingTaskService.findById(orderId);
-            String barcode = wmsSortTask.getBarcode();
-            WmsWarehouseTurnoverResult turnover = wmsWarehouseTurnoverService.findByBarCode(barcode);
-            WmsWarehouseTurnoverBindParam param1 = new WmsWarehouseTurnoverBindParam();
-            param1.setTurnoverId(turnover.getId().toString());
-            WmsWarehouseTurnoverBindResult turnoverBind = wmsWarehouseTurnoverBindService.findByTurnoverId(param1);
 
-            int i = Integer.parseInt(sortingNumber); // 分拣数量
-            int i1 = Integer.parseInt(turnoverBind.getMNumber()); // 周转箱绑定的数量
-
-            if (i == i1) {
-                // 更新周转箱信息为空闲
-                WmsWarehouseTurnoverParam wmsWarehouseTurnoverParam = new WmsWarehouseTurnoverParam();
-                turnover.setTurnoverState("0");
-                ToolUtil.copyProperties(turnover, wmsWarehouseTurnoverParam);
-                wmsWarehouseTurnoverService.update(wmsWarehouseTurnoverParam);
-
-                // 更新周转箱绑定信息
-                updateTurnoverBind(turnoverBind);
-            } else {
-                // 更新周转箱绑定的数量
-                int rem = i1 - i;
-                turnoverBind.setMNumber("" + rem);
-                WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
-                ToolUtil.copyProperties(turnoverBind, wmsWarehouseTurnoverBindParam);
-                wmsWarehouseTurnoverBindService.update(wmsWarehouseTurnoverBindParam);
-            }
-
-            // 更新分拣任务状态为已完成
-            wmsSortTask.setTaskState("3");
-            WmsSortingTaskParam wmsSortingTaskParam = new WmsSortingTaskParam();
-            ToolUtil.copyProperties(wmsSortTask,wmsSortingTaskParam);
-            wmsSortingTaskService.update(wmsSortingTaskParam);
-
-            // 创建入库任务
-          String messageId = createInTask(turnover,turnoverBind);
-
-            // 执行入库
-            warehouseService.sendTask(messageId);
-
+            wmsWarehouseToolUseTaskService.updateByTaskNumber(useTaskNumber);
         }
         if (taskNumber.split("-")[0].equals("spare")) {
-            // todo 备件补货 自动分拣业务
 
-
+            WmsWarehouseReplenishmentTaskResult byTask = wmsWarehouseReplenishmentTaskService.findByTaskNumber(useTaskNumber);
+            final WmsWarehouseReplenishmentTaskParam params = new WmsWarehouseReplenishmentTaskParam();
+            byTask.setTaskState("3");
+            byTask.setSortingStatus("1");
+            byTask.setSortingType("1");
+            byTask.setSortingNum(sortingNumber);
+            ToolUtil.copyProperties(byTask, param);
+            wmsWarehouseReplenishmentTaskService.update(params);
         }
+
+        // 创建入库任务
+        String messageId = createInTask(turnover, turnoverBind);
+
+        // 执行入库
+        warehouseService.sendTask(messageId);
+
 
         cn.hutool.json.JSONObject object = new cn.hutool.json.JSONObject();
         object.put("Code", 200);
@@ -222,13 +236,11 @@ public class WmsApiReceive {
         wmsWarehouseTaskIn.setMessageId(messageId);
         wmsWarehouseTaskIn.setOrderType("B");
         String turnoverState = turnover.getTurnoverState();
-        if (Objects.equals("0",turnoverState)){
+        if (Objects.equals("0", turnoverState)) {
             wmsWarehouseTaskIn.setGoodsType("C");
-        }
-        else if (Objects.equals("1",turnoverBind.getGoodsType())){
+        } else if (Objects.equals("1", turnoverBind.getGoodsType())) {
             wmsWarehouseTaskIn.setGoodsType("A");
-        }
-        else {
+        } else {
             wmsWarehouseTaskIn.setGoodsType("B");
         }
 
@@ -262,7 +274,7 @@ public class WmsApiReceive {
         turnoverBind.setMNumber("");
         turnoverBind.setLatticeState("0");
         turnoverBind.setCreateTime(new Date());
-        ToolUtil.copyProperties(turnoverBind,wmsWarehouseTurnoverBindParam);
+        ToolUtil.copyProperties(turnoverBind, wmsWarehouseTurnoverBindParam);
         wmsWarehouseTurnoverBindService.update(wmsWarehouseTurnoverBindParam);
 
 

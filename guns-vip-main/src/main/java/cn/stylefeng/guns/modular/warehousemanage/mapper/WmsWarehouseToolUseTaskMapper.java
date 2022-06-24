@@ -59,4 +59,5 @@ public interface WmsWarehouseToolUseTaskMapper extends BaseMapper<WmsWarehouseTo
      */
     List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(@Param("paramCondition") WmsWarehouseToolUseTaskParam paramCondition);
 
+    void updateByTaskNumber(@Param("toolUseTaskNumber")String toolUseTaskNumber);
 }

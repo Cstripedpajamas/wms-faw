@@ -3,6 +3,9 @@ package cn.stylefeng.guns.modular.sparePartsManagement.requestMsg;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
+import cn.stylefeng.guns.modular.base.intelligentcabinet2conf.entity.WmsIntelligentCabinet2Conf;
+import cn.stylefeng.guns.modular.base.intelligentcabinet2conf.model.result.WmsIntelligentCabinet2ConfResult;
+import cn.stylefeng.guns.modular.base.intelligentcabinet2conf.service.WmsIntelligentCabinet2ConfService;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.materialspareparts.model.params.WmsMaterialSparePartsParam;
@@ -28,7 +31,9 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.res
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.service.WmsCabinet2StockService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Turnover.service.WmsCabinet2TurnoverService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResultP;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.service.WmsCabinet2TurnoverBindService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.entity.WmsCabinet2UseTask;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params.WmsCabinet2UseTaskParam;
@@ -40,6 +45,10 @@ import cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.service.Wm
 import cn.stylefeng.guns.modular.statistics.errorrecordinfo.model.params.WmsErrorRecordInfoParam;
 import cn.stylefeng.guns.modular.statistics.errorrecordinfo.service.WmsErrorRecordInfoService;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseReplenishmentTask;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseReplenishmentTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseReplenishmentTaskService;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTurnoverBindService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
@@ -96,6 +105,15 @@ public class RequestMsg extends BaseController {
     private WmsCabinet2CheckTaskService wmsCabinet2CheckTaskService;
     @Autowired
     private WmsCheckDifferenceRecordInfoService wmsCheckDifferenceRecordInfoService;
+
+    @Autowired
+    private WmsIntelligentCabinet2ConfService wmsIntelligentCabinet2ConfService;
+
+    @Autowired
+    private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
+
+    @Autowired
+    private WmsWarehouseTurnoverBindService wmsWarehouseTurnoverBindService;
 
     // 盘点任务编号
     public static String inventoryTaskNumber = "";
@@ -216,7 +234,54 @@ public class RequestMsg extends BaseController {
     @PostMapping(value = "/finishCargo")
     @ApiOperation(value = "取货完成")
     public ResponseData finishCargo(@RequestBody String msg) {
+        String runningId = TaskThread._runningId;
         TaskThread.isQuHuoCargoFinish = true;
+
+        //判断是否需要创建备件补货任务
+        WmsCabinet2UseTaskResult byId = wmsCabinet2UseTaskService.findById(runningId);
+        String materialSku = byId.getMaterialSku();
+
+        // 阀值
+        WmsIntelligentCabinet2ConfResult result = wmsIntelligentCabinet2ConfService.findBySku(materialSku);
+        if (result != null) {
+
+            int replenishmentThreshold = Integer.parseInt(result.getReplenishmentThreshold());
+
+            // 库存
+            List<WmsCabinet2TurnoverBindResultP> total = wmsCabinet2TurnoverBindService.findBySku(materialSku);
+            int reduce = total.stream().mapToInt(WmsCabinet2TurnoverBindResultP::getMNumber).boxed().reduce(0, Integer::sum);
+
+            if (replenishmentThreshold > reduce) {
+
+                // 阀值减去库存,等于补货数量
+                int number = replenishmentThreshold - reduce;
+                // 创建立库备件补货任务
+                WmsWarehouseReplenishmentTask taskParam = new WmsWarehouseReplenishmentTask();
+                SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmm");
+                String format1 = format.format(new Date());
+                taskParam.setTaskNumber("BJ" + format1);
+                taskParam.setMaterialTypeId(byId.getUseMaterialTypeId());
+                taskParam.setMaterialId(byId.getUseMaterialId());
+                taskParam.setMaterialSku(materialSku);
+                taskParam.setMaterialName(byId.getMaterialName());
+
+                // 批次 查询库内的所有批次,统计数量,并选择一个批次
+                BatchEnt batchEnt = wmsWarehouseTurnoverBindService.findBatch(materialSku, number);
+
+                if (batchEnt != null) {
+                    // todo 如何通知
+                    return ResponseData.error("立库库存不足");
+                } else {
+                    taskParam.setmBatch(batchEnt.getMBatch());
+                    taskParam.setmUnit(batchEnt.getMUnit());
+                }
+                taskParam.setmNumber("" + number);
+                taskParam.setTaskState("0");
+                wmsWarehouseReplenishmentTaskService.save(taskParam);
+
+            }
+        }
+
         return ResponseData.success();
     }
 
@@ -335,7 +400,7 @@ public class RequestMsg extends BaseController {
     // 创建补货任务
     @ResponseBody
     @RequestMapping("/createRepairTask")
-    @ApiOperation(value = "备品备件补货任务")
+    @ApiOperation(value = "II类柜备品备件补货任务")
     public ResponseData createRepairTask(WmsCabinet2ReplenishmentTaskParam wms) {
 
         if (!TaskThread.isLogin) {
@@ -406,7 +471,7 @@ public class RequestMsg extends BaseController {
                     TaskThread.wsr = nullStock;
                     return ResponseData.success("空周转箱入库中~");
                 } else {
-                    return ResponseData.error("当前无法进行入库~"+inbound.getMessage());
+                    return ResponseData.error("当前无法进行入库~" + inbound.getMessage());
                 }
             } else {
                 return ResponseData.error("暂无空库位");
@@ -538,7 +603,7 @@ public class RequestMsg extends BaseController {
         // 判断 是否可以出库
         Map<String, Object> map = new HashMap<>();
         map.put("OrderId", wms.getId().toString());
-       String turnoverNumber = wmsCabinet2TurnoverService.findTurnoverNumber(wms.getTurnoverId());
+        String turnoverNumber = wmsCabinet2TurnoverService.findTurnoverNumber(wms.getTurnoverId());
         map.put("HUNumber", turnoverNumber);
         map.put("LocationId", wms.getLocaNumber());
         TaskThread._runningId = wms.getId().toString(); // 任务id
@@ -579,7 +644,7 @@ public class RequestMsg extends BaseController {
             Map<String, Object> map = new HashMap<>();
             map.put("OrderId", wms.getId().toString());
             String turnoverNumber = wmsCabinet2TurnoverService.findTurnoverNumber(wms.getTurnoverId());
-            map.put("HUNumber",turnoverNumber);
+            map.put("HUNumber", turnoverNumber);
             map.put("LocationId", wms.getLocaNumber());
             // todo 跳过入库判断
             Declension inbound = wmsApiService.Inbound(map);
@@ -588,7 +653,7 @@ public class RequestMsg extends BaseController {
                 wmsCabinet2CheckTaskService.updateStateById(wms.getId().toString(), "3");
                 return ResponseData.success();
             }
-            return ResponseData.error("当前无法进行入库~"+inbound.getMessage());
+            return ResponseData.error("当前无法进行入库~" + inbound.getMessage());
         }
         return ResponseData.error("没有足够的空库位了~");
     }
@@ -701,8 +766,8 @@ public class RequestMsg extends BaseController {
                 return ResponseData.success(byId.getTaskState());
             }
             if (TaskThread.taskType == 3) { // 盘点
-             WmsCabinet2CheckTaskResult wms = wmsCabinet2CheckTaskService.findById(TaskThread._runningId);
-             return ResponseData.success(wms.getTaskState());
+                WmsCabinet2CheckTaskResult wms = wmsCabinet2CheckTaskService.findById(TaskThread._runningId);
+                return ResponseData.success(wms.getTaskState());
             }
         }
         return ResponseData.error("无执行的任务");

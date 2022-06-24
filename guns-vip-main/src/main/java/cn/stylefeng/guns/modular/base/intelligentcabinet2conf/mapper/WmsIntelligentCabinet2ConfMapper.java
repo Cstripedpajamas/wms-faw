@@ -52,4 +52,5 @@ public interface WmsIntelligentCabinet2ConfMapper extends BaseMapper<WmsIntellig
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsIntelligentCabinet2ConfParam paramCondition);
 
+    WmsIntelligentCabinet2ConfResult findBySku(@Param("materialSku")String materialSku);
 }

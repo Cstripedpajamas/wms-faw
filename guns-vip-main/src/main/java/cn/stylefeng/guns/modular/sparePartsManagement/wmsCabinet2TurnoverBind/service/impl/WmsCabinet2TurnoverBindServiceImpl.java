@@ -7,6 +7,7 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.en
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.mapper.WmsCabinet2TurnoverBindMapper;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResultP;
 import  cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.service.WmsCabinet2TurnoverBindService;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -87,6 +88,11 @@ public class WmsCabinet2TurnoverBindServiceImpl extends ServiceImpl<WmsCabinet2T
     @Override
     public WmsCabinet2TurnoverBindResult findByTurnId2(String turnoverID) {
         return this.baseMapper.WmsCabinet2TurnoverBindResult(turnoverID);
+    }
+
+    @Override
+    public List<WmsCabinet2TurnoverBindResultP> findBySku(String materialSku) {
+        return this.baseMapper.findBySku(materialSku);
     }
 
     private Serializable getKey(WmsCabinet2TurnoverBindParam param){

@@ -68,6 +68,11 @@ public class WmsWarehouseToolUseTaskServiceImpl extends ServiceImpl<WmsWarehouse
         return this.baseMapper.findByTaskStateOfOperator(param);
     }
 
+    @Override
+    public void updateByTaskNumber(String toolUseTaskNumber) {
+        this.baseMapper.updateByTaskNumber(toolUseTaskNumber);
+    }
+
     private Serializable getKey(WmsWarehouseToolUseTaskParam param){
         return param.getId();
     }

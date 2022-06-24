@@ -71,4 +71,5 @@ public interface WmsWarehouseToolUseTaskService extends IService<WmsWarehouseToo
      */
     List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(WmsWarehouseToolUseTaskParam param);
 
+    void updateByTaskNumber(String toolUseTaskNumber);
 }

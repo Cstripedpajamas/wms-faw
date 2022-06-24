@@ -157,4 +157,10 @@
         </if>
     </select>
 
+    <select id="findBySku" parameterType="string" resultType="cn.stylefeng.guns.modular.base.intelligentcabinet2conf.model.result.WmsIntelligentCabinet2ConfResult">
+        select
+        <include refid="Base_Column_List"/>
+        from  wms_intelligent_cabinet2_conf where material_sku = #{materialSku}
+    </select>
+
 </mapper>

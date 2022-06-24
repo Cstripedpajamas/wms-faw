@@ -4,6 +4,7 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Turnover.model.
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.entity.WmsCabinet2TurnoverBind;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResultP;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -63,4 +64,6 @@ public interface WmsCabinet2TurnoverBindMapper extends BaseMapper<WmsCabinet2Tur
     void updateNumber(@Param("turnoverID")String turnoverID,@Param("number")String number);
 
     WmsCabinet2TurnoverBindResult WmsCabinet2TurnoverBindResult(@Param("turnoverID")String turnoverID);
+
+    List<WmsCabinet2TurnoverBindResultP> findBySku(@Param("materialSku")String materialSku);
 }

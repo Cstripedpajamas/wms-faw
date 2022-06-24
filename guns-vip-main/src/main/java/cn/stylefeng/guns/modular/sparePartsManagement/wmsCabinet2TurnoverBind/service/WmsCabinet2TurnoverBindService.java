@@ -5,6 +5,7 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Turnover.model.
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.entity.WmsCabinet2TurnoverBind;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params.WmsCabinet2TurnoverBindParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResultP;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -76,4 +77,6 @@ public interface WmsCabinet2TurnoverBindService extends IService<WmsCabinet2Turn
     void updateNumber(String turnId,String number);
 
     WmsCabinet2TurnoverBindResult findByTurnId2(String s);
+
+    List<WmsCabinet2TurnoverBindResultP> findBySku(String materialSku);
 }

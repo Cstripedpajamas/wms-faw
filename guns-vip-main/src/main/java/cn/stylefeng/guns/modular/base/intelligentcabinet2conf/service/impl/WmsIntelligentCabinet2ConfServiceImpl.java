@@ -63,6 +63,11 @@ public class WmsIntelligentCabinet2ConfServiceImpl extends ServiceImpl<WmsIntell
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsIntelligentCabinet2ConfResult findBySku(String materialSku) {
+        return this.baseMapper.findBySku(materialSku);
+    }
+
     private Serializable getKey(WmsIntelligentCabinet2ConfParam param) {
         return param.getId();
     }

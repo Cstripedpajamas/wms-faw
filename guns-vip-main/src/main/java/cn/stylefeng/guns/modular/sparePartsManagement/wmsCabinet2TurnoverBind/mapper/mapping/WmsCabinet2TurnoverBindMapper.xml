@@ -218,4 +218,12 @@
          where w.id = #{turnoverID}
     </select>
 
+    <select id="findBySku" parameterType="string" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResultP">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        wms_cabinet2_turnover_bind
+        where material_sku = #{materialSku}
+    </select>
+
 </mapper>

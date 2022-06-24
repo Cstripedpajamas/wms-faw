@@ -268,4 +268,13 @@
     <select id="findByMaterial" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult" parameterType="string">
         select * from wms_warehouse_turnover_bind where 1=1 and  material_serial_number like CONCAT('%',#{materialSerialNumber},'%')
     </select>
+
+    <select id="findBatch" resultType="cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt">
+        SELECT
+        m_batch AS mBatch,
+        SUM(m_number) AS total,
+        m_unit AS mUnit
+        FROM `wms_warehouse_turnover_bind`
+        WHERE material_sku = #{materialSku} GROUP BY m_batch HAVING total &gt;= #{number}  LIMIT 1
+    </select>
 </mapper>

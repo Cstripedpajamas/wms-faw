@@ -3,6 +3,7 @@ package cn.stylefeng.guns.modular.warehousemanage.service.impl;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageFactory;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
 import cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseTurnoverBindMapper;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
@@ -101,6 +102,11 @@ public class WmsWarehouseTurnoverBindServiceImpl extends ServiceImpl<WmsWarehous
     @Override
     public WmsWarehouseTurnoverBindResult findByMaterial(String materialSerialNumber) {
         return this.baseMapper.findByMaterial(materialSerialNumber);
+    }
+
+    @Override
+    public BatchEnt findBatch(String materialSku, int number) {
+        return this.baseMapper.findBatch(materialSku,number);
     }
 
     private Serializable getKey(WmsWarehouseTurnoverBindParam param){

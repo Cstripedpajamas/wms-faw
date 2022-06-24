@@ -291,4 +291,8 @@
         from wms_warehouse_tool_use_task where (task_state  = '0'  or task_state  = '1' or task_state  = '2' )  and operator = #{paramCondition.operator}
     </select>
 
+    <update id="updateByTaskNumber" parameterType="string">
+        update wms_warehouse_tool_use_task set sorting_status = '1',task_state = '3' where task_number = #{toolUseTaskNumber}
+    </update>
+
 </mapper>
