@@ -4,6 +4,7 @@ import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import cn.stylefeng.guns.modular.WebApi.Entity.runBatch;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
@@ -56,6 +57,8 @@ public class RedirectConfController extends BaseController {
 
     @Autowired
     private WmsPackinfoService wmsPackinfoService;
+
+    private static String lightColor = "default";
 
 
     /**
@@ -572,6 +575,37 @@ public class RedirectConfController extends BaseController {
         }
         return ResponseData.success();
     }
+
+    @RequestMapping("/alarmMsg")
+    @ResponseBody
+    public ResponseData alarmMsg(String tag) {
+        Map<String,String> params = new HashMap<>();
+        params.put("State","1");
+        params.put("Color",tag);
+        params.put("Second","15");
+        lightColor = tag;
+        System.out.println(params.toString());
+        Declension declension = WmsApiService.sendAlarmMessage(params);
+        return ResponseData.success();
+    }
+
+    @RequestMapping("/reset")
+    @ResponseBody
+    public ResponseData reset() {
+        if (lightColor.equals("default")){
+            return ResponseData.error("灯未亮,无需复位");
+        }
+        Map<String,String> params = new HashMap<>();
+        params.put("State","0");
+        params.put("Color",lightColor);
+        params.put("Second","1");
+
+        System.out.println(params.toString());
+        Declension declension = WmsApiService.sendAlarmMessage(params);
+        return ResponseData.success();
+    }
+
+
 }
 
 

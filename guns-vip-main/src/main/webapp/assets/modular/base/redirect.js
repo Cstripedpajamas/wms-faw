@@ -76,6 +76,61 @@ layui.use(['form', 'admin', 'ax'], function () {
         })
     });
 
+    // 绿灯报警
+    $("#success").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/alarmMsg?"+"tag="+ "green",
+            success: function (data) {
+                if (data.code === 200) {
+                    Feng.success("下发成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    })
+
+    // 黄灯报警
+    $("#warning").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/alarmMsg?"+"tag="+ "yellow",
+            success: function (data) {
+                if (data.code === 200) {
+                    Feng.success("下发成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    })
+
+    // 红灯报警
+    $("#error").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/alarmMsg?"+"tag="+ "red",
+            success: function (data) {
+                if (data.code === 200) {
+                    Feng.success("下发成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    })
+
+    $("#reset").click(function () {
+        $.ajax({
+            url: Feng.ctxPath + "/redirect/reset",
+            success: function (data) {
+                if (data.code === 200) {
+                    Feng.success("复位成功");
+                } else {
+                    Feng.error(data.message);
+                }
+            }
+        })
+    })
+
     // 关闭格口
     $("#LockClosed").click(function () {
         var LocationId = $("#LocationId").val();

@@ -51,8 +51,11 @@ public class WmsApiService {
     private static final  String outWarehouseReq = requestWarehouse+"/Outbound";
 
 
-    // 打开格口url
+    // 打开格口url openUrl
     private static final String openDeclension = openUrl+"/OpenLock";
+
+    //发送报警信息
+    private static final String sendAlarmMessage = openUrl+"/OpenOrCloseLight";
 
     // 备品备件-出库 startScrapUrl
     private static final String outboundDeclension = startScrapUrl+"/Outbound";
@@ -97,6 +100,17 @@ public class WmsApiService {
     // 打开格口
     public static Declension openDeclension(Object obj){
         ResponseEntity<String> exchange  = restTemplate().postForEntity(openDeclension, toJSON(obj), String.class);
+        String resultRemote = exchange.getBody();
+        Declension declension = JSONObject.parseObject(resultRemote, Declension.class);
+        return declension;
+    }
+
+    /**
+     *  工具类柜接口
+     *  发送报警信息
+     * */
+    public static Declension sendAlarmMessage(Object obj){
+        ResponseEntity<String> exchange  = restTemplate().postForEntity(sendAlarmMessage, toJSON(obj), String.class);
         String resultRemote = exchange.getBody();
         Declension declension = JSONObject.parseObject(resultRemote, Declension.class);
         return declension;
