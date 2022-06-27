@@ -53,4 +53,5 @@ public interface WmsCabinet1RenewTaskMapper extends BaseMapper<WmsCabinet1RenewT
      */
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsCabinet1RenewTaskParam paramCondition);
 
+    WmsCabinet1RenewTaskResult findByTaskNumber(@Param("taskNumber")String taskNumber);
 }

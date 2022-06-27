@@ -285,4 +285,11 @@
             </if>
     </select>
 
+    <select id="findByTaskNumber" parameterType="string" resultType="cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsCabinet1RenewTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_cabinet1_renew_task where 1 = 1
+        and task_number = #{taskNumber}
+    </select>
+
 </mapper>

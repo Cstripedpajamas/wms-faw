@@ -602,6 +602,7 @@ public class RedirectConfController extends BaseController {
 
         System.out.println(params.toString());
         Declension declension = WmsApiService.sendAlarmMessage(params);
+        log.info("I  turn message:{}",declension);
         return ResponseData.success();
     }
 

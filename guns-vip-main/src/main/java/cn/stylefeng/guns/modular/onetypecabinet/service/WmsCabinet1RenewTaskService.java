@@ -66,4 +66,5 @@ public interface WmsCabinet1RenewTaskService extends IService<WmsCabinet1RenewTa
      */
      LayuiPageInfo findPageBySpec(WmsCabinet1RenewTaskParam param);
 
+    WmsCabinet1RenewTaskResult findByTaskNumber(String taskNumber);
 }

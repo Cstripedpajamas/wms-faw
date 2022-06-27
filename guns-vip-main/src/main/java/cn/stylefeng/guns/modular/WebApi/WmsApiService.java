@@ -35,6 +35,7 @@ public class WmsApiService {
 
     // 一类柜格口接口地址
     private static final  String openUrl ="http://192.168.26.30:9091/Lock";
+    private static final  String openUrl2 ="http://192.168.26.30:9091/ColumnLight";
 
     // 二类柜接口地址
     private static final  String startScrapUrl ="http://192.168.26.31:9092/Plc";
@@ -51,11 +52,11 @@ public class WmsApiService {
     private static final  String outWarehouseReq = requestWarehouse+"/Outbound";
 
 
-    // 打开格口url openUrl
+    // 打开格口url 真实: openUrl 测试: basicUrl
     private static final String openDeclension = openUrl+"/OpenLock";
 
     //发送报警信息
-    private static final String sendAlarmMessage = openUrl+"/OpenOrCloseLight";
+    private static final String sendAlarmMessage = openUrl2+"/OpenOrCloseLight";
 
     // 备品备件-出库 startScrapUrl
     private static final String outboundDeclension = startScrapUrl+"/Outbound";

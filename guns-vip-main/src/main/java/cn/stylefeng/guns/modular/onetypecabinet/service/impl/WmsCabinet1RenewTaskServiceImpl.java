@@ -63,6 +63,11 @@ public class WmsCabinet1RenewTaskServiceImpl extends ServiceImpl<WmsCabinet1Rene
         return LayuiPageFactory.createPageInfo(page);
     }
 
+    @Override
+    public WmsCabinet1RenewTaskResult findByTaskNumber(String taskNumber) {
+        return this.baseMapper.findByTaskNumber(taskNumber);
+    }
+
     private Serializable getKey(WmsCabinet1RenewTaskParam param){
         return param.getId();
     }
