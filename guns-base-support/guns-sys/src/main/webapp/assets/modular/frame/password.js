@@ -25,7 +25,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
 
     // 添加表单验证方法
     form.verify({
-        psw: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
+        psw: [/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!#$%^&*.])[\da-zA-Z!#$%^&*.]{8,16}$/g, '密码必须8到16位，且必须包含大小写字母和特殊符号(!#$%^&*.)'],
         repsw: function (t) {
             if (t !== $('#form-psw input[name=newPassword]').val()) {
                 return '两次密码输入不一致';

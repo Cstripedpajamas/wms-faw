@@ -99,4 +99,9 @@
         left join sys_dept dept on user.dept_id = dept.dept_id
     </select>
 
+    <update id="updateByAccount" parameterType="string">
+        update wms_user set u_pwd = #{newPassword}
+        where serial_number = #{account}
+    </update>
+
 </mapper>

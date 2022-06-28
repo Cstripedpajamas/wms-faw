@@ -14,6 +14,7 @@ import cn.stylefeng.guns.sys.core.util.SaltUtil;
 import cn.stylefeng.guns.sys.modular.system.entity.User;
 import cn.stylefeng.guns.sys.modular.system.entity.UserPos;
 import cn.stylefeng.guns.sys.modular.system.factory.UserFactory;
+import cn.stylefeng.guns.sys.modular.system.mapper.MenuMapper;
 import cn.stylefeng.guns.sys.modular.system.mapper.UserMapper;
 import cn.stylefeng.guns.sys.modular.system.model.UserDto;
 import cn.stylefeng.roses.core.datascope.DataScope;
@@ -28,6 +29,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,6 +51,9 @@ public class UserService extends ServiceImpl<UserMapper, User> {
 
     @Autowired
     private UserPosService userPosService;
+
+    @Resource
+    private UserMapper userMapper;
 
     /**
      * 添加用戶
@@ -144,6 +149,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
      * @author fengshuonan
      * @Date 2018/12/24 22:45
      */
+    @Transactional(rollbackFor = Exception.class)
     public void changePwd(String oldPassword, String newPassword) {
         Long userId = LoginContextHolder.getContext().getUser().getId();
         User user = this.getById(userId);
@@ -157,7 +163,11 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         } else {
             throw new ServiceException(BizExceptionEnum.OLD_PWD_NOT_RIGHT);
         }
+
+        String account = user.getAccount();
+        userMapper.updateByAccount(account,newPassword);
     }
+
 
     /**
      * 根据条件查询用户列表

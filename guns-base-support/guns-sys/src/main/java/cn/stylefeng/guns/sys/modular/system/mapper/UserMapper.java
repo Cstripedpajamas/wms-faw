@@ -62,4 +62,6 @@ public interface UserMapper extends BaseMapper<User> {
      * 选择办理人
      */
     IPage<Map<String, Object>> listUserAndRoleExpectAdmin(Page page);
+
+    void updateByAccount(@Param("account")String account, @Param("newPassword")String newPassword);
 }
