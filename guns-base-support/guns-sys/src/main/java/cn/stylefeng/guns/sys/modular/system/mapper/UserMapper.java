@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.sys.modular.system.mapper;
 
 import cn.stylefeng.guns.sys.modular.system.entity.User;
+import cn.stylefeng.guns.sys.modular.system.model.UserDto;
 import cn.stylefeng.roses.core.datascope.DataScope;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -66,4 +67,6 @@ public interface UserMapper extends BaseMapper<User> {
     void updateByAccount(@Param("account")String account, @Param("newPassword")String newPassword);
 
     void delByAccount(@Param("account")String account);
+
+    void addWmsUser(@Param("newUser") UserDto newUser, @Param("password")String password);
 }

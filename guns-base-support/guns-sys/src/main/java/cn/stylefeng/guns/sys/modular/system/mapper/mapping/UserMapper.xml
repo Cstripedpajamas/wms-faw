@@ -108,4 +108,9 @@
         delete from wms_user where serial_number = #{account}
     </delete>
 
+    <insert id="addWmsUser">
+        insert into wms_user (serial_number,user_name,job_responsibility,id_info,user_type,data_state,u_pwd)
+        values(#{newUser.account},#{newUser.name},#{newUser.position},#{newUser.account},#{newUser.avatar},#{newUser.status},#{password})
+    </insert>
+
 </mapper>

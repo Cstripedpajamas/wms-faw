@@ -11,10 +11,12 @@ import cn.stylefeng.guns.sys.core.constant.state.ManagerStatus;
 import cn.stylefeng.guns.sys.core.exception.enums.BizExceptionEnum;
 import cn.stylefeng.guns.sys.core.util.DefaultImages;
 import cn.stylefeng.guns.sys.core.util.SaltUtil;
+import cn.stylefeng.guns.sys.modular.system.entity.Position;
 import cn.stylefeng.guns.sys.modular.system.entity.User;
 import cn.stylefeng.guns.sys.modular.system.entity.UserPos;
 import cn.stylefeng.guns.sys.modular.system.factory.UserFactory;
 import cn.stylefeng.guns.sys.modular.system.mapper.MenuMapper;
+import cn.stylefeng.guns.sys.modular.system.mapper.PositionMapper;
 import cn.stylefeng.guns.sys.modular.system.mapper.UserMapper;
 import cn.stylefeng.guns.sys.modular.system.model.UserDto;
 import cn.stylefeng.roses.core.datascope.DataScope;
@@ -55,6 +57,9 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Resource
     private UserMapper userMapper;
 
+    @Resource
+    private PositionMapper positionMapper;
+
     /**
      * 添加用戶
      *
@@ -79,6 +84,21 @@ public class UserService extends ServiceImpl<UserMapper, User> {
 
         //添加职位关联
         addPosition(user.getPosition(), newUser.getUserId());
+
+        //添加到wms_user表中 更新user的岗位职能和人员类型
+        Position position = positionMapper.selectById(user.getPosition());
+        user.setPosition(position.getName());
+        user.setStatus("0");
+        String code = position.getCode();
+        if (code.startsWith("WX")){
+            user.setAvatar("B");
+        } else if (code.startsWith("JF")){
+            user.setAvatar("A");
+        }
+        else {
+            user.setAvatar("C");
+        }
+        userMapper.addWmsUser(user,user.getPassword());
     }
 
     /**
