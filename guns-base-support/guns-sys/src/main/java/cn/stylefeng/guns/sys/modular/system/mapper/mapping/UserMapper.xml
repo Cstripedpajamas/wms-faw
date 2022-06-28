@@ -112,5 +112,8 @@
         insert into wms_user (serial_number,user_name,job_responsibility,id_info,user_type,data_state,u_pwd)
         values(#{newUser.account},#{newUser.name},#{newUser.position},#{newUser.account},#{newUser.avatar},#{newUser.status},#{password})
     </insert>
-
+<update id="updateWmsUser">
+    update wms_user set user_name = #{updateUser.name},job_responsibility = #{updateUser.position},user_type = #{updateUser.avatar}
+    where serial_number = #{updateUser.account}
+</update>
 </mapper>

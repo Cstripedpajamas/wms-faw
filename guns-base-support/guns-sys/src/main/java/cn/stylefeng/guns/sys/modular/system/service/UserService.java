@@ -85,20 +85,8 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         //添加职位关联
         addPosition(user.getPosition(), newUser.getUserId());
 
-        //添加到wms_user表中 更新user的岗位职能和人员类型
-        Position position = positionMapper.selectById(user.getPosition());
-        user.setPosition(position.getName());
-        user.setStatus("0");
-        String code = position.getCode();
-        if (code.startsWith("WX")){
-            user.setAvatar("B");
-        } else if (code.startsWith("JF")){
-            user.setAvatar("A");
-        }
-        else {
-            user.setAvatar("C");
-        }
-        userMapper.addWmsUser(user,user.getPassword());
+        UserDto usr = getUpdateUser(user);
+        userMapper.addWmsUser(usr,usr.getPassword());
     }
 
     /**
@@ -128,6 +116,32 @@ public class UserService extends ServiceImpl<UserMapper, User> {
 
         //添加职位关联
         addPosition(user.getPosition(), user.getUserId());
+
+        //更新 wms_user表
+        ToolUtil.copyProperties(oldUser,user);
+        UserDto updateUser = getUpdateUser(user);
+        userMapper.updateWmsUser(updateUser);
+
+    }
+
+    /**
+     * 获取 用户数据
+     * */
+
+    public UserDto  getUpdateUser(UserDto user){
+        // 通过用户编号 更新wms_user 表 姓名和职务
+        Position position = positionMapper.selectById(user.getPosition());
+        user.setPosition(position.getName());
+        String code = position.getCode();
+        if (code.startsWith("WX")){
+            user.setAvatar("B");
+        } else if (code.startsWith("JF")){
+            user.setAvatar("A");
+        }
+        else {
+            user.setAvatar("C");
+        }
+        return  user;
     }
 
     /**

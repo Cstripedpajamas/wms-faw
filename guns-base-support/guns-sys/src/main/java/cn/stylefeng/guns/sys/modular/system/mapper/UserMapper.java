@@ -69,4 +69,6 @@ public interface UserMapper extends BaseMapper<User> {
     void delByAccount(@Param("account")String account);
 
     void addWmsUser(@Param("newUser") UserDto newUser, @Param("password")String password);
+
+    void updateWmsUser(@Param("updateUser")UserDto updateUser);
 }
