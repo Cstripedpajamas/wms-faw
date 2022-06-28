@@ -28,6 +28,7 @@ import cn.stylefeng.guns.sys.core.exception.enums.BizExceptionEnum;
 import cn.stylefeng.guns.sys.core.log.LogObjectHolder;
 import cn.stylefeng.guns.sys.core.util.SaltUtil;
 import cn.stylefeng.guns.sys.modular.system.entity.User;
+import cn.stylefeng.guns.sys.modular.system.mapper.UserMapper;
 import cn.stylefeng.guns.sys.modular.system.model.UserDto;
 import cn.stylefeng.guns.sys.modular.system.service.UserService;
 import cn.stylefeng.guns.sys.modular.system.warpper.UserWrapper;
@@ -46,6 +47,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.util.Map;
 import java.util.UUID;
@@ -64,6 +66,8 @@ public class UserMgrController extends BaseController {
 
     @Autowired
     private UserService userService;
+    @Resource
+    private UserMapper userMapper;
 
     /**
      * 跳转到查看管理员列表的页面
@@ -271,6 +275,7 @@ public class UserMgrController extends BaseController {
         user.setSalt(SaltUtil.getRandomSalt());
         user.setPassword(SaltUtil.md5Encrypt(ConstantsContext.getDefaultPassword(), user.getSalt()));
         this.userService.updateById(user);
+        this.userMapper.updateByAccount(user.getAccount(),ConstantsContext.getDefaultPassword());
         return SUCCESS_TIP;
     }
 

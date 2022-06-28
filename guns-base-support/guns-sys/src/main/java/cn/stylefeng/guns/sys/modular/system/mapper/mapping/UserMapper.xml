@@ -104,4 +104,8 @@
         where serial_number = #{account}
     </update>
 
+    <delete id="delByAccount" parameterType="string">
+        delete from wms_user where serial_number = #{account}
+    </delete>
+
 </mapper>

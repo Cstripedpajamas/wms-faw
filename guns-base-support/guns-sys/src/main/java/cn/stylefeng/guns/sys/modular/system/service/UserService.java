@@ -131,6 +131,10 @@ public class UserService extends ServiceImpl<UserMapper, User> {
 
         //删除职位关联
         userPosService.remove(new QueryWrapper<UserPos>().eq("user_id", userId));
+
+        // 删除 wms_user表数据
+        User user = this.getById(userId);
+        userMapper.delByAccount(user.getAccount());
     }
 
     /**
