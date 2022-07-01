@@ -572,7 +572,7 @@ public class TaskThread {
                 allMsg.put("putInNumber", updatedMsg.getSNumber()); // 推送投入数量
                 WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
             }
-            if (Integer.parseInt(updatedMsg.getSNumber()) == ScrapNumber) {
+            if (Integer.parseInt(updatedMsg.getSNumber()) >= ScrapNumber) {
                 //1.更新任务的状态(投入完成)
                 taskThread.wmsCabinet2UseTaskService.updateState(TaskId, "2");
 

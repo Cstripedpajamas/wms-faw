@@ -178,7 +178,8 @@ public class RequestMsg extends BaseController {
     public LayuiPageInfo IIReceiveTask(WmsCabinet2UseTaskParam wmsCabinet2UseTaskParam) {
         // 领用任务
         WmsCabinet2UseTaskParam wmsUserParam = new WmsCabinet2UseTaskParam();
-        wmsUserParam.setOperator(TaskThread.userId);
+        final WmsUser user = wmsUserService.getById(TaskThread.userId);
+        wmsUserParam.setOperator(user.getSerialNumber());
         return wmsCabinet2UseTaskService.findPageBySpec2(wmsUserParam);
     }
 
