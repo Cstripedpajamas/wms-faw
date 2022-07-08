@@ -260,7 +260,7 @@ public class WarehouseService {
 
                     //自动分拣 创建分拣任务
                     WmsWarehouseTurnoverBindParam params = new WmsWarehouseTurnoverBindParam();
-                    ToolUtil.copyProperties(turnoverResult, params);
+                    params.setTurnoverId(turnover.getId().toString());
                     WmsWarehouseTurnoverBindResult turnoverBindInfo = wmsWarehouseTurnoverBindService.findByTurnoverId(params);
                     WmsSortingTask sortingTask = createSpareSortingTask(turnover, turnoverBindInfo, wmsWarehouseReplenishmentTask);
 

@@ -161,6 +161,10 @@ public class WmsApiReceive {
         String taskNumber = String.valueOf(jsonObject.get("task_number"));
         String sortingNumber = String.valueOf(jsonObject.get("sorting_number"));
         String er_code = String.valueOf(jsonObject.get("er_code"));
+        String task_status = String.valueOf(jsonObject.get("task_status"));
+        if (task_status.equals("ER")) {
+            log.info("分拣出错,错误信息为:{}", er_code);
+        }
 
 
         WmsSortingTaskResult wmsSortTask = wmsSortingTaskService.findById(orderId);
@@ -196,23 +200,23 @@ public class WmsApiReceive {
         WmsSortingTaskParam wmsSortingTaskParam = new WmsSortingTaskParam();
         ToolUtil.copyProperties(wmsSortTask, wmsSortingTaskParam);
         wmsSortingTaskService.update(wmsSortingTaskParam);
-
-        String useTaskNumber = taskNumber.split("-")[1];
+        String taskNumber1 = wmsSortTask.getTaskNumber();
+        String useTaskNumber = taskNumber1.split("-")[1];
 
         // 更新
-        if (taskNumber.split("-")[0].equals("tool")) {
+        if (taskNumber1.split("-")[0].equals("tool")) {
 
             wmsWarehouseToolUseTaskService.updateByTaskNumber(useTaskNumber);
         }
-        if (taskNumber.split("-")[0].equals("spare")) {
-
+        if (taskNumber1.split("-")[0].equals("spare")) {
+            // todo
             WmsWarehouseReplenishmentTaskResult byTask = wmsWarehouseReplenishmentTaskService.findByTaskNumber(useTaskNumber);
             final WmsWarehouseReplenishmentTaskParam params = new WmsWarehouseReplenishmentTaskParam();
             byTask.setTaskState("3");
             byTask.setSortingStatus("1");
             byTask.setSortingType("1");
             byTask.setSortingNum(sortingNumber);
-            ToolUtil.copyProperties(byTask, param);
+            ToolUtil.copyProperties(byTask, params);
             wmsWarehouseReplenishmentTaskService.update(params);
         }
 
@@ -261,7 +265,7 @@ public class WmsApiReceive {
 
     private void updateTurnoverBind(WmsWarehouseTurnoverBindResult turnoverBind) {
         WmsWarehouseTurnoverBindParam wmsWarehouseTurnoverBindParam = new WmsWarehouseTurnoverBindParam();
-        turnoverBind.setLatticeCode("");
+        turnoverBind.setLatticeCode(turnoverBind.getLatticeCode());
         turnoverBind.setGoodsType("");
         turnoverBind.setMaterialTypeId("");
         turnoverBind.setMaterialId("");

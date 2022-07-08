@@ -450,9 +450,9 @@ public class PDAWareController {
         WmsWarehouseTaskOut out = new WmsWarehouseTaskOut();
         String messageId = RandomStringUtils.randomNumeric(12);
         out.setMessageId(messageId);// 消息识别ID
-        out.setOrderType(ApplyType.A.getType());// 订单类别(A工具领用 B补货出库 C出库)
+        out.setOrderType(ApplyType.B.getType());// 订单类别(A工具领用 B补货出库 C出库)
         out.setTaskMg(task.getTaskNumber());// 任务信息
-        out.setGoodsType(ApplyType.A.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
+        out.setGoodsType(ApplyType.B.getType());// 出仓货物类型（A工具/B备品备件/C空周转箱）
         out.setMaterialTypeId(task.getMaterialTypeId());// 物料类型ID
         out.setMaterialSku(wmsMaterialType.getMaterialSku());// 物料SKU
         out.setMaterialType(wmsMaterialType.getMaterialType());// 物料类型
