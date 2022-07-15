@@ -134,13 +134,13 @@ public class FawApiServiceImpl implements FawApiService {
                 wmsUserParam.setJobResponsibility(fawUserInfoParam.getJobs());
                 wmsUserParam.setIdInfo(fawUserInfoParam.getEmployeeId());
                 wmsUserParam.setUserType("C");
-                wmsUserParam.setUPwd("123456");
+                wmsUserParam.setUPwd("Rz123456!");
                 wmsUserParam.setDataState("0");
                 wmsUserParams.add(wmsUserParam);
 
                 UserDto user=new UserDto();
                 user.setAccount(fawUserInfoParam.getEmployeeId());
-                user.setPassword("123456");
+                user.setPassword("Rz123456!");
                 user.setName(fawUserInfoParam.getEmployeeName());
                 user.setBirthday(new Date());
                 user.setSex("M");
