@@ -1,0 +1,129 @@
+@layout("/common/_form.html",{js:["/assets/modular/base/tool_applyNumber.js"]}){
+
+<form class="layui-form" id="toolApplyNumber" lay-filter="toolApply">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">申请信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input id="operator" name="operator" type="hidden"/>
+                    <input id="materialId" name="materialId" type="hidden"/>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">物料号<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="materialsku" name="materialsku" placeholder="请输入物料号"
+                                   type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">规格型号</label>
+                        <div class="layui-input-block">
+                            <input id="sizes" name="sizes" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">物料类型</label>
+                        <div class="layui-input-block">
+                            <input id="materialtype" name="materialtype" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">批次号</label>
+                        <div class="layui-input-block">
+                            <input id="dibatch" name="dibatch" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">描述</label>
+                        <div class="layui-input-block">
+                            <input id="materialname" name="materialname" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">库存数量</label>
+                        <div class="layui-input-block">
+                            <input id="totalMNumber" name="totalMNumber" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">已领用数量</label>
+                        <div class="layui-input-block">
+                            <input id="useTotalMNumber" name="useTotalMNumber" placeholder="" type="text"
+                                   class="layui-input" readonly/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请数量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mNumber" name="mNumber" placeholder="请输入数量"
+                                   type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">记账日期<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="postDate" name="postDate" placeholder="记账日期"
+                                   type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">项目成本单号</label>
+                        <div class="layui-input-block">
+                            <input id="ordNO" name="ordNO" placeholder="项目成本单号"
+                                   type="text" class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12" id="mainAssetNoDiv" style="display: none">
+                        <label class="layui-form-label">固定资产编码<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mainAssetNo" name="mainAssetNo" placeholder="固定资产编码"
+                                   type="text" class="layui-input" lay-verify="required"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12" style="display: none">
+                        <label class="layui-form-label">是否结算<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="jieSan" name="jieSan" value="true" title="结算"
+                                   type="radio" />
+                            <input id="buJieSan" name="jieSan" value="false" title="不结算"
+                                   type="radio" checked/>
+                        </div>
+                    </div>
+<!--                    <div class="layui-inline layui-col-md12">-->
+<!--                        <label class="layui-form-label">成本中心<span style="color: red;">*</span></label>-->
+<!--                        <div class="layui-input-block">-->
+<!--                            <input id="costCenter" name="costCenter" placeholder="成本中心"-->
+<!--                                   type="text" class="layui-input" lay-verify="required" required/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="layui-inline layui-col-md12">-->
+<!--                        <label class="layui-form-label">产品编码</label>-->
+<!--                        <div class="layui-input-block">-->
+<!--                            <input id="busArea" name="busArea" placeholder="产品编码（业务范围）"-->
+<!--                                   type="text" class="layui-input"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请原因<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="processReason" name="processReason" placeholder="请输入申请原因"
+                                   type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button></button>
+    </div>
+
+</form>
+
+@}

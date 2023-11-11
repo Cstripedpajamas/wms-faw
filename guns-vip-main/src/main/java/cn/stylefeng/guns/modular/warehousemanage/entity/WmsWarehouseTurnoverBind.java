@@ -1,15 +1,11 @@
 package cn.stylefeng.guns.modular.warehousemanage.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -38,7 +34,6 @@ public class WmsWarehouseTurnoverBind implements Serializable {
     @ApiModelProperty(value = "周转箱信息ID")
     @TableField("turnover_id")
     private String turnoverId;
-
     /**
      * 格口编号
      */
@@ -77,21 +72,21 @@ public class WmsWarehouseTurnoverBind implements Serializable {
     /**
      * 物料名称
      */
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     @TableField("material_name")
     private String materialName;
 
     /**
      * 物料SKU
      */
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     @TableField("material_sku")
     private String materialSku;
 
     /**
      * 单位
      */
-    @ApiModelProperty(value = "单位")
+    @ApiModelProperty(value = "基本计量单位")
     @TableField("m_unit")
     private String mUnit;
 
@@ -108,6 +103,13 @@ public class WmsWarehouseTurnoverBind implements Serializable {
     @ApiModelProperty(value = "批次")
     @TableField("m_batch")
     private String mBatch;
+
+    /**
+     * 规格型号
+     */
+    @ApiModelProperty(value = "规格型号")
+    @TableField("sizes")
+    private String sizes;
 
     /**
      * 数量
@@ -160,6 +162,14 @@ public class WmsWarehouseTurnoverBind implements Serializable {
 
     public void setLatticeCode(String latticeCode) {
         this.latticeCode = latticeCode;
+    }
+
+    public String getSizes() {
+        return sizes;
+    }
+
+    public void setSizes(String sizes) {
+        this.sizes = sizes;
     }
 
     public String getGoodsType() {
@@ -255,6 +265,7 @@ public class WmsWarehouseTurnoverBind implements Serializable {
         return "WmsWarehouseTurnoverBind{" +
                 "id=" + id +
                 ", turnoverId='" + turnoverId + '\'' +
+                ", sizes='" + sizes + '\'' +
                 ", latticeCode='" + latticeCode + '\'' +
                 ", goodsType='" + goodsType + '\'' +
                 ", materialTypeId='" + materialTypeId + '\'' +

@@ -2,7 +2,6 @@ package cn.stylefeng.guns.modular.base.materialtool.controller;
 
 import cn.stylefeng.guns.base.consts.ConstantsContext;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
-import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.base.materialtool.model.params.WmsMaterialToolParam;
@@ -12,7 +11,6 @@ import cn.stylefeng.guns.sys.modular.consts.service.SysConfigService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -99,15 +97,17 @@ public class WmsMaterialToolController extends BaseController {
 //            return ResponseData.error("物料编号已存在！");
 //        }
 
-        String toolCard =  ConstantsContext.getToolCard();
-        String[] codes = addCodeNumber(toolCard, 1);
-        wmsMaterialToolParam.setMaterialSerialNumber(codes[0]);
+//        String toolCard =  ConstantsContext.getToolCard();
+//        String[] codes = addCodeNumber(toolCard, 1);
+//        wmsMaterialToolParam.setMaterialSerialNumber(codes[0]);
         this.wmsMaterialToolService.add(wmsMaterialToolParam);
         // 更新缓存
-        ConstantsContext.putConstant("TOOL_CARD",codes[codes.length -1]);
+//        ConstantsContext.putConstant("TOOL_CARD",codes[codes.length -1]);
+        ConstantsContext.putConstant("TOOL_CARD",wmsMaterialToolParam.getMaterialSerialNumber());
 
         // 更新数据库
-        sysConfigService.updateByCode("TOOL_CARD",codes[codes.length -1]);
+//        sysConfigService.updateByCode("TOOL_CARD",codes[codes.length -1]);
+        sysConfigService.updateByCode("TOOL_CARD",wmsMaterialToolParam.getMaterialSerialNumber());
         return ResponseData.success();
     }
 
@@ -132,13 +132,13 @@ public class WmsMaterialToolController extends BaseController {
     @ResponseBody
     public ResponseData editItem(WmsMaterialToolParam wmsMaterialToolParam) {
         // 查看编号是否存在
-        QueryWrapper<WmsMaterialTool> wrapper = new QueryWrapper<>();
-        wrapper.eq("material_serial_number", wmsMaterialToolParam.getMaterialSerialNumber());
-        WmsMaterialTool one = wmsMaterialToolService.getOne(wrapper);
-        // 如果不为空，则说明编号存在
-        if (!Objects.isNull(one) && !Objects.equals(one.getId(), wmsMaterialToolParam.getId())) {
-            return ResponseData.error("物料编号已存在！");
-        }
+//        QueryWrapper<WmsMaterialTool> wrapper = new QueryWrapper<>();
+//        wrapper.eq("material_serial_number", wmsMaterialToolParam.getMaterialSerialNumber());
+//        WmsMaterialTool one = wmsMaterialToolService.getOne(wrapper);
+//        // 如果不为空，则说明编号存在
+//        if (!Objects.isNull(one) && !Objects.equals(one.getId(), wmsMaterialToolParam.getId())) {
+//            return ResponseData.error("物料编号已存在！");
+//        }
         this.wmsMaterialToolService.update(wmsMaterialToolParam);
         return ResponseData.success();
     }
@@ -169,6 +169,8 @@ public class WmsMaterialToolController extends BaseController {
     @RequestMapping("/detail")
     @ResponseBody
     public ResponseData detail(WmsMaterialToolParam wmsMaterialToolParam) {
+        System.out.println("测试");
+        System.out.println(wmsMaterialToolParam);
         WmsMaterialTool detail = this.wmsMaterialToolService.getById(wmsMaterialToolParam.getId());
         return ResponseData.success(detail);
     }

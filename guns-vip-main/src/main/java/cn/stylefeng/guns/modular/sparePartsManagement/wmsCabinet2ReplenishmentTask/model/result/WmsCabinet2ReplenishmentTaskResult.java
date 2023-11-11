@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2ReplenishmentTask.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -20,7 +20,7 @@ public class WmsCabinet2ReplenishmentTaskResult implements Serializable {
 
 
     /**
-     * 记录ID
+     * 记录ID·
      */
     private Long id;
 
@@ -33,6 +33,21 @@ public class WmsCabinet2ReplenishmentTaskResult implements Serializable {
      * 物料类型ID
      */
     private String materialTypeId;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 物料描述
+     */
+    private String materialName;
+
+    /**
+     * 物料号
+     */
+    private String materialSku;
 
     /**
      * 物料信息ID
@@ -93,5 +108,28 @@ public class WmsCabinet2ReplenishmentTaskResult implements Serializable {
      * 更新时间
      */
     private Date updateTime;
+
+    /**
+     * 操作人名字
+     */
+    private String user_name;
+
+    /**
+     * 物料类型
+     */
+    private String material_type;
+
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 操作人员工号
+     */
+    private String serialNumber;
+    /**
+     * 操作人员姓名
+     */
+    private String userName;
 
 }

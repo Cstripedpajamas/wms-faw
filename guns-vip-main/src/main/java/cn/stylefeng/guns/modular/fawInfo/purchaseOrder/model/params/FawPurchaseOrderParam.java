@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -24,6 +24,11 @@ public class FawPurchaseOrderParam implements Serializable, BaseValidatingParam 
      * 记录ID
      */
     private Long id;
+
+    /**
+     * 规格
+     */
+    private String sizecoL;
 
     /**
      * 应用环境
@@ -209,11 +214,6 @@ public class FawPurchaseOrderParam implements Serializable, BaseValidatingParam 
      * 存储地点描述
      */
     private String storeLocationDes;
-
-    /**
-     * 规格
-     */
-    private String sizecoL;
 
     /**
      * 计量单位描述

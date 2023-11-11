@@ -3,9 +3,7 @@ package cn.stylefeng.guns.modular.base.user.mapper;
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
 import cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam;
 import cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult;
-import cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -29,6 +27,8 @@ public interface WmsUserMapper extends BaseMapper<WmsUser> {
      * @Date 2021-11-01
      */
     List<WmsUserResult> customList(@Param("paramCondition") WmsUserParam paramCondition);
+
+
 
     /**
      * 获取map列表
@@ -61,6 +61,18 @@ public interface WmsUserMapper extends BaseMapper<WmsUser> {
     WmsUserResult findUserIdInfo(@Param("staffId")String staffId);
 
     WmsUserResult findUserIdInfo2(@Param("staffId")String staffId);
+
+    /**
+     * 获取列表
+     *
+     * @author lhx
+     * @Date 2021-11-01
+     */
+    List<WmsUserResult> findListUserName(@Param("Selectitem") String item);
+
+    WmsUserResult findUserName(@Param("Selectname")String name);
+
+    WmsUserResult findSerialNumber(@Param("SerialNumber")String serialNumber);
 
     void insertListBatch(@Param("list")List<WmsUserParam> paramCondition);
 }

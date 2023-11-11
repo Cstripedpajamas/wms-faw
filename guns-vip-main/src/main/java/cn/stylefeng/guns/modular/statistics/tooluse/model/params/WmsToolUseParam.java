@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.statistics.tooluse.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -59,7 +59,44 @@ public class WmsToolUseParam implements Serializable, BaseValidatingParam {
      * 数据时间
      */
     private Date dataTime;
+    /**
+     * 姓名
+     */
+    private String userName;
+    /**
+     * 所属组织编码
+     */
+    private String workTeam;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
+
+
+
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+
+    /**
+     * 包装单位
+     */
+    private String mUnit;
+
+
+    /**
+     * 规格型号
+     */
+    private String Sizes;
+
+    /**
+     * 库存数量
+     */
+    private String stockCount;
     @Override
     public String checkParam() {
         return null;

@@ -20,10 +20,10 @@ public class SpareParts {
     @ApiModelProperty(value = "周转箱状态")
     private String turnoverState;
 
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     private String materialName;
 
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     private String materialSku;
 
     @ApiModelProperty(value = "批次")

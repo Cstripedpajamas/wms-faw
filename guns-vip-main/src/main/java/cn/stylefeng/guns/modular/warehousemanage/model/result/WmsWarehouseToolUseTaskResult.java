@@ -128,4 +128,39 @@ public class WmsWarehouseToolUseTaskResult implements Serializable {
      * 分拣任务 (机械手分拣ID)
      */
     private String sortingTask;
+
+    /**
+     * 数量
+     */
+    private String mNumber;
+
+    /**
+     * 拣选数量
+     */
+    private String sortingNum;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 规格型号
+     */
+    private String materialSizes;
+
+    /**
+     * 操作人名称
+     */
+    private String userName;
+
+    /**
+     * 所属组织
+     */
+    private String workTeam;
+
+    /**
+     * 周转箱编号
+     */
+    private String barCode;
 }

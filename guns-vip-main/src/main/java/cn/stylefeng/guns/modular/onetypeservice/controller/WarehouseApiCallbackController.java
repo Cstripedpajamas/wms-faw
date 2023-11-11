@@ -9,8 +9,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,9 +37,11 @@ public class WarehouseApiCallbackController {
         String messageId = jsonObject.getString("messageId");
         String turnoverNumber = jsonObject.getString("turnoverNumber");
         String status = jsonObject.getString("status");
+//        王盼宇增加接口字段，把拣选数量传过来
+        String qty = jsonObject.getString("qty");
         String errMsg = jsonObject.getString("errMsg");
         log.info("Delivery result:Process No:{},Barcode of turnover box:{},Outbound status:{},Abnormal information:{}",messageId,turnoverNumber,status,errMsg);
-        warehouseService.claimCallbackComplete(messageId,turnoverNumber);
+        warehouseService.claimCallbackComplete(messageId,turnoverNumber,qty);
         return ResponseData.success();
     }
 
@@ -56,6 +56,20 @@ public class WarehouseApiCallbackController {
         log.info("Warehousing result:Process No:{},Location information:{},Warehousing status:{},Abnormal information:{}",messageId,locaNumber,status,errMsg);
         warehouseService.claimInCallback(messageId,locaNumber);
          return ResponseData.success();
+    }
+
+    @PostMapping("/re-callback")
+    @ApiOperation(value = "移库完成")
+    public ResponseData claimInRellback(@RequestBody String str){
+        JSONObject jsonObject = JSONObject.parseObject(str);
+        String messageId = jsonObject.getString("messageId");
+        String orlocaNumber = jsonObject.getString("orlocaNumber");   //原来位置
+        String culocaNumber = jsonObject.getString("culocaNumber");       //现在位置
+        String contaioner= jsonObject.getString("contaioner");       //容器
+        String errMsg = jsonObject.getString("errMsg");
+        log.info("Warehousing result:Process No:{},OrLocation information:{},Warehousing culocaNumber:{},Warehousing contaioner,Abnormal information:{}",messageId,orlocaNumber,culocaNumber,contaioner,errMsg);
+        warehouseService.claimInRellback(messageId,orlocaNumber,culocaNumber,contaioner);
+        return ResponseData.success();
     }
 
     @GetMapping("/web-socket")

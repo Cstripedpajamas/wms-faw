@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -79,6 +79,47 @@ public class WmsWarehousePurchaseStorageTaskParam implements Serializable, BaseV
      * 已组盘数量
      */
     private String groupdQuantity;
+
+    /**
+     * 操作人姓名
+     */
+    private String userName;
+
+    /**
+     * 采购凭证行号
+     */
+    private String purdocItemno;
+
+    /**
+     * 描述
+     */
+    private String materialName;
+
+    /**
+     * 物料号
+     */
+    private String materialSku;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 规格
+     */
+    private String sizecol;
+
+    /**
+     * 数量
+     */
+    private String mNumber;
+
+
+    /**
+     * 接口调用Uid
+     */
+    private String uid;
 
 
     @Override

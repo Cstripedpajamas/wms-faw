@@ -1,11 +1,12 @@
 package cn.stylefeng.guns.modular.procedureManagement.wmsReturnApply.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -68,6 +69,12 @@ public class WmsReturnApply implements Serializable {
     @TableField("data_state")
     private String dataState;
 
+    /**
+     * 审批人
+     */
+    @TableField("approvedby")
+    private String approvedBy;
+
 
     public Long getId() {
         return id;
@@ -83,6 +90,14 @@ public class WmsReturnApply implements Serializable {
 
     public void setProcessNumber(String processNumber) {
         this.processNumber = processNumber;
+    }
+
+    public String getApprovedBy() {
+        return approvedBy;
+    }
+
+    public void setApprovedBy(String approvedBy) {
+        this.approvedBy = approvedBy;
     }
 
     public String getOperator() {

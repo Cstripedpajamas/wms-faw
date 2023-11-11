@@ -2,15 +2,10 @@ package cn.stylefeng.guns.modular.onetypeservice.controller;
 
 import cn.stylefeng.guns.modular.base.materialtool.entity.WmsMaterialTool;
 import cn.stylefeng.guns.modular.onetypeservice.service.OneTypeCabinetService;
-import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
-import com.alibaba.fastjson.JSONObject;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by li wen ya on 2021/11/10
@@ -45,6 +40,8 @@ public class OneTypeCabinetRepairGiveBackController {
     })
     public ResponseData queryTool(@ApiParam(value = "工具编号") @RequestParam String materialSerialNumber){
         WmsMaterialTool tool = oneTypeCabinetService.findToolByMaterialSerialNumber(materialSerialNumber);
+        System.out.println("----------------------------------");
+        System.out.println(materialSerialNumber);
         return ResponseData.success(tool);
     }
 
@@ -55,4 +52,9 @@ public class OneTypeCabinetRepairGiveBackController {
         return oneTypeCabinetService.confirmRepairGiveBack(taskNumber,materialSerialNumber);
     }
 
+    @GetMapping("/conform-no-task")
+    @ApiOperation(value = "维修归还流程：4.确认按钮调用")
+    public ResponseData conformNoTask(@ApiParam(value = "工具编号") @RequestParam String materialSerialNumber){
+        return oneTypeCabinetService.confirmRepairGiveBackNoTask(materialSerialNumber);
+    }
 }

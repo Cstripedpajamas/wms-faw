@@ -1,9 +1,15 @@
 package cn.stylefeng.guns.webservice;
 
-import cn.stylefeng.guns.config.AppConfig;
+import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
+import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
+import cn.stylefeng.guns.modular.base.purchaseorderCancel.model.params.WmsWarehousePurchaseorderCancelParam;
+import cn.stylefeng.guns.modular.base.purchaseorderCancel.service.WmsWarehousePurchaseorderCancelService;
+import cn.stylefeng.guns.modular.base.purchaseorderDelivery.model.params.WmsWarehousePurchaseorderDeliveryParam;
+import cn.stylefeng.guns.modular.base.purchaseorderDelivery.service.WmsWarehousePurchaseorderDeliveryService;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
 import cn.stylefeng.guns.modular.base.user.model.params.WmsUserParam;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
@@ -13,19 +19,22 @@ import cn.stylefeng.guns.modular.fawInfo.mtlInfo.service.FawMtlInfoService;
 import cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam;
 import cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.result.FawPurchaseOrderResult;
 import cn.stylefeng.guns.modular.fawInfo.purchaseOrder.service.FawPurchaseOrderService;
-import cn.stylefeng.guns.modular.fawInfo.userInfo.entity.FawUserInfo;
 import cn.stylefeng.guns.modular.fawInfo.userInfo.model.params.FawUserInfoParam;
 import cn.stylefeng.guns.modular.fawInfo.userInfo.model.result.FawUserInfoResult;
 import cn.stylefeng.guns.modular.fawInfo.userInfo.service.FawUserInfoService;
-import cn.stylefeng.guns.modular.statistics.tooluse.entity.WmsToolUse;
+import cn.stylefeng.guns.modular.fawPurchase0rder.model.params.FawmallPurchaseorderCancelParam;
+import cn.stylefeng.guns.modular.fawPurchase0rder.model.params.FawmallPurchaseorderDeliveryParam;
+import cn.stylefeng.guns.modular.fawPurchase0rder.model.result.FawmallPurchaseorderCancelResult;
+import cn.stylefeng.guns.modular.fawPurchase0rder.service.FawmallPurchaseorderCancelService;
+import cn.stylefeng.guns.modular.fawPurchase0rder.service.FawmallPurchaseorderDeliveryService;
 import cn.stylefeng.guns.modular.statistics.tooluse.model.params.WmsToolUseParam;
 import cn.stylefeng.guns.modular.statistics.tooluse.model.result.WmsToolUseResult;
 import cn.stylefeng.guns.modular.statistics.tooluse.service.WmsToolUseService;
 import cn.stylefeng.guns.sys.modular.system.model.UserDto;
 import cn.stylefeng.guns.sys.modular.system.service.UserService;
 import cn.stylefeng.guns.webservice.entity.*;
-import com.alibaba.fastjson.JSONArray;
-import com.baomidou.mybatisplus.extension.api.R;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +65,17 @@ public class FawApiServiceImpl implements FawApiService {
 
     @Autowired
     private FawUserInfoService fawUserInfoService;
+    @Autowired
+    private FawmallPurchaseorderCancelService fawmallPurchaseorderCancelService;
+
+    @Autowired
+    private FawmallPurchaseorderDeliveryService fawmallPurchaseorderDeliveryService;
+
+    @Autowired
+    private WmsWarehousePurchaseorderCancelService wmsWarehousePurchaseorderCancelService;
+
+    @Autowired
+    private WmsWarehousePurchaseorderDeliveryService wmsWarehousePurchaseorderDeliveryService;
 
     @Autowired
     private WmsUserService wmsUserService;
@@ -128,16 +148,26 @@ public class FawApiServiceImpl implements FawApiService {
             List<WmsUserParam> wmsUserParams = new ArrayList<>();
             for (FawUserInfoParam fawUserInfoParam : fawUserInfoParamList) {
                 WmsUserParam wmsUserParam = new WmsUserParam();
+                wmsUserParam.setAccountcode(fawUserInfoParam.getAccountCode());
+                wmsUserParam.setEmailaddress(fawUserInfoParam.getEmailAddress());
+                wmsUserParam.setClassofpositions(fawUserInfoParam.getClassOfPositions());
+                wmsUserParam.setFawclaofpos(fawUserInfoParam.getFawClaOfPos());
+                wmsUserParam.setDirectorid(fawUserInfoParam.getDirectorId());
+                wmsUserParam.setDirectorname(fawUserInfoParam.getDirectorName());
+                wmsUserParam.setMdmtype(fawUserInfoParam.getMdmType());
+                wmsUserParam.setDeptlevel(fawUserInfoParam.getDeptLevel());
+                wmsUserParam.setObjectstatus(fawUserInfoParam.getObjectStatus());
                 wmsUserParam.setSerialNumber(fawUserInfoParam.getEmployeeId());
                 wmsUserParam.setUserName(fawUserInfoParam.getEmployeeName());
                 wmsUserParam.setWorkTeam(fawUserInfoParam.getDepNo());
                 wmsUserParam.setJobResponsibility(fawUserInfoParam.getJobs());
                 wmsUserParam.setIdInfo(fawUserInfoParam.getEmployeeId());
                 wmsUserParam.setUserType("C");
-                wmsUserParam.setUPwd("Rz123456!");
                 wmsUserParam.setDataState("0");
-                wmsUserParams.add(wmsUserParam);
+                wmsUserParam.setCreateTime(new Date());
+                wmsUserParam.setUPwd("Rz123456!");
 
+                wmsUserParams.add(wmsUserParam);
                 UserDto user=new UserDto();
                 user.setAccount(fawUserInfoParam.getEmployeeId());
                 user.setPassword("Rz123456!");
@@ -187,7 +217,7 @@ public class FawApiServiceImpl implements FawApiService {
         logger.info(msgHeader.toString());
         logger.info(msgBody.toString());
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         List<FawPurchaseOrderResult> fawPurchaseOrderResultList = this.fawPurchaseOrderService.findListBySpec(new FawPurchaseOrderParam());
 
@@ -199,6 +229,7 @@ public class FawApiServiceImpl implements FawApiService {
 
         if (yqjfPurchaseOrderInfo != null && !yqjfPurchaseOrderInfo.isEmpty()) {
             for (YQJFPurchaseOrderInfo purchaseOrderInfo : yqjfPurchaseOrderInfo) {
+                if (!purchaseOrderInfo.getPurDocNO().startsWith("PO")){
                 FawPurchaseOrderParam fawPurchaseOrderParam = new FawPurchaseOrderParam();
                 fawPurchaseOrderParam.setClient(nullSetValue(purchaseOrderInfo.getClient()));
                 fawPurchaseOrderParam.setPurDocitemNo(nullSetValue(purchaseOrderInfo.getPurDocItemNO()));
@@ -269,7 +300,8 @@ public class FawApiServiceImpl implements FawApiService {
                     fawPurchaseOrderParamArrayList.add(fawPurchaseOrderParam);
                 } else {
                     fawPurchaseOrderParamArrayListUp.add(fawPurchaseOrderParam);
-                }
+                 }
+             }
             }
         }
 
@@ -277,22 +309,80 @@ public class FawApiServiceImpl implements FawApiService {
             this.fawPurchaseOrderService.insertListBatch(fawPurchaseOrderParamArrayList);
             List<WmsPurchaseOrderInfoParam> wmsPurchaseOrderInfoParams = new ArrayList<>();
             for (FawPurchaseOrderParam fawPurchaseOrderParam : fawPurchaseOrderParamArrayList) {
+            if (!fawPurchaseOrderParam.getPurDocNo().startsWith("PO")){
                 WmsPurchaseOrderInfoParam wmsPurchaseOrderInfoParam = new WmsPurchaseOrderInfoParam();
                 wmsPurchaseOrderInfoParam.setPurNumber(fawPurchaseOrderParam.getPurdocitemId());
-                wmsPurchaseOrderInfoParam.setType("");
-                wmsPurchaseOrderInfoParam.setMaterialTypeId("");
-                wmsPurchaseOrderInfoParam.setMaterialType("");
-                wmsPurchaseOrderInfoParam.setMaterialName("");
-                wmsPurchaseOrderInfoParam.setMaterialSku(fawPurchaseOrderParam.getMtlNo());
-                wmsPurchaseOrderInfoParam.setMUnit("");
-                wmsPurchaseOrderInfoParam.setMNumber(fawPurchaseOrderParam.getQuantity());
+                wmsPurchaseOrderInfoParam.setClient(nullSetValue(fawPurchaseOrderParam.getClient()));
+                wmsPurchaseOrderInfoParam.setPurdocitemno(nullSetValue(fawPurchaseOrderParam.getPurDocitemNo()));
+                wmsPurchaseOrderInfoParam.setPurchasereqno(nullSetValue(fawPurchaseOrderParam.getPurchaseReqNo()));
+                wmsPurchaseOrderInfoParam.setPurdocno(nullSetValue(fawPurchaseOrderParam.getPurDocNo()));
+                wmsPurchaseOrderInfoParam.setItemno(nullSetValue(fawPurchaseOrderParam.getItemNo()));
+                wmsPurchaseOrderInfoParam.setPurstockbillid(nullSetValue(fawPurchaseOrderParam.getPurStockBillId()));
+                wmsPurchaseOrderInfoParam.setBuyliststrdes(nullSetValue(fawPurchaseOrderParam.getBuyListStrDes()));
+                wmsPurchaseOrderInfoParam.setCreatedby(nullSetValue(fawPurchaseOrderParam.getCreatedBy()));
+                wmsPurchaseOrderInfoParam.setCreateddate(fawPurchaseOrderParam.getCreatedDate());
+                wmsPurchaseOrderInfoParam.setDocDate(fawPurchaseOrderParam.getDocDate());
+                wmsPurchaseOrderInfoParam.setEstimatedpriceindic(nullSetValue(fawPurchaseOrderParam.getEstimatedPriceIndic()));
+                wmsPurchaseOrderInfoParam.setMatBrand(nullSetValue(fawPurchaseOrderParam.getMatBrand()));
+                wmsPurchaseOrderInfoParam.setNetvalue(nullSetValue(fawPurchaseOrderParam.getNetValue()));
+                wmsPurchaseOrderInfoParam.setOrdpriceunit(nullSetValue(fawPurchaseOrderParam.getOrdPriceUnit()));
+                wmsPurchaseOrderInfoParam.setOrdtype(nullSetValue(fawPurchaseOrderParam.getOrdType()));
+                wmsPurchaseOrderInfoParam.setPlant(nullSetValue(fawPurchaseOrderParam.getPlant()));
+                wmsPurchaseOrderInfoParam.setPrice(nullSetValue(fawPurchaseOrderParam.getPrice()));
+                wmsPurchaseOrderInfoParam.setPromotion(nullSetValue(fawPurchaseOrderParam.getPromotion()));
+                wmsPurchaseOrderInfoParam.setProposerdesc(nullSetValue(fawPurchaseOrderParam.getProposerDesc()));
+                wmsPurchaseOrderInfoParam.setProposerid(nullSetValue(fawPurchaseOrderParam.getProposerId()));
+                wmsPurchaseOrderInfoParam.setPurgrp(nullSetValue(fawPurchaseOrderParam.getPurGrp()));
+                wmsPurchaseOrderInfoParam.setPurOrg(nullSetValue(fawPurchaseOrderParam.getPurOrg()));
+                wmsPurchaseOrderInfoParam.setPurdocheaderid(nullSetValue(fawPurchaseOrderParam.getPurdocheaderId()));
+                wmsPurchaseOrderInfoParam.setPurgrpdesc(nullSetValue(fawPurchaseOrderParam.getPurGrpDesc()));
+                wmsPurchaseOrderInfoParam.setRemark(nullSetValue(fawPurchaseOrderParam.getRemark()));
+                wmsPurchaseOrderInfoParam.setRemark1(nullSetValue(fawPurchaseOrderParam.getRemark1()));
+                wmsPurchaseOrderInfoParam.setStorelocation(nullSetValue(fawPurchaseOrderParam.getStoreLocation()));
+                wmsPurchaseOrderInfoParam.setVendordesc(nullSetValue(fawPurchaseOrderParam.getVendorDesc()));
+                wmsPurchaseOrderInfoParam.setPlantdes(nullSetValue(fawPurchaseOrderParam.getPlantDes()));
+                wmsPurchaseOrderInfoParam.setStorelocationdes(nullSetValue(fawPurchaseOrderParam.getStoreLocationDes()));
+                wmsPurchaseOrderInfoParam.setSizecol(nullSetValue(fawPurchaseOrderParam.getSizecoL()));
+                wmsPurchaseOrderInfoParam.setUnitdes(nullSetValue(fawPurchaseOrderParam.getUnitDes()));
+                wmsPurchaseOrderInfoParam.setCreatedbydesc(nullSetValue(fawPurchaseOrderParam.getCreatedByDesc()));
+                wmsPurchaseOrderInfoParam.setStatedesc(nullSetValue(fawPurchaseOrderParam.getStateDesc()));
+                wmsPurchaseOrderInfoParam.setVendorno(nullSetValue(fawPurchaseOrderParam.getVendorNo()));
+                wmsPurchaseOrderInfoParam.setPhone(nullSetValue(fawPurchaseOrderParam.getPhone()));
+                wmsPurchaseOrderInfoParam.setReqphone(nullSetValue(fawPurchaseOrderParam.getReqPhone()));
+                wmsPurchaseOrderInfoParam.setDiOperType(nullSetValue(fawPurchaseOrderParam.getDiOpertype()));
+                wmsPurchaseOrderInfoParam.setDiBatchNo(nullSetValue(fawPurchaseOrderParam.getDiBatch()));
+                wmsPurchaseOrderInfoParam.setDiUpdatetime(fawPurchaseOrderParam.getDiUpdatetime());
+                WmsMaterialTypeResult wmsMaterialTypeResult= wmsMaterialTypeService.findByMaterialSku(fawPurchaseOrderParam.getMtlNo());
+                if (wmsMaterialTypeResult!=null)
+                {
+                    wmsPurchaseOrderInfoParam.setMaterialTypeId(wmsMaterialTypeResult.getId().toString());
+                    wmsPurchaseOrderInfoParam.setType(wmsMaterialTypeResult.getType());
+                    wmsPurchaseOrderInfoParam.setMaterialType(wmsMaterialTypeResult.getMaterialType());
+                    wmsPurchaseOrderInfoParam.setMaterialName(wmsMaterialTypeResult.getMaterialName());
+                    wmsPurchaseOrderInfoParam.setMUnit(wmsMaterialTypeResult.getMUnit());
+                }else {
+                    wmsPurchaseOrderInfoParam.setMaterialTypeId("");
+                    wmsPurchaseOrderInfoParam.setType("");
+                    wmsPurchaseOrderInfoParam.setMaterialType("");
+                    wmsPurchaseOrderInfoParam.setMaterialName("");
+                    wmsPurchaseOrderInfoParam.setMUnit("");
+                }
+                wmsPurchaseOrderInfoParam.setMaterialSku(nullSetValue(fawPurchaseOrderParam.getMtlNo()));
+                wmsPurchaseOrderInfoParam.setMNumber(nullSetValue(fawPurchaseOrderParam.getQuantity()));
                 wmsPurchaseOrderInfoParam.setArrivalTime(fawPurchaseOrderParam.getItemDeliveryDate());
-                wmsPurchaseOrderInfoParam.setArrivalState("0");
                 wmsPurchaseOrderInfoParam.setReceivedQuantity("0");
                 wmsPurchaseOrderInfoParam.setPrintNum("0");
-                wmsPurchaseOrderInfoParam.setAcceptableQuantity(fawPurchaseOrderParam.getMtlNo());
+                wmsPurchaseOrderInfoParam.setAcceptableQuantity(nullSetValue(fawPurchaseOrderParam.getQuantity()));
+//                if(fawPurchaseOrderParam.getPurDocNo().startsWith("PO")){
+//                    wmsPurchaseOrderInfoParam.setArrivalState("5");
+//                }else {
+                    wmsPurchaseOrderInfoParam.setArrivalState("0");
+//                }
                 wmsPurchaseOrderInfoParams.add(wmsPurchaseOrderInfoParam);
+
             }
+         }
+
             this.wmsPurchaseOrderInfoService.insertListBatch(wmsPurchaseOrderInfoParams);
         }
 
@@ -372,6 +462,10 @@ public class FawApiServiceImpl implements FawApiService {
                 fawMtlInfoParam.setSizes(nullSetValue(materialInfo.getSIZES()));
                 fawMtlInfoParam.setSpmtlstatus(nullSetValue(materialInfo.getSPMTLSTATUS()));
                 boolean dataKg = true;
+                WmsMaterialType wmsMaterialType= this.wmsMaterialTypeService.getOne(new QueryWrapper<WmsMaterialType>().eq("material_sku",fawMtlInfoParam.getMtlNo()));
+                if (wmsMaterialType!=null){
+                    dataKg = false;
+                }
                 if (!fawMtlInfoResultList.isEmpty()) {
                     for (FawMtlInfoResult fawMtlInfoResult : fawMtlInfoResultList) {
                         if (fawMtlInfoResult.getMtlNo().equals(fawMtlInfoParam.getMtlNo())) {
@@ -399,16 +493,34 @@ public class FawApiServiceImpl implements FawApiService {
                 if (fawMtlInfoParam.getMtlType().equals("BJ")){
                     wmsMaterialTypeParam.setType("2");
                 }
-                wmsMaterialTypeParam.setMaterialType(fawMtlInfoParam.getMtlType());
-                wmsMaterialTypeParam.setMaterialName(fawMtlInfoParam.getMtlNodes());
-                wmsMaterialTypeParam.setMaterialSku(fawMtlInfoParam.getMtlNo()+"-"+fawMtlInfoParam.getPlant());
-                wmsMaterialTypeParam.setMUnit(fawMtlInfoParam.getMeasurebaseunit());
+                wmsMaterialTypeParam.setMaterialType(nullSetValue(fawMtlInfoParam.getMtlType()));
+                wmsMaterialTypeParam.setMaterialName(nullSetValue(fawMtlInfoParam.getMtlNodes()));
+                wmsMaterialTypeParam.setMaterialSku(nullSetValue(fawMtlInfoParam.getMtlNo()));
+                wmsMaterialTypeParam.setMUnit(nullSetValue(fawMtlInfoParam.getMeasurebaseunit()));
                 wmsMaterialTypeParam.setLatticeMouthType("");
                 wmsMaterialTypeParam.setDataState("1");
+                wmsMaterialTypeParam.setCreateTime(new Date());
                 wmsMaterialTypeParam.setSortType("0");
                 wmsMaterialTypeParam.setPackageType("");
                 wmsMaterialTypeParam.setPackageNumber("0");
                 wmsMaterialTypeParam.setSource("1");
+                wmsMaterialTypeParam.setDiOperType(fawMtlInfoParam.getDiOpertype());
+                wmsMaterialTypeParam.setDiBatchNo(nullSetValue(fawMtlInfoParam.getDiBatch()));
+                wmsMaterialTypeParam.setDiUpdatetime(new Date());
+                wmsMaterialTypeParam.setPlant(nullSetValue(fawMtlInfoParam.getPlant()));
+                wmsMaterialTypeParam.setDelflagforclientmtl(nullSetValue(fawMtlInfoParam.getDelflagforclientmtl()));
+                wmsMaterialTypeParam.setIndustrystnddes(nullSetValue(fawMtlInfoParam.getIndustrystnddes()));
+                wmsMaterialTypeParam.setPagefromat(nullSetValue(fawMtlInfoParam.getPagefromat()));
+                wmsMaterialTypeParam.setIsconfflag(nullSetValue(fawMtlInfoParam.getIsconfflag()));
+                wmsMaterialTypeParam.setDatauser(nullSetValue(fawMtlInfoParam.getDatauser()));
+                wmsMaterialTypeParam.setPurgrp(nullSetValue(fawMtlInfoParam.getPurgrp()));
+                wmsMaterialTypeParam.setProcuretype(nullSetValue(fawMtlInfoParam.getProcuretype()));
+                wmsMaterialTypeParam.setSpecprocuretype(nullSetValue(fawMtlInfoParam.getSpecprocuretype()));
+                wmsMaterialTypeParam.setMrpcontroller(nullSetValue(fawMtlInfoParam.getMrpcontroller()));
+                wmsMaterialTypeParam.setValctg(nullSetValue(fawMtlInfoParam.getValctg()));
+                wmsMaterialTypeParam.setCroplant(nullSetValue(fawMtlInfoParam.getCroplant()));
+                wmsMaterialTypeParam.setSizes(fawMtlInfoParam.getSizes());
+                wmsMaterialTypeParam.setSpmtlstatus(nullSetValue(fawMtlInfoParam.getSpmtlstatus()));
                 wmsMaterialTypeParamList.add(wmsMaterialTypeParam);
             }
             this.wmsMaterialTypeService.insertListBatch(wmsMaterialTypeParamList);
@@ -449,21 +561,21 @@ public class FawApiServiceImpl implements FawApiService {
         String operator = msgBody.getAccountCode();
         List<WmsToolUseResult> wmsToolUseResultList;
         WmsToolUseParam wmsToolUseParam = new WmsToolUseParam();
-        if (sDateTime != null && eDateTime != null) {
+        if (StringUtils.isNotBlank(sDateTime) &&StringUtils.isNotBlank(eDateTime)) {
             wmsToolUseParam.setOperator(sDateTime);
             wmsToolUseParam.setMaterialTypeId(eDateTime);
             wmsToolUseResultList = this.wmsToolUseService.findListBySpecC(wmsToolUseParam);
-        } else if (sDateTime != null) {
+        } else if (StringUtils.isNotBlank(sDateTime)) {
             wmsToolUseParam.setOperator(sDateTime);
             wmsToolUseResultList = this.wmsToolUseService.findListBySpecA(wmsToolUseParam);
-        } else if (eDateTime != null) {
+        } else if (StringUtils.isNotBlank(eDateTime)) {
             wmsToolUseParam.setOperator(eDateTime);
             wmsToolUseResultList = this.wmsToolUseService.findListBySpecB(wmsToolUseParam);
         } else {
             wmsToolUseResultList = this.wmsToolUseService.findListBySpec(new WmsToolUseParam());
         }
 
-        if (operator != null) {
+        if (StringUtils.isNotBlank(operator)) {
             if (wmsToolUseResultList != null && !wmsToolUseResultList.isEmpty()) {
                 List<WmsToolUseResult> wmsToolUseResultList1 = new ArrayList<>();
                 for (WmsToolUseResult wmsToolUseResult : wmsToolUseResultList) {
@@ -518,6 +630,296 @@ public class FawApiServiceImpl implements FawApiService {
         RsMsgMomBody rsMsgMomBody = new RsMsgMomBody();
         rsMsgMomBody.setToolCollections(toolCollections);
         rsBody.setMsgBody(rsMsgMomBody);
+
+        logger.info("--OVER--");
+        return rsBody;
+    }
+
+    @Override
+    public RsBody getPurchaseorderDelivery(MsgHeader msgHeader, MsgBodyDelivery msgBody) throws ParseException {
+
+//        WmsWarehousePurchaseorderDeliveryResult wmsWarehousea= wmsWarehousePurchaseorderDeliveryService.selectPurDocNo("PO230414000001","21501");
+        logger.info("--getPurchaseorderDelivery--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        List<FawmallPurchaseorderCancelResult> fawPurchaseorderyResultList = this.fawmallPurchaseorderCancelService.findListBySpec(new FawmallPurchaseorderCancelParam());
+
+        List<YQJFDeliveryOrder> yqjfdeliverorder = msgBody.getYqjfdeliverorder();
+        //新增集合
+        List<FawmallPurchaseorderDeliveryParam> fawmallPurchaseorderDeliveryParams = new ArrayList<>();
+        //更新集合
+        List<FawmallPurchaseorderDeliveryParam> fawmallPurchaseorderDeliveryParamsUp = new ArrayList<>();
+
+//        List<WmsPurchaseOrderInfoParam> wmsPurchaseOrderInfoParamList = new ArrayList<>();
+        if (yqjfdeliverorder != null && !yqjfdeliverorder.isEmpty()) {
+            for (YQJFDeliveryOrder deliverorder : yqjfdeliverorder) {
+                FawmallPurchaseorderDeliveryParam fawmallPurchaseorderDeliveryParam = new FawmallPurchaseorderDeliveryParam();
+                fawmallPurchaseorderDeliveryParam.setPurdocno(nullSetValue(deliverorder.getPurDocNo()));
+                fawmallPurchaseorderDeliveryParam.setItemno(nullSetValue(deliverorder.getItemNo()));
+                fawmallPurchaseorderDeliveryParam.setMtlno(nullSetValue(deliverorder.getMtlNo()));
+                fawmallPurchaseorderDeliveryParam.setQty(nullSetValue(deliverorder.getQTY()));
+                fawmallPurchaseorderDeliveryParam.setCode(nullSetValue(deliverorder.getCODE()));
+                if (deliverorder.getSENDTIME() != null) {
+                    fawmallPurchaseorderDeliveryParam.setSendtime(deliverorder.getSENDTIME());
+                }
+                if (deliverorder.getEXPECTEDRECEIVETIME() != null) {
+                    fawmallPurchaseorderDeliveryParam.setExpectedreceivetime(deliverorder.getEXPECTEDRECEIVETIME());
+                }
+                fawmallPurchaseorderDeliveryParam.setLinecode(nullSetValue(deliverorder.getLINECODE()));
+                fawmallPurchaseorderDeliveryParam.setStatus(nullSetValue(deliverorder.getSTATUS()));
+                boolean dataKg = true;
+
+                if (dataKg) {
+                    fawmallPurchaseorderDeliveryParams.add(fawmallPurchaseorderDeliveryParam);
+                } else {
+                    fawmallPurchaseorderDeliveryParamsUp.add(fawmallPurchaseorderDeliveryParam);
+                }
+            }
+        }
+//        王盼宇修改于20230519，修改内容：根据发货单创建采购订单，不对之前的采购订单做修改
+        List<WmsPurchaseOrderInfoParam> wmsPurchaseOrderInfoParamList = new ArrayList<>();
+
+        if (!fawmallPurchaseorderDeliveryParams.isEmpty()) {
+            this.fawmallPurchaseorderDeliveryService.insertListBatch(fawmallPurchaseorderDeliveryParams);
+            List<WmsWarehousePurchaseorderDeliveryParam> wmsWarehousePurchaseorderParamList = new ArrayList<>();
+            for (FawmallPurchaseorderDeliveryParam fawPurchaseorderParam : fawmallPurchaseorderDeliveryParams) {
+                WmsWarehousePurchaseorderDeliveryParam wmsWarehousePurchaseorderDeliveryParam = new WmsWarehousePurchaseorderDeliveryParam();
+                wmsWarehousePurchaseorderDeliveryParam.setPurdocno(fawPurchaseorderParam.getPurdocno());
+                wmsWarehousePurchaseorderDeliveryParam.setItemno(fawPurchaseorderParam.getItemno());
+                wmsWarehousePurchaseorderDeliveryParam.setMtlno(fawPurchaseorderParam.getMtlno());
+                wmsWarehousePurchaseorderDeliveryParam.setQty(fawPurchaseorderParam.getQty());
+                wmsWarehousePurchaseorderDeliveryParam.setCode(fawPurchaseorderParam.getCode());
+                Date date = new Date();
+                date=sdf.parse(fawPurchaseorderParam.getSendtime());
+                wmsWarehousePurchaseorderDeliveryParam.setSendtime(sdf.parse(fawPurchaseorderParam.getSendtime()));
+                wmsWarehousePurchaseorderDeliveryParam.setExpectedreceivetime(sdf.parse(fawPurchaseorderParam.getExpectedreceivetime()));
+                wmsWarehousePurchaseorderDeliveryParam.setLinecode(fawPurchaseorderParam.getLinecode());
+                wmsWarehousePurchaseorderDeliveryParam.setStatus(fawPurchaseorderParam.getStatus());
+                wmsWarehousePurchaseorderDeliveryParam.setCreateTime(new Date());
+                WmsPurchaseOrderInfoResult wmsPurchaseOrder= wmsPurchaseOrderInfoService.selectPurdocno(fawPurchaseorderParam.getPurdocno(),fawPurchaseorderParam.getItemno());
+                WmsMaterialTypeResult wmsMaterialTypeResult= wmsMaterialTypeService.findByMaterialSku(fawPurchaseorderParam.getMtlno());
+//                if (wmsPurchaseOrder!=null){
+                        String string="";
+                        WmsPurchaseOrderInfoParam wmsWarehouse= new WmsPurchaseOrderInfoParam();
+//                        wmsWarehouse.setId(wmsPurchaseOrder.getId());
+                        wmsWarehouse.setClient(nullSetValue("900"));
+                        wmsWarehouse.setPurdocitemno(nullSetValue(fawPurchaseorderParam.getLinecode()));
+                        wmsWarehouse.setPurdocno(nullSetValue(fawPurchaseorderParam.getPurdocno()));
+                        wmsWarehouse.setPurchasereqno(nullSetValue(fawPurchaseorderParam.getCode()));
+                        wmsWarehouse.setItemno(nullSetValue(fawPurchaseorderParam.getItemno()));
+                        wmsWarehouse.setPurstockbillid(nullSetValue(fawPurchaseorderParam.getLinecode()));
+                        wmsWarehouse.setBuyliststrdes(nullSetValue("商城采购订单"));
+                        wmsWarehouse.setCreatedby("商城订单");
+                        wmsWarehouse.setCreateddate(sdf.parse(fawPurchaseorderParam.getSendtime()));
+                        wmsWarehouse.setDocDate(sdf.parse(fawPurchaseorderParam.getSendtime()));
+                        wmsWarehouse.setEstimatedpriceindic("");
+                        wmsWarehouse.setMatBrand("");
+                        wmsWarehouse.setNetvalue("");
+                        wmsWarehouse.setOrdpriceunit("");
+                        wmsWarehouse.setOrdtype("");
+                        wmsWarehouse.setPrice("");
+                        wmsWarehouse.setPromotion("");
+                        wmsWarehouse.setProposerdesc("");
+                        wmsWarehouse.setProposerid("");
+                        wmsWarehouse.setPurgrp("");
+                        wmsWarehouse.setPurgrpdesc("");
+                        wmsWarehouse.setPurOrg("");
+                        wmsWarehouse.setPurOrg("");
+                        wmsWarehouse.setPurdocheaderid("");
+                        wmsWarehouse.setRemark("");
+                        wmsWarehouse.setRemark1("");
+                        wmsWarehouse.setStorelocation("R06B861");
+                        wmsWarehouse.setVendordesc("");
+                        wmsWarehouse.setPhone("");
+                        wmsWarehouse.setReqphone("");
+                        wmsWarehouse.setPlantdes("");
+                        wmsWarehouse.setStorelocationdes("");
+                        wmsWarehouse.setStorelocationdes("");
+                        wmsWarehouse.setSizecol("");
+                        wmsWarehouse.setUnitdes("");
+                        wmsWarehouse.setUnitdes("");
+                        wmsWarehouse.setCreatedby("");
+                        wmsWarehouse.setStatedesc(nullSetValue(fawPurchaseorderParam.getStatus()));
+                        wmsWarehouse.setDiOperType("");
+                        wmsWarehouse.setDiUpdatetime(sdf.parse(nullSetValue(fawPurchaseorderParam.getSendtime())));
+                        wmsWarehouse.setVendorno("");
+                        wmsWarehouse.setPurNumber(nullSetValue(fawPurchaseorderParam.getItemno()));
+                        wmsWarehouse.setMNumber(nullSetValue(fawPurchaseorderParam.getQty()));
+                        wmsWarehouse.setArrivalTime(sdf.parse(fawPurchaseorderParam.getExpectedreceivetime()));
+                        wmsWarehouse.setArrivalState("0");
+                        wmsWarehouse.setCreateTime(sdf.parse(fawPurchaseorderParam.getSendtime()));
+                        wmsWarehouse.setReceivedQuantity("0");
+                        wmsWarehouse.setPrintNum("0");
+                        wmsWarehouse.setAcceptableQuantity(nullSetValue(fawPurchaseorderParam.getQty()));
+                        wmsWarehouse.setMaterialSku(nullSetValue(fawPurchaseorderParam.getMtlno()));
+                        if (wmsMaterialTypeResult!=null)
+                        {
+                            wmsWarehouse.setMaterialTypeId(wmsMaterialTypeResult.getId().toString());
+                            wmsWarehouse.setType(wmsMaterialTypeResult.getType());
+                            wmsWarehouse.setMaterialType(wmsMaterialTypeResult.getMaterialType());
+                            wmsWarehouse.setMaterialName(wmsMaterialTypeResult.getMaterialName());
+                            wmsWarehouse.setMUnit(wmsMaterialTypeResult.getMUnit());
+                            wmsWarehouse.setPlant(wmsMaterialTypeResult.getPlant());
+                        }else {
+                            wmsWarehouse.setMaterialTypeId("");
+                            wmsWarehouse.setType("");
+                            wmsWarehouse.setMaterialType("");
+                            wmsWarehouse.setMaterialName("");
+                            wmsWarehouse.setMUnit("");
+                            wmsWarehouse.setPlant("");
+                        }
+                    wmsPurchaseOrderInfoParamList.add(wmsWarehouse);
+
+//                        wmsPurchaseOrderInfoService.updatePurdocno(wmsWarehouse.getPurdocno(),wmsWarehouse.getItemno(), wmsWarehouse.getMaterialSku(),
+//                                wmsWarehouse.getAcceptableQuantity(),wmsWarehouse.getArrivalTime(),wmsWarehouse.getPurchasereqno(),wmsWarehouse.getDiUpdatetime(),
+//                                wmsWarehouse.getPurstockbillid(),wmsWarehouse.getStatedesc(),wmsWarehouse.getArrivalState(),wmsWarehouse.getCreatedby(),
+//                                wmsWarehouse.getMaterialTypeId(),wmsWarehouse.getType(),wmsWarehouse.getMaterialType(),wmsWarehouse.getMaterialName(),
+//                                wmsWarehouse.getMUnit());
+//                        wmsPurchaseOrderInfoService.update(wmsWarehouse);
+//                    wmsPurchaseOrderInfoService.updatePurdocno(
+//                            wmsWarehouse.getClient(),wmsWarehouse.getPurdocitemno(),wmsWarehouse.getBuyliststrdes(),
+//                            wmsWarehouse.getStorelocation(),wmsWarehouse.getMNumber(),
+//                            wmsWarehouse.getPurdocno(),wmsWarehouse.getItemno(),
+//                            wmsWarehouse.getMaterialSku(),wmsWarehouse.getAcceptableQuantity(),wmsWarehouse.getArrivalTime(),
+//                            wmsWarehouse.getPurchasereqno(),wmsWarehouse.getDiUpdatetime(),wmsWarehouse.getPurstockbillid(),
+//                            wmsWarehouse.getStatedesc(),wmsWarehouse.getArrivalState(),wmsWarehouse.getCreatedby(),
+//                            wmsWarehouse.getMaterialTypeId(),wmsWarehouse.getType(),wmsWarehouse.getMaterialType(),
+//                            wmsWarehouse.getMaterialName(),wmsWarehouse.getMUnit(),wmsWarehouse.getPurNumber());
+//                }
+
+                wmsWarehousePurchaseorderParamList.add(wmsWarehousePurchaseorderDeliveryParam);
+            }
+            this.wmsPurchaseOrderInfoService.insertListBatch(wmsPurchaseOrderInfoParamList);
+            this.wmsWarehousePurchaseorderDeliveryService.insertList(wmsWarehousePurchaseorderParamList);
+        }
+
+        if (!fawmallPurchaseorderDeliveryParamsUp.isEmpty()) {
+            for (FawmallPurchaseorderDeliveryParam fawmallPurchaseorderDeliveryParam : fawmallPurchaseorderDeliveryParamsUp) {
+                this.fawmallPurchaseorderDeliveryService.update(fawmallPurchaseorderDeliveryParam);
+            }
+        }
+
+        RsBody rsBody = new RsBody();
+        RsMsgHeader rsMsgHeader = new RsMsgHeader();
+        rsMsgHeader.setResultType("0");
+        rsMsgHeader.setResultCode("");
+        rsMsgHeader.setResultMessage("接收成功");
+        rsBody.setMsgHeader(rsMsgHeader);
+
+        logger.info("--OVER--");
+        return rsBody;
+    }
+
+    @Override
+    public RsBody getPurchaseorderCancel(MsgHeader msgHeader, MsgBodyCancel msgBody) {
+        logger.info("--getPurchaseorderCancel--");
+        logger.info(msgHeader.toString());
+        logger.info(msgBody.toString());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        List<FawmallPurchaseorderCancelResult> fawPurchaseorderyResultList = this.fawmallPurchaseorderCancelService.findListBySpec(new FawmallPurchaseorderCancelParam());
+
+        List<YQJFCancelOrder> yqjfCancelorder = msgBody.getYqjfCancelorder();
+        //新增集合
+        List<FawmallPurchaseorderCancelParam> fawmallPurchaseorderCancelParams = new ArrayList<>();
+//新增集合
+        List<WmsWarehousePurchaseorderCancelParam> wmsWarehousePurchaseorderCancelParams = new ArrayList<>();
+
+        List<WmsPurchaseOrderInfoParam> wmsPurchaseOrderInfoParamList = new ArrayList<>();
+        //更新集合
+        List<FawmallPurchaseorderCancelParam> fawmallPurchaseorderCancelParamsUp = new ArrayList<>();
+
+
+        if (yqjfCancelorder != null && !yqjfCancelorder.isEmpty()) {
+            for (YQJFCancelOrder cancelorder : yqjfCancelorder) {
+                FawmallPurchaseorderCancelParam fawmallPurchaseorderCancelParam = new FawmallPurchaseorderCancelParam();
+                fawmallPurchaseorderCancelParam.setPurdocno(nullSetValue(cancelorder.getPurDocNo()));
+                fawmallPurchaseorderCancelParam.setItemno(nullSetValue(cancelorder.getItemNo()));
+                fawmallPurchaseorderCancelParam.setStatus(nullSetValue(cancelorder.getSTATUS()));
+
+                WmsWarehousePurchaseorderCancelParam wmsWarehousePurchaseorderCancelParam=new WmsWarehousePurchaseorderCancelParam();
+                wmsWarehousePurchaseorderCancelParam.setPurdocno(nullSetValue(cancelorder.getPurDocNo()));
+                wmsWarehousePurchaseorderCancelParam.setItemno(nullSetValue(cancelorder.getItemNo()));
+                wmsWarehousePurchaseorderCancelParam.setStatus(nullSetValue(cancelorder.getSTATUS()));
+                wmsWarehousePurchaseorderCancelParam.setCreateTime(new Date());
+                boolean dataKg = true;
+
+                if (dataKg) {
+                    fawmallPurchaseorderCancelParams.add(fawmallPurchaseorderCancelParam);
+                    wmsWarehousePurchaseorderCancelParams.add(wmsWarehousePurchaseorderCancelParam);
+                } else {
+                    fawmallPurchaseorderCancelParamsUp.add(fawmallPurchaseorderCancelParam);
+                }
+            }
+        }
+
+        if (!fawmallPurchaseorderCancelParams.isEmpty()) {
+            this.fawmallPurchaseorderCancelService.insertListBatch(fawmallPurchaseorderCancelParams);
+            this.wmsWarehousePurchaseorderCancelService.insertList(wmsWarehousePurchaseorderCancelParams);
+            List<WmsWarehousePurchaseorderCancelParam> wmsWarehousePurchaseorderParamList = new ArrayList<>();
+            for (FawmallPurchaseorderCancelParam fawPurchaseorderParam : fawmallPurchaseorderCancelParams) {
+                WmsWarehousePurchaseorderCancelParam wmsWarehousePurchaseorderCancelParam = new WmsWarehousePurchaseorderCancelParam();
+                wmsWarehousePurchaseorderCancelParam.setPurdocno(fawPurchaseorderParam.getPurdocno());
+                wmsWarehousePurchaseorderCancelParam.setItemno(fawPurchaseorderParam.getItemno());
+                wmsWarehousePurchaseorderCancelParam.setStatus(fawPurchaseorderParam.getStatus());
+                wmsWarehousePurchaseorderCancelParam.setCreateTime(new Date());
+                WmsPurchaseOrderInfoParam wmsPurchaseOrderInfoParamModel = new WmsPurchaseOrderInfoParam();
+                if (Objects.equals(fawPurchaseorderParam.getStatus(), "I"))
+                {
+                    wmsPurchaseOrderInfoParamModel.setPurdocno(fawPurchaseorderParam.getPurdocno());
+                    wmsPurchaseOrderInfoParamModel.setItemno(fawPurchaseorderParam.getItemno());
+                    wmsPurchaseOrderInfoParamModel.setArrivalState("5");
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDocDate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDiUpdatetime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setArrivalTime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+                    wmsPurchaseOrderInfoParamList.add(wmsPurchaseOrderInfoParamModel);
+
+                }
+                if (Objects.equals(fawPurchaseorderParam.getStatus(), "D"))
+                {
+                    wmsPurchaseOrderInfoParamModel.setPurdocno(fawPurchaseorderParam.getPurdocno());
+                    wmsPurchaseOrderInfoParamModel.setItemno(fawPurchaseorderParam.getItemno());
+                    wmsPurchaseOrderInfoParamModel.setArrivalState("4");
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDocDate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDiUpdatetime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setArrivalTime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+//                    wmsPurchaseOrderInfoParamList.add(wmsPurchaseOrderInfoParamModel);
+                    wmsPurchaseOrderInfoService.update(wmsPurchaseOrderInfoParamModel);
+                }
+                if(Objects.equals(fawPurchaseorderParam.getStatus(), "U")) {
+                    wmsPurchaseOrderInfoParamModel.setPurdocno(fawPurchaseorderParam.getPurdocno());
+                    wmsPurchaseOrderInfoParamModel.setItemno(fawPurchaseorderParam.getItemno());
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDocDate(new Date());
+                    wmsPurchaseOrderInfoParamModel.setDiUpdatetime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setArrivalTime(new Date());
+                    wmsPurchaseOrderInfoParamModel.setCreateddate(new Date());
+                    wmsPurchaseOrderInfoService.update(wmsPurchaseOrderInfoParamModel);
+                }
+            }
+                wmsPurchaseOrderInfoService.insertListBatch(wmsPurchaseOrderInfoParamList);
+        }
+
+
+        if (!fawmallPurchaseorderCancelParamsUp.isEmpty()) {
+            for (FawmallPurchaseorderCancelParam fawmallPurchaseorderDeliveryParam : fawmallPurchaseorderCancelParamsUp) {
+                this.fawmallPurchaseorderCancelService.update(fawmallPurchaseorderDeliveryParam);
+            }
+        }
+
+        RsBody rsBody = new RsBody();
+        RsMsgHeader rsMsgHeader = new RsMsgHeader();
+        rsMsgHeader.setResultType("0");
+        rsMsgHeader.setResultCode("");
+        rsMsgHeader.setResultMessage("接收成功");
+        rsBody.setMsgHeader(rsMsgHeader);
 
         logger.info("--OVER--");
         return rsBody;

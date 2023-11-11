@@ -4,7 +4,6 @@ import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseToolUseTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseToolUseTaskResult;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -60,4 +59,12 @@ public interface WmsWarehouseToolUseTaskMapper extends BaseMapper<WmsWarehouseTo
     List<WmsWarehouseToolUseTaskResult> findByTaskStateOfOperator(@Param("paramCondition") WmsWarehouseToolUseTaskParam paramCondition);
 
     void updateByTaskNumber(@Param("toolUseTaskNumber")String toolUseTaskNumber);
+
+    WmsWarehouseToolUseTaskResult findByTaskNumber(@Param("taskNumber")String taskNumber);
+
+    WmsWarehouseToolUseTaskResult findBySortingTask(@Param("sortingTask")String sortingTask);
+
+    void updatePickNumber(@Param("taskNumber")String taskNumber, @Param("pickNumber")String pickNumber);
+
+    WmsWarehouseToolUseTaskResult inExecution();
 }

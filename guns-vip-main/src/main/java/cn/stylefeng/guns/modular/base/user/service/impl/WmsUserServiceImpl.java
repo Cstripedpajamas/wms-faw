@@ -56,6 +56,10 @@ public class WmsUserServiceImpl extends ServiceImpl<WmsUserMapper, WmsUser> impl
         return this.baseMapper.customList(param);
     }
 
+    public List<WmsUserResult> findListUserName(String item){
+        return this.baseMapper.findListUserName(item);
+    }
+
     @Override
     public LayuiPageInfo findPageBySpec(WmsUserParam param){
         Page pageContext = getPageContext();
@@ -81,6 +85,16 @@ public class WmsUserServiceImpl extends ServiceImpl<WmsUserMapper, WmsUser> impl
     @Override
     public WmsUserResult findUserIdInfo2(String staffId) {
         return this.baseMapper.findUserIdInfo2(staffId);
+    }
+
+    @Override
+    public WmsUserResult findUserName(String name) {
+        return this.baseMapper.findUserName(name);
+    }
+
+    @Override
+    public WmsUserResult findSerialNumber(String serialNumber) {
+        return this.baseMapper.findSerialNumber(serialNumber);
     }
 
     @Override

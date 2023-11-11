@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -39,6 +39,8 @@ public class WmsWarehouseReplenishmentTaskParam implements Serializable, BaseVal
      * 物料名称
      */
     private String materialName;
+
+    private String sizes;
 
     /**
      * 物料SKU
@@ -104,6 +106,16 @@ public class WmsWarehouseReplenishmentTaskParam implements Serializable, BaseVal
      * 分拣数量
      */
     private String sortingNum;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 物料规格
+     */
+    private String materialSizes;
 
     @Override
     public String checkParam() {

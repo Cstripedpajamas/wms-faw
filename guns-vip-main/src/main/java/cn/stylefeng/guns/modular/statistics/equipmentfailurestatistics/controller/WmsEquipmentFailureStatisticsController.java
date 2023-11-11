@@ -124,6 +124,19 @@ public class WmsEquipmentFailureStatisticsController extends BaseController {
         return this.wmsEquipmentFailureStatisticsService.findPageBySpec(wmsEquipmentFailureStatisticsParam);
     }
 
+
+    /**
+     * 查询维修列表
+     *
+     * @author 王盼宇
+     * @Date 2023-07-22
+     */
+    @ResponseBody
+    @RequestMapping("/RepairList")
+    public LayuiPageInfo RepairList(WmsEquipmentFailureStatisticsParam wmsEquipmentFailureStatisticsParam) {
+        return this.wmsEquipmentFailureStatisticsService.findPageBySpec(wmsEquipmentFailureStatisticsParam);
+    }
+
 }
 
 

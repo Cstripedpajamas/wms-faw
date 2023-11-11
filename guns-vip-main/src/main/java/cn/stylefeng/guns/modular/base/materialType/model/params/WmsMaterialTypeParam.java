@@ -1,11 +1,10 @@
 package cn.stylefeng.guns.modular.base.materialType.model.params;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -103,6 +102,112 @@ public class WmsMaterialTypeParam implements Serializable, BaseValidatingParam {
      *  RFID条码
      * */
     private  String materialSerialNumber;
+
+
+    /**
+     *  工厂
+     * */
+    private  String plant;
+    /**
+     * 操作类型
+     */
+    private String diOperType;
+
+    /**
+     * 工厂
+     */
+//    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
+
+    /**
+     * 更新时间
+     */
+    private Date diUpdatetime;
+
+    /**
+     * 停用标识
+     */
+    private String delflagforclientmtl;
+
+    /**
+     * 制造路线
+     */
+    private String industrystnddes;
+
+    /**
+     * 可配置物料标识
+     */
+    private String pagefromat;
+
+    /**
+     * 可配置物料标识
+     */
+    private String isconfflag;
+
+    /**
+     * 创建对象的用户代码
+     */
+    private String datauser;
+
+    /**
+     * 采购组代码
+     */
+    private String purgrp;
+
+    /**
+     * 获取类型
+     */
+    private String procuretype;
+
+    /**
+     * 特殊获取类型
+     */
+    private String specprocuretype;
+
+
+    /**
+     * MRP控制者
+     */
+    private String mrpcontroller;
+
+    /**
+     * 估价类别
+     */
+    private String valctg;
+
+    /**
+     * 可配置物料
+     */
+    private String croplant;
+
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * C标识
+     */
+    private String spmtlstatus;
+
+    /**
+     * 图片地址
+     */
+    private String imagePath;
+
+    /**
+     * 库存总数量
+     */
+    private String totalMNumber;
+
+    /**
+     * 领用的数量
+     */
+    private String useTotalMNumber;
 
     @Override
     public String checkParam() {

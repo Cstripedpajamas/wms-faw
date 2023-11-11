@@ -69,6 +69,26 @@ public class WmsWarehouseToolUseTaskServiceImpl extends ServiceImpl<WmsWarehouse
     }
 
     @Override
+    public WmsWarehouseToolUseTaskResult findByTaskNumber(String toolUseTaskNumber){
+        return this.baseMapper.findByTaskNumber(toolUseTaskNumber);
+    }
+
+    @Override
+    public WmsWarehouseToolUseTaskResult findBySortingTask(String sortingTask){
+        return this.baseMapper.findBySortingTask(sortingTask);
+    }
+
+    @Override
+    public WmsWarehouseToolUseTaskResult inExecution() {
+        return this.baseMapper.inExecution();
+    }
+
+    @Override
+    public void updatePickNumber(String taskNumber, String pickNumber) {
+        this.baseMapper.updatePickNumber(taskNumber,pickNumber);
+    }
+
+    @Override
     public void updateByTaskNumber(String toolUseTaskNumber) {
         this.baseMapper.updateByTaskNumber(toolUseTaskNumber);
     }

@@ -84,8 +84,8 @@ public class WmsCabinet2StockServiceImpl extends ServiceImpl<WmsCabinet2StockMap
     }
 
     @Override
-    public WmsCabinet2StockResult findNullStock() {
-      return   this.baseMapper.findNullStock();
+    public WmsCabinet2StockResult findNullStock(String locaNumber) {
+      return   this.baseMapper.findNullStock(locaNumber);
     }
 
     @Override

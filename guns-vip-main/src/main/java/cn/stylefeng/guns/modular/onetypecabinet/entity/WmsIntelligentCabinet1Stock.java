@@ -1,17 +1,11 @@
 package cn.stylefeng.guns.modular.onetypecabinet.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import io.swagger.annotations.Api;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import springfox.documentation.annotations.ApiIgnore;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -114,14 +108,14 @@ public class WmsIntelligentCabinet1Stock implements Serializable {
     /**
      * 物料名称
      */
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     @TableField("material_name")
     private String materialName;
 
     /**
      * 物料SKU
      */
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     @TableField("material_sku")
     private String materialSku;
 

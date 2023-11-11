@@ -1,0 +1,117 @@
+@layout("/common/_form.html",{js:["/assets/warehousemanage/wmsWarehouseTaskIn/wmsWarehouseTaskIn_edit.js"]}){
+
+<form class="layui-form" id="wmsWarehouseTaskInForm" lay-filter="wmsWarehouseTaskInForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">基本信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input name="id" type="hidden"/>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">消息识别ID<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="messageId" name="messageId" placeholder="请输入消息识别ID" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">订单类别(A采购入库 B入库)<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="orderType" name="orderType" placeholder="请输入订单类别(A采购入库 B入库)" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">任务信息<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="taskMg" name="taskMg" placeholder="请输入任务信息" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">入仓货物类型（A工具/B备品备件/C空周转箱）<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="goodsType" name="goodsType" placeholder="请输入入仓货物类型（A工具/B备品备件/C空周转箱）" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱类型(A单格口/B双格口)<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="turnoverType" name="turnoverType" placeholder="请输入周转箱类型(A单格口/B双格口)" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱编号<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="turnoverNumber" name="turnoverNumber" placeholder="请输入周转箱编号" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱条码<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="tBarcode" name="tBarcode" placeholder="请输入周转箱条码" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">周转箱格口数量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="turnoverMouthQuality" name="turnoverMouthQuality" placeholder="周转箱格口数量" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备注<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mark" name="mark" placeholder="请输入备注" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备用字段<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="spareField" name="spareField" placeholder="请输入备用字段" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">请求标记（0初始 1请求）<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="reqTag" name="reqTag" placeholder="请输入请求标记（0初始 1请求）" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">请求状态（0初始 1成功 2失败）<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="reqStatus" name="reqStatus" placeholder="请输入请求状态（0初始 1成功 2失败）" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">结果标记（0初始 1更新 2结束）<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="resTag" name="resTag" placeholder="请输入结果标记（0初始 1更新 2结束）" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">结果状态（0初始 1正在执行 2任务完成 3任务失败）<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="resStatus" name="resStatus" placeholder="请输入结果状态（0初始 1正在执行 2任务完成 3任务失败）" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">入仓仓位编号<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="locaNumber" name="locaNumber" placeholder="请输入入仓仓位编号" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">任务反馈<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="taskFeedback" name="taskFeedback" placeholder="请输入任务反馈" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button>
+        <button type="reset" class="layui-btn layui-btn-primary" ew-event="closeDialog">&emsp;取消&emsp;</button>
+    </div>
+
+</form>
+
+@}

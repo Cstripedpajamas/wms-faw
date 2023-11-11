@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -81,6 +81,11 @@ public class WmsCabinet2StockParam implements Serializable, BaseValidatingParam 
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
      * 批次
      */
     private String mBatch;
@@ -94,6 +99,10 @@ public class WmsCabinet2StockParam implements Serializable, BaseValidatingParam 
      * 数据时间
      */
     private Date createTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
     @Override
     public String checkParam() {

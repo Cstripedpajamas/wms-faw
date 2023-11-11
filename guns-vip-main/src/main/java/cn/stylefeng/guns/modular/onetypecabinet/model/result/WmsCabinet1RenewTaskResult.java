@@ -123,5 +123,16 @@ public class WmsCabinet1RenewTaskResult implements Serializable {
      * 自动关闭标识(0:确认关闭 1：自动关闭)
      */
     private String autoFlag;
-
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 组合编码
+     */
+    private String workTeam;
+    /**
+     * 操作人姓名
+     */
+    private String userName;
 }

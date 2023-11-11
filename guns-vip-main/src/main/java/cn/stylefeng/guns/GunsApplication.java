@@ -15,15 +15,11 @@
  */
 package cn.stylefeng.guns;
 
-import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import cn.stylefeng.roses.core.config.MybatisDataSourceAutoConfiguration;
-import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
 
 /**
  * SpringBoot方式启动类
@@ -40,5 +36,6 @@ public class GunsApplication {
         SpringApplication.run(GunsApplication.class, args);
         logger.info(GunsApplication.class.getSimpleName() + " is success!");
     }
+
 
 }

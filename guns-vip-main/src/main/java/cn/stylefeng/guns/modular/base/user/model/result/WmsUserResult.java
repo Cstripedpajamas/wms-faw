@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.base.user.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -28,6 +28,51 @@ public class WmsUserResult implements Serializable {
      * 编号
      */
     private String serialNumber;
+
+    /**
+     * 员工IAM账号（IAMID）
+     */
+    private String accountcode;
+
+    /**
+     * 电子邮件地址
+     */
+    private String emailaddress;
+
+    /**
+     * 职级
+     */
+    private String classofpositions;
+
+    /**
+     * 解放职级
+     */
+    private String fawclaofpos;
+
+    /**
+     * 直接上级ID
+     */
+    private String directorid;
+
+    /**
+     * 直接上级姓名
+     */
+    private String directorname;
+
+    /**
+     * 员工状态
+     */
+    private String objectstatus;
+
+    /**
+     * 主数据人员类别
+     */
+    private String mdmtype;
+
+    /**
+     * 外部人员解放部门编码
+     */
+    private String deptlevel;
 
     /**
      * 姓名
@@ -69,5 +114,10 @@ public class WmsUserResult implements Serializable {
      * 访问密码
      * */
     private String uPwd;
+
+    /**
+     * 手机号
+     * */
+    private String phoneNumber;
 
 }

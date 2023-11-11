@@ -1,11 +1,12 @@
 package cn.stylefeng.guns.modular.fawInfo.purchaseOrder.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -655,6 +656,7 @@ public class FawPurchaseOrder implements Serializable {
     public String toString() {
         return "FawPurchaseOrder{" +
         "id=" + id +
+        ", sizecoL=" + sizecoL +
         ", client=" + client +
         ", purDocitemNo=" + purDocitemNo +
         ", purDocNo=" + purDocNo +
@@ -692,7 +694,6 @@ public class FawPurchaseOrder implements Serializable {
         ", reqPhone=" + reqPhone +
         ", plantDes=" + plantDes +
         ", storeLocationDes=" + storeLocationDes +
-        ", sizecoL=" + sizecoL +
         ", unitDes=" + unitDes +
         ", createdByDesc=" + createdByDesc +
         ", stateDesc=" + stateDesc +

@@ -148,6 +148,18 @@ public class WmsWarehouseToolUseTask implements Serializable {
      */
     private String sortingTask;
 
+    /**
+     * 分拣类型（0人工 1自动)
+     */
+    @TableField("sorting_num")
+    private String sortingNum;
+
+    /**
+     * 数量
+     */
+    @TableField("m_number")
+    private String mNumber;
+
     public Long getId() {
         return id;
     }
@@ -350,5 +362,21 @@ public class WmsWarehouseToolUseTask implements Serializable {
                 ", sortingStatus='" + sortingStatus + '\'' +
                 ", sortingTask='" + sortingTask + '\'' +
                 '}';
+    }
+
+    public String getSortingNum() {
+        return sortingNum;
+    }
+
+    public void setSortingNum(String sortingNum) {
+        this.sortingNum = sortingNum;
+    }
+
+    public String getmNumber() {
+        return mNumber;
+    }
+
+    public void setmNumber(String mNumber) {
+        this.mNumber = mNumber;
     }
 }

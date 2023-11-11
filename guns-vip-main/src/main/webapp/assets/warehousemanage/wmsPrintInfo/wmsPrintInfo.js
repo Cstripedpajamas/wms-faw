@@ -104,7 +104,16 @@ layui.use(['table', 'admin', 'ax', 'func'], function () {
         cellMinWidth: 100,
         cols: WmsPrintInfo.initColumn()
     });
+    table.on('checkbox(wmsPrintInfoTable)',function (obj) {
+        var isChecked=obj.checked;
+        var tr=obj.tr;
+        if (isChecked){
+            tr.addClass('layui-table-click');
+        }else{
+            tr.removeClass('layui-table-click');
+        }
 
+    });
     // 搜索按钮点击事件
     $('#btnSearch').click(function () {
         WmsPrintInfo.search();

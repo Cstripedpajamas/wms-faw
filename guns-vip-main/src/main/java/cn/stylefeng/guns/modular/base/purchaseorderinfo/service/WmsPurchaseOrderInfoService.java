@@ -4,9 +4,9 @@ import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderInfo;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
-import cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.params.FawPurchaseOrderParam;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -74,4 +74,12 @@ public interface WmsPurchaseOrderInfoService extends IService<WmsPurchaseOrderIn
     void stopTask();
 
     LayuiPageInfo findPageBySpec2(WmsPurchaseOrderInfoParam infoParam);
+
+    void updatePurdocnoState(String purDocNO,String itemNO,String state);
+
+    void updatePurdocno(String client,String purDocItemNo,String buyListStrDes,String storeLocation,String mNumber,String purDocNO, String itemNO, String materialsku, String quantity, Date arrivaltime, String purchasereqno, Date updatetime, String stockbillid, String statedesc, String arrivalstate, String createdby, String typeid, String type, String materialType, String materialName, String mUnit,String purNumber);
+
+    WmsPurchaseOrderInfoResult selectPurdocno(String purDocNO, String itemNO);
+
+    void update(WmsPurchaseOrderInfoResult wmsPurchaseOrder);
 }

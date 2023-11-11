@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -124,6 +124,31 @@ public class WmsWarehouseTaskInParam implements Serializable, BaseValidatingPara
      * 入仓位置
      * */
     private String sortingInfo;
+
+    /**
+     * 物料号
+     * */
+    private String materialSku;
+
+    /**
+     * 物料类型
+     * */
+    private String materialType;
+
+    /**
+     * 物料名
+     * */
+    private String materialName;
+
+    /**
+     * 规格型号
+     * */
+    private String materialSizes;
+
+    /**
+     * 数量
+     * */
+    private String materialMNumber;
 
     @Override
     public String checkParam() {

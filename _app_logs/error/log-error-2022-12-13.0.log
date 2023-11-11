@@ -1,0 +1,4 @@
+2022-12-13 13:52:50.430 ERROR 23844 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->xcy8agedjk5puuq982nx2qmj0cxd8gn0，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-12-13 13:53:01.171 ERROR 23844 --- [http-nio-8099-exec-4] .g.m.s.w.c.WmsCabinet2TurnoverController : 登入次数55
+2022-12-13 14:48:26.124 ERROR 24932 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->nctusp0kt9z10vkvn7lu9uxlt0og0nuz，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-12-13 14:52:34.586 ERROR 35580 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->vkzznr1ogkukglv7laje2ktrriuf272c，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！

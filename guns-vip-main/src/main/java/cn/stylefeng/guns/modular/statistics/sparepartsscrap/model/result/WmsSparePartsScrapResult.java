@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.statistics.sparepartsscrap.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -48,5 +48,32 @@ public class WmsSparePartsScrapResult implements Serializable {
      * 数据时间
      */
     private Date createTime;
+
+
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * 报废数量
+     */
+    private String mNumber;
+
+    /**
+     * 操作人
+     */
+    private String operator;
+
+    /**
+     * 操作时间
+     */
+    private String operationTime;
 
 }

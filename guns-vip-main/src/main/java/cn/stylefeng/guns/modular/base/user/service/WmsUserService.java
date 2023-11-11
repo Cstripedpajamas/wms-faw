@@ -74,5 +74,11 @@ public interface WmsUserService extends IService<WmsUser> {
 
     WmsUserResult findUserIdInfo2(String staffId);
 
+    WmsUserResult findSerialNumber(String serialNumber);
+
     void insertListBatch(List<WmsUserParam> param);
+
+    List<WmsUserResult> findListUserName(String item);
+
+    WmsUserResult findUserName(String name);
 }

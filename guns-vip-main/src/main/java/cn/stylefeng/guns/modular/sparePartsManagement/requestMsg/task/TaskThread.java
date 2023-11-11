@@ -1,45 +1,44 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.task;
 
+import cn.hutool.http.webservice.SoapClient;
 import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
-import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
+import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
+import cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.entity.WmsUseApply;
 import cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.model.result.WmsUseApplyResult;
 import cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.service.WmsUseApplyService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.service.WmsCabinet2CheckTaskService;
-import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2InputScrap.entity.WmsCabinet2InputScrap;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2InputScrap.model.params.WmsCabinet2InputScrapParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2InputScrap.service.WmsCabinet2InputScrapService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2ReplenishmentTask.model.params.WmsCabinet2ReplenishmentTaskParam;
-import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2ReplenishmentTask.model.result.WmsCabinet2ReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2ReplenishmentTask.service.WmsCabinet2ReplenishmentTaskService;
-import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.entity.WmsCabinet2Stock;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.service.WmsCabinet2StockService;
-import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Turnover.model.result.WmsCabinet2TurnoverResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Turnover.service.WmsCabinet2TurnoverService;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.WmsCabinet2TurnoverBindResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.service.WmsCabinet2TurnoverBindService;
+import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.entity.WmsCabinet2UseTask;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.result.WmsCabinet2UseTaskResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.service.WmsCabinet2UseTaskService;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.lang.ref.WeakReference;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import javax.xml.soap.SOAPElement;
+import javax.xml.soap.SOAPException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @Author: ll
@@ -73,6 +72,8 @@ public class TaskThread {
     @Autowired
     private WmsCabinet2CheckTaskService wmsCabinet2CheckTaskService;
 
+    @Autowired
+    private WmsPurchaseOrderInfoService wmsPurchaseOrderInfoService;
 
     public static TaskThread taskThread;
 
@@ -89,6 +90,8 @@ public class TaskThread {
         taskThread.wmsCabinet2TurnoverService = wmsCabinet2TurnoverService;
         taskThread.wmsCabinet2TurnoverBindService = wmsCabinet2TurnoverBindService;
         taskThread.wmsCabinet2ReplenishmentTaskService = wmsCabinet2ReplenishmentTaskService;
+        taskThread.wmsCabinet2CheckTaskService = wmsCabinet2CheckTaskService;
+        taskThread.wmsPurchaseOrderInfoService = wmsPurchaseOrderInfoService;
         taskThread.startTask();
     }
 
@@ -148,7 +151,7 @@ public class TaskThread {
     private static Integer remainNumber = 0;//
 
     // 锁定空库存的信息
-    public static WmsCabinet2StockResult wsr = null;//
+//    public static WmsCabinet2StockResult wsr = null;//
 
 
     // 开始补货入货
@@ -181,12 +184,13 @@ public class TaskThread {
             @Override
             public void run() {
                 while (true) {
-//                    try {
+                    try {
                         runTask();
+//                        System.out.println("///////////////////////111111111111111///////////////////////");
                         Thread.sleep(1000);
-//                    } catch (Exception e) {
-//                        System.out.println(e.getMessage());
-//                    }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
             }
         }).start();
@@ -197,6 +201,7 @@ public class TaskThread {
     public static void runTask() {
         if (taskState) {
             // 任务类型
+//            System.out.println("///////////////////////22222222222222///////////////////////");
             switch (taskType) {
                 case 1: // 领用
                     receiveFlow(_runningId);
@@ -206,6 +211,10 @@ public class TaskThread {
                     break;
                 case 3:
                     checkFlow();
+                    break;
+                case 4:
+                    purchaseFlow();
+                    break;
             }
         }
     }
@@ -324,12 +333,13 @@ public class TaskThread {
                     if (isBackTurnover) {
                         // 查找空库位
 //                        WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
-                        if (!lockStock) {
-                            wsr = taskThread.wmsCabinet2StockService.findNullStock();
-                            if (wsr.getId() != null) {
-                                lockStock = true;
-                            }
-                        }
+//                        if (!lockStock) {
+//                            wsr = taskThread.wmsCabinet2StockService.findNullStock();
+//                            if (wsr.getId() != null) {
+//                                lockStock = true;
+//                            }
+//                        }
+                        lockStock = true;
                         if (lockStock) {
                             // 是否可以入库
                             Map<String, Object> map = new HashMap<>();
@@ -345,7 +355,7 @@ public class TaskThread {
                                 Declension inbound = taskThread.wmsApiService.Inbound(map);
                                 if (Objects.equals("1", inbound.getResult())) {
                                     // 锁定空库位 只锁定一次
-                                    taskThread.wmsCabinet2StockService.updateState(wsr.getId().toString(), "2");
+                                    taskThread.wmsCabinet2StockService.updateState(byId.getId().toString(), "2");
                                     isIntSend = false;
                                 }
                             }
@@ -354,14 +364,118 @@ public class TaskThread {
                                 if (remainNumber > 0) {
                                     // 周转箱上有货 更新数量
                                     WmsCabinet2TurnoverBindResult byTurnId = taskThread.wmsCabinet2TurnoverBindService.findByTurnId(turnoverID);
-                                    updateStockMsg(byTurnId);
+                                    updateStockMsg(byId, byTurnId);
                                 } else {
-                                    taskThread.wmsCabinet2StockService.updateTurnover(wsr.getId().toString(), "0", turnoverID);
+                                    taskThread.wmsCabinet2StockService.updateTurnover(byId.getId().toString(), "0", turnoverID);
                                 }
                                 // 更新周转箱的信息 排 列 层 存放状态(库内)
-                                taskThread.wmsCabinet2TurnoverService.updateStockLocal(turnoverID, wsr.getLocaRow(), wsr.getLocaCol(), wsr.getLocaLayer(), "1");
+                                taskThread.wmsCabinet2TurnoverService.updateStockLocal(turnoverID, byId.getLocaRow(), byId.getLocaCol(), byId.getLocaLayer(), "1");
                                 // 更新任务状态为结束
                                 taskThread.wmsCabinet2UseTaskService.updateState(_runningId, "6");
+//                                TODO 二类柜出库完成接口反馈 王盼宇2023-06-04标记
+                                WmsCabinet2UseTask wmsCabinet2UseTask=taskThread.wmsCabinet2UseTaskService.getById(_runningId);
+                                String processNumber=wmsCabinet2UseTask.getProcessNumber();
+                                WmsUseApply wmsUseApply=taskThread.wmsUseApplyService.getOne(new QueryWrapper<WmsUseApply>().eq("process_number", processNumber));
+                                WmsMaterialType wmsMaterialType=taskThread.wmsMaterialTypeService.getById(wmsUseApply.getMaterialId());
+                                System.out.println("11111111111111111111----OutErpOutErpOutErp----1111111111111111111111");
+
+
+                                String moveMentType="Z01";
+                                String getOrdNOStr="";
+                                String budgetCenter="";
+                                String commitmentItem="";
+                                String getOrdNO= wmsUseApply.getOrdNO();
+                                if (getOrdNO!=null&&getOrdNO!=""){
+                                    getOrdNOStr=getOrdNO;
+                                }
+                                if (wmsUseApply.getCostCenter().equals("Z28")){
+//                    移动类型
+                                    moveMentType="G09";
+//                    项目成本单号
+                                    getOrdNOStr="KC9600042301";
+//                    预算中心
+                                    budgetCenter="Z28";
+//                    预算项目
+                                    commitmentItem="YS66022207";
+                                }
+                                //            正式环境IP:10.7.62.76
+                                //            测试环境IP:10.6.201.184
+                                // 新建客户端 正式环境
+                                SoapClient client = SoapClient.create("http://10.7.62.76:8011/ERP/UWMS/UWMS2ERP_SyncInvNoGuardianStorageLocation/ProxyServices/SyncInvNoGuardianStorageLocationPS?wsdl")
+                                        // 设置要请求的方法，此接口方法前缀为web，传入对应的命名空间
+                                        .setMethod("ser:reOutStorageMT", "http://service.noGuardianStor.inv.mm.erp.faw_qm.com/");
+
+                                // 设置参数，此处自动添加方法的前缀：web
+                                try {
+                                    SOAPElement msgHeader = client.getMethodEle().addChildElement("msgHeader");
+                                    msgHeader.addChildElement("comments").setValue("");
+                                    msgHeader.addChildElement("count").setValue("");
+                                    msgHeader.addChildElement("interfaceID").setValue("TWMS-ERP-002");
+                                    msgHeader.addChildElement("messageID").setValue(String.valueOf(UUID.randomUUID()));
+                                    msgHeader.addChildElement("receiver").setValue("JF_ERP");
+                                    msgHeader.addChildElement("sender").setValue("JF_TWMS");
+                                    msgHeader.addChildElement("transID").setValue("");
+                                    SOAPElement msgBody = client.getMethodEle().addChildElement("msgBody");
+                                    SOAPElement invReOutStorageMTItems=msgBody.addChildElement("invReOutStorageMTItems");
+                                    invReOutStorageMTItems.addChildElement("assetSubNO").setValue("");
+                                    invReOutStorageMTItems.addChildElement("budgetCenter").setValue(budgetCenter);
+                                    invReOutStorageMTItems.addChildElement("busArea").setValue("");
+                                    invReOutStorageMTItems.addChildElement("commitmentItem").setValue(commitmentItem);
+                                    //            成本中心
+                                    invReOutStorageMTItems.addChildElement("costCenter").setValue(wmsUseApply.getCostCenter());
+                                    //            凭证日期
+                                    Date date=new Date();
+                                    SimpleDateFormat formatter=new SimpleDateFormat("yyyyMMdd");
+                                    String dateString=formatter.format(date);
+                                    invReOutStorageMTItems.addChildElement("docDate").setValue(dateString);
+                                    invReOutStorageMTItems.addChildElement("equipmentNR").setValue("");
+                                    //            领用者
+                                    invReOutStorageMTItems.addChildElement("goodsRecipient").setValue(wmsUseApply.getOperator());
+                                    invReOutStorageMTItems.addChildElement("itemText").setValue("");
+                                    //            固定资产编码
+                                    String mainAssetNO="";
+                                    String mainAssetNOStr= wmsUseApply.getMainAssetNo();
+                                    if (mainAssetNOStr!=null&&mainAssetNOStr!=""){
+                                        mainAssetNO=mainAssetNOStr;
+                                    }
+                                    invReOutStorageMTItems.addChildElement("mainAssetNO").setValue(mainAssetNO);
+                                    //            移动类型
+                                    invReOutStorageMTItems.addChildElement("moveMentType").setValue(moveMentType);
+                                    //            物料号
+                                    invReOutStorageMTItems.addChildElement("mtlNO").setValue(wmsMaterialType.getMaterialSku());
+//                invReOutStorageMTItems.addChildElement("mtlNO").setValue("A05172331");
+                                    //            项目成品单号
+                                    invReOutStorageMTItems.addChildElement("ordNO").setValue(getOrdNOStr);
+                                    //            工厂
+                                    invReOutStorageMTItems.addChildElement("plant").setValue("R06");
+                                    //            记账日期
+                                    String dates=wmsUseApply.getPostDate();
+                                    SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+                                    Date postDate=dateFormat.parse(dates);
+                                    String postStr=formatter.format(postDate);
+//                                    postStr="20220404";
+                                    invReOutStorageMTItems.addChildElement("postDate").setValue(dateString);
+                                    //            数量
+                                    invReOutStorageMTItems.addChildElement("quantity").setValue(wmsCabinet2UseTask.getUseNumber());
+                                    //            出库单号
+                                    invReOutStorageMTItems.addChildElement("refDocNO").setValue(wmsCabinet2UseTask.getTaskNumber());
+                                    invReOutStorageMTItems.addChildElement("refItemNO").setValue("");
+                                    invReOutStorageMTItems.addChildElement("remark1").setValue("");
+                                    //            存储地点
+                                    invReOutStorageMTItems.addChildElement("storageLocation").setValue("R06GZ11");
+                                    //            产品编码
+                                    invReOutStorageMTItems.addChildElement("TPBusArea").setValue(wmsUseApply.getBusArea());
+                                } catch (SOAPException e) {
+                                    throw new RuntimeException(e);
+                                } catch (Exception exception) {
+                                    System.out.println("fffffffffffffffffffffffffffffffff");
+                                    logger.info(exception.getMessage());
+                                }
+                                String str= client.send(true);
+                                logger.info("/tool_apply_commit_over upload ERP interface"+str);
+                                System.out.println("/tool_apply_commit_over upload ERP interface"+str);
+                                System.out.println("11111111111111111111----OutErpOutErpOutErp----1111111111111111111111");
+
                                 // 结束此次任务 并初始化所有的状态
                                 allMsg.put("isBackTurnover", "1"); // 回库完成
                                 WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
@@ -407,10 +521,11 @@ public class TaskThread {
                 String turnoverNumber = taskThread.wmsCabinet2TurnoverService.findTurnoverNumber(turnoverID);
                 map.put("HUNumber", turnoverNumber);
                 map.put("LocationId", byTurnId.getLocaNumber());
-
+//                System.out.println("///////////////////////3333333333333///////////////////////");
                 //todo 跳过出库判断
                 if (isOutSend) {
                     Declension outbound = taskThread.wmsApiService.Outbound(map);
+                    System.out.println("///////////////////////"+outbound.getResult()+"///////////////////////");
                     if (Objects.equals("1", outbound.getResult())) {
                         // 更新任务的状态 空箱开始出库
                         taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "1");
@@ -431,9 +546,11 @@ public class TaskThread {
             // todo 点击取消之后执行
             if (isCancelTask) {
                 if (isIsBackTurnoverResult) {
+                    WmsCabinet2StockParam byId = taskThread.wmsCabinet2StockService.findById(TaskThread.stockID);
+
                     // 更新库存信息  // 更新周转箱的信息
-                    taskThread.wmsCabinet2StockService.updateTurnover(wsr.getId().toString(), "1", TaskThread.turnoverID);
-                    taskThread.wmsCabinet2TurnoverService.updateStockLocal(TaskThread.turnoverID, wsr.getLocaRow(), wsr.getLocaCol(), wsr.getLocaLayer(), "1");
+                    taskThread.wmsCabinet2StockService.updateTurnover(byId.getId().toString(), "1", TaskThread.turnoverID);
+                    taskThread.wmsCabinet2TurnoverService.updateStockLocal(TaskThread.turnoverID, byId.getLocaRow(), byId.getLocaCol(), byId.getLocaLayer(), "1");
                     // webSocket推送数据
                     allMsg.put("isInStockFinish", "1"); // 入库完成
                     WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
@@ -465,7 +582,8 @@ public class TaskThread {
                 // 获取入库结果 入库完成
                 if (isIsBackTurnoverResult) {
                     // 更新信息
-                    boolean b = updateReplenishTask();
+                    WmsCabinet2StockParam byId = taskThread.wmsCabinet2StockService.findById(TaskThread.stockID);
+                    boolean b = updateReplenishTask(byId);
                     if (b) {
                         // 入库完成推送信息
                         allMsg.put("isInStockFinish", "1");
@@ -541,6 +659,119 @@ public class TaskThread {
             _runningId = "";
             turnoverID = "";
             stockID = "";
+        }
+
+
+    }
+
+
+    /**
+     * 采购业务流程梳理
+     */
+    public static void purchaseFlow(){
+        try {
+//            System.out.println("----------------------******purchase******---------------------------");
+            if (jumpMethod) {
+                initReplenishState();
+                System.out.println("----------------------******jumpMethod******---------------------------");
+
+                //判断是否可以出库
+                Map<String, Object> map = new HashMap<>();
+                map.put("OrderId", _runningId);
+                WmsCabinet2StockResult byTurnId = taskThread.wmsCabinet2StockService.findByTurnId(turnoverID);
+                String turnoverNumber = taskThread.wmsCabinet2TurnoverService.findTurnoverNumber(turnoverID);
+                map.put("HUNumber", turnoverNumber);
+                map.put("LocationId", byTurnId.getLocaNumber());
+
+                System.out.println("///////////////////////3333333333333///////////////////////");
+                System.out.println(turnoverNumber);
+                System.out.println(byTurnId.getLocaNumber());
+                //todo 跳过出库判断
+                if (isOutSend) {
+
+                    System.out.println("----------------------*******OutSend1*****---------------------------");
+
+                    Declension outbound = taskThread.wmsApiService.Outbound(map);
+                    System.out.println(outbound.getResult());
+                    if (Objects.equals("1", outbound.getResult())) {
+                        System.out.println("----------------------******OutSend2******---------------------------");
+
+                        // 更新任务的状态 空箱开始出库
+                        taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "1");
+                        WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
+                        isOutSend = false;
+                    }
+                }
+                // 判断出库结果
+                if (isOutStockFinish) {
+                    System.out.println("----------------------******isOutStockFinish******---------------------------");
+
+                    allMsg.put("isOutStockFinish", "1"); // 出库完成
+                    WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
+                    // 更新库存信息,跟新周转箱箱信息,任务绑定周转箱信息
+                    updateOutReplair();
+                    isOutSend = true;
+                }
+            }
+
+            if (isCancelTask) {
+                if (isIsBackTurnoverResult) {
+                    WmsCabinet2StockParam byId = taskThread.wmsCabinet2StockService.findById(TaskThread.stockID);
+
+                    // 更新库存信息  // 更新周转箱的信息
+                    taskThread.wmsCabinet2StockService.updateTurnover(byId.getId().toString(), "1", TaskThread.turnoverID);
+                    taskThread.wmsCabinet2TurnoverService.updateStockLocal(TaskThread.turnoverID, byId.getLocaRow(), byId.getLocaCol(), byId.getLocaLayer(), "1");
+                    // webSocket推送数据
+                    allMsg.put("isInStockFinish", "1"); // 入库完成
+                    WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
+                    TaskThread.finishTask();
+                }
+            }
+            // 点击确认之后继续向下执行
+            if (startInMaterial) {
+//                System.out.println("----------------------******startInMaterial******---------------------------");
+
+                if (isInStock) {
+//                    System.out.println("----------------------******isInStock******---------------------------");
+
+                    // 是否可以入库 更新任务状态为 开始入库
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("OrderId", _runningId);
+                    String turnoverNumber = taskThread.wmsCabinet2TurnoverService.findTurnoverNumber(TaskThread.turnoverID);
+                    map.put("HUNumber", turnoverNumber);
+                    WmsCabinet2StockParam byId = taskThread.wmsCabinet2StockService.findById(TaskThread.stockID);
+                    map.put("LocationId", byId.getLocaNumber());
+                    // todo 跳过入库判断
+                    Declension outbound = taskThread.wmsApiService.Inbound(map);
+                    allMsg.put("isInStockFinish", "0"); // 入库中
+                    if (Objects.equals("1", outbound.getResult())) {
+                        // 跟新任务状态为入库中
+                        taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "3");
+                        isInStock = false;
+                    }
+                }
+                // 获取入库结果 入库完成
+                if (isIsBackTurnoverResult) {
+//                    System.out.println("----------------------******isIsBackTurnoverResult******---------------------------");
+
+                    // 更新信息
+                    WmsCabinet2StockParam byId = taskThread.wmsCabinet2StockService.findById(TaskThread.stockID);
+                    boolean b = updateReplenishTask(byId);
+                    if (b) {
+//                        System.out.println("----------------------******isInStockFinish******---------------------------");
+
+                        // 入库完成推送信息
+                        allMsg.put("isInStockFinish", "1");
+                        WebSocket.sendMessageOfSession2(JSONObject.toJSONString(allMsg));
+                        finishTask();
+                    }
+                }
+
+
+            }
+        }catch (Exception e) {
+            // 推送异常信息
+            System.out.println("错误信息"+e);
         }
 
 
@@ -668,36 +899,43 @@ public class TaskThread {
         taskThread.wmsCabinet2StockService.clearTurnMsg(stockID, "0");
         // 更新周转箱的信息 状态改为出入口
         taskThread.wmsCabinet2TurnoverService.updateState(turnoverID, "3");
-        // 更新任务的状态 出库完成
-        taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "2");
-
         // 查询周转箱的编码
         String turnoverNumber = taskThread.wmsCabinet2TurnoverService.findTurnoverNumber(turnoverID);
-        // 任务绑定周转箱
-        WmsCabinet2ReplenishmentTaskParam w = taskThread.wmsCabinet2ReplenishmentTaskService.findById(_runningId);
-        w.setTurnoverId(turnoverID);
-        w.setTurnoverNumber(turnoverNumber);
-        taskThread.wmsCabinet2ReplenishmentTaskService.update(w);
+
+        switch (taskType) {
+            case 2: // 补货
+                // 更新任务的状态 出库完成
+                taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "2");
+                // 任务绑定周转箱
+                WmsCabinet2ReplenishmentTaskParam w = taskThread.wmsCabinet2ReplenishmentTaskService.findById(_runningId);
+                w.setTurnoverId(turnoverID);
+                w.setTurnoverNumber(turnoverNumber);
+                taskThread.wmsCabinet2ReplenishmentTaskService.update(w);
+                break;
+            case 4:
+                taskThread.wmsPurchaseOrderInfoService.updateState("2",_runningId);
+                break;
+        }
         isOutStockFinish = false;
         jumpMethod = false;
     }
 
 
     // 更新库存信息
-    private static void updateStockMsg(WmsCabinet2TurnoverBindResult byTurnId) {
+    private static void updateStockMsg(WmsCabinet2StockParam byId, WmsCabinet2TurnoverBindResult byTurnId) {
         WmsCabinet2StockParam wmsCabinet2StockParam = new WmsCabinet2StockParam();
         // id
-        wmsCabinet2StockParam.setId(wsr.getId());
+        wmsCabinet2StockParam.setId(byId.getId());
         // 库位编号
-        wmsCabinet2StockParam.setLocaNumber(wsr.getLocaNumber());
+        wmsCabinet2StockParam.setLocaNumber(byId.getLocaNumber());
         // 排
-        wmsCabinet2StockParam.setLocaRow(wsr.getLocaRow());
+        wmsCabinet2StockParam.setLocaRow(byId.getLocaRow());
         // 列
-        wmsCabinet2StockParam.setLocaCol(wsr.getLocaCol());
+        wmsCabinet2StockParam.setLocaCol(byId.getLocaCol());
         // 层
-        wmsCabinet2StockParam.setLocaLayer(wsr.getLocaLayer());
+        wmsCabinet2StockParam.setLocaLayer(byId.getLocaLayer());
         // 设备码
-        wmsCabinet2StockParam.setLocaEquipment(wsr.getLocaEquipment());
+        wmsCabinet2StockParam.setLocaEquipment(byId.getLocaEquipment());
         // 状态
         wmsCabinet2StockParam.setLocationState("1");
         // 周转箱ID
@@ -765,7 +1003,7 @@ public class TaskThread {
         ifNewState1 = true;
         jumpMethod = true;
         lockStock = false;
-        wsr = null;
+//        wsr = null;
         remainNumber = 0;
         allMsg.clear();
         startInMaterial = false;
@@ -786,18 +1024,17 @@ public class TaskThread {
     }
 
     // 更新备品备件补货任务数据
-    public static boolean updateReplenishTask() {
-        // 更新任务状态为入库完成
-        taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "4");
+    public static boolean updateReplenishTask(WmsCabinet2StockParam byIdStock) {
+
         // 更新库存信息:周转箱的id 物料信息 状态:有货
         WmsCabinet2TurnoverBindResult byTurnId = taskThread.wmsCabinet2TurnoverBindService.findByTurnId(turnoverID);
         WmsCabinet2StockParam wms = new WmsCabinet2StockParam();
-        wms.setId(wsr.getId());
-        wms.setLocaNumber(wsr.getLocaNumber());
-        wms.setLocaRow(wsr.getLocaRow());
-        wms.setLocaCol(wsr.getLocaCol());
-        wms.setLocaLayer(wsr.getLocaLayer());
-        wms.setLocaEquipment(wsr.getLocaEquipment());
+        wms.setId(byIdStock.getId());
+        wms.setLocaNumber(byIdStock.getLocaNumber());
+        wms.setLocaRow(byIdStock.getLocaRow());
+        wms.setLocaCol(byIdStock.getLocaCol());
+        wms.setLocaLayer(byIdStock.getLocaLayer());
+        wms.setLocaEquipment(byIdStock.getLocaEquipment());
         wms.setLocationState("1"); // 有货
         wms.setTurnoverId(turnoverID); // 周转箱id
         wms.setMaterialTypeId(byTurnId.getMaterialTypeId()); // 物料类型id
@@ -806,20 +1043,31 @@ public class TaskThread {
         wms.setMaterialSku(byTurnId.getMaterialSku()); // 物料SKU
         wms.setMBatch(byTurnId.getMBatch()); // 物料批次
         wms.setMNumber(byTurnId.getMNumber()); // 物料数量
-        wms.setCreateTime(wsr.getCreateTime());
+        wms.setCreateTime(byIdStock.getCreateTime());
         taskThread.wmsCabinet2StockService.update(wms);
 
         // 更新周转箱信息 改为 库内  排列层更新上
-        taskThread.wmsCabinet2TurnoverService.updateStockLocal(turnoverID, wsr.getLocaRow(), wsr.getLocaCol(), wsr.getLocaLayer(), "1");
-        // 更新任务库存信息 库位编码
-        WmsCabinet2ReplenishmentTaskParam byId = taskThread.wmsCabinet2ReplenishmentTaskService.findById(_runningId);
-        byId.setStockId(stockID); // 库存id
-        // 查询库位编号并保存
-        String stockNumber = taskThread.wmsCabinet2StockService.findStockNumber(stockID);
-        byId.setLocaNumber(stockNumber);
-        byId.setOperationTime(new Date());
-        byId.setTaskState("5");
-        taskThread.wmsCabinet2ReplenishmentTaskService.update(byId);
+        taskThread.wmsCabinet2TurnoverService.updateStockLocal(turnoverID, byIdStock.getLocaRow(), byIdStock.getLocaCol(), byIdStock.getLocaLayer(), "1");
+
+        switch (taskType) {
+            case 2: // 补货
+                // 更新任务状态为入库完成
+                taskThread.wmsCabinet2ReplenishmentTaskService.updateStateById(_runningId, "4");
+                // 更新任务库存信息 库位编码
+                WmsCabinet2ReplenishmentTaskParam byId = taskThread.wmsCabinet2ReplenishmentTaskService.findById(_runningId);
+                byId.setStockId(stockID); // 库存id
+                // 查询库位编号并保存
+                String stockNumber = taskThread.wmsCabinet2StockService.findStockNumber(stockID);
+                byId.setLocaNumber(stockNumber);
+                byId.setOperationTime(new Date());
+                byId.setTaskState("5");
+                taskThread.wmsCabinet2ReplenishmentTaskService.update(byId);
+                break;
+            case 4: // 采购入库
+//                taskThread.wmsPurchaseOrderInfoService.updateState("3",_runningId);
+                break;
+        }
+
         return true;
     }
 }

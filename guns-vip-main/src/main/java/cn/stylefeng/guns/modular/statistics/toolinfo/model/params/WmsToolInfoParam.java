@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.statistics.toolinfo.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -69,6 +69,56 @@ public class WmsToolInfoParam implements Serializable, BaseValidatingParam {
      * 数据时间
      */
     private Date createTime;
+
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * 物料状态为新的
+     */
+    private String materialStateNew;
+
+    /**
+     * 物料状态为使用中的
+     */
+    private String materialStateUsing;
+
+    /**
+     * 物料状态为维修的
+     */
+    private String materialStateFix;
+
+    /**
+     * 物料状态为报废的
+     */
+    private String materialStateDis;
+
+    /**
+     * 存放状态为初始的
+     */
+    private String storageStateInit;
+
+    /**
+     * 存放状态为库内的
+     */
+    private String storageStateIn;
+
+    /**
+     * 存放状态为库外的
+     */
+    private String storageStateOut;
+
+    /**
+     * 存放地址为立库的
+     */
+    private String storageAddressAsRs;
+
+    /**
+     * 存放地址为I类柜的
+     */
+    private String storageAddressI;
 
     @Override
     public String checkParam() {

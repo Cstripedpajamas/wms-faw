@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -39,6 +39,36 @@ public class WmsCabinet2UseTaskParam implements Serializable, BaseValidatingPara
      * 流程单号
      */
     private String processNumber;
+
+    /**
+     * 流程单号
+     */
+    private String sMaterialType;
+
+    /**
+     * 流程单号
+     */
+    private String smaterialName;
+
+    /**
+     * 流程单号
+     */
+    private String smaterialSku;
+
+    /**
+     * 流程单号
+     */
+    private String useMaterialType;
+
+    /**
+     * 流程单号
+     */
+    private String useMaterialSku;
+
+    /**
+     * 流程单号
+     */
+    private String useMaterialName;
 
     /**
      * 报废-物料类型ID
@@ -109,6 +139,37 @@ public class WmsCabinet2UseTaskParam implements Serializable, BaseValidatingPara
      * 更新时间
      */
     private Date updateTime;
+
+    /**
+     * 物料 SKU
+     * */
+    private String materialSku;
+
+    /**
+     * 物料名称
+     * */
+    private String materialName;
+
+    /**
+     * 报废规格型号
+     */
+    private String materialSize;
+    /**
+     * 领用规格型号
+     */
+    private String useMaterialSize;
+    /**
+     * 操作人姓名
+     */
+    private String userName;
+    /**
+     * 所属组织编码
+     */
+    private String workTeam;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
     @Override
     public String checkParam() {

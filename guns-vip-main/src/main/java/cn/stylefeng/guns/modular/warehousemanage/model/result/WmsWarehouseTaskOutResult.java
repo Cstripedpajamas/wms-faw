@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -149,6 +149,10 @@ public class WmsWarehouseTaskOutResult implements Serializable {
      * */
     private  String mark;
 
+    /**
+     * 备注
+     * */
+    private  String sizes;
     /**
      * 备用字段
      * */

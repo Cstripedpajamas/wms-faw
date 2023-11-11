@@ -1,12 +1,9 @@
 package cn.stylefeng.guns.modular.base.user.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -32,6 +29,60 @@ public class WmsUser implements Serializable {
      */
     @TableField("serial_number")
     private String serialNumber;
+
+    /**
+     * 员工IAM账号（IAMID）
+     */
+    @TableField("accountcode")
+    private String accountcode;
+
+    /**
+     * 电子邮件地址
+     */
+    @TableField("emailaddress")
+    private String emailaddress;
+
+    /**
+     * 职级
+     */
+    @TableField("classofpositions")
+    private String classofpositions;
+
+    /**
+     * 解放职级
+     */
+    @TableField("fawclaofpos")
+    private String fawclaofpos;
+
+    /**
+     * 直接上级ID
+     */
+    @TableField("directorid")
+    private String directorid;
+
+    /**
+     * 直接上级姓名
+     */
+    @TableField("directorname")
+    private String directorname;
+
+    /**
+     * 员工状态
+     */
+    @TableField("objectstatus")
+    private String objectstatus;
+
+    /**
+     * 主数据人员类别
+     */
+    @TableField("mdmtype")
+    private String mdmtype;
+
+    /**
+     * 外部人员解放部门编码
+     */
+    @TableField("deptlevel")
+    private String deptlevel;
 
     /**
      * 姓名
@@ -80,6 +131,12 @@ public class WmsUser implements Serializable {
        * */
       @TableField(value = "u_pwd")
       private String uPwd;
+
+    /**
+     * 手机号
+     * */
+    @TableField(value = "phonenumber")
+    private String phoneNumber;
 
     @Override
     public String toString() {
@@ -177,4 +234,12 @@ public class WmsUser implements Serializable {
         this.createTime = createTime;
     }
 
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber=phoneNumber;
+    }
 }

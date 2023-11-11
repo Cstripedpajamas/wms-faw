@@ -3,9 +3,7 @@ package cn.stylefeng.guns.modular.base.materialType.mapper;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
-import cn.stylefeng.guns.modular.fawInfo.mtlInfo.model.params.FawMtlInfoParam;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -56,9 +54,15 @@ public interface WmsMaterialTypeMapper extends BaseMapper<WmsMaterialType> {
 
     WmsMaterialTypeResult findById(@Param("id")String sMaterialTypeId);
 
-    WmsMaterialTypeResult findByMaterialSku(@Param("paramCondition") WmsMaterialTypeParam paramCondition);
+    WmsMaterialTypeResult findByMaterialSku(@Param("materialSku") String materialSku);
 
     void insertListBatch(@Param("list")List<WmsMaterialTypeParam> paramCondition);
 
     List<WmsMaterialType> findAll();
+
+    List<WmsMaterialType> findAllMaterialType();
+
+    List<WmsMaterialType> findAllMaterialNo(@Param("paramCondition")WmsMaterialTypeParam paramCondition);
+
+    List<WmsMaterialType> findMaterialRes(@Param("paramCondition")WmsMaterialTypeParam paramCondition);
 }

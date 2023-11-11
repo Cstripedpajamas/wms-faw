@@ -3,10 +3,11 @@ package cn.stylefeng.guns.modular.warehousemanage.mapper;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseCycleCountParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseCycleCountResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -69,4 +70,8 @@ public interface WmsWarehouseTurnoverBindMapper extends BaseMapper<WmsWarehouseT
     WmsWarehouseTurnoverBindResult findByMaterial(@Param("materialSerialNumber")String materialSerialNumber);
 
     BatchEnt findBatch(@Param("materialSku")String materialSku, @Param("number")int number);
+
+    Page<WmsWarehouseCycleCountResult> findSKUList(@Param("page") Page pageContext, @Param("paramCondition") WmsWarehouseCycleCountParam param);
+
+    WmsWarehouseTurnoverBindResult findBarcode(@Param("paramCondition") WmsWarehouseTurnoverBindParam paramCondition);
 }

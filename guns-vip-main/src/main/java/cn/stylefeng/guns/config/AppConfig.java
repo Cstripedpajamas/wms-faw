@@ -1,15 +1,10 @@
 package cn.stylefeng.guns.config;
 
-import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBody2Entity;
-import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendBodyEntity;
-import cn.stylefeng.guns.modular.WebApi.Entity.BpmSendHeaderEntity;
-import cn.stylefeng.guns.modular.WebApi.WmsApiService;
 import cn.stylefeng.guns.threads.GuiHuanAppliesThread;
 import cn.stylefeng.guns.threads.UseAppliesThread;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -54,6 +49,7 @@ public class AppConfig implements CommandLineRunner {
         @Override
         public void run() {
             try {
+                UseAppliesThread.NotificationStockInfo();
                 UseAppliesThread.startThread();
             } catch (Exception e) {
                 logger.info("UpDataThreadPool-->Start exception");

@@ -3,9 +3,9 @@ package cn.stylefeng.guns.modular.onetypecabinet.model.result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -43,13 +43,13 @@ public class WmsCabinet1RepairReturnTaskResult implements Serializable {
     /**
      * 物料名称
      */
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     private String materialName;
 
     /**
      * 物料SKU
      */
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     private String materialSku;
 
     /**
@@ -105,5 +105,19 @@ public class WmsCabinet1RepairReturnTaskResult implements Serializable {
      */
     @ApiModelProperty(value = "更新时间")
     private Date updateTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 组合编码
+     */
+    private String workTeam;
+
+    /**
+     * 操作人姓名
+     */
+    private String userName;
+
 
 }

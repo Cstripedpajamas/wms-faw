@@ -1,11 +1,12 @@
 package cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -86,12 +87,57 @@ public class WmsUseApply implements Serializable {
     @TableField("scrap_num")
     private String scrapNum;
 
+    /**
+     * 审批人
+     * */
+    @TableField("approvedby")
+    private String approvedBy;
+
+    /**
+     * 记账日期
+     * */
+    @TableField("postDate")
+    private String postDate;
+
+    /**
+     * 项目成本单号
+     * */
+    @TableField("ordNO")
+    private String ordNO;
+
+    /**
+     * 成本中心
+     * */
+    @TableField("costCenter")
+    private String costCenter;
+
+    /**
+     * 产品编码
+     * */
+    @TableField("busArea")
+    private String busArea;
+
+
+    /**
+     * 是否结算
+     * */
+    @TableField("jieSan")
+    private Boolean jieSan;
+
+
+    /**
+     * 固定资产编号
+     * */
+    @TableField("mainAssetNo")
+    private String mainAssetNo;
+
     @Override
     public String toString() {
         return "WmsUseApply{" +
                 "id=" + id +
                 ", processNumber='" + processNumber + '\'' +
                 ", operator='" + operator + '\'' +
+                ", approvedBy='" + approvedBy + '\'' +
                 ", materialId='" + materialId + '\'' +
                 ", mNumber='" + mNumber + '\'' +
                 ", processType='" + processType + '\'' +
@@ -100,6 +146,12 @@ public class WmsUseApply implements Serializable {
                 ", dataState='" + dataState + '\'' +
                 ", scrapMaterialId='" + scrapMaterialId + '\'' +
                 ", scrapNum='" + scrapNum + '\'' +
+                ", postDate='" + postDate + '\'' +
+                ", ordNO='" + ordNO + '\'' +
+                ", costCenter='" + costCenter + '\'' +
+                ", busArea='" + busArea + '\'' +
+                ", jieSan='" + jieSan + '\'' +
+                ", mainAssetNo='" + mainAssetNo + '\'' +
                 '}';
     }
 
@@ -109,6 +161,14 @@ public class WmsUseApply implements Serializable {
 
     public void setScrapMaterialId(String scrapMaterialId) {
         this.scrapMaterialId = scrapMaterialId;
+    }
+
+    public String getApprovedBy() {
+        return approvedBy;
+    }
+
+    public void setApprovedBy(String approvedBy) {
+        this.approvedBy = approvedBy;
     }
 
     public String getScrapNum() {
@@ -189,6 +249,51 @@ public class WmsUseApply implements Serializable {
 
     public void setDataState(String dataState) {
         this.dataState = dataState;
+    }
+    public String getPostDate() {
+        return postDate;
+    }
+
+    public void setPostDate(String postDate) {
+        this.postDate = postDate;
+    }
+    public String getOrdNO() {
+        return ordNO;
+    }
+
+    public void setOrdNO(String ordNO) {
+        this.ordNO = ordNO;
+    }
+    public String getCostCenter() {
+        return costCenter;
+    }
+
+    public void setCostCenter(String costCenter) {
+        this.costCenter = costCenter;
+    }
+    public String getBusArea() {
+        return busArea;
+    }
+
+    public void setBusArea(String busArea) {
+        this.busArea = busArea;
+    }
+
+    public Boolean getJieSan() {
+        return jieSan;
+    }
+
+    public void setJieSan(Boolean jieSan) {
+        this.jieSan = jieSan;
+    }
+
+
+    public String getMainAssetNo() {
+        return mainAssetNo;
+    }
+
+    public void setMainAssetNo(String mainAssetNo) {
+        this.mainAssetNo = mainAssetNo;
     }
 
 }

@@ -1,7 +1,6 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.params;
 
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -130,6 +129,31 @@ public class WmsWarehouseToolUseTaskParam implements Serializable, BaseValidatin
      * 分拣任务 (机械手分拣ID)
      */
     private String sortingTask;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 规格型号
+     */
+    private String materialSizes;
+
+    /**
+     * 操作人名称
+     */
+    private String userName;
+
+    /**
+     * 所属组织
+     */
+    private String workTeam;
+
+    /**
+     * 周转箱编号
+     */
+    private String barCode;
 
 
     @Override

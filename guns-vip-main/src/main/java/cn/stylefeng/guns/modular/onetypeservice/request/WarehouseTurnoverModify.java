@@ -14,7 +14,7 @@ public class WarehouseTurnoverModify {
     @ApiModelProperty(value = "周转箱ID")
     private Long id;
 
-    @ApiModelProperty(value = "备品备件ID")
+    @ApiModelProperty(value = "备品备件ID=>物料主数据ID")
     private Long sparePartsId;
 
     @ApiModelProperty(value = "格口编号")

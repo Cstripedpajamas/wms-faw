@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.onetypecabinet.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -89,6 +89,20 @@ public class WmsCabinet1RepairReturnTaskParam implements Serializable, BaseValid
      * 更新时间
      */
     private Date updateTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 组合编码
+     */
+    private String workTeam;
+
+    /**
+     * 操作人姓名
+     */
+    private String userName;
+
 
     @Override
     public String checkParam() {

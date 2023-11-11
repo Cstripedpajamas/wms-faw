@@ -64,8 +64,8 @@ public class WmsIntelligentCabinet2ConfServiceImpl extends ServiceImpl<WmsIntell
     }
 
     @Override
-    public WmsIntelligentCabinet2ConfResult findBySku(String materialSku) {
-        return this.baseMapper.findBySku(materialSku);
+    public WmsIntelligentCabinet2ConfResult findBySku(String materialTypeId) {
+        return this.baseMapper.findBySku(materialTypeId);
     }
 
     private Serializable getKey(WmsIntelligentCabinet2ConfParam param) {

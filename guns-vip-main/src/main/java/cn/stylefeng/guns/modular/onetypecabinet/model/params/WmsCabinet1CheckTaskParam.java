@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.onetypecabinet.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -39,6 +39,10 @@ public class WmsCabinet1CheckTaskParam implements Serializable, BaseValidatingPa
      * 操作人
      */
     private String operator;
+    /**
+     * 操作人姓名
+     */
+    private String userName;
 
     /**
      * 操作时间

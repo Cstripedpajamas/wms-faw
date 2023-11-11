@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -69,6 +69,22 @@ public class WmsCabinet2CheckTaskParam implements Serializable, BaseValidatingPa
      * 更新时间
      */
     private Date updateTime;
+    /**
+     * 操作人员姓名
+     */
+    private String userName;
+    /**
+     * 操作人员工号
+     */
+    private String serialNumber;
+    /**
+     * 物料编号
+     */
+    private String materialSku;
+    /**
+     * 物料名称
+     */
+    private String materialName;
 
     @Override
     public String checkParam() {

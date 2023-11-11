@@ -17,9 +17,9 @@ public class PurchaseStorageResponse {
     private String  materialTypeId;
     @ApiModelProperty(value = "物料类型")
     private String  materialType;
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     private String  materialName;
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     private String  materialSku;
     @ApiModelProperty(value = "剩余可接收数量")
     private String number;

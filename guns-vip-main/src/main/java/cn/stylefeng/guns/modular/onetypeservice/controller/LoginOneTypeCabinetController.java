@@ -1,7 +1,6 @@
 package cn.stylefeng.guns.modular.onetypeservice.controller;
 
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
-import cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
 import cn.stylefeng.guns.modular.onetypeservice.response.LoginResponse;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
@@ -53,19 +52,20 @@ public class LoginOneTypeCabinetController {
         List<LoginResponse> list = new ArrayList<>();
         if(Objects.equals(user.getUserType(),"A")){
             user.setUserType("管理员");
-            list.add(new LoginResponse("大件换新","1"));
-            list.add(new LoginResponse("大件归还","2"));
-            list.add(new LoginResponse("大件维修","3"));
+            list.add(new LoginResponse("工具换新","1"));
+            list.add(new LoginResponse("工具归还","2"));
+            list.add(new LoginResponse("工具维修","3"));
             list.add(new LoginResponse("维修归还","4"));
-            list.add(new LoginResponse("大件盘点","5"));
+//            list.add(new LoginResponse("工具盘点","5"));
+            list.add(new LoginResponse("补货","6"));
         } else if(Objects.equals(user.getUserType(),"B")){
-            user.setUserType("维修人员");
-            list.add(new LoginResponse("大件维修","3"));
+            user.setUserType("装备技术室维修人员");
+            list.add(new LoginResponse("工具维修","3"));
             list.add(new LoginResponse("维修归还","4"));
         } else {
             user.setUserType("操作员");
-            list.add(new LoginResponse("大件换新","1"));
-            list.add(new LoginResponse("大件归还","2"));
+            list.add(new LoginResponse("工具换新","1"));
+            list.add(new LoginResponse("工具归还","2"));
         }
         return list;
     }

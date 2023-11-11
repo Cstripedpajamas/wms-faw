@@ -152,6 +152,11 @@ public class WmsWarehouseTaskOutParam implements Serializable, BaseValidatingPar
     private  String mark;
 
     /**
+     * 备注
+     * */
+    private  String sizes;
+
+    /**
      * 备用字段
      * */
     private String spareField;

@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2InputScrap.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -30,6 +30,27 @@ public class WmsCabinet2InputScrapResult implements Serializable {
     private String useTask;
 
     /**
+     * 领用任务编号
+     */
+    private String taskNumber;
+
+
+    /**
+     * 报废物料类型
+     */
+    private String materialType;
+
+    /**
+     * 报废物料描述
+     */
+    private String materialName;
+
+    /**
+     * 报废物料号
+     */
+    private String materialSku;
+
+    /**
      * 报废物料类型ID
      */
     private String materialTypeId;
@@ -48,5 +69,12 @@ public class WmsCabinet2InputScrapResult implements Serializable {
      * 操作时间
      */
     private Date operationTime;
-
+    /**
+     * 操作人员工号
+     */
+    private String operators;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 }

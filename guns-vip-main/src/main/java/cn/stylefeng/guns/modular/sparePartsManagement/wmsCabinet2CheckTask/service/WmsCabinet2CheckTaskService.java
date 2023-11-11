@@ -34,6 +34,8 @@ public interface WmsCabinet2CheckTaskService extends IService<WmsCabinet2CheckTa
      */
     void delete(WmsCabinet2CheckTaskParam param);
 
+
+    void deleteVue();
     /**
      * 更新
      *

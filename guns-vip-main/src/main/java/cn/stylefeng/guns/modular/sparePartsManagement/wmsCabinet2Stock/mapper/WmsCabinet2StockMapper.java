@@ -60,7 +60,7 @@ public interface WmsCabinet2StockMapper extends BaseMapper<WmsCabinet2Stock> {
 
     void updateStockById(@Param("stockID")String stockID,@Param("state")String state);
 
-    WmsCabinet2StockResult findNullStock();
+    WmsCabinet2StockResult findNullStock(String locaNumber);
 
     void updateTurnover(@Param("nullStockID")String nullStockID,@Param("stockState")String stockState, @Param("turnoverID")String turnoverID);
 

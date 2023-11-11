@@ -58,5 +58,9 @@ public class WmsCabinet1CheckTaskResult implements Serializable {
      * 更新时间
      */
     private Date updateTime;
+    /**
+     * 操作人姓名
+     */
+    private String userName;
 
 }

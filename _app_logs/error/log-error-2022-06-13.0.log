@@ -1,0 +1,2706 @@
+2022-06-13 09:02:14.051 ERROR 13124 --- [http-nio-8099-exec-3] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES : insert into wms_print_info (material_serial_number,operator,print_type,print_stu)
+          
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+### The error may exist in file [D:\项目资料\一汽解放智能柜\asd_faw_new\guns-vip-main\target\classes\cn\stylefeng\guns\modular\onetypecabinet\mapper\mapping\WmsPrintInfoMapper.xml]
+### The error may involve cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsPrintInfoMapper.insertMatch
+### The error occurred while executing an update
+### SQL: insert into wms_print_info (material_serial_number,operator,print_type,print_stu)                        (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )          ,              (             ?,?,?,?             )
+### Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES : insert into wms_print_info (material_serial_number,operator,print_type,print_stu)
+          
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+; uncategorized SQLException; SQL state [null]; error code [0]; sql injection violation, syntax error: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES : insert into wms_print_info (material_serial_number,operator,print_type,print_stu)
+          
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            ); nested exception is java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES : insert into wms_print_info (material_serial_number,operator,print_type,print_stu)
+          
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.insert(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.insert(OptionalSqlSessionTemplate.java:203)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy181.insertMatch(Unknown Source)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl.insertMatch(WmsPrintInfoServiceImpl.java:73)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$FastClassBySpringCGLIB$$be732b41.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$EnhancerBySpringCGLIB$$e286ab0f.insertMatch(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService.printGeneratorCode(WarehouseService.java:767)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$FastClassBySpringCGLIB$$6120538d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$EnhancerBySpringCGLIB$$81383299.printGeneratorCode(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController.generatorCode(PrintInfoController.java:49)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$FastClassBySpringCGLIB$$f52dc6e7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$EnhancerBySpringCGLIB$$708e74e7.generatorCode(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES : insert into wms_print_info (material_serial_number,operator,print_type,print_stu)
+          
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+         , 
+            (
+            ?,?,?,?
+            )
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:806)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:259)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:568)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:341)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:350)
+	at sun.reflect.GeneratedMethodAccessor198.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.atomikos.jdbc.AtomikosConnectionProxy.invoke(AtomikosConnectionProxy.java:141)
+	at com.sun.proxy.$Proxy100.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor.intercept(PaginationInterceptor.java:162)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at cn.stylefeng.roses.core.datascope.DataScopeInterceptor.intercept(DataScopeInterceptor.java:35)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:92)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:53)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:97)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 129 common frames omitted
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'type,print_stu)
+          
+        ', expect RPAREN, actual QUES pos 120, line 3, column 15, token QUES
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:344)
+	at com.alibaba.druid.sql.parser.SQLParser.accept(SQLParser.java:352)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseInsert(MySqlStatementParser.java:2829)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseInsert(MySqlStatementParser.java:220)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:266)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:182)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:624)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:578)
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:793)
+	... 174 common frames omitted
+
+2022-06-13 09:04:26.751 ERROR 106400 --- [http-nio-8099-exec-4] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 09:04:26.751 ERROR 106400 --- [http-nio-8099-exec-3] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 09:04:36.608 ERROR 106400 --- [http-nio-8099-exec-5] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'printStu' not found. Available parameters are [list, param1]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.insert(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.insert(OptionalSqlSessionTemplate.java:203)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy181.insertMatch(Unknown Source)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl.insertMatch(WmsPrintInfoServiceImpl.java:73)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$FastClassBySpringCGLIB$$be732b41.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$EnhancerBySpringCGLIB$$f7faf3cd.insertMatch(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService.printGeneratorCode(WarehouseService.java:767)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$FastClassBySpringCGLIB$$6120538d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$EnhancerBySpringCGLIB$$cf1d5c38.printGeneratorCode(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController.generatorCode(PrintInfoController.java:49)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$FastClassBySpringCGLIB$$f52dc6e7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$EnhancerBySpringCGLIB$$be739e86.generatorCode(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'printStu' not found. Available parameters are [list, param1]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:45)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at com.baomidou.mybatisplus.core.MybatisDefaultParameterHandler.setParameters(MybatisDefaultParameterHandler.java:229)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.parameterize(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.parameterize(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:97)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:53)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:97)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 129 common frames omitted
+
+2022-06-13 09:06:59.354 ERROR 101920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 09:08:44.211 ERROR 101920 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->nwnfk90cby0ekimyt05bfoei5zi425qx，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 09:53:06.733 ERROR 96528 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:04:04.290 ERROR 96528 --- [http-nio-8099-exec-7] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->4t4juwm0y83m2rhrq569wibcz0b8b9w7，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:04:34.376 ERROR 96528 --- [http-nio-8099-exec-8] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 业务异常:
+
+cn.stylefeng.roses.kernel.model.exception.ServiceException: 已经存在该编码的系统参数
+	at cn.stylefeng.guns.sys.modular.consts.service.impl.SysConfigServiceImpl.add(SysConfigServiceImpl.java:46)
+	at cn.stylefeng.guns.sys.modular.consts.service.impl.SysConfigServiceImpl$$FastClassBySpringCGLIB$$2420a835.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at cn.stylefeng.guns.sys.modular.consts.service.impl.SysConfigServiceImpl$$EnhancerBySpringCGLIB$$82565cd2.add(<generated>)
+	at cn.stylefeng.guns.sys.modular.consts.controller.SysConfigController.addItem(SysConfigController.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2022-06-13 10:09:54.542 ERROR 31816 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->pb3rzxllnqno8bxxlrvl66osg3evuig3，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:35:52.686 ERROR 88296 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->stmwfrfq5dsjxoqqszosw8m2uospdick，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:46:19.872 ERROR 70184 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->40xcgly9pi9ox116csal33o3u77xgs53，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:48:14.389 ERROR 72700 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->pijgn7tihyyw89jiihr486g2342yl177，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:51:29.922 ERROR 85740 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->6xmsrvea7mtg1gz22tjgoblmj1aq1udr，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 10:59:06.779 ERROR 85740 --- [http-nio-8099-exec-10] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+### The error may exist in cn/stylefeng/guns/modular/base/materialType/mapper/WmsMaterialTypeMapper.java (best guess)
+### The error may involve cn.stylefeng.guns.modular.base.materialType.mapper.WmsMaterialTypeMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO wms_material_type  ( type, material_type, material_name, material_sku, m_unit, lattice_mouth_type,  create_time, sort_type, package_type, package_number, turnover_type, turnover_lattice_type, label )  VALUES  ( ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect integer value: '' for column 'package_number' at row 1; nested exception is java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.insert(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.insert(OptionalSqlSessionTemplate.java:203)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy120.insert(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.save(ServiceImpl.java:114)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl.add(WmsMaterialTypeServiceImpl.java:33)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl$$FastClassBySpringCGLIB$$44ead905.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl$$EnhancerBySpringCGLIB$$f5e7c650.add(<generated>)
+	at cn.stylefeng.guns.modular.base.materialType.controller.WmsMaterialTypeController.addItem(WmsMaterialTypeController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:627)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.update(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.update(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:54)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:97)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 113 common frames omitted
+
+2022-06-13 11:01:50.059 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.060 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->lmoby2n4thqqtge5cifi40p7dvmzja19，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.241 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.241 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.242 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.243 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.243 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.243 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.243 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:01:50.243 ERROR 58828 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.572 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.573 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->7qnesfdi821srv7t87oa8vmy861mjqfw，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.744 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.744 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.744 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.745 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.745 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.745 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.746 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:02:59.746 ERROR 67920 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:06:10.354 ERROR 34224 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->7hd1pebpm3l5704q7zqznmor0y5qjkln，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.423 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.424 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->baxqftzz28k5knamuh4rekqesnmnpbp7，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.629 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:14:15.631 ERROR 72792 --- [http-nio-8099-exec-2] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.732 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.733 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->tgqjqru8to0h457z0n8f6ju2po0z94vt，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.919 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.919 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.919 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.920 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.921 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.921 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.921 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:27.921 ERROR 28752 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:17:55.607 ERROR 28752 --- [http-nio-8099-exec-7] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+### The error may exist in cn/stylefeng/guns/modular/base/materialType/mapper/WmsMaterialTypeMapper.java (best guess)
+### The error may involve cn.stylefeng.guns.modular.base.materialType.mapper.WmsMaterialTypeMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO wms_material_type  ( type, material_type, material_name, material_sku, m_unit, lattice_mouth_type,  create_time, sort_type, package_type, package_number, turnover_type, turnover_lattice_type, label )  VALUES  ( ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect integer value: '' for column 'package_number' at row 1; nested exception is java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.insert(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.insert(OptionalSqlSessionTemplate.java:203)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy120.insert(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.save(ServiceImpl.java:114)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl.add(WmsMaterialTypeServiceImpl.java:33)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl$$FastClassBySpringCGLIB$$44ead905.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.base.materialType.service.impl.WmsMaterialTypeServiceImpl$$EnhancerBySpringCGLIB$$d813efa2.add(<generated>)
+	at cn.stylefeng.guns.modular.base.materialType.controller.WmsMaterialTypeController.addItem(WmsMaterialTypeController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect integer value: '' for column 'package_number' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:627)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.update(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy314.update(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:54)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:97)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 113 common frames omitted
+
+2022-06-13 11:26:34.833 ERROR 94876 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:26:34.834 ERROR 94876 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->u3zywlxz63v0b92yxca31lj3ok4lhi3j，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:32:56.769 ERROR 65336 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->ewm2uy2ncxmhlabxs7rld38q16otxb0c，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:47:42.915 ERROR 102352 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->pwkfm46l6kvump7oas3o0bgswj06x3lk，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:51:25.913 ERROR 103568 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->v6pi6d1yp4g5drqg0hipjo1lb7f4pxvu，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 11:55:01.298 ERROR 29444 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->zr78nszgc9pc43jp9o6tskd82bmxyrbi，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.011 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.012 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->15py1bfnfznboeah72cjwyvb62zp9avp，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.214 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.215 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.215 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.216 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.216 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.216 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.216 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 12:04:48.217 ERROR 84012 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:01:48.310 ERROR 87372 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->23xgydqs1nz7oib9uymt3fm89y5g521k，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:04:47.184 ERROR 38972 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->lgzpojh7bsodyypykvy6ej6rplsk740j，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:12:55.154 ERROR 31256 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->3blkpwlh0cnj13fhcefy0k3m1ohh67dy，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.064 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.065 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->xynmik1ucviazibk6huu33210nasp8ra，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.291 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.291 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.291 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.292 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.292 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.293 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.293 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 13:18:52.293 ERROR 86628 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 14:15:32.630 ERROR 30072 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->aza9bbeepgkx5uemhgf1o5l5ijwogtap，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 14:15:50.880 ERROR 30072 --- [http-nio-8099-exec-7] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id =
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+### The error may exist in file [D:\项目资料\一汽解放智能柜\asd_faw_new\guns-vip-main\target\classes\cn\stylefeng\guns\modular\onetypecabinet\mapper\mapping\WmsPrintInfoMapper.xml]
+### The error may involve cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsPrintInfoMapper.updateMatch
+### The error occurred while executing an update
+### SQL: update wms_print_info set print_stu = '1' where id =                        ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?
+### Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id =
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+; uncategorized SQLException; SQL state [null]; error code [0]; sql injection violation, syntax error: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id =
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?; nested exception is java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id =
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.update(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.update(OptionalSqlSessionTemplate.java:219)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy181.updateMatch(Unknown Source)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl.updateMatch(WmsPrintInfoServiceImpl.java:78)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$FastClassBySpringCGLIB$$be732b41.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$EnhancerBySpringCGLIB$$b0371c42.updateMatch(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService.printSupplement(WarehouseService.java:849)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$FastClassBySpringCGLIB$$6120538d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$EnhancerBySpringCGLIB$$4dc53fa1.printSupplement(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController.generatorCodePrint(PrintInfoController.java:56)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$FastClassBySpringCGLIB$$f52dc6e7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$EnhancerBySpringCGLIB$$3d1b81ef.generatorCodePrint(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id =
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:806)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:259)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:568)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:341)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:350)
+	at sun.reflect.GeneratedMethodAccessor198.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.atomikos.jdbc.AtomikosConnectionProxy.invoke(AtomikosConnectionProxy.java:141)
+	at com.sun.proxy.$Proxy100.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59)
+	at sun.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor.intercept(PaginationInterceptor.java:162)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at cn.stylefeng.roses.core.datascope.DataScopeInterceptor.intercept(DataScopeInterceptor.java:35)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:92)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:53)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:162)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 129 common frames omitted
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'here id =
+          
+            ?
+', expect COMMA, actual COMMA pos 88, line 3, column 15, token COMMA
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:344)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:532)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:182)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:624)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:578)
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:793)
+	... 173 common frames omitted
+
+2022-06-13 14:17:10.627 ERROR 64676 --- [http-nio-8099-exec-6] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id in 
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+### The error may exist in file [D:\项目资料\一汽解放智能柜\asd_faw_new\guns-vip-main\target\classes\cn\stylefeng\guns\modular\onetypecabinet\mapper\mapping\WmsPrintInfoMapper.xml]
+### The error may involve cn.stylefeng.guns.modular.onetypecabinet.mapper.WmsPrintInfoMapper.updateMatch
+### The error occurred while executing an update
+### SQL: update wms_print_info set print_stu = '1' where id in                         ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?          ,              ?
+### Cause: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id in 
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+; uncategorized SQLException; SQL state [null]; error code [0]; sql injection violation, syntax error: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id in 
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?; nested exception is java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id in 
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:348)
+	at com.sun.proxy.$Proxy106.update(Unknown Source)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate.update(OptionalSqlSessionTemplate.java:219)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
+	at com.sun.proxy.$Proxy181.updateMatch(Unknown Source)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl.updateMatch(WmsPrintInfoServiceImpl.java:78)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$FastClassBySpringCGLIB$$be732b41.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypecabinet.service.impl.WmsPrintInfoServiceImpl$$EnhancerBySpringCGLIB$$f8fb7b7c.updateMatch(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService.printSupplement(WarehouseService.java:849)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$FastClassBySpringCGLIB$$6120538d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService$$EnhancerBySpringCGLIB$$c9a7cbf8.printSupplement(<generated>)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController.generatorCodePrint(PrintInfoController.java:56)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$FastClassBySpringCGLIB$$f52dc6e7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:73)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.onetypeservice.controller.PrintInfoController$$EnhancerBySpringCGLIB$$b8fe0e46.generatorCodePrint(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA : update wms_print_info set print_stu = '1' where id in 
+          
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+         , 
+            ?
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:806)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:259)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:568)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:341)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:350)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.atomikos.jdbc.AtomikosConnectionProxy.invoke(AtomikosConnectionProxy.java:141)
+	at com.sun.proxy.$Proxy100.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor.intercept(PaginationInterceptor.java:162)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at cn.stylefeng.roses.core.datascope.DataScopeInterceptor.intercept(DataScopeInterceptor.java:35)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy314.prepare(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:92)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:53)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor.intercept(OptimisticLockerInterceptor.java:162)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy313.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at cn.stylefeng.roses.core.mutidatasource.mybatis.OptionalSqlSessionTemplate$SqlSessionInterceptor.invoke(OptionalSqlSessionTemplate.java:335)
+	... 129 common frames omitted
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'e id in 
+          
+            ?
+ ', expect COMMA, actual COMMA pos 90, line 3, column 15, token COMMA
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:344)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:532)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:182)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:624)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:578)
+	at com.alibaba.druid.wall.WallFilter.checkInternal(WallFilter.java:793)
+	... 176 common frames omitted
+
+2022-06-13 14:19:21.518 ERROR 72876 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->mehugnwzltpho26twjjram4lj883avrj，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 15:06:11.718 ERROR 12924 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->nkerh6ylp8zbk67a94sqhtjac4jcx79p，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 15:11:07.352 ERROR 67484 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->0mj6wkaj6p1cwm9h9mzptc4iyhrn7bwi，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 15:27:52.379 ERROR 31528 --- [main] c.atomikos.persistence.imp.LogFileLock   : ERROR: the specified log seems to be in use already: tmlog in D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs\. Make sure that no other instance is running, or kill any pending process if needed.
+2022-06-13 15:27:52.590 ERROR 31528 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userTransactionService' defined in class path resource [org/springframework/boot/autoconfigure/transaction/jta/AtomikosJtaConfiguration.class]: Invocation of init method failed; nested exception is com.atomikos.icatch.SysException: Error in init: Log already in use? tmlog in D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs\
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$149/776484396.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at cn.stylefeng.guns.GunsApplication.main(GunsApplication.java:40)
+Caused by: com.atomikos.icatch.SysException: Error in init: Log already in use? tmlog in D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs\
+	at com.atomikos.icatch.provider.imp.AssemblerImp.createRepository(AssemblerImp.java:181)
+	at com.atomikos.icatch.provider.imp.AssemblerImp.assembleTransactionService(AssemblerImp.java:156)
+	at com.atomikos.icatch.config.Configuration.assembleSystemComponents(Configuration.java:485)
+	at com.atomikos.icatch.config.Configuration.init(Configuration.java:448)
+	at com.atomikos.icatch.config.UserTransactionServiceImp.initialize(UserTransactionServiceImp.java:105)
+	at com.atomikos.icatch.config.UserTransactionServiceImp.init(UserTransactionServiceImp.java:219)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1904)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1846)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 17 common frames omitted
+Caused by: com.atomikos.recovery.LogException: Log already in use? tmlog in D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs\
+	at com.atomikos.persistence.imp.LogFileLock.acquireLock(LogFileLock.java:59)
+	at com.atomikos.recovery.imp.FileSystemRepository.init(FileSystemRepository.java:55)
+	at com.atomikos.icatch.provider.imp.AssemblerImp.createCoordinatorLogEntryRepository(AssemblerImp.java:229)
+	at com.atomikos.icatch.provider.imp.AssemblerImp.createRepository(AssemblerImp.java:179)
+	... 29 common frames omitted
+
+2022-06-13 15:33:47.283 ERROR 33836 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->cggi6fx3vcwvhct94re8974zx510z1ng，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-13 15:33:50.491 ERROR 33836 --- [http-nio-8099-exec-3] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 业务异常:
+
+cn.stylefeng.roses.kernel.model.exception.RequestEmptyException: 账号或密码为空！
+

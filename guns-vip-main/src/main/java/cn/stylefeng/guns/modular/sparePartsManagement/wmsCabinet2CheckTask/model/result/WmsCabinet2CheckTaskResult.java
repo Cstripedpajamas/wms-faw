@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -45,6 +45,11 @@ public class WmsCabinet2CheckTaskResult implements Serializable {
     private String turnoverId;
 
     /**
+     * 条码信息
+     */
+    private String barcode;
+
+    /**
      * 操作人
      */
     private String operator;
@@ -68,5 +73,20 @@ public class WmsCabinet2CheckTaskResult implements Serializable {
      * 更新时间
      */
     private Date updateTime;
-
+    /**
+     * 操作人员姓名
+     */
+    private String userName;
+    /**
+     * 操作人员工号
+     */
+    private String serialNumber;
+    /**
+     * 操作人员姓名
+     */
+    private String materialSku;
+    /**
+     * 操作人员工号
+     */
+    private String materialName;
 }

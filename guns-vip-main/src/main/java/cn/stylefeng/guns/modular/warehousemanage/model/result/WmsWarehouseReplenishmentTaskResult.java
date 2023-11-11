@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -38,6 +38,9 @@ public class WmsWarehouseReplenishmentTaskResult implements Serializable {
      * 物料名称
      */
     private String materialName;
+
+
+    private String sizes;
 
     /**
      * 物料SKU
@@ -103,5 +106,15 @@ public class WmsWarehouseReplenishmentTaskResult implements Serializable {
      * 分拣数量
      */
     private String sortingNum;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 物料规格
+     */
+    private String materialSizes;
 
 }

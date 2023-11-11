@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.procedureManagement.wmsReturnApply.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -41,6 +41,35 @@ public class WmsReturnApplyParam implements Serializable, BaseValidatingParam {
     private String materialId;
 
     /**
+     * 物料类型
+     */
+    private String materialType;
+    /**
+     * 差异类型
+     */
+    private String differenceType;
+
+    /**
+     * 描述
+     */
+    private String materialName;
+
+    /**
+     * 物料号
+     */
+    private String materialSku;
+
+    /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
+
+    /**
      * 物料数量
      */
     private String mNumber;
@@ -59,6 +88,27 @@ public class WmsReturnApplyParam implements Serializable, BaseValidatingParam {
      * 数据状态(0初始 1审核中 2通过 3结束)
      */
     private String dataState;
+
+    /**
+     * 审批人
+     */
+    private String approvedBy;
+    /**
+     * 人员姓名
+     */
+    private String userName;
+    /**
+     * 所属组织编码
+     */
+    private String workTeam;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 使用状态
+     */
+    private String objectstatus;
 
     @Override
     public String checkParam() {

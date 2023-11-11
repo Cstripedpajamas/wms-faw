@@ -1,0 +1,1449 @@
+2023-07-11 13:11:48.121  INFO 19860 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-8LEEG3A with PID 19860 (started by 22490 in C:\LOGBOT\1 Project\Projects_2020\LB-SS141G_FAW\trunk\SourceCode\WMS源码\后端\wms\asd_faw_new)
+2023-07-11 13:11:48.127  INFO 19860 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2023-07-11 13:11:52.129  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$a7f6a8d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.307  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e1f0cb2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.341  INFO 19860 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-07-11 13:11:52.347  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.359  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.360  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.431  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d59062c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.594  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d606ce66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.601  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.604  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@43245559' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.608  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fadb7118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:52.615  INFO 19860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:11:53.059  INFO 19860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2023-07-11 13:11:53.100  INFO 19860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11 13:11:53.100  INFO 19860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2023-07-11 13:11:53.381  INFO 19860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2023-07-11 13:11:53.382  INFO 19860 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4964 ms
+2023-07-11 13:11:53.474  WARN 19860 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2023-07-11 13:12:11.464  INFO 10640 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-8LEEG3A with PID 10640 (started by 22490 in C:\LOGBOT\1 Project\Projects_2020\LB-SS141G_FAW\trunk\SourceCode\WMS源码\后端\wms\asd_faw_new)
+2023-07-11 13:12:11.469  INFO 10640 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2023-07-11 13:12:15.485  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$3fb763a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.622  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$79b185fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.663  INFO 10640 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-07-11 13:12:15.670  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.682  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.682  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.822  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d519c0fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:15.996  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6dc78936] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:16.004  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:16.007  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39da5e49' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:16.011  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$929c2be8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:16.019  INFO 10640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 13:12:16.588  INFO 10640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2023-07-11 13:12:16.633  INFO 10640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11 13:12:16.634  INFO 10640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2023-07-11 13:12:16.930  INFO 10640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2023-07-11 13:12:16.930  INFO 10640 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5136 ms
+2023-07-11 13:12:17.026  WARN 10640 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2023-07-11 13:12:17.307  INFO 10640 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-07-11 13:12:18.271  WARN 10640 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7e94e331: WARNING: transaction manager not running?
+2023-07-11 13:12:22.298  INFO 10640 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2023-07-11 13:12:22.377  INFO 10640 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2023-07-11 13:12:23.311  INFO 10640 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2023-07-11 13:12:23.925  INFO 10640 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-11 13:12:26.327  INFO 10640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2023-07-11 13:12:26.327  INFO 10640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2023-07-11 13:12:26.328  INFO 10640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2023-07-11 13:12:26.328  INFO 10640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2023-07-11 13:12:26.388  INFO 10640 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-07-11 13:12:26.479  INFO 10640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64e3bc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@70cac22a, org.springframework.security.web.header.HeaderWriterFilter@46290193, org.springframework.web.filter.CorsFilter@54ed249f, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@1d0dad12, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5862dda4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7872e91f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4714f447, org.springframework.security.web.session.SessionManagementFilter@2911db81, org.springframework.security.web.access.ExceptionTranslationFilter@7d2be319, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7771c4e]
+2023-07-11 13:12:26.630  INFO 10640 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:12:26.722  INFO 10640 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2023-07-11 13:12:27.475  INFO 10640 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2023-07-11 13:12:27.626  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/C:/Users/22490/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2023-07-11 13:12:27.632  WARN 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2023-07-11 13:12:27.638  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2023-07-11 13:12:27.639  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2023-07-11 13:12:27.639  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = C:\LOGBOT\1 Project\Projects_2020\LB-SS141G_FAW\trunk\SourceCode\WMS源码\后端\wms\asd_faw_new\transaction-logs
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2023-07-11 13:12:27.640  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 172.20.10.2.tm
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2023-07-11 13:12:27.641  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2023-07-11 13:12:27.642  INFO 10640 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2023-07-11 13:12:27.670  INFO 10640 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2023-07-11 13:12:27.925  INFO 10640 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-07-11 13:12:27.941  INFO 10640 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-07-11 13:12:27.941  INFO 10640 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2023-07-11 13:12:27.942  INFO 10640 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-07-11 13:12:27.943  INFO 10640 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-07-11 13:12:27.943  INFO 10640 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-07-11 13:12:27.943  INFO 10640 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2023-07-11 13:12:27.944  INFO 10640 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2d4f1ddd
+2023-07-11 13:12:28.192  INFO 10640 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-07-11 13:12:28.239  INFO 10640 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-07-11 13:12:28.309  INFO 10640 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-07-11 13:12:28.579  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2023-07-11 13:12:28.581  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2023-07-11 13:12:28.583  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2023-07-11 13:12:28.584  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2023-07-11 13:12:28.678  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2023-07-11 13:12:28.694  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2023-07-11 13:12:28.701  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2023-07-11 13:12:28.924  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2023-07-11 13:12:28.954  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2023-07-11 13:12:28.973  INFO 10640 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2023-07-11 13:12:28.992  INFO 10640 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-07-11 13:12:28.992  INFO 10640 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-07-11 13:12:29.076  INFO 10640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2023-07-11 13:12:29.080  INFO 10640 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 18.701 seconds (JVM running for 21.374)
+2023-07-11 13:12:29.087  INFO 10640 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2023-07-11 13:12:29.351  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:12:29.361  INFO 10640 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant17 strip
+2023-07-11 13:12:29.363  INFO 10640 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2023-07-11 13:12:29.366  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:12:39.360  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:12:49.381  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:12:50.517  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:12:59.401  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:00.538  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:13:09.420  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:19.428  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:21.589  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:13:29.438  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:31.705  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:13:39.456  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:49.465  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:13:50.148  INFO 10640 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 13:13:50.149  INFO 10640 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11 13:13:50.175  INFO 10640 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2023-07-11 13:13:52.754  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:13:59.525  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:02.780  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:14:09.540  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:19.549  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:23.839  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:14:29.556  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:33.864  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:14:39.569  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:49.581  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:14:54.883  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:14:59.600  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:04.912  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:15:05.671  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:15:09.604  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:15.708  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:15:19.618  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:29.636  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:30.113  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:15:39.648  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:40.131  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:15:49.656  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:15:50.322  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:15:59.676  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:00.338  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:16:09.687  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:12.912  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:16:19.701  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:22.942  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:16:29.721  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:30.693  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:16:39.741  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:40.722  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:16:48.659  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:16:49.775  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:16:58.683  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:16:59.791  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:09.741  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:17:09.799  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:19.754  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:17:19.807  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:28.466  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:17:29.821  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:38.524  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:17:39.839  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:46.173  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:17:49.850  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:17:56.203  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:17:59.865  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:05.923  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:18:09.880  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:15.953  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:18:19.896  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:23.536  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:18:29.900  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:33.562  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:18:39.909  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:41.656  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:18:49.923  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:18:51.682  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:18:59.244  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:18:59.959  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:09.266  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:19:09.975  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:18.252  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:19:19.983  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:28.271  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:19:29.991  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:36.160  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:19:40.004  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:46.194  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:19:50.022  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:19:53.626  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:20:00.044  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:03.649  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:20:10.058  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:15.945  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:20:20.075  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:25.962  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:20:30.092  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:35.611  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:20:40.097  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:45.629  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:20:50.104  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:20:53.683  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:21:00.111  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:03.705  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:21:10.130  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:15.628  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:21:20.147  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:25.646  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:21:30.155  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:33.492  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:21:40.172  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:43.512  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:21:50.180  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:21:51.998  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:22:00.187  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:02.013  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:22:10.194  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:13.975  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:22:20.212  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:23.992  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:22:30.218  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:32.270  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:22:40.236  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:42.289  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:22:50.248  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:22:50.424  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:23:00.257  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:00.437  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:23:10.275  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:14.708  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:23:20.280  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:24.736  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:23:30.285  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:33.372  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:23:40.293  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:43.394  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:23:50.300  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:23:51.192  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:24:00.306  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:01.214  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:24:10.321  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:15.324  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:24:20.337  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:25.347  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:24:30.344  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:33.722  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:24:40.359  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:43.742  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:24:50.375  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:24:50.863  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:25:00.394  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:00.890  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:25:10.282  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:25:10.411  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:20.308  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:25:20.424  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:30.438  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:31.122  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:25:40.456  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:41.138  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:25:50.462  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:25:50.589  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:26:00.476  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:00.617  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:26:10.490  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:11.095  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:26:20.503  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:21.121  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:26:29.941  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:26:30.508  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:39.975  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:26:40.520  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:48.370  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:26:50.539  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:26:58.385  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:27:00.548  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:09.489  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:27:10.570  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:19.511  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:27:20.581  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:28.349  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:27:30.601  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:38.372  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:27:40.621  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:46.268  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:27:50.640  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:27:56.293  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:28:00.648  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:06.851  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:28:10.666  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:16.879  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:28:20.680  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:25.488  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:28:30.687  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:35.503  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:28:40.709  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:42.944  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:28:50.723  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:28:52.980  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:29:00.739  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:07.078  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:29:10.748  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:17.093  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:29:20.767  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:25.686  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:29:30.775  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:35.708  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:29:40.790  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:42.713  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:29:50.809  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:29:52.740  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:29:59.873  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:30:00.820  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:09.899  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:30:10.837  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:20.851  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:21.829  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:30:30.862  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:31.852  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:30:40.873  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:42.004  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:30:50.888  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:30:52.032  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:31:00.901  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:04.744  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:31:10.913  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:14.770  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:31:20.922  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:23.817  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:31:30.941  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:33.838  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:31:40.952  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:43.721  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:31:50.958  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:31:53.737  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:32:00.975  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:02.384  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:32:11.008  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:12.399  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:32:21.022  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:25.111  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:32:31.029  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:35.140  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:32:41.036  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:43.294  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:32:51.044  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:32:53.310  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:33:01.084  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:05.082  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:33:11.100  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:15.103  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:33:21.114  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:23.368  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:33:31.134  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:33.386  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:33:41.143  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:41.956  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:33:51.157  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:33:51.975  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:33:59.908  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:34:01.170  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:09.924  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:34:11.182  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:17.207  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:34:21.202  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:27.229  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:34:31.219  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:35.178  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:34:41.234  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:45.199  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:34:51.251  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:34:52.965  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:35:01.263  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:35:02.986  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:35:11.268  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:35:13.830  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:35:21.276  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:35:23.856  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:35:31.290  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:35:33.139  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:35:41.296  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:35:43.158  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:35:50.773  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:35:51.300  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:00.793  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:36:01.315  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:09.817  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:36:11.327  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:19.839  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:36:21.342  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:28.434  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:36:31.357  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:38.461  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:36:41.369  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:45.062  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:36:47.119  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:36:51.383  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:36:57.139  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:01.394  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:07.142  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:07.797  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:37:11.402  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:17.826  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:21.412  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:26.384  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:37:29.209  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:31.430  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:36.412  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:41.446  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:44.134  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:37:51.294  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:37:51.460  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:37:54.164  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:01.471  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:03.205  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:38:11.480  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:13.227  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:13.362  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:20.600  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:38:21.501  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:30.625  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:31.515  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:35.417  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:38.152  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:38:41.532  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:48.175  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:38:51.545  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:38:55.213  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:38:57.501  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:01.552  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:05.250  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:11.572  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:14.145  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:39:19.552  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:21.583  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:24.168  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:31.593  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:32.219  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:39:41.599  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:41.620  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:42.240  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:39:49.731  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:39:51.615  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:39:59.750  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:01.633  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:03.697  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:11.646  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:12.541  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:40:21.652  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:22.563  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:25.754  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:31.665  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:33.095  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:40:41.678  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:43.121  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:47.819  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:40:51.698  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:40:53.186  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:41:01.703  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:03.210  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:41:09.902  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:41:11.719  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:14.445  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:41:21.737  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:24.473  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:41:31.755  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:31.966  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:41:33.683  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:41:41.762  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:43.702  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:41:51.661  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:41:51.771  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:41:54.022  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:01.677  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:01.790  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:11.808  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:16.090  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:18.385  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:42:21.822  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:28.416  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:31.841  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:37.650  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:42:38.141  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:41.847  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:47.666  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:42:51.857  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:42:56.613  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:43:00.196  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:01.869  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:06.635  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:11.882  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:15.869  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:43:21.889  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:22.254  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:25.890  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:31.899  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:34.318  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:43:41.914  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:44.300  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:44.334  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:43:51.929  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:43:52.109  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:44:01.943  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:02.123  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:06.363  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:11.953  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:14.615  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:44:21.961  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:24.646  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:28.459  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:31.968  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:33.979  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:44:41.973  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:44.007  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:50.531  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:44:51.980  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:44:52.794  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:45:01.993  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:02.821  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:45:11.999  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:12.604  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:45:21.016  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:45:22.014  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:31.044  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:45:32.031  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:34.657  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:45:41.485  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:45:42.048  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:51.509  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:45:52.067  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:45:56.713  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:00.149  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:46:02.080  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:10.167  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:12.085  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:18.775  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:20.659  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:46:22.096  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:30.679  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:32.102  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:40.526  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:46:40.822  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:42.111  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:50.554  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:46:52.124  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:46:58.763  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:47:02.140  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:02.878  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:08.791  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:12.145  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:17.558  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:47:22.159  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:24.939  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:27.576  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:32.173  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:35.978  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:47:42.186  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:45.999  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:46.993  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:47:52.201  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:47:55.001  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:48:02.208  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:05.025  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:09.046  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:12.215  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:16.120  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:48:22.234  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:26.154  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:31.085  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:32.250  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:38.215  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:48:42.262  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:48.236  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:52.282  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:48:53.162  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:48:57.335  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:49:02.289  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:07.362  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:49:12.304  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:15.221  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:49:19.175  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:49:22.318  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:29.200  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:49:32.336  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:37.280  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:49:38.037  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:49:42.354  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:48.070  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:49:52.371  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:49:55.842  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:49:59.349  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:02.389  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:05.893  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:12.397  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:16.996  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:50:21.439  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:22.408  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:27.024  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:32.432  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:36.530  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:50:42.445  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:43.489  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:46.567  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:50:52.462  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:50:54.311  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:51:02.476  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:51:04.325  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:05.553  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:12.484  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:51:14.233  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:51:22.496  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:51:24.252  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:27.618  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:32.508  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:51:33.114  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:51:42.514  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:51:43.130  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:49.691  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:51:51.590  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:51:52.525  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:01.614  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:52:02.537  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:11.746  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:52:12.548  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:15.815  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:52:19.549 ERROR 10640 --- [http-nio-8099-exec-1] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+java.lang.NullPointerException: null
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg.affirmPurchaseTask(RequestMsg.java:634)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$FastClassBySpringCGLIB$$479db6c3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$EnhancerBySpringCGLIB$$b0a70d8d.affirmPurchaseTask(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+2023-07-11 13:52:22.556  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:25.831  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:52:32.576  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:33.738  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:52:33.791  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:52:42.590  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:43.761  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:52:52.070  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:52:52.600  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:52:55.865  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:02.116  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:02.612  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:11.262  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:53:12.625  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:15.365 ERROR 10640 --- [http-nio-8099-exec-6] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+java.lang.NullPointerException: null
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg.affirmPurchaseTask(RequestMsg.java:634)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$FastClassBySpringCGLIB$$479db6c3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$EnhancerBySpringCGLIB$$b0a70d8d.affirmPurchaseTask(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+2023-07-11 13:53:17.929  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:21.293  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:22.632  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:24.364 ERROR 10640 --- [http-nio-8099-exec-7] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 运行时异常:
+
+java.lang.NullPointerException: null
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg.affirmPurchaseTask(RequestMsg.java:634)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$FastClassBySpringCGLIB$$479db6c3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg$$EnhancerBySpringCGLIB$$b0a70d8d.affirmPurchaseTask(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+2023-07-11 13:53:29.214  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:53:32.641  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:39.232  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:39.993  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:53:42.650  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:46.119  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:53:52.660  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:53:56.143  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:02.051  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:02.678  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:54:06.294  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:54:12.700  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:54:16.319  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:22.714  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:54:24.013  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:54:24.126  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:32.720  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:54:34.045  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:41.837  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:54:42.728  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:54:46.186  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:51.863  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:54:52.738  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:01.022  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:55:02.749  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:08.240  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:11.064  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:12.757  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:20.713  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:55:22.770  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:30.329  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:30.739  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:32.786  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:39.921  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:55:42.793  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:49.948  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:52.423  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:55:52.804  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:55:57.714  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:56:02.823  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:07.743  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:56:12.833  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:14.592  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:56:18.439  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:56:22.846  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:28.465  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:56:32.863  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:36.660  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:56:37.501  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:56:42.877  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:47.536  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:56:52.883  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:56:56.653  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:56:58.719  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:02.903  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:06.672  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:12.913  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:18.680  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:57:20.779  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:22.933  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:28.708  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:32.951  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:36.393  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:57:42.859  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:42.960  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:46.408  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:57:52.977  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:57:54.082  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:58:02.992  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:58:04.107  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:04.910  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:13.003  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:58:17.590  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:58:23.018  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:58:26.962  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:27.610  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:33.031  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:58:42.394  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:58:43.042  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:58:49.052  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:52.416  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:58:53.060  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:03.079  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:04.818  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:59:11.096  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:13.092  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:14.834  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:23.005  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:59:23.108  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:33.032  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:33.113  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:33.149  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:40.691  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 13:59:43.122  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:50.716  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:53.136  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 13:59:55.213  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 13:59:58.716  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:00:03.151  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:08.752  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:00:13.166  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:17.278  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:00:23.183  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:23.588  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:00:33.197  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:33.629  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:00:39.372  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:00:43.205  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:46.950  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:00:53.219  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:00:56.976  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:01.440  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:03.235  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:01:12.354  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:01:13.241  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:01:22.383  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:23.257  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:01:23.521  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:32.995  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:01:33.273  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:01:43.037  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:43.293  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:01:45.587  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:01:50.253  INFO 10640 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 14:01:53.305  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:02:00.273  INFO 10640 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:02:03.325  INFO 10640 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 14:02:07.667  INFO 10640 --- [Thread-33] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 14:02:10.600  INFO 10640 --- [Thread-43] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-07-11 14:02:10.602  INFO 10640 --- [Thread-43] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-07-11 14:02:10.603  INFO 10640 --- [Thread-43] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-07-11 14:02:10.605  INFO 10640 --- [Thread-43] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-07-11 14:02:10.607  INFO 10640 --- [Thread-43] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-07-11 14:02:10.610  INFO 10640 --- [Thread-43] c.a.icatch.imp.TransactionServiceImp     : Transaction Service: Entering shutdown (false, 9223372036854775807)...
+2023-07-11 14:02:10.639  INFO 10640 --- [Thread-43] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-11 14:02:10.653  INFO 10640 --- [Thread-43] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': destroying pool...
+2023-07-11 14:02:10.653  WARN 10640 --- [Thread-43] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': connection is still in use on pool destroy: an AtomikosXAPooledConnection with a SessionHandleState with 1 context(s) - please check your shutdown sequence to avoid heuristic termination of ongoing transactions!
+2023-07-11 15:37:59.636  INFO 18408 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on DESKTOP-8LEEG3A with PID 18408 (started by 22490 in C:\LOGBOT\1 Project\Projects_2020\LB-SS141G_FAW\trunk\SourceCode\WMS源码\后端\wms\asd_faw_new)
+2023-07-11 15:37:59.640  INFO 18408 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2023-07-11 15:38:03.715  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$6954a45d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:03.854  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a34ec6b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:03.887  INFO 18408 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-07-11 15:38:03.893  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:03.903  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:03.903  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:03.981  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$feb701b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.125  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9764c9ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.133  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.137  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@364fd4ae' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.141  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bc396ca1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.149  INFO 18408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-11 15:38:04.557  INFO 18408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2023-07-11 15:38:04.596  INFO 18408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11 15:38:04.597  INFO 18408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2023-07-11 15:38:04.890  INFO 18408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2023-07-11 15:38:04.891  INFO 18408 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4958 ms
+2023-07-11 15:38:04.992  WARN 18408 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2023-07-11 15:38:05.229  INFO 18408 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-07-11 15:38:06.264  WARN 18408 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@6b832551: WARNING: transaction manager not running?
+2023-07-11 15:38:09.802  INFO 18408 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2023-07-11 15:38:09.854  INFO 18408 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2023-07-11 15:38:10.721  INFO 18408 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2023-07-11 15:38:11.336  INFO 18408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-11 15:38:13.640  INFO 18408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2023-07-11 15:38:13.641  INFO 18408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2023-07-11 15:38:13.641  INFO 18408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2023-07-11 15:38:13.641  INFO 18408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2023-07-11 15:38:13.700  INFO 18408 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-07-11 15:38:13.778  INFO 18408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c02b3cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@bea283b, org.springframework.security.web.header.HeaderWriterFilter@2a5efbb9, org.springframework.web.filter.CorsFilter@3d8fd373, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@15914bb5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22854f2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27d6267e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dcd451f, org.springframework.security.web.session.SessionManagementFilter@1b9c716f, org.springframework.security.web.access.ExceptionTranslationFilter@4e45fbd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@414d2821]
+2023-07-11 15:38:13.900  INFO 18408 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:38:13.997  INFO 18408 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2023-07-11 15:38:14.731  INFO 18408 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2023-07-11 15:38:14.868  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/C:/Users/22490/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2023-07-11 15:38:14.874  WARN 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2023-07-11 15:38:14.880  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2023-07-11 15:38:14.881  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2023-07-11 15:38:14.881  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2023-07-11 15:38:14.881  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2023-07-11 15:38:14.881  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = C:\LOGBOT\1 Project\Projects_2020\LB-SS141G_FAW\trunk\SourceCode\WMS源码\后端\wms\asd_faw_new\transaction-logs
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2023-07-11 15:38:14.882  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 172.20.10.2.tm
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2023-07-11 15:38:14.883  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2023-07-11 15:38:14.884  INFO 18408 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2023-07-11 15:38:14.913  INFO 18408 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2023-07-11 15:38:15.099  INFO 18408 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-07-11 15:38:15.112  INFO 18408 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-07-11 15:38:15.113  INFO 18408 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2023-07-11 15:38:15.114  INFO 18408 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-07-11 15:38:15.115  INFO 18408 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-07-11 15:38:15.115  INFO 18408 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-07-11 15:38:15.115  INFO 18408 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2023-07-11 15:38:15.115  INFO 18408 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7f53b345
+2023-07-11 15:38:15.322  INFO 18408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-07-11 15:38:15.356  INFO 18408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-07-11 15:38:15.413  INFO 18408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-07-11 15:38:15.633  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2023-07-11 15:38:15.635  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2023-07-11 15:38:15.637  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2023-07-11 15:38:15.638  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2023-07-11 15:38:15.720  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2023-07-11 15:38:15.733  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2023-07-11 15:38:15.739  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2023-07-11 15:38:15.922  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2023-07-11 15:38:15.949  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2023-07-11 15:38:15.968  INFO 18408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2023-07-11 15:38:15.985  INFO 18408 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-07-11 15:38:15.985  INFO 18408 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-07-11 15:38:16.032  INFO 18408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2023-07-11 15:38:16.038  INFO 18408 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 17.286 seconds (JVM running for 19.733)
+2023-07-11 15:38:16.047  INFO 18408 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2023-07-11 15:38:16.250  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:38:16.258  INFO 18408 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant17 strip
+2023-07-11 15:38:16.261  INFO 18408 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2023-07-11 15:38:16.265  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:38:26.269  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:38:31.758  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:38:36.285  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:38:41.666  INFO 18408 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 15:38:41.667  INFO 18408 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11 15:38:41.683  INFO 18408 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2023-07-11 15:38:41.788  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:38:45.989  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:38:46.292  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:38:48.961  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:38:56.304  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:38:58.990  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:06.317  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:39:07.436  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:39:08.047  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:16.331  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:39:17.468  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:26.342  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:39:26.363  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:39:30.141  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:36.352  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:39:36.391  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:44.152  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:39:46.366  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:39:52.202  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:54.178  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:39:56.371  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:03.345  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:40:06.380  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:13.367  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:40:14.265  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:40:16.395  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:23.782  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:40:26.414  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:33.811  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:40:36.329  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:40:36.431  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:43.300  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:40:46.442  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:53.315  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:40:56.450  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:40:58.400  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:03.259  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:41:06.468  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:13.275  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:16.487  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:20.458  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:22.440  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:41:26.495  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:32.465  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:36.513  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:39.813  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:41:42.520  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:46.530  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:49.832  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:41:56.548  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:41:58.356  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:42:04.584  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:06.555  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:42:08.385  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:16.570  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:42:17.048  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:42:26.582  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:42:26.633  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:27.076  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:35.859  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:42:36.597  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:42:45.888  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:46.603  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:42:48.686  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:42:54.012  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:42:56.619  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:04.030  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:06.636  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:10.776  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:16.648  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:17.721  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:43:26.663  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:27.751  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:32.832  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:36.666  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:37.045  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:43:46.675  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:47.076  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:54.891  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:43:56.684  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:43:56.986  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:44:06.699  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:07.011  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:44:16.705  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:16.959  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:44:18.272  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:44:26.723  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:28.296  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:44:36.726  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:38.628  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:44:39.028  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:44:46.743  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:48.653  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:44:56.752  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:44:58.301  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:45:01.068  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:06.767  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:45:08.318  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:16.781  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:45:21.822  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:45:23.120  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:26.788  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:45:31.843  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:36.796  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:45:42.682  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:45:45.191  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:46.806  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:45:52.698  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:45:56.814  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:03.429  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:46:06.822  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:07.260  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:13.459  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:16.835  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:23.115  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:46:26.851  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:29.319  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:33.129  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:36.866  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:42.091  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:46:46.878  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:46:51.351  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:52.117  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:46:56.887  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:02.380  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:47:06.897  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:12.394  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:47:13.400  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:47:16.900  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:21.813  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:47:26.913  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:31.832  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:47:35.468  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:47:36.917  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:41.306  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:47:46.926  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:51.328  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:47:56.936  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:47:57.523  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:01.419  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:48:06.955  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:11.435  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:16.963  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:19.577  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:21.281  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:48:26.979  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:31.303  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:36.989  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:40.587  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:48:41.632  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:46.997  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:50.610  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:48:57.007  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:48:58.632  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:49:03.697  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:07.020  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:49:08.652  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:17.029  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:49:17.276  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:49:25.739  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:27.041  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:49:27.298  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:37.052  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:49:37.072  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:49:47.066  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:49:47.088  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:47.783  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:49:56.860  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:49:57.072  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:06.882  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:50:07.075  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:09.839  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:50:17.088  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:26.948  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:50:27.094  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:31.898  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:50:36.963  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:50:37.110  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:47.119  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:50:50.713  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:50:53.955  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:50:57.125  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:00.730  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:51:07.137  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:15.994  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:51:16.034  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:51:17.148  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:26.022  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:51:27.166  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:34.983  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:51:37.178  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:38.086  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:51:45.006  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:51:47.208  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:51:52.885  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:51:57.214  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:52:00.130  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:52:02.905  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:52:07.231  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:52:17.238  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:52:17.580  INFO 18408 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-07-11 15:52:22.186  INFO 18408 --- [Thread-31] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:52:27.249  INFO 18408 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-07-11 15:52:27.605  INFO 18408 --- [demo-pool-0] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2023-07-11 15:52:28.031  INFO 18408 --- [Thread-40] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-07-11 15:52:28.032  INFO 18408 --- [Thread-40] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-07-11 15:52:28.033  INFO 18408 --- [Thread-40] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-07-11 15:52:28.033  INFO 18408 --- [Thread-40] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-07-11 15:52:28.034  INFO 18408 --- [Thread-40] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-07-11 15:52:28.035  INFO 18408 --- [Thread-40] c.a.icatch.imp.TransactionServiceImp     : Transaction Service: Entering shutdown (false, 9223372036854775807)...
+2023-07-11 15:52:28.047  INFO 18408 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-07-11 15:52:28.054  INFO 18408 --- [Thread-40] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': destroying pool...
+2023-07-11 15:52:28.054  WARN 18408 --- [Thread-40] c.a.datasource.pool.ConnectionPool       : atomikos connection pool 'master': connection is still in use on pool destroy: an AtomikosXAPooledConnection with a SessionHandleState with 1 context(s) - please check your shutdown sequence to avoid heuristic termination of ongoing transactions!

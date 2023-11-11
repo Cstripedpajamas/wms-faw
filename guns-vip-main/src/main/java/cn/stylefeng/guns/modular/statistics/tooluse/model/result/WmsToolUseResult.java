@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.statistics.tooluse.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -58,5 +58,16 @@ public class WmsToolUseResult implements Serializable {
      * 数据时间
      */
     private Date dataTime;
-
+    /**
+     * 姓名
+     */
+    private String userName;
+    /**
+     * 所属组织编码
+     */
+    private String workTeam;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 }

@@ -1,0 +1,637 @@
+2022-06-14 09:04:38.194  INFO 13160 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 13160 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd_faw_new)
+2022-06-14 09:04:38.241  INFO 13160 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-06-14 09:04:53.570  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$c8c6e0fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:53.730  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2c10351] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:53.815  INFO 13160 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-14 09:04:53.820  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:53.836  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:53.836  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:53.894  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e293e52] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.154  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$f6d7068c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.160  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.162  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5f0a2638' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.166  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$1baba93e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.170  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:04:54.827  INFO 13160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-06-14 09:04:54.867  INFO 13160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-14 09:04:54.867  INFO 13160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-06-14 09:04:55.061  INFO 13160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-06-14 09:04:55.061  INFO 13160 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 16130 ms
+2022-06-14 09:04:55.146  WARN 13160 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-06-14 09:04:56.420  INFO 13160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-06-14 09:04:57.163  WARN 13160 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@24e5389c: WARNING: transaction manager not running?
+2022-06-14 09:05:04.720  INFO 13160 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2022-06-14 09:05:05.231  INFO 13160 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2022-06-14 09:05:06.536  INFO 13160 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-06-14 09:05:07.420  INFO 13160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-14 09:05:09.985  INFO 13160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-06-14 09:05:09.986  INFO 13160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-06-14 09:05:09.986  INFO 13160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-06-14 09:05:09.986  INFO 13160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-06-14 09:05:10.045  INFO 13160 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-06-14 09:05:10.113  INFO 13160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19ce19b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@cb1c58c, org.springframework.security.web.header.HeaderWriterFilter@37ade216, org.springframework.web.filter.CorsFilter@13047d3d, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@1884e671, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10a064bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22f046b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b240276, org.springframework.security.web.session.SessionManagementFilter@7be859de, org.springframework.security.web.access.ExceptionTranslationFilter@17d19538, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3205610d]
+2022-06-14 09:05:10.272  INFO 13160 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2022-06-14 09:05:10.345  INFO 13160 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-06-14 09:05:10.875  INFO 13160 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-06-14 09:05:10.970  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-06-14 09:05:10.973  WARN 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-06-14 09:05:10.976  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 2.0.0.1.tm
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-06-14 09:05:10.977  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-06-14 09:05:10.978  INFO 13160 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-06-14 09:05:11.176  INFO 13160 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-06-14 09:05:12.137  INFO 13160 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-06-14 09:05:12.146  INFO 13160 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-06-14 09:05:12.146  INFO 13160 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-06-14 09:05:12.147  INFO 13160 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-06-14 09:05:12.148  INFO 13160 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-06-14 09:05:12.148  INFO 13160 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-06-14 09:05:12.148  INFO 13160 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-06-14 09:05:12.148  INFO 13160 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@62871522
+2022-06-14 09:05:12.457  INFO 13160 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-06-14 09:05:12.531  INFO 13160 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-06-14 09:05:12.569  INFO 13160 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-06-14 09:05:12.732  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-06-14 09:05:12.734  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-06-14 09:05:12.734  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-06-14 09:05:12.736  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-06-14 09:05:12.790  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-06-14 09:05:12.799  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-06-14 09:05:12.804  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-06-14 09:05:12.913  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-06-14 09:05:12.930  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2022-06-14 09:05:12.986  INFO 13160 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-06-14 09:05:13.023  INFO 13160 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-06-14 09:05:13.023  INFO 13160 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-06-14 09:05:13.159  INFO 13160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-06-14 09:05:13.163  INFO 13160 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 37.973 seconds (JVM running for 42.614)
+2022-06-14 09:05:13.168  INFO 13160 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-06-14 09:05:14.348  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:05:14.348  INFO 13160 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant17 strip
+2022-06-14 09:05:14.351  INFO 13160 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2022-06-14 09:05:14.386  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:05:24.399  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:05:24.428  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:05:34.460  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:05:34.477  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:05:44.515  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:05:44.555  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:05:54.568  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:05:54.597  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:04.619  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:04.655  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:14.670  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:14.709  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:16.126  INFO 13160 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-14 09:06:16.126  INFO 13160 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-14 09:06:16.138  INFO 13160 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2022-06-14 09:06:24.715  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:24.799  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:34.757  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:34.877  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:44.803  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:44.929  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:06:54.856  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:06:54.983  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:04.901  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:05.031  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:14.942  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:15.092  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:24.989  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:25.139  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:35.047  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:35.190  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:45.102  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:45.262  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:07:55.157  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:07:55.309  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:05.206  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:05.432  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:15.249  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:15.473  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:25.287  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:25.530  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:35.336  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:35.573  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:45.384  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:45.620  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:08:55.431  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:08:55.704  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:05.481  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:05.753  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:15.534  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:15.793  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:25.581  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:25.837  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:35.674  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:35.886  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:45.729  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:45.940  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:09:55.771  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:09:56.000  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:05.816  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:06.046  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:15.863  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:16.088  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:25.905  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:26.141  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:35.956  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:36.181  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:46.029  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:46.232  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:10:56.204  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:10:56.307  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:06.257  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:06.355  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:16.301  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:16.398  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:26.342  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:26.451  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:36.394  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:36.503  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:46.434  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:46.545  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:11:56.510  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:11:56.595  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:06.559  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:06.636  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:16.604  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:16.686  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:26.646  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:26.769  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:36.683  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:36.816  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:46.736  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:46.862  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:12:56.793  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:12:56.914  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:06.872  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:06.963  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:16.921  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:17.033  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:26.969  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:27.079  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:37.021  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:37.129  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:47.069  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:47.181  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:13:57.124  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:13:57.230  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:07.182  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:07.284  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:17.230  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:17.363  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:27.276  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:27.409  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:37.329  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:37.451  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:47.378  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:47.506  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:14:57.439  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:14:57.567  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:07.503  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:07.629  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:17.557  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:17.704  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:27.603  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:27.763  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:37.674  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:37.812  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:47.721  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:47.867  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:15:57.772  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:15:57.904  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:07.825  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:07.975  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:17.879  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:18.016  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:27.931  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:28.062  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:37.981  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:38.124  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:48.060  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:48.180  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:16:58.113  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:16:58.220  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:08.166  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:08.262  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:18.225  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:18.305  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:28.269  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:28.358  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:38.315  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:38.413  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:48.376  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:48.471  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:17:58.429  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:17:58.513  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:08.479  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:08.586  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:18.520  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:18.635  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:28.576  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:28.685  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:38.648  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:38.743  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:48.699  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:48.790  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:18:58.744  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:18:58.846  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:08.796  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:08.897  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:18.834  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:18.953  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:28.886  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:29.002  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:38.947  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:39.087  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:49.001  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:49.126  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:19:59.059  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:19:59.176  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:09.106  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:09.220  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:19.187  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:19.272  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:29.242  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:29.330  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:39.282  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:39.380  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:49.328  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:49.421  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:20:59.403  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:20:59.475  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:09.441  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:09.525  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:19.484  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:19.565  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:29.532  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:29.610  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:39.589  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:39.649  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:49.637  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:49.701  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:21:59.684  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:21:59.775  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:09.726  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:22:09.846  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:19.769  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:22:19.900  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:29.817  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:22:29.950  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:39.865  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:22:39.996  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:49.939  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:22:50.043  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:22:59.975  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:00.088  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:23:10.031  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:10.155  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:23:20.083  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:20.198  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:23:30.129  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:30.240  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:23:40.174  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:40.287  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:23:50.256  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:23:50.389  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:00.322  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:00.439  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:10.363  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:10.489  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:20.415  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:20.543  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:30.456  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:30.597  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:40.505  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:40.649  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:24:50.559  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:24:50.703  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:00.603  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:00.754  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:10.645  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:10.816  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:20.718  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:20.869  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:30.766  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:30.919  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:40.842  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:40.961  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:25:50.894  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:25:51.003  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:00.941  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:01.076  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:10.980  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:11.121  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:21.026  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:21.170  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:31.070  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:31.225  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:41.116  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:41.296  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:26:51.162  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:26:51.338  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:01.217  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:01.386  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:11.261  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:11.430  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:21.308  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:21.479  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:31.355  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:31.533  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:41.405  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:41.583  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:27:51.452  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:27:51.644  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:01.502  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:01.693  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:11.547  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:11.745  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:21.590  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:21.800  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:31.635  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:31.838  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:41.684  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:41.890  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:28:51.730  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:28:51.943  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:01.774  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:01.996  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:11.823  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:12.046  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:21.867  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:22.103  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:31.916  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:32.150  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:41.959  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:42.207  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:29:52.013  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:29:52.247  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:02.065  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:02.307  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:12.109  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:12.360  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:22.150  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:22.410  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:32.196  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:32.475  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:42.240  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:42.527  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:30:52.287  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:30:52.574  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:02.328  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:02.634  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:12.382  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:12.675  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:22.428  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:22.717  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:32.472  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:32.762  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:42.521  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:42.815  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:31:52.562  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:31:52.864  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:02.604  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:02.906  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:12.647  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:12.992  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:22.685  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:23.036  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:32.728  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:33.092  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:42.784  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:43.141  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:32:52.834  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:32:53.180  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:02.885  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:03.226  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:12.948  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:13.274  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:22.996  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:23.339  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:33.036  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:33.390  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:43.096  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:43.441  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:33:53.140  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:33:53.491  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:03.188  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:03.529  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:13.257  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:13.583  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:23.297  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:23.632  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:33.345  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:33.683  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:43.394  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:43.734  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:34:53.462  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:34:53.804  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:03.529  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:03.880  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:13.569  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:13.924  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:23.612  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:23.964  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:33.654  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:34.017  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:43.696  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:44.088  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:35:53.751  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:35:54.142  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:03.799  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:04.179  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:13.850  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:14.224  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:23.906  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:24.290  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:33.959  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:34.367  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:44.012  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:44.408  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:36:54.079  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:36:54.460  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:04.126  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:04.538  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:14.170  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:14.584  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:24.217  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:24.632  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:34.258  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:34.685  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:44.308  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:44.735  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:37:54.380  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:37:54.813  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:04.426  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:04.862  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:14.532  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:14.950  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:24.574  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:24.996  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:34.628  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:35.051  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:44.670  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:45.091  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:38:54.718  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:38:55.142  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:04.768  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:05.194  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:14.814  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:15.250  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:24.996  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:25.395  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:35.041  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:35.449  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:45.090  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:45.490  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:39:55.134  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:39:55.544  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:05.190  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:05.599  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:15.233  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:15.654  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:25.282  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:25.707  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:35.335  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:35.757  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:45.381  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:45.826  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:40:55.428  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:40:55.865  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:05.470  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:05.913  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:15.517  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:15.953  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:25.570  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:25.995  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:35.620  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:36.037  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:45.671  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:46.094  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:41:55.723  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:41:56.141  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:05.768  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:06.188  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:15.824  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:16.236  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:25.870  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:26.287  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:35.912  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:36.343  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:45.962  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:46.441  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:42:56.016  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:42:56.494  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:06.057  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:06.551  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:16.099  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:16.607  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:26.163  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:26.667  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:36.204  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:36.730  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:46.249  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:46.771  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:43:56.291  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:43:56.822  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:06.331  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:06.874  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:16.385  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:16.917  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:26.523  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:27.060  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:36.576  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:37.102  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:46.618  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:47.182  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:44:56.671  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:44:57.233  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:06.726  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:07.284  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:16.770  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:17.327  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:26.814  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:27.384  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:36.868  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:37.431  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:46.918  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:47.471  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:45:56.964  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:45:57.515  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:07.015  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:07.563  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:17.074  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:17.620  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:27.128  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:27.675  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:37.170  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:37.766  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:47.223  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:47.817  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:46:57.270  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:46:57.865  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:07.345  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:07.922  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:17.394  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:17.982  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:27.444  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:28.021  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:37.499  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:38.071  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:47.550  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:48.146  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:47:57.599  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:47:58.186  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:07.641  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:08.248  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:17.693  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:18.304  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:27.753  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:28.352  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:37.801  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:38.402  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:47.843  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:48.453  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:48:57.887  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:48:58.501  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:07.962  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:08.575  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:18.006  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:18.629  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:28.073  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:28.675  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:38.123  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:38.730  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:48.173  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:48.785  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-14 09:49:58.228  INFO 13160 --- [demo-pool-1] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-14 09:49:58.827  INFO 13160 --- [demo-pool-0] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application

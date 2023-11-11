@@ -1,19 +1,16 @@
 package cn.stylefeng.guns.modular.base.redirect;
 
 import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
 import cn.stylefeng.guns.modular.WebApi.Entity.runBatch;
 import cn.stylefeng.guns.modular.WebApi.WmsApiService;
-import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.packageInfo.entity.WmsPackinfo;
 import cn.stylefeng.guns.modular.base.packageInfo.service.WmsPackinfoService;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsSortingTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.service.WmsSortingTaskService;
 import cn.stylefeng.guns.print.ZplPrinter;
@@ -388,7 +385,7 @@ public class RedirectConfController extends BaseController {
         wmsMaterialTypeParam.setMaterialSku(wmsSortingTaskResult.getSortingMaterialType());
 
         // 根据物料SKU 查询出物料类型
-        WmsMaterialTypeResult wmsMaterialTypeResult=this.wmsMaterialTypeService.findByMaterialSku(wmsMaterialTypeParam);
+        WmsMaterialTypeResult wmsMaterialTypeResult=this.wmsMaterialTypeService.findByMaterialSku(wmsMaterialTypeParam.getMaterialSku());
 
         WmsPackinfo wmsPackinfo=this.wmsPackinfoService.getById(wmsMaterialTypeResult.getPackageType());
         runBatch runBatchRe = wmsApiService.getRunBatchRe(wmsSortingTaskResult,wmsPackinfo);

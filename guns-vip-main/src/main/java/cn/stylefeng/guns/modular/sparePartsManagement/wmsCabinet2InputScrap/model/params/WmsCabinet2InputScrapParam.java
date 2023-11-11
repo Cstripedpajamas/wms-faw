@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2InputScrap.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -31,6 +31,11 @@ public class WmsCabinet2InputScrapParam implements Serializable, BaseValidatingP
     private String useTask;
 
     /**
+     * 领用任务编号
+     */
+    private String taskNumber;
+
+    /**
      * 报废物料类型ID
      */
     private String materialTypeId;
@@ -49,6 +54,35 @@ public class WmsCabinet2InputScrapParam implements Serializable, BaseValidatingP
      * 操作时间
      */
     private Date operationTime;
+
+    /**
+     * 领用任务流程单号
+     */
+    private String processNumber;
+
+
+    /**
+     * 报废物料类型
+     */
+    private String materialType;
+
+    /**
+     * 报废物料描述
+     */
+    private String materialName;
+
+    /**
+     * 报废物料号
+     */
+    private String materialSku;
+    /**
+     * 规格型号
+     */
+    public String sizes;
+    /**
+     * 操作人姓名
+     */
+    public String operators;
 
     @Override
     public String checkParam() {

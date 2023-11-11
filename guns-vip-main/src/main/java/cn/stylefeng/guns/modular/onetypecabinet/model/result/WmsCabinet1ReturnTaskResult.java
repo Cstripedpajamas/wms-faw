@@ -103,5 +103,17 @@ public class WmsCabinet1ReturnTaskResult implements Serializable {
      * 更新时间
      */
     private Date updateTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 组合编码
+     */
+    private String workTeam;
 
+    /**
+     * 操作人姓名
+     */
+    private String userName;
 }

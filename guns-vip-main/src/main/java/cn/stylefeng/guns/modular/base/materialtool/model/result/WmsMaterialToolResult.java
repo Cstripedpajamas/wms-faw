@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.base.materialtool.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -45,6 +45,16 @@ public class WmsMaterialToolResult implements Serializable {
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
+
+    /**
      * 物料编码
      */
     private String materialSerialNumber;
@@ -83,5 +93,8 @@ public class WmsMaterialToolResult implements Serializable {
      * 采购单号
      */
     private String purNumber;
-
+    /**
+     * 规格型号
+     */
+    private String sizes;
 }

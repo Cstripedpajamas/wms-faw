@@ -2,7 +2,6 @@ package cn.stylefeng.guns.modular.onetypeservice.controller;
 
 import cn.stylefeng.guns.modular.base.user.entity.WmsUser;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
-import cn.stylefeng.guns.modular.onetypeservice.response.LoginResponse;
 import cn.stylefeng.guns.modular.onetypeservice.response.LoginWarehouseResponse;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -48,10 +47,12 @@ public class LoginWarehouseController {
             user.setUserType("管理员");
 //            list.add(new LoginWarehouseResponse("工具领用","1","main/toolAccessPage/step1"));
             list.add(new LoginWarehouseResponse("采购入库","2","main/purchaseWarehousingPage/step1"));
-            list.add(new LoginWarehouseResponse("小件物料补货出库","4","main/replenishmentPage/step1"));
-            list.add(new LoginWarehouseResponse("大件物料条码打印","5","main/printerPage/step1"));
+            list.add(new LoginWarehouseResponse("Ⅱ类柜工具补货出库","4","main/replenishmentPage/step1"));
+            list.add(new LoginWarehouseResponse("Ⅰ类柜工具条码打印","5","main/printerPage/step1"));
             list.add(new LoginWarehouseResponse("入库","3","main/instoragePage"));
             list.add(new LoginWarehouseResponse("出库","6","main/outstoragePage"));
+            list.add(new LoginWarehouseResponse("盘点","7","main/cyclecountPage"));
+
         } else {
            return ResponseData.error("您不是管理员,无法登入");
         }

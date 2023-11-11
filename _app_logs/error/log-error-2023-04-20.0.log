@@ -1,0 +1,1 @@
+2023-04-20 15:20:56.559 ERROR 26148 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->n635k6yju18yprit8vbbusp342i9f09p，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！

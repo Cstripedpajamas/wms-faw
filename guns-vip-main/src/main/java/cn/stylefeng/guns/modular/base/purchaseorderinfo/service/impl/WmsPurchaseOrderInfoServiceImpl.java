@@ -6,7 +6,7 @@ import cn.stylefeng.guns.modular.base.purchaseorderinfo.entity.WmsPurchaseOrderI
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.mapper.WmsPurchaseOrderInfoMapper;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.params.WmsPurchaseOrderInfoParam;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
-import  cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
+import cn.stylefeng.guns.modular.base.purchaseorderinfo.service.WmsPurchaseOrderInfoService;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -14,6 +14,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -42,6 +43,14 @@ public class WmsPurchaseOrderInfoServiceImpl extends ServiceImpl<WmsPurchaseOrde
     public void update(WmsPurchaseOrderInfoParam param){
         WmsPurchaseOrderInfo oldEntity = getOldEntity(param);
         WmsPurchaseOrderInfo newEntity = getEntity(param);
+        ToolUtil.copyProperties(newEntity, oldEntity);
+        this.updateById(newEntity);
+    }
+
+    @Override
+    public void update(WmsPurchaseOrderInfoResult wmsPurchaseOrder){
+        WmsPurchaseOrderInfo oldEntity = getOldEntity(wmsPurchaseOrder);
+        WmsPurchaseOrderInfo newEntity = getEntity(wmsPurchaseOrder);
         ToolUtil.copyProperties(newEntity, oldEntity);
         this.updateById(newEntity);
     }
@@ -85,6 +94,21 @@ public class WmsPurchaseOrderInfoServiceImpl extends ServiceImpl<WmsPurchaseOrde
         baseMapper.stopTask();
     }
 
+    @Override
+    public void updatePurdocnoState(String purDocNO,String itemNO,String state) {
+        baseMapper.updatePurdocnoState(purDocNO,itemNO,state);
+    }
+
+    @Override
+    public void updatePurdocno(String client,String purDocItemNo,String buyListStrDes,String storeLocation,String mNumber,String purDocNO, String itemNO, String materialsku, String quantity, Date arrivaltime, String purchasereqno, Date updatetime, String stockbillid, String statedesc, String arrivalstate, String createdby, String typeid, String type, String materialType, String materialName, String mUnit,String purNumber) {
+        baseMapper.updatePurdocno(client,purDocItemNo,buyListStrDes,storeLocation,mNumber,purDocNO,itemNO,materialsku,quantity,arrivaltime,purchasereqno,updatetime,stockbillid,statedesc,arrivalstate,createdby,typeid,type,materialType,materialName,mUnit,purNumber);
+    }
+
+    @Override
+    public WmsPurchaseOrderInfoResult selectPurdocno(String purDocNO, String itemNO) {
+        return baseMapper.selectPurdocno(purDocNO,itemNO);
+    }
+
     private Serializable getKey(WmsPurchaseOrderInfoParam param){
         return param.getId();
     }
@@ -97,7 +121,23 @@ public class WmsPurchaseOrderInfoServiceImpl extends ServiceImpl<WmsPurchaseOrde
         return this.getById(getKey(param));
     }
 
+
+
     private WmsPurchaseOrderInfo getEntity(WmsPurchaseOrderInfoParam param) {
+        WmsPurchaseOrderInfo entity = new WmsPurchaseOrderInfo();
+        ToolUtil.copyProperties(param, entity);
+        return entity;
+    }
+
+    private Serializable getKey(WmsPurchaseOrderInfoResult param){
+        return param.getId();
+    }
+
+    private WmsPurchaseOrderInfo getOldEntity(WmsPurchaseOrderInfoResult param) {
+        return this.getById(getKey(param));
+    }
+
+    private WmsPurchaseOrderInfo getEntity(WmsPurchaseOrderInfoResult param) {
         WmsPurchaseOrderInfo entity = new WmsPurchaseOrderInfo();
         ToolUtil.copyProperties(param, entity);
         return entity;

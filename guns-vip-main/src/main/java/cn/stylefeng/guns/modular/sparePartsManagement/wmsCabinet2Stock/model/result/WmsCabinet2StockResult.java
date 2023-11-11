@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -60,6 +60,11 @@ public class WmsCabinet2StockResult implements Serializable {
     private String turnoverId;
 
     /**
+     * 条码信息
+     */
+    private String barcode;
+
+    /**
      * 物料类型ID
      */
     private String materialTypeId;
@@ -80,6 +85,11 @@ public class WmsCabinet2StockResult implements Serializable {
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
      * 批次
      */
     private String mBatch;
@@ -93,5 +103,9 @@ public class WmsCabinet2StockResult implements Serializable {
      * 数据时间
      */
     private Date createTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
 }

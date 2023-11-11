@@ -1,10 +1,11 @@
 package cn.stylefeng.guns.modular.base.materialtool.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -39,6 +40,16 @@ public class WmsMaterialToolParam implements Serializable, BaseValidatingParam {
      * 物料名称
      */
     private String materialName;
+
+    /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
 
     /**
      * 物料SKU
@@ -84,6 +95,11 @@ public class WmsMaterialToolParam implements Serializable, BaseValidatingParam {
      * 采购单号
      */
     private String purNumber;
+    /**
+     * 规格型号
+     */
+    @TableField(exist = false)
+    private String sizes;
 
     @Override
     public String checkParam() {

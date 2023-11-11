@@ -6,8 +6,12 @@ import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
 import cn.stylefeng.guns.modular.onetypeservice.controller.LoginOneTypeCabinetController;
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
 import cn.stylefeng.guns.modular.onetypeservice.response.LoginResponse;
+import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
 import cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.RequestMsg;
 import cn.stylefeng.guns.modular.utils.WebSocket.WebSocket;
+import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseToolUseTaskService;
+import cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTurnoverBindService;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -32,6 +36,14 @@ public class WmsApiMethods {
     @Autowired
     private LoginOneTypeCabinetController loginOneTypeCabinetController;
 
+    @Autowired
+    private WarehouseService warehouseService;
+
+    @Autowired
+    private WmsWarehouseToolUseTaskService wmsWarehouseToolUseTaskService;
+
+    @Autowired
+    private WmsWarehouseTurnoverBindService wmsWarehouseTurnoverBindService;
     public static  WmsApiMethods wmsApiMethods;
     @PostConstruct
     public void init(){
@@ -74,5 +86,29 @@ public class WmsApiMethods {
         else {
         WebSocket.sendMessageOfSession2(JSONObject.toJSONString(ResponseData.error("人员认证失败")));
     }
+    }
+
+    public static void ASRSAutoExeTask(String StaffId){
+        try{
+            System.out.println(StaffId);
+            JSONObject jsonObject = JSONObject.parseObject(StaffId);
+            String staffId = jsonObject.get("StaffId").toString();
+            toolApplyList(staffId);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //根据角色Number查询任务信息
+    public static void toolApplyList(String serialNumber) {
+        List<WmsWarehouseToolUseTask> data = wmsApiMethods.wmsWarehouseToolUseTaskService.list(new
+               QueryWrapper<WmsWarehouseToolUseTask>()
+               .eq("operator",serialNumber)
+               .eq("task_state",0)
+        );
+        if(data == null || data.isEmpty()){
+            return;
+        }
+        wmsApiMethods.warehouseService.claimConform(serialNumber, data.get(0).getTaskNumber());
     }
 }

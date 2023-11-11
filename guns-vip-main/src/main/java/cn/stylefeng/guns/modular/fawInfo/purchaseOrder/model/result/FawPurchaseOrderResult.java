@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.fawInfo.purchaseOrder.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -23,6 +23,11 @@ public class FawPurchaseOrderResult implements Serializable {
      * 记录ID
      */
     private Long id;
+
+    /**
+     * 规格
+     */
+    private String sizecoL;
 
     /**
      * 应用环境
@@ -209,10 +214,6 @@ public class FawPurchaseOrderResult implements Serializable {
      */
     private String storeLocationDes;
 
-    /**
-     * 规格
-     */
-    private String sizecoL;
 
     /**
      * 计量单位描述

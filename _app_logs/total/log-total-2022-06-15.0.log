@@ -1,0 +1,176 @@
+2022-06-15 10:35:12.446  INFO 16376 --- [main] cn.stylefeng.guns.GunsApplication        : Starting GunsApplication on LAPTOP-P46VT7JU with PID 16376 (started by 爱仕达 in D:\项目资料\一汽解放智能柜\asd_faw_new)
+2022-06-15 10:35:12.450  INFO 16376 --- [main] cn.stylefeng.guns.GunsApplication        : The following profiles are active: local
+2022-06-15 10:35:18.450  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webConfig' of type [cn.stylefeng.guns.config.web.WebConfig$$EnhancerBySpringCGLIB$$dfa6ced7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.556  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$19a0f12e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.584  INFO 16376 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-15 10:35:18.589  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.619  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.619  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.685  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$75092c2f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.832  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$db6f469] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.838  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.841  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@697d6ded' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.845  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$328b971b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:18.851  INFO 16376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15 10:35:19.223  INFO 16376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2022-06-15 10:35:19.255  INFO 16376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-15 10:35:19.255  INFO 16376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-06-15 10:35:19.393  INFO 16376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring embedded WebApplicationContext
+2022-06-15 10:35:19.394  INFO 16376 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6541 ms
+2022-06-15 10:35:19.453  WARN 16376 --- [main] c.atomikos.jdbc.AbstractDataSourceBean   : AtomikosDataSoureBean 'master': poolSize equals default - this may cause performance problems!
+2022-06-15 10:35:22.217  INFO 16376 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-06-15 10:35:22.601  WARN 16376 --- [main] c.atomikos.jdbc.AtomikosConnectionProxy  : atomikos connection proxy for com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@29170a47: WARNING: transaction manager not running?
+2022-06-15 10:35:28.324  INFO 16376 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Delete the DatabaseInfo information of the master! delete1Bar!
+2022-06-15 10:35:28.912  INFO 16376 --- [main] c.s.guns.base.db.dao.DataBaseInfoDao     : Initialize the DatabaseInfo information of the master! initialization1Bar!
+2022-06-15 10:35:30.169  INFO 16376 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet CXFServlet was not registered (possibly already registered?)
+2022-06-15 10:35:30.844  INFO 16376 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-15 10:35:33.376  INFO 16376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login', POST], []
+2022-06-15 10:35:33.376  INFO 16376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**', GET], []
+2022-06-15 10:35:33.376  INFO 16376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2022-06-15 10:35:33.376  INFO 16376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/activiti-editor/**', GET], []
+2022-06-15 10:35:33.418  INFO 16376 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-06-15 10:35:33.490  INFO 16376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b2ff4df, org.springframework.security.web.context.SecurityContextPersistenceFilter@16cb6f51, org.springframework.security.web.header.HeaderWriterFilter@6f2a3b37, org.springframework.web.filter.CorsFilter@23dff243, cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter@4e2824b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25c8c71e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d770bcd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4af606e9, org.springframework.security.web.session.SessionManagementFilter@50ef2906, org.springframework.security.web.access.ExceptionTranslationFilter@53ddabc6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62410e1f]
+2022-06-15 10:35:33.647  INFO 16376 --- [main] c.stylefeng.guns.modular.utils.HttpUtil  : Resttemplate initialization completed
+2022-06-15 10:35:33.777  INFO 16376 --- [main] o.a.c.w.s.f.ReflectionServiceFactoryBean : Creating Service {http://andot.org/webservice/demo/server}FawApiServiceImplService from class cn.stylefeng.guns.webservice.FawApiService
+2022-06-15 10:35:34.419  INFO 16376 --- [main] org.apache.cxf.endpoint.ServerImpl       : Setting the server's publish address to be /fawApiService
+2022-06-15 10:35:34.536  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Loaded jar:file:/D:/MAVEN/LocalWarehouse/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-06-15 10:35:34.539  WARN 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.client_demarcation = false
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.threaded_2pc = false
+2022-06-15 10:35:34.545  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_dir = D:\项目资料\一汽解放智能柜\asd_faw_new\transaction-logs
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.rmi_export_class = none
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_actives = -1
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.enable_logging = true
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-06-15 10:35:34.546  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.max_timeout = 300000
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.trust_client_tm = false
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.tm_unique_name = 20.0.2.170.tm
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: java.naming.provider.url = rmi://localhost:1099
+2022-06-15 10:35:34.547  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-06-15 10:35:34.548  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : USING: com.atomikos.icatch.default_jta_timeout = 300000
+2022-06-15 10:35:34.549  INFO 16376 --- [main] c.a.icatch.provider.imp.AssemblerImp     : Using default (local) logging and recovery...
+2022-06-15 10:35:34.695  INFO 16376 --- [main] c.a.d.xa.XATransactionalResource         : master: refreshed XAResource
+2022-06-15 10:35:35.664  INFO 16376 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-06-15 10:35:35.672  INFO 16376 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-06-15 10:35:35.672  INFO 16376 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2022-06-15 10:35:35.673  INFO 16376 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-06-15 10:35:35.674  INFO 16376 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-06-15 10:35:35.674  INFO 16376 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-06-15 10:35:35.674  INFO 16376 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2022-06-15 10:35:35.675  INFO 16376 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@57fec63f
+2022-06-15 10:35:35.848  INFO 16376 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-06-15 10:35:35.873  INFO 16376 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-06-15 10:35:35.933  INFO 16376 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-06-15 10:35:36.209  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-06-15 10:35:36.212  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-06-15 10:35:36.214  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-06-15 10:35:36.215  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: logoutUsingGET_1
+2022-06-15 10:35:36.324  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: closeCabinetUsingGET_1
+2022-06-15 10:35:36.341  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: conformUsingGET_1
+2022-06-15 10:35:36.350  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolUsingGET_1
+2022-06-15 10:35:36.548  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryToolContentUsingGET_1
+2022-06-15 10:35:36.576  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: replenishmentCreateOutTaskUsingGET_1
+2022-06-15 10:35:36.595  INFO 16376 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-06-15 10:35:36.609  INFO 16376 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-06-15 10:35:36.609  INFO 16376 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-06-15 10:35:36.676  INFO 16376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path '/faw'
+2022-06-15 10:35:36.680  INFO 16376 --- [main] cn.stylefeng.guns.GunsApplication        : Started GunsApplication in 25.199 seconds (JVM running for 28.703)
+2022-06-15 10:35:36.685  INFO 16376 --- [main] cn.stylefeng.guns.config.AppConfig       : Test Start up complete
+2022-06-15 10:35:37.570  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:35:37.662  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:35:37.669  INFO 16376 --- [main] c.s.g.s.m.consts.init.SysConfigInit      : Initialization constant17 strip
+2022-06-15 10:35:37.672  INFO 16376 --- [main] cn.stylefeng.guns.GunsApplication        : GunsApplication is success!
+2022-06-15 10:35:39.730  INFO 16376 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/faw]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-15 10:35:39.730  INFO 16376 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-15 10:35:39.747  INFO 16376 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2022-06-15 10:35:44.415 ERROR 16376 --- [http-nio-8099-exec-8] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->v5zzh5s26vny3sbvlly9328ucv6mvpsu，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-15 10:35:47.629  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:35:47.701  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:35:57.724  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:35:57.809  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:07.781  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:07.852  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:17.820  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:17.895  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:27.876  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:27.965  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:37.939  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:38.022  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:47.989  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:48.067  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:36:58.030  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:36:58.108  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:08.084  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:08.192  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:18.181  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:18.235  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:28.226  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:28.307  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:38.269  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:38.347  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:48.344  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:48.395  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:37:58.444  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:37:58.509  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:08.495  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:08.599  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:18.570  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:18.638  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:28.611  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:28.679  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:38.658  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:38.733  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:48.701  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:48.771  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:38:58.768  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:38:58.823  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:08.821  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:08.865  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:18.858  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:18.904  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:28.950  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:29.040  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:38.989  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:39.079  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:49.060  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:49.119  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:39:59.098  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:39:59.159  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:09.138  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:09.228  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:19.189  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:19.268  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:29.244  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:29.332  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:39.289  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:39.388  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:49.358  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:49.431  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:40:59.399  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:40:59.468  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:41:09.505  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:41:09.534  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:41:19.546  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:41:19.570  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:41:29.584  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:41:29.627  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2022-06-15 10:41:39.643  INFO 16376 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2022-06-15 10:41:39.669  INFO 16376 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application

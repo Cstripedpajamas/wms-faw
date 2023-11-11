@@ -66,5 +66,5 @@ public interface WmsIntelligentCabinet2ConfService extends IService<WmsIntellige
      */
     LayuiPageInfo findPageBySpec(WmsIntelligentCabinet2ConfParam param);
 
-    WmsIntelligentCabinet2ConfResult findBySku(String materialSku);
+    WmsIntelligentCabinet2ConfResult findBySku(String materialTypeId);
 }

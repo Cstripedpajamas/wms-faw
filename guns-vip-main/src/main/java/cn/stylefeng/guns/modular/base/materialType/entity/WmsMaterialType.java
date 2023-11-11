@@ -1,12 +1,9 @@
 package cn.stylefeng.guns.modular.base.materialType.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -40,10 +37,16 @@ public class WmsMaterialType implements Serializable {
     private String materialType;
 
     /**
-     * 物料名称
+     * 描述
      */
     @TableField("material_name")
     private String materialName;
+
+    /**
+     * 工厂
+     */
+    @TableField("plant")
+    private String plant;
 
     /**
      * 物料SKU
@@ -56,6 +59,103 @@ public class WmsMaterialType implements Serializable {
      */
     @TableField("m_unit")
     private String mUnit;
+
+    /**
+     * 操作类型
+     */
+    @TableField("di_opertype")
+    private String diOperType;
+
+    /**
+     * 批次号
+     */
+    @TableField("di_batchNo")
+    private String diBatchNo;
+
+    /**
+     * 更新时间
+     */
+    @TableField("di_updatetime")
+    private Date diUpdatetime;
+
+    /**
+     * 停用标识
+     */
+    @TableField("delflagforclientmtl")
+    private String delflagforclientmtl;
+
+    /**
+     * 制造路线
+     */
+    @TableField("industrystnddes")
+    private String industrystnddes;
+
+    /**
+     * 可配置物料标识
+     */
+    @TableField("pagefromat")
+    private String pagefromat;
+
+    /**
+     * 可配置物料标识
+     */
+    @TableField("isconfflag")
+    private String isconfflag;
+
+    /**
+     * 创建对象的用户代码
+     */
+    @TableField("datauser")
+    private String datauser;
+
+    /**
+     * 采购组代码
+     */
+    @TableField("purgrp")
+    private String purgrp;
+
+    /**
+     * 获取类型
+     */
+    @TableField("procuretype")
+    private String procuretype;
+
+    /**
+     * 特殊获取类型
+     */
+    @TableField("specprocuretype")
+    private String specprocuretype;
+
+
+    /**
+     * MRP控制者
+     */
+    @TableField("mrpcontroller")
+    private String mrpcontroller;
+
+    /**
+     * 估价类别
+     */
+    @TableField("valctg")
+    private String valctg;
+
+    /**
+     * 可配置物料
+     */
+    @TableField("croplant")
+    private String croplant;
+
+    /**
+     * 规格型号
+     */
+    @TableField("sizes")
+    private String sizes;
+
+    /**
+     * C标识
+     */
+    @TableField("spmtlstatus")
+    private String spmtlstatus;
 
     /**
      * 格口类型(仅工具)
@@ -119,6 +219,18 @@ public class WmsMaterialType implements Serializable {
      * */
     @TableField(value = "source")
     private String source;
+
+    /**
+     * 图片地址
+     * */
+    @TableField(value = "image_path")
+    private String imagePath;
+
+    /**
+     * 工厂
+     */
+//    @TableField("plant")
+//    private String plant;
 
     @Override
     public String toString() {
@@ -268,6 +380,49 @@ public class WmsMaterialType implements Serializable {
 
     public void setPackageNumber(String packageNumber) {
         this.packageNumber = packageNumber;
+    }
+//
+//    public String getDiBatchNo() {
+//        return di_batchNo;
+//    }
+//
+//    public void setDiBatchNo(String di_batchNo) {
+//        this.di_batchNo = di_batchNo;
+//    }
+
+    public String getPlant() {
+        return plant;
+    }
+
+    public String getSizes() {
+        return sizes;
+    }
+
+    public void setPlant(String plant) {
+        this.plant = plant;
+    }
+
+    public String getDi_opertype() {
+        return diOperType;
+    }
+
+    public void setDi_opertype(String di_opertype) {
+        this.diOperType = di_opertype;
+    }
+
+    public String getDiBatchNo() {
+        return diBatchNo;
+    }
+
+    public void setDiBatchNo(String diBatchNo) {
+        this.diBatchNo = diBatchNo;
+    }
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
 }

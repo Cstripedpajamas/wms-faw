@@ -4,6 +4,7 @@ import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseCycleCountParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -82,4 +83,12 @@ public interface WmsWarehouseTurnoverBindService extends IService<WmsWarehouseTu
     WmsWarehouseTurnoverBindResult findByMaterial(String materialSerialNumber);
 
     BatchEnt findBatch(String materialSku, int number);
+
+    /**
+     * 查找SKU列表
+     * @author chenrui
+     * @param param
+     * @return
+     */
+    LayuiPageInfo findSKUList(WmsWarehouseCycleCountParam param);
 }

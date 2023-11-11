@@ -65,8 +65,10 @@ public class OneTypeCabinetGiveBackController {
     public ResponseData giveBackConform(@ApiParam("任务编号") @RequestParam String taskNumber,
                                         @ApiParam("用户编号") @RequestParam String serialNumber,
                                         @ApiParam("工具状态") @RequestParam String materialState,
-                                        @ApiParam("物料编号") @RequestParam String materialSerialNumber){
-        return oneTypeCabinetService.conformCabinet1ReturnTask(taskNumber,serialNumber,materialState,materialSerialNumber);
+                                        @ApiParam("物料编号") @RequestParam String materialSerialNumber,
+                                        @ApiParam("故障原因") @RequestParam String toolErrorContent,
+                                        @ApiParam("描述") @RequestParam String materialName){
+        return oneTypeCabinetService.conformCabinet1ReturnTask(taskNumber,serialNumber,materialState,materialSerialNumber,toolErrorContent,materialName);
     }
 
     @GetMapping("/detail")

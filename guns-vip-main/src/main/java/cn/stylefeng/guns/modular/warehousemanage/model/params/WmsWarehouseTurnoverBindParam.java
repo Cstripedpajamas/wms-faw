@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -35,6 +35,11 @@ public class WmsWarehouseTurnoverBindParam implements Serializable, BaseValidati
      * 周转箱信息ID
      */
     private String turnoverId;
+
+    /**
+     * 工厂
+     */
+    private String plant;
 
     /**
      * 格口编号
@@ -111,6 +116,16 @@ public class WmsWarehouseTurnoverBindParam implements Serializable, BaseValidati
      * 格口状态
      * */
     private String latticeState;
+
+    /**
+     * 格口状态
+     * */
+    private String barcode;
+
+    /**
+     * 格口状态
+     * */
+    private String sizes;
 
     @Override
     public String checkParam() {

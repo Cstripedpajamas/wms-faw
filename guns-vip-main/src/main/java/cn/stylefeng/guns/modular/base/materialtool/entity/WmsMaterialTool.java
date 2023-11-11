@@ -45,14 +45,14 @@ public class WmsMaterialTool implements Serializable {
     /**
      * 物料名称
      */
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     @TableField("material_name")
     private String materialName;
 
     /**
      * 物料SKU
      */
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     @TableField("material_sku")
     private String materialSku;
 
@@ -66,7 +66,7 @@ public class WmsMaterialTool implements Serializable {
     /**
      * 单位
      */
-    @ApiModelProperty(value = "单位")
+    @ApiModelProperty(value = "基本计量单位")
     @TableField("m_unit")
     private String mUnit;
 
@@ -111,7 +111,20 @@ public class WmsMaterialTool implements Serializable {
     @ApiModelProperty(value = "采购单号")
     @TableField(value = "pur_number")
     private String purNumber;
+    /**
+     * 规格型号
+     */
+    @ApiModelProperty(value = "规格型号")
+    @TableField(exist = false)
+    private String sizes;
 
+    public void setSizes(String sizes) {
+        this.sizes = sizes;
+    }
+
+    public String getSizes() {
+        return sizes;
+    }
 
     public Long getId() {
         return id;
@@ -233,6 +246,7 @@ public class WmsMaterialTool implements Serializable {
                 ", dataState='" + dataState + '\'' +
                 ", createTime=" + createTime +
                 ", purNumber='" + purNumber + '\'' +
+                ", sizes='" + sizes + '\'' +
                 '}';
     }
 }

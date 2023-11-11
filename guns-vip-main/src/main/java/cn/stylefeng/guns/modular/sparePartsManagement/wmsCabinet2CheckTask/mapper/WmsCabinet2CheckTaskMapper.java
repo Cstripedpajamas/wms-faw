@@ -4,7 +4,6 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.entit
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.model.params.WmsCabinet2CheckTaskParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2CheckTask.model.result.WmsCabinet2CheckTaskResult;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -54,6 +53,8 @@ public interface WmsCabinet2CheckTaskMapper extends BaseMapper<WmsCabinet2CheckT
     Page<Map<String, Object>> customPageMapList(@Param("page") Page page, @Param("paramCondition") WmsCabinet2CheckTaskParam paramCondition);
 
     void addAll(@Param("list")List<WmsCabinet2CheckTaskParam> list);
+
+    void deleteVue();
 
     List<WmsCabinet2CheckTaskResult> findByTurnoverId(@Param("turnoverID")String turnoverID);
 

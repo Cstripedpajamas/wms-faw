@@ -1,11 +1,10 @@
 package cn.stylefeng.guns.modular.onetypecabinet.model.params;
 
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -92,6 +91,16 @@ public class WmsIntelligentCabinet1StockParam implements Serializable, BaseValid
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次
+     */
+    private String diBatchNo;
+
+    /**
      * 物料编码
      */
     private String materialSerialNumber;
@@ -110,6 +119,15 @@ public class WmsIntelligentCabinet1StockParam implements Serializable, BaseValid
      * 数据时间
      */
     private Date createTime;
+
+    /**
+     * 工具异常内容
+     */
+    private String toolErrorContent;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
     @Override
     public String checkParam() {

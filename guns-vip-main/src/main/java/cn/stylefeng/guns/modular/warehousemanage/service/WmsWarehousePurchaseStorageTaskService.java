@@ -71,6 +71,8 @@ public interface WmsWarehousePurchaseStorageTaskService extends IService<WmsWare
 
     void updateState(String state,String orderId);
 
+    void updateStateById(String runningId,String state);
+
     void stopTask();
 
     WmsPurchaseOrderInfoResult doingTask();

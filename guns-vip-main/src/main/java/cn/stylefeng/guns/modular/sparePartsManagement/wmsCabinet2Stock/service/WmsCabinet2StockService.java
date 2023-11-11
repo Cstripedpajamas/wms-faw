@@ -5,7 +5,6 @@ import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.entity.Wm
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.params.WmsCabinet2StockParam;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2Stock.model.result.WmsCabinet2StockResult;
 import com.baomidou.mybatisplus.extension.service.IService;
-import io.swagger.models.auth.In;
 
 import java.util.List;
 
@@ -75,7 +74,7 @@ public interface WmsCabinet2StockService extends IService<WmsCabinet2Stock> {
 
     void updateStockById(String stockID,String state);
 
-    WmsCabinet2StockResult findNullStock();
+    WmsCabinet2StockResult findNullStock(String locaNumber);
 
     void updateTurnover(String toString,String stockState, String turnoverID);
 

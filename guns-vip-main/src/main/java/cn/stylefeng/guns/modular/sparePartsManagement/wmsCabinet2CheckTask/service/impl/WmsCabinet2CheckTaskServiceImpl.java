@@ -39,6 +39,11 @@ public class WmsCabinet2CheckTaskServiceImpl extends ServiceImpl<WmsCabinet2Chec
     }
 
     @Override
+    public void deleteVue(){
+        this.baseMapper.deleteVue();
+    }
+
+    @Override
     public void update(WmsCabinet2CheckTaskParam param){
         WmsCabinet2CheckTask oldEntity = getOldEntity(param);
         WmsCabinet2CheckTask newEntity = getEntity(param);

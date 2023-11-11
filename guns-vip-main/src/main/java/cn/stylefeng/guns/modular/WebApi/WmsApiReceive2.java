@@ -1,8 +1,5 @@
 package cn.stylefeng.guns.modular.WebApi;
 
-import cn.stylefeng.guns.modular.WebApi.Entity.Declension;
-import cn.stylefeng.guns.modular.WebApi.WmsApiService;
-import cn.stylefeng.guns.modular.base.user.model.result.WmsUserResult;
 import cn.stylefeng.guns.modular.base.user.service.WmsUserService;
 import cn.stylefeng.guns.modular.sparePartsManagement.requestMsg.task.TaskThread;
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2UseTask.service.WmsCabinet2UseTaskService;
@@ -12,10 +9,7 @@ import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,10 +31,20 @@ public class WmsApiReceive2 {
     private WmsCabinet2UseTaskService wmsCabinet2UseTaskService;
 
     // 认证人员信息 备品备件柜
+//    @RequestMapping(value = "/StaffId", method = RequestMethod.POST)
+//    @ResponseBody
+//    public ResponseData checkUserMsg(@RequestBody String StaffId) {
+//        log.info("Face recognition number{}",StaffId);
+//        System.out.println("***********RenLianII**************StaffId"+StaffId);
+//        WmsApiMethods.II(StaffId);
+//        return ResponseData.success();
+//    }
+
     @RequestMapping(value = "/StaffId", method = RequestMethod.POST)
     @ResponseBody
     public ResponseData checkUserMsg(@RequestBody String StaffId) {
-        log.info("Face recognition number{}",StaffId);
+        log.info("First class cabinet face recognition number{}", StaffId);
+        System.out.println("***********RenLianII**************StaffId"+StaffId);
         WmsApiMethods.II(StaffId);
         return ResponseData.success();
     }
@@ -144,4 +148,13 @@ public class WmsApiReceive2 {
         log.info("Abnormal information returned by class II cabinet{}",errorMsg);
         return ResponseData.success();
     }
+
+    @RequestMapping(value = "/ASRSAutoExeTask", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseData ASRSAutoExeTask(@RequestBody String StaffId){
+        log.info("ASRSAutoExeTask StaffId{}",StaffId);
+        WmsApiMethods.ASRSAutoExeTask(StaffId);
+        return ResponseData.success();
+    }
+
 }

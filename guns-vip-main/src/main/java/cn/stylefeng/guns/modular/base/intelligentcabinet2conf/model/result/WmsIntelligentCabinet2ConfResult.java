@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.base.intelligentcabinet2conf.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -50,6 +50,16 @@ public class WmsIntelligentCabinet2ConfResult implements Serializable {
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
+
+    /**
      * 补货阈值
      */
     private String replenishmentThreshold;
@@ -63,5 +73,18 @@ public class WmsIntelligentCabinet2ConfResult implements Serializable {
      * 数据时间
      */
     private Date createTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * 操作人工号
+     */
+    private String account;
+    /**
+     * 操作人姓名
+     */
+    private String name;
 
 }

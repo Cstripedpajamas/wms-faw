@@ -1,17 +1,10 @@
 package cn.stylefeng.guns.modular.WebApi;
 
-import cn.hutool.json.JSONUtil;
 import cn.stylefeng.guns.modular.WebApi.Entity.*;
 import cn.stylefeng.guns.modular.base.packageInfo.entity.WmsPackinfo;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsSortingTask;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+//import jdk.internal.org.jline.utils.Log;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -72,11 +65,14 @@ public class WmsApiService {
     // 备品备件-开始报废品计数
     private static final String startScrapCount = startScrapUrl+"/StartScrapCount";
 
+
+//            正式环境IP:10.7.62.76
+//            测试环境IP:10.6.201.184
     //bpm 发起流程
-    private static final String bpmSend = "http://10.6.201.184:8011/BPM/TWMS/TWMS2BPM_InitiatingProcess/ProxyServices/InitiatingProcessPS";
+    private static final String bpmSend = "http://10.7.62.76:8011/BPM/TWMS/TWMS2BPM_InitiatingProcess/ProxyServices/InitiatingProcessPS";
 
     //bpm 流程查询
-    private static final String bpmQuery = "http://10.6.201.184:8011/BPM/TWMS/TWMS2BPM_SelectProcessStatus/Proxyservices/SelectProcessStatusPS";
+    private static final String bpmQuery = "http://10.7.62.76:8011/BPM/TWMS/TWMS2BPM_SelectProcessStatus/Proxyservices/SelectProcessStatusPS";
 
 
 
@@ -155,6 +151,7 @@ public class WmsApiService {
 
     // 波次分拣任务请求
     public runBatch getRunBatchRe(WmsSortingTaskResult wmsSortingTaskResult, WmsPackinfo wmsPackinfo){
+        System.out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
         Map<String, Object> map = new HashMap<>();
         map.put("batch_id",""+wmsSortingTaskResult.getId()); // 唯一识别码
         map.put("task_nums",Integer.parseInt(wmsSortingTaskResult.getSortingNum())); // 任务数量
@@ -201,7 +198,7 @@ public class WmsApiService {
     }
 
     // bpm 发起
-    public boolean sendBpm(BpmSendHeaderEntity bpmSendHeaderEntity,BpmSendBodyEntity bpmSendBodyEntity) {
+    public String sendBpm(BpmSendHeaderEntity bpmSendHeaderEntity,BpmSendBodyEntity bpmSendBodyEntity) {
         Map<String,Object> param = new HashMap<>();
         param.put("msgHeader",bpmSendHeaderEntity);
         param.put("msgBody",bpmSendBodyEntity);
@@ -209,12 +206,11 @@ public class WmsApiService {
         String resultRemote = exchange.getBody();
         Map map = JSONObject.parseObject(resultRemote,Map.class);
         Map map1 = JSONObject.parseObject(String.valueOf(map.get("msgHeader")), Map.class);
-        if (map1.get("resultType")!=null){
-            if (map1.get("resultType").equals("0")){
-                return true;
-            }
+        if (exchange.getStatusCode().is2xxSuccessful()){
+            String body=exchange.getBody();
+            return body;
         }
-        return false;
+        return "false";
     }
 
     // bpm 查询
@@ -222,7 +218,9 @@ public class WmsApiService {
         Map<String,Object> param = new HashMap<>();
         param.put("msgHeader",bpmSendHeaderEntity);
         param.put("msgBody",bpmSendBody2Entity);
+        System.out.println("queryBpmS-------------------------->queryBpmS");
         ResponseEntity<String> exchange  = restTemplate().postForEntity(bpmQuery, toJSON(param), String.class);
+        System.out.println("queryBpmE-------------------------->queryBpmE");
         String resultRemote = exchange.getBody();
         Map map = JSONObject.parseObject(resultRemote,Map.class);
         Map map1 = JSONObject.parseObject(String.valueOf(map.get("msgHeader")), Map.class);

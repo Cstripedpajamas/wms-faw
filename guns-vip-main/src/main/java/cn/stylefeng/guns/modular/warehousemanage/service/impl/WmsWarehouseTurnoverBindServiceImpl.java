@@ -6,6 +6,7 @@ import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeR
 import cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.result.BatchEnt;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
 import cn.stylefeng.guns.modular.warehousemanage.mapper.WmsWarehouseTurnoverBindMapper;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseCycleCountParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
 import  cn.stylefeng.guns.modular.warehousemanage.service.WmsWarehouseTurnoverBindService;
@@ -109,6 +110,13 @@ public class WmsWarehouseTurnoverBindServiceImpl extends ServiceImpl<WmsWarehous
         return this.baseMapper.findBatch(materialSku,number);
     }
 
+    @Override
+    public LayuiPageInfo findSKUList(WmsWarehouseCycleCountParam param) {
+        Page pageContext = getPageContext();
+        IPage page = this.baseMapper.findSKUList(pageContext, param);
+        return LayuiPageFactory.createPageInfo(page);
+    }
+
     private Serializable getKey(WmsWarehouseTurnoverBindParam param){
         return param.getId();
     }
@@ -126,5 +134,6 @@ public class WmsWarehouseTurnoverBindServiceImpl extends ServiceImpl<WmsWarehous
         ToolUtil.copyProperties(param, entity);
         return entity;
     }
+
 
 }

@@ -5,7 +5,6 @@ import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehousePurchaseStor
 import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehousePurchaseStorageTaskParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -57,6 +56,8 @@ public interface WmsWarehousePurchaseStorageTaskMapper extends BaseMapper<WmsWar
     WmsWarehousePurchaseStorageTaskResult findByOrderId(@Param("orderId")String orderId);
 
     void updateState(@Param("state")String state,@Param("orderId")String orderId);
+
+    void updateStateById(@Param("id")String id,@Param("state")String state);
 
     void stopTask();
 

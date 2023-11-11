@@ -1,0 +1,8 @@
+cn\stylefeng\guns\email\provider\MailServiceProvider.class
+cn\stylefeng\guns\email\core\model\SendMailParam.class
+cn\stylefeng\guns\email\provider\MailServiceApi.class
+cn\stylefeng\guns\email\config\ServiceAutoConfiguration.class
+cn\stylefeng\guns\email\core\enums\MailSendResultEnum.class
+cn\stylefeng\guns\email\core\mail\MailManager.class
+cn\stylefeng\guns\email\core\mail\service\JavaMailManager.class
+cn\stylefeng\guns\email\core\exception\MailException.class

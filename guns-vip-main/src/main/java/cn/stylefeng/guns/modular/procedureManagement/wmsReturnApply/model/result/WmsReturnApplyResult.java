@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.procedureManagement.wmsReturnApply.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -28,6 +28,31 @@ public class WmsReturnApplyResult implements Serializable {
      * 流程单号
      */
     private String processNumber;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 描述
+     */
+    private String materialName;
+
+    /**
+     * 物料号
+     */
+    private String materialSku;
+
+    /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
 
     /**
      * 人员信息
@@ -59,4 +84,28 @@ public class WmsReturnApplyResult implements Serializable {
      */
     private String dataState;
 
+    /**
+     * 审批人
+     */
+    private String approvedBy;
+    /**
+     * 差异类型
+     */
+    private String differenceType;
+    /**
+     * 人员姓名
+     */
+    private String userName;
+    /**
+     * 所属组织编码
+     */
+    private String workTeam;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+    /**
+     * 使用状态
+     */
+    private String objectstatus;
 }

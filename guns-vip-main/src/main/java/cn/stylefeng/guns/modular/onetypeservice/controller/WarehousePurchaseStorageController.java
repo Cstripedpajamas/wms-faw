@@ -3,7 +3,6 @@ package cn.stylefeng.guns.modular.onetypeservice.controller;
 import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.purchaseorderinfo.model.result.WmsPurchaseOrderInfoResult;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
-import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehousePurchaseStorageTaskResult;
 import cn.stylefeng.roses.kernel.model.response.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,6 +28,12 @@ public class WarehousePurchaseStorageController {
         return warehouseService.purchaseOrder();
     }
 
+    @ApiOperation(value = "1.1 待接收列表")
+    @GetMapping(value = "/order-oneQuery")
+    public LayuiPageInfo purchaseOrderQuery(String purNumber,String materialSku,String purDocNo){
+            return warehouseService.purchaseOrderQuery(purNumber,materialSku,purDocNo);
+    }
+
     @ApiOperation(value = "1.2 完成接收列表")
     @GetMapping(value = "/order-two")
     public LayuiPageInfo purchaseOrderTwo(){
@@ -38,8 +43,9 @@ public class WarehousePurchaseStorageController {
     @ApiOperation(value = "2. 确认按钮")
     @GetMapping(value = "/conform")
     public ResponseData purchaseConform(@ApiParam(value = "用户编号") @RequestParam String serialNumber,
-                                        @ApiParam(value = "采购单号") @RequestParam String purNumber){
-        return warehouseService.purchaseConform(serialNumber,purNumber);
+                                        @ApiParam(value = "采购单号") @RequestParam String purNumber,
+                                        @ApiParam(value = "采购申请号") @RequestParam String purchasereqno){
+        return warehouseService.purchaseConform(serialNumber,purNumber,purchasereqno);
     }
 
     @ApiOperation(value = "3. 扫描入库")

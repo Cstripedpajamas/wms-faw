@@ -10,10 +10,15 @@
       </list>
     </option>
   </component>
+  <component name="PWA">
+    <option name="wasEnabledAtLeastOnce" value="true" />
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://10.6.201.184:8011/ERP/TWMS/TWMS2ERP_ReceiveInvoices/ProxyServices/ReceiveInvoicesPS?SCHEMA%2FERP%2FTWMS%2FTWMS2ERP_ReceiveInvoices%2FSchemas%2FESB" location="$PROJECT_DIR$" />
+    <resource url="http://xmlns.oracle.com/JieFangCeShi/ERP/service1" location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
-  <component name="SwUserDefinedSpecifications">
-    <option name="specTypeByUrl">
-      <map />
-    </option>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
   </component>
 </project>

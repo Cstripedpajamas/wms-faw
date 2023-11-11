@@ -47,14 +47,14 @@ public class WmsCabinet1RenewTask implements Serializable {
     /**
      * 物料名称
      */
-    @ApiModelProperty(value = "物料名称")
+    @ApiModelProperty(value = "描述")
     @TableField("material_name")
     private String materialName;
 
     /**
      * 物料SKU
      */
-    @ApiModelProperty(value = "物料SKU")
+    @ApiModelProperty(value = "物料号")
     @TableField("material_sku")
     private String materialSku;
 

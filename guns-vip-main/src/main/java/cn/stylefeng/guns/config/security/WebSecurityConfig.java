@@ -92,6 +92,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/purchase/*").permitAll()
                 .antMatchers("/replenishment/*").permitAll()
                 .antMatchers("/print/*").permitAll()
+                .antMatchers("/cycleCount/*").permitAll()
+                .antMatchers("/apply/*").permitAll()
 
                 // session登录失效之后的跳转
                 .antMatchers("/global/sessionError").permitAll()

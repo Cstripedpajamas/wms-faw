@@ -1,0 +1,187 @@
+2022-06-10 08:54:19.740 ERROR 41812 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->4nzq6eu8x01k96u5e8pgkpke0evmcqvm，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 09:03:17.745 ERROR 68832 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->jjlwieaszk4i6fpt0vax7naje9xw1xjw，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 09:05:59.294 ERROR 68832 --- [http-nio-8099-exec-10] c.s.g.s.c.e.aop.GlobalExceptionHandler   : 业务异常:
+
+cn.stylefeng.roses.kernel.model.exception.RequestEmptyException: 账号或密码为空！
+
+2022-06-10 09:40:04.716 ERROR 26844 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->1tw4r9r51dqvnqzomy3e3b749onq60yc，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 09:44:53.879 ERROR 103100 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->y3sfqw4dtjfsw8mq24c13snoey3ligvr，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:15:48.318 ERROR 66604 --- [http-nio-8099-exec-9] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->m79q4xbolie2fhc454wgso66zl2v20il，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.253 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.254 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->zdrfyodeygje7kcy0grsw5gyf90lz8le，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.478 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.478 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.478 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.480 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.480 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.480 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.481 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:23:29.481 ERROR 30732 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:24:33.910 ERROR 39420 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:24:33.911 ERROR 39420 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->jp0pbh5lk1jfs4w2vp4xaeapmav7h7py，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:24:34.163 ERROR 39420 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:24:34.163 ERROR 39420 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.644 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 获取token的header标识为空！常量名称：GUNS_TOKEN_HEADER_NAME，采用默认值：Authorization，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.645 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->e4hja5flfy3a52mxfgizfsttr3wy32pb，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.870 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.870 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.870 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.871 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.872 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.872 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_SYSTEM_RELEASE_VERSION，采用默认值：guns，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.872 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 10:56:42.872 ERROR 108424 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : 系统常量存在空值！常量名称：GUNS_TENANT_OPEN，采用默认值：DISABLE，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 11:09:54.668 ERROR 11604 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->ktrtxdug4fygl8yiybvb8rjxig3cv7if，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 11:11:35.131 ERROR 33384 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->x45y3u3qp3698nf2vamftun8vr8cjgob，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 11:13:36.575 ERROR 63988 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->7odlealnafp7zh3hh4t3o8htgtoyk125，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 11:17:05.029 ERROR 9496 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->5u1k4w5sl86d7fvmitwohp0zp3r1zbwl，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 11:40:40.924 ERROR 53228 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->o9k4c0h9ew3t9y5jfnkw97fsaj9lo3la，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 14:26:08.869 ERROR 72436 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8099]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:296)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at cn.stylefeng.guns.GunsApplication.main(GunsApplication.java:40)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 14 common frames omitted
+
+2022-06-10 14:26:08.958 ERROR 72436 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8099 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8099, or configure this application to listen on another port.
+
+2022-06-10 14:41:10.366 ERROR 53616 --- [http-nio-8099-exec-7] c.s.r.c.e.DefaultExceptionHandler        : 运行时异常:
+
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'startCode' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:202)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:113)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:126)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at cn.stylefeng.roses.core.xss.XssFilter.doFilter(XssFilter.java:31)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.stylefeng.guns.sys.core.auth.filter.JwtAuthorizationTokenFilter.doFilterInternal(JwtAuthorizationTokenFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2022-06-10 14:48:26.788 ERROR 53616 --- [http-nio-8099-exec-10] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->zfwv20g78az4swqtuglu1eg8yophffnc，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 15:52:42.046 ERROR 107460 --- [http-nio-8099-exec-6] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->di6evl1jqsp06ama53ujocglekhexeu2，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-06-10 17:28:25.800 ERROR 95716 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->d4p4z5kkrwmk6c0z3gohpm7qxrq2okwt，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！

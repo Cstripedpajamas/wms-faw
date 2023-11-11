@@ -1,5 +1,9 @@
 package cn.stylefeng.guns.modular.WebApi;
 
+import cn.hutool.http.webservice.SoapClient;
+import cn.stylefeng.guns.config.AppConfig;
+import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
+import cn.stylefeng.guns.modular.base.materialType.service.WmsMaterialTypeService;
 import cn.stylefeng.guns.modular.base.redirect.RedirectConfController;
 import cn.stylefeng.guns.modular.onetypecabinet.entity.WmsIntelligentCabinet1Stock;
 import cn.stylefeng.guns.modular.onetypecabinet.model.params.WmsIntelligentCabinet1StockParam;
@@ -7,11 +11,14 @@ import cn.stylefeng.guns.modular.onetypecabinet.model.result.WmsIntelligentCabin
 import cn.stylefeng.guns.modular.onetypecabinet.service.WmsIntelligentCabinet1StockService;
 import cn.stylefeng.guns.modular.onetypeservice.enums.StateEnum;
 import cn.stylefeng.guns.modular.onetypeservice.service.WarehouseService;
+import cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.entity.WmsUseApply;
+import cn.stylefeng.guns.modular.procedureManagement.wmsUseApply.service.WmsUseApplyService;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTaskIn;
 import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseToolUseTask;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnover;
-import cn.stylefeng.guns.modular.warehousemanage.entity.WmsWarehouseTurnoverBind;
-import cn.stylefeng.guns.modular.warehousemanage.model.params.*;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseReplenishmentTaskParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverBindParam;
+import cn.stylefeng.guns.modular.warehousemanage.model.params.WmsWarehouseTurnoverParam;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseReplenishmentTaskResult;
 import cn.stylefeng.guns.modular.warehousemanage.model.result.WmsWarehouseTurnoverBindResult;
@@ -25,11 +32,16 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.ResultSet;
+import javax.xml.soap.SOAPElement;
+import javax.xml.soap.SOAPException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 
@@ -44,6 +56,7 @@ import java.util.*;
 @Slf4j
 public class WmsApiReceive {
 
+    private final static Logger logger = LoggerFactory.getLogger(AppConfig.class);
 
     @Autowired //
     private WmsIntelligentCabinet1StockService wmsIntelligentCabinet1StockService;
@@ -67,13 +80,28 @@ public class WmsApiReceive {
     private WmsWarehouseToolUseTaskService wmsWarehouseToolUseTaskService;
 
     @Autowired
+    private WmsUseApplyService wmsUseApplyService;
+
+    @Autowired
+    private WmsMaterialTypeService wmsMaterialTypeService;
+
+    @Autowired
     private WmsWarehouseReplenishmentTaskService wmsWarehouseReplenishmentTaskService;
 
     // 认证人员信息 工具柜界面
+//    @GetMapping("/StaffId")
+//    public ResponseData checkUserMsg(@RequestParam("StaffId") String StaffId) {
+//        log.info("First class cabinet face recognition number{}", StaffId);
+//        System.out.println("***********RenLian**************StaffId"+StaffId);
+//        WmsApiMethods.I(StaffId);
+//        return ResponseData.success();
+//    }
+
     @RequestMapping(value = "/StaffId", method = RequestMethod.POST)
     @ResponseBody
     public ResponseData checkUserMsg(@RequestBody String StaffId) {
         log.info("First class cabinet face recognition number{}", StaffId);
+        System.out.println("***********RenLian**************StaffId"+StaffId);
         WmsApiMethods.I(StaffId);
         return ResponseData.success();
     }
@@ -165,8 +193,8 @@ public class WmsApiReceive {
         if (task_status.equals("ER")) {
             log.info("分拣出错,错误信息为:{}", er_code);
         }
-
-
+        System.out.println("pppppppppppppppp");
+        System.out.println(param);
         WmsSortingTaskResult wmsSortTask = wmsSortingTaskService.findById(orderId);
         String barcode = wmsSortTask.getBarcode();
         WmsWarehouseTurnoverResult turnover = wmsWarehouseTurnoverService.findByBarCode(barcode);
@@ -205,8 +233,129 @@ public class WmsApiReceive {
 
         // 更新
         if (taskNumber1.split("-")[0].equals("tool")) {
+            WmsWarehouseToolUseTask wmsWarehouseToolUseTask= wmsWarehouseToolUseTaskService.getOne(new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", useTaskNumber));
+            int num= Integer.parseInt(wmsWarehouseToolUseTask.getSortingNum());
+            int sortingNum=num+sortNumber;
+            wmsWarehouseToolUseTask.setSortingNum(String.valueOf(sortingNum));
+            if (String.valueOf(sortingNum).equals(wmsWarehouseToolUseTask.getmNumber())) {
+                System.out.println("2222222222222222222----OutErpOutErpOutErp----2222222222222222222");
+                wmsWarehouseToolUseTask.setTaskState("3");
 
+                String processNumber=wmsWarehouseToolUseTask.getProcessNumber();
+                WmsUseApply wmsUseApply=wmsUseApplyService.getOne(new QueryWrapper<WmsUseApply>().eq("process_number", processNumber));
+
+                WmsMaterialType wmsMaterialType=wmsMaterialTypeService.getById(wmsWarehouseToolUseTask.getMaterialTypeId());
+                if ((wmsMaterialType.getMaterialType().equals("GJ")&&wmsUseApply.getJieSan())||wmsMaterialType.getMaterialType().equals("BJ")) {
+                    String storageLocation="R06B901";
+//                移动类型
+                    String moveMentType="G01";
+                    String getOrdNOStr="";
+                    String budgetCenter="";
+                    String commitmentItem="";
+                    String getOrdNO= wmsUseApply.getOrdNO();
+                    if (getOrdNO!=null&&getOrdNO!=""){
+                        getOrdNOStr=getOrdNO;
+                    }
+
+                    if (wmsMaterialType.getMaterialType().equals("GJ")){
+                        storageLocation="R06GZ11";
+                        moveMentType="Z01";
+                    }
+
+                    if (wmsUseApply.getCostCenter().equals("Z28")){
+//                    移动类型
+                        moveMentType="G09";
+//                    项目成本单号
+                        getOrdNOStr="KC9600042301";
+//                    预算中心
+                        budgetCenter="Z28";
+//                    预算项目
+                        commitmentItem="YS66022207";
+                    }
+                    //            正式环境IP:10.7.62.76
+                    //            测试环境IP:10.6.201.184
+                    // 新建客户端
+                    SoapClient client = SoapClient.create("http://10.7.62.76:8011/ERP/UWMS/UWMS2ERP_SyncInvNoGuardianStorageLocation/ProxyServices/SyncInvNoGuardianStorageLocationPS?wsdl")
+                            // 设置要请求的方法，此接口方法前缀为web，传入对应的命名空间
+                            .setMethod("ser:reOutStorageMT", "http://service.noGuardianStor.inv.mm.erp.faw_qm.com/");
+                    // 设置参数，此处自动添加方法的前缀：web
+                    try {
+                        SOAPElement msgHeader = client.getMethodEle().addChildElement("msgHeader");
+                        msgHeader.addChildElement("comments").setValue("");
+                        msgHeader.addChildElement("count").setValue("");
+                        msgHeader.addChildElement("interfaceID").setValue("TWMS-ERP-002");
+                        msgHeader.addChildElement("messageID").setValue(String.valueOf(UUID.randomUUID()));
+                        msgHeader.addChildElement("receiver").setValue("JF_ERP");
+                        msgHeader.addChildElement("sender").setValue("JF_TWMS");
+                        msgHeader.addChildElement("transID").setValue("");
+                        SOAPElement msgBody = client.getMethodEle().addChildElement("msgBody");
+                        SOAPElement invReOutStorageMTItems=msgBody.addChildElement("invReOutStorageMTItems");
+                        invReOutStorageMTItems.addChildElement("assetSubNO").setValue("");
+//                    预算中心
+                        invReOutStorageMTItems.addChildElement("budgetCenter").setValue(budgetCenter);
+                        invReOutStorageMTItems.addChildElement("busArea").setValue("");
+                        invReOutStorageMTItems.addChildElement("commitmentItem").setValue(commitmentItem);
+                        //            成本中心
+                        invReOutStorageMTItems.addChildElement("costCenter").setValue(wmsUseApply.getCostCenter());
+                        //            凭证日期
+                        Date date=new Date();
+                        SimpleDateFormat formatter=new SimpleDateFormat("yyyyMMdd");
+                        String dateString=formatter.format(date);
+                        invReOutStorageMTItems.addChildElement("docDate").setValue(dateString);
+                        invReOutStorageMTItems.addChildElement("equipmentNR").setValue("");
+                        //            领用者
+                        invReOutStorageMTItems.addChildElement("goodsRecipient").setValue(wmsUseApply.getOperator());
+                        invReOutStorageMTItems.addChildElement("itemText").setValue("");
+                        //            固定资产编码
+                        String mainAssetNO="";
+                        String mainAssetNOStr= wmsUseApply.getMainAssetNo();
+                        if (mainAssetNOStr!=null&&mainAssetNOStr!=""){
+                            mainAssetNO=mainAssetNOStr;
+                        }
+                        invReOutStorageMTItems.addChildElement("mainAssetNO").setValue(mainAssetNO);
+                        //            移动类型
+                        invReOutStorageMTItems.addChildElement("moveMentType").setValue(moveMentType);
+                        //            物料号
+                        invReOutStorageMTItems.addChildElement("mtlNO").setValue(wmsMaterialType.getMaterialSku());
+//                    invReOutStorageMTItems.addChildElement("mtlNO").setValue("A05172331");
+                        //            项目成品单号
+
+                        invReOutStorageMTItems.addChildElement("ordNO").setValue(getOrdNOStr);
+                        //            工厂
+                        invReOutStorageMTItems.addChildElement("plant").setValue("R06");
+                        //            记账日期
+                        String dates=wmsUseApply.getPostDate();
+                        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+                        Date postDate=dateFormat.parse(dates);
+                        String postStr=formatter.format(postDate);
+                        invReOutStorageMTItems.addChildElement("postDate").setValue(dateString);
+                        //            数量
+                        invReOutStorageMTItems.addChildElement("quantity").setValue(wmsUseApply.getmNumber());
+                        //            出库单号
+                        invReOutStorageMTItems.addChildElement("refDocNO").setValue(wmsUseApply.getProcessNumber());
+                        invReOutStorageMTItems.addChildElement("refItemNO").setValue("");
+                        invReOutStorageMTItems.addChildElement("remark1").setValue("");
+                        //            存储地点
+                        invReOutStorageMTItems.addChildElement("storageLocation").setValue(storageLocation);
+                        //            产品编码
+                        invReOutStorageMTItems.addChildElement("TPBusArea").setValue(wmsUseApply.getBusArea());
+                    } catch (SOAPException e) {
+                        System.out.println("fffffffffffffffffffffffffffffffffC");
+                    } catch (ParseException e) {
+                        throw new RuntimeException(e);
+                    }
+                    String str= client.send(true);
+                    logger.info("/tool_apply_commit_over upload ERP interface"+str);
+                    System.out.println("/tool_apply_commit_over upload ERP interface"+str);
+                    System.out.println("2222333333222222222----OutErpOutErpOutErp----22233333333322222");
+                    // 发送请求，参数true表示返回一个格式化后的XML内容
+                    // 返回内容为XML字符串，可以配合XmlUtil解析这个响应
+                }
+
+            }
             wmsWarehouseToolUseTaskService.updateByTaskNumber(useTaskNumber);
+            wmsWarehouseToolUseTaskService.update(wmsWarehouseToolUseTask,new QueryWrapper<WmsWarehouseToolUseTask>().eq("task_number", useTaskNumber));
+
         }
         if (taskNumber1.split("-")[0].equals("spare")) {
             // todo
@@ -252,6 +401,7 @@ public class WmsApiReceive {
         wmsWarehouseTaskIn.setTurnoverNumber(turnover.getTurnoverNumber());
         wmsWarehouseTaskIn.settBarcode(turnover.getBarcode());
         wmsWarehouseTaskIn.setTurnoverMouthQuality(turnover.getTurnoverMouthQuantity());
+        wmsWarehouseTaskIn.settBarcode(turnover.getBarcode());
         wmsWarehouseTaskIn.setSortingInfo("B");
         wmsWarehouseTaskIn.setReqTag("0");
         wmsWarehouseTaskIn.setReqStatus("0");
@@ -272,10 +422,11 @@ public class WmsApiReceive {
         turnoverBind.setMaterialType("");
         turnoverBind.setMaterialName("");
         turnoverBind.setMaterialSku("");
+        turnoverBind.setSizes("");
         turnoverBind.setMUnit("");
         turnoverBind.setMaterialSerialNumber("");
         turnoverBind.setMBatch("");
-        turnoverBind.setMNumber("");
+        turnoverBind.setMNumber("0");
         turnoverBind.setLatticeState("0");
         turnoverBind.setCreateTime(new Date());
         ToolUtil.copyProperties(turnoverBind, wmsWarehouseTurnoverBindParam);

@@ -91,6 +91,16 @@ public class WmsIntelligentCabinet1StockResult implements Serializable {
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次
+     */
+    private String diBatchNo;
+
+    /**
      * 物料编码
      */
     private String materialSerialNumber;
@@ -110,4 +120,12 @@ public class WmsIntelligentCabinet1StockResult implements Serializable {
      */
     private Date createTime;
 
+    /**
+     * 工具异常内容
+     */
+    private String toolErrorContent;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 }

@@ -30,6 +30,11 @@ public class WmsCabinet2TurnoverBindResult implements Serializable {
     private String turnoverId;
 
     /**
+     * 周转箱信息ID
+     */
+    private String barcode;
+
+    /**
      * 周转箱编号
      * */
     private String turnoverNumber;
@@ -64,6 +69,11 @@ public class WmsCabinet2TurnoverBindResult implements Serializable {
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
      * 批次
      */
     private String mBatch;
@@ -82,5 +92,8 @@ public class WmsCabinet2TurnoverBindResult implements Serializable {
      * 数据时间
      */
     private Date createTime;
-
+    /**
+     * 规格型号
+     */
+    private String sizes;
 }

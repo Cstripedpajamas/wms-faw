@@ -2,9 +2,8 @@ package cn.stylefeng.guns.modular.statistics.checkdifferencerecordinfo.model.res
 
 import lombok.Data;
 
-import java.util.Date;
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -66,5 +65,4 @@ public class WmsCheckDifferenceRecordInfoResult implements Serializable {
      * 数据时间
      */
     private Date createTime;
-
 }

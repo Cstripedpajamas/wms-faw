@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.sparePartsManagement.wmsCabinet2TurnoverBind.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -31,6 +31,11 @@ public class WmsCabinet2TurnoverBindParam implements Serializable, BaseValidatin
     private String turnoverId;
 
     /**
+     * 周转箱信息ID
+     */
+    private String barcode;
+
+    /**
      * 物料类型ID
      */
     private String materialTypeId;
@@ -39,6 +44,11 @@ public class WmsCabinet2TurnoverBindParam implements Serializable, BaseValidatin
      * 物料信息ID
      */
     private String materialId;
+
+    /**
+     * 工厂
+     */
+    private String plant;
 
     /**
      * 物料类型
@@ -69,6 +79,10 @@ public class WmsCabinet2TurnoverBindParam implements Serializable, BaseValidatin
      * 数量
      */
     private String mNumber;
+    /**
+     * 规格型号
+     */
+    private String sizes;
 
     /**
      * 数据时间

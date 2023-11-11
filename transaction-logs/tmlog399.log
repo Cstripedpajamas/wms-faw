@@ -1,0 +1,2 @@
+{"id":"172.31.6.93.tm168869581955700001","wasCommitted":true,"participants":[{"uri":"172.31.6.93.tm1","state":"COMMITTING","expires":1688696119669,"resourceName":"master"}]}
+{"id":"172.31.6.93.tm168869581955700001","wasCommitted":true,"participants":[{"uri":"172.31.6.93.tm1","state":"TERMINATED","expires":1688696119679,"resourceName":"master"}]}

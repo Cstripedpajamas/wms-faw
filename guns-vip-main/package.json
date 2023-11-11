@@ -1,0 +1,7 @@
+{
+  "name": "guns-vip-main",
+  "version": "1.0.0",
+  "dependencies": {
+    "dingtalk-design-libs": "^0.2.0"
+  }
+}

@@ -1,0 +1,6 @@
+2022-07-08 14:23:49.381  INFO 2600 --- [http-nio-8099-exec-31] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1
+2022-07-08 14:27:21.230  INFO 2600 --- [http-nio-8099-exec-39] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1
+2022-07-08 14:30:43.889  INFO 25076 --- [http-nio-8099-exec-1] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1
+2022-07-08 14:31:58.166  INFO 13404 --- [http-nio-8099-exec-8] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1
+2022-07-08 14:34:08.440  INFO 10108 --- [http-nio-8099-exec-1] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1
+2022-07-08 14:35:49.007  INFO 25888 --- [http-nio-8099-exec-6] s.g.m.o.c.WarehouseApiCallbackController : Delivery result:Process No:473574756892,Barcode of turnover box:1000000094,Outbound status:1,Abnormal information:1

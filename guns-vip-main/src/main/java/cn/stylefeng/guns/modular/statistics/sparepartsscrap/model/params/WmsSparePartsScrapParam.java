@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.statistics.sparepartsscrap.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -49,6 +49,31 @@ public class WmsSparePartsScrapParam implements Serializable, BaseValidatingPara
      * 数据时间
      */
     private Date createTime;
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * 报废数量
+     */
+    private String mNumber;
+
+    /**
+     * 操作人
+     */
+    private String operator;
+
+    /**
+     * 操作时间
+     */
+    private String operationTime;
 
     @Override
     public String checkParam() {

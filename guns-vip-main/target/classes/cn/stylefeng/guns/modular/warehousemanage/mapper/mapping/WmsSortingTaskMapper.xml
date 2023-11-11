@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.warehousemanage.mapper.WmsSortingTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.warehousemanage.entity.WmsSortingTask">
+        <id column="id" property="id" />
+        <result column="task_number" property="taskNumber" />
+        <result column="turnover_type" property="turnoverType" />
+        <result column="turnover_number" property="turnoverNumber" />
+        <result column="barcode" property="barcode" />
+        <result column="lattice_code" property="latticeCode" />
+        <result column="sorting_num" property="sortingNum" />
+        <result column="task_state" property="taskState" />
+        <result column="create_time" property="createTime" />
+        <result column="req_time" property="reqTime" />
+        <result column="data_time" property="dataTime" />
+        <result column="sorting_material_type" property="sortingMaterialType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", task_number AS "taskNumber", turnover_type AS "turnoverType", turnover_number AS "turnoverNumber", barcode AS "barcode", lattice_code AS "latticeCode", sorting_num AS "sortingNum", task_state AS "taskState", create_time AS "createTime", req_time AS "reqTime", data_time AS "dataTime",
+        sorting_material_type AS "sortingMaterialType"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.barcode != null and paramCondition.barcode != ''">
+                and barcode like CONCAT('%',#{paramCondition.barcode},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.sortingNum != null and paramCondition.sortingNum != ''">
+                and sorting_num like CONCAT('%',#{paramCondition.sortingNum},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.barcode != null and paramCondition.barcode != ''">
+                and barcode like CONCAT('%',#{paramCondition.barcode},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.sortingNum != null and paramCondition.sortingNum != ''">
+                and sorting_num like CONCAT('%',#{paramCondition.sortingNum},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.barcode != null and paramCondition.barcode != ''">
+                and barcode like CONCAT('%',#{paramCondition.barcode},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.sortingNum != null and paramCondition.sortingNum != ''">
+                and sorting_num like CONCAT('%',#{paramCondition.sortingNum},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.warehousemanage.model.params.WmsSortingTaskParam">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task where 1 = 1
+            <if test="paramCondition.id != null and paramCondition.id != ''">
+                and id like CONCAT('%',#{paramCondition.id},'%')
+            </if>
+            <if test="paramCondition.taskNumber != null and paramCondition.taskNumber != ''">
+                and task_number like CONCAT('%',#{paramCondition.taskNumber},'%')
+            </if>
+            <if test="paramCondition.turnoverType != null and paramCondition.turnoverType != ''">
+                and turnover_type like CONCAT('%',#{paramCondition.turnoverType},'%')
+            </if>
+            <if test="paramCondition.turnoverNumber != null and paramCondition.turnoverNumber != ''">
+                and turnover_number like CONCAT('%',#{paramCondition.turnoverNumber},'%')
+            </if>
+            <if test="paramCondition.barcode != null and paramCondition.barcode != ''">
+                and barcode like CONCAT('%',#{paramCondition.barcode},'%')
+            </if>
+            <if test="paramCondition.latticeCode != null and paramCondition.latticeCode != ''">
+                and lattice_code like CONCAT('%',#{paramCondition.latticeCode},'%')
+            </if>
+            <if test="paramCondition.sortingNum != null and paramCondition.sortingNum != ''">
+                and sorting_num like CONCAT('%',#{paramCondition.sortingNum},'%')
+            </if>
+            <if test="paramCondition.taskState != null and paramCondition.taskState != ''">
+                and task_state like CONCAT('%',#{paramCondition.taskState},'%')
+            </if>
+            <if test="paramCondition.createTime != null and paramCondition.createTime != ''">
+                and create_time like CONCAT('%',#{paramCondition.createTime},'%')
+            </if>
+            <if test="paramCondition.reqTime != null and paramCondition.reqTime != ''">
+                and req_time like CONCAT('%',#{paramCondition.reqTime},'%')
+            </if>
+            <if test="paramCondition.dataTime != null and paramCondition.dataTime != ''">
+                and data_time like CONCAT('%',#{paramCondition.dataTime},'%')
+            </if>
+    </select>
+
+    <select id="findByTaskStateOne" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult" >
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task where 1 = 1 and task_state = '0' order by id limit 1
+    </select>
+
+    <select id="findRecentTask" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task
+        order by id desc  limit 5
+    </select>
+
+    <select id="findById" parameterType="string" resultType="cn.stylefeng.guns.modular.warehousemanage.model.result.WmsSortingTaskResult">
+        select
+        <include refid="Base_Column_List"/>
+        from wms_sorting_task
+        where id = #{orderId}
+    </select>
+
+</mapper>

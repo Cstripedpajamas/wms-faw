@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.statistics.equipmentfailurestatistics.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -45,6 +45,42 @@ public class WmsEquipmentFailureStatisticsParam implements Serializable, BaseVal
      */
     private Date createTime;
 
+
+
+    /**
+     * 物料类型
+     */
+    private String materialType;
+
+
+    /**
+     * 物料名称
+     */
+    private String materialName;
+
+
+    /**
+     * 物料编号
+     */
+    private String materialSku;
+
+
+    /**
+     * 包装单位
+     */
+    private String mUnit;
+
+
+    /**
+     * 规格型号
+     */
+    private String Sizes;
+
+
+    /**
+     * 维修次数
+     */
+    private String repairCount;
     @Override
     public String checkParam() {
         return null;

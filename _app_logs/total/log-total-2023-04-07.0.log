@@ -1,0 +1,16 @@
+2023-04-07 00:00:11.044  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:00:11.342  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:00:22.709  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:00:22.979  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:00:36.717  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:00:36.920  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:00:49.744  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:00:50.371  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:01:01.276  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:01:01.919  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:01:13.550  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:01:14.124  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:01:25.911  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:01:26.504  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application
+2023-04-07 00:01:41.854  INFO 35176 --- [demo-pool-1] c.s.guns.threads.GuiHuanAppliesThread    : Task Thread- Return application
+2023-04-07 00:01:42.142  INFO 35176 --- [demo-pool-0] c.s.guns.threads.UseAppliesThread        : Task Thread- Requisition application

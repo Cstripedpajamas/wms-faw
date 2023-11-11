@@ -1,9 +1,9 @@
 package cn.stylefeng.guns.modular.warehousemanage.model.result;
 
 import lombok.Data;
-import java.util.Date;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -28,6 +28,16 @@ public class WmsWarehouseTurnoverBindResult implements Serializable {
      * 周转箱信息ID
      */
     private String turnoverId;
+
+    /**
+     * 条码信息
+     */
+    private String barcode;
+
+    /**
+     * 工厂
+     */
+    private String plant;
 
     /**
      * 格口编号
@@ -93,5 +103,10 @@ public class WmsWarehouseTurnoverBindResult implements Serializable {
      * 格口状态
      * */
     private String latticeState;
+
+    /**
+     * 格口状态
+     * */
+    private String sizes;
 
 }

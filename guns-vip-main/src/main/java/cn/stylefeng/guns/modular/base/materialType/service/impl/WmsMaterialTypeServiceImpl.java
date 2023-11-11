@@ -69,8 +69,8 @@ public class WmsMaterialTypeServiceImpl extends ServiceImpl<WmsMaterialTypeMappe
     }
 
     @Override
-    public WmsMaterialTypeResult findByMaterialSku(WmsMaterialTypeParam param) {
-        return this.baseMapper.findByMaterialSku(param);
+    public WmsMaterialTypeResult findByMaterialSku(String materialSku) {
+        return this.baseMapper.findByMaterialSku(materialSku);
     }
 
     @Override
@@ -101,4 +101,18 @@ public class WmsMaterialTypeServiceImpl extends ServiceImpl<WmsMaterialTypeMappe
         return entity;
     }
 
+    @Override
+    public List<WmsMaterialType> findAllMaterialType() {
+        return this.baseMapper.findAllMaterialType();
+    }
+
+    @Override
+    public List<WmsMaterialType> findAllMaterialNo(WmsMaterialTypeParam param) {
+        return this.baseMapper.findAllMaterialNo(param);
+    }
+
+    @Override
+    public List<WmsMaterialType> findMaterialRes(WmsMaterialTypeParam param) {
+        return this.baseMapper.findMaterialRes(param);
+    }
 }

@@ -4,7 +4,6 @@ import cn.stylefeng.guns.base.pojo.page.LayuiPageInfo;
 import cn.stylefeng.guns.modular.base.materialType.entity.WmsMaterialType;
 import cn.stylefeng.guns.modular.base.materialType.model.params.WmsMaterialTypeParam;
 import cn.stylefeng.guns.modular.base.materialType.model.result.WmsMaterialTypeResult;
-import cn.stylefeng.guns.modular.fawInfo.mtlInfo.model.params.FawMtlInfoParam;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -69,9 +68,15 @@ public interface WmsMaterialTypeService extends IService<WmsMaterialType> {
 
     WmsMaterialTypeResult findById(String sMaterialTypeId);
 
-    WmsMaterialTypeResult findByMaterialSku(WmsMaterialTypeParam param);
+    WmsMaterialTypeResult findByMaterialSku(String materialSku);
 
     void insertListBatch(List<WmsMaterialTypeParam> param);
 
     List<WmsMaterialType> findAll();
+
+    List<WmsMaterialType> findAllMaterialType();
+
+    List<WmsMaterialType> findAllMaterialNo(WmsMaterialTypeParam param);
+
+    List<WmsMaterialType> findMaterialRes(WmsMaterialTypeParam param);
 }

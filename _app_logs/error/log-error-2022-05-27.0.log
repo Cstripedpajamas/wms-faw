@@ -1,0 +1,3 @@
+2022-05-27 09:27:35.938 ERROR 80468 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->bq3r3r0eu46lnqzxnv5fmmseeqjwrzre，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-27 11:44:40.829 ERROR 60096 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->2nxmbhzdfm79djrfwom0vs06l3j6uxfo，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！
+2022-05-27 17:52:07.391 ERROR 45788 --- [http-nio-8099-exec-1] c.s.guns.base.consts.ConstantsContext    : jwt密钥存在空值！常量名称：GUNS_JWT_SECRET，采用默认值：随机字符串->o3awhagsmyo5q7rog11owus51p9byfpo，若想忽略此提示，请在开发管理->系统配置->参数配置，设置相关参数！

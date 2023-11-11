@@ -75,6 +75,11 @@ public class WmsWarehousePurchaseStorageTaskServiceImpl extends ServiceImpl<WmsW
     }
 
     @Override
+    public void updateStateById(String runningId, String state) {
+        this.baseMapper.updateStateById(runningId,state);
+    }
+
+    @Override
     public void stopTask() {
         baseMapper.stopTask();
     }

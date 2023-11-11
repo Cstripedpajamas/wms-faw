@@ -5,6 +5,7 @@ import cn.stylefeng.guns.webservice.entity.*;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import java.text.ParseException;
 
 @WebService(targetNamespace = "http://andot.org/webservice/demo/server")
 public interface FawApiService {
@@ -48,4 +49,24 @@ public interface FawApiService {
      */
     @WebMethod
     RsMomBody getToolCollection(@WebParam(name = "msgHeader") MsgHeader msgHeader, @WebParam(name = "msgBody") MsgBodyByMom msgBody);
+
+    /**
+     * 采购订单商城发货单
+     *
+     * @param msgHeader rule id
+     * @param msgBody page number
+     * @return RsBody
+     */
+    @WebMethod
+    RsBody getPurchaseorderDelivery(@WebParam(name = "msgHeader") MsgHeader msgHeader, @WebParam(name = "msgBody") MsgBodyDelivery msgBody) throws ParseException;
+
+    /**
+     * 采购订单商城订单取消
+     *
+     * @param msgHeader rule id
+     * @param msgBody page number
+     * @return RsBody
+     */
+    @WebMethod
+    RsBody getPurchaseorderCancel(@WebParam(name = "msgHeader") MsgHeader msgHeader, @WebParam(name = "msgBody") MsgBodyCancel msgBody);
 }

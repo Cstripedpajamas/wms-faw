@@ -1,10 +1,10 @@
 package cn.stylefeng.guns.modular.base.intelligentcabinet2conf.model.params;
 
-import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
-import java.util.Date;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -51,6 +51,16 @@ public class WmsIntelligentCabinet2ConfParam implements Serializable, BaseValida
     private String materialSku;
 
     /**
+     * 工厂
+     */
+    private String plant;
+
+    /**
+     * 批次号
+     */
+    private String diBatchNo;
+
+    /**
      * 补货阈值
      */
     private String replenishmentThreshold;
@@ -64,6 +74,20 @@ public class WmsIntelligentCabinet2ConfParam implements Serializable, BaseValida
      * 数据时间
      */
     private Date createTime;
+    /**
+     * 规格型号
+     */
+    private String sizes;
+
+    /**
+     * 操作人工号
+     */
+    private String account;
+    /**
+     * 操作人姓名
+     */
+    private String name;
+
 
     @Override
     public String checkParam() {
